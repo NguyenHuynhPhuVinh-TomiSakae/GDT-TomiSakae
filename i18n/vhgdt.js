@@ -2,2340 +2,2340 @@ Languages.vi = {
     "values": [{
         "value": "Invitation",
         "comment": "heading",
-        "translation": "Invitación"
+        "translation": "Lời mời"
     }, {
         "value": "Hi, I'm Gordon Hench the host of the local hobby computer club. I just discovered that your company is close-by. I'm a huge fan of {0} and would love for you to join our meetup this week!\nEagerly awaiting your reply.\nGordon",
-        "translation": "Hola, soy Gordon Hench, el anfitrión del club local de aficionados por la informática. Acabo de descubrir que tu compañía está cerca de nosotros. ¡Soy un gran fan de {0} y me encantaría que nos acompañaras en nuestra reunión de esta semana!\nEspero ansiosamente tu respuesta.\nGordon"
+        "translation": "Chào bạn, tôi là Gordon Hench, chủ nhiệm câu lạc bộ máy tính nghiệp dư địa phương. Tôi vừa phát hiện ra công ty của bạn ở gần đây. Tôi là một người hâm mộ cuồng nhiệt của {0} và rất mong bạn tham gia buổi gặp mặt của chúng tôi vào tuần này!\nRất mong nhận được hồi âm của bạn.\nGordon"
     }, {
         "value": "Sure",
         "comment": "decision action button",
-        "translation": "Claro"
+        "translation": "Chắc chắn rồi"
     }, {
         "value": "No time",
         "comment": "decision action button",
-        "translation": "No tengo tiempo"
+        "translation": "Không có thời gian"
     }, {
         "value": "Thank you very much! I'm sure our members will love what you have to say.\nGordon",
-        "translation": "¡Muchísimas gracias! Estoy seguro que nuestros miembros estarán encantados de oírte.\nGordon"
+        "translation": "Cảm ơn bạn rất nhiều! Tôi chắc chắn các thành viên của chúng tôi sẽ rất thích những gì bạn chia sẻ.\nGordon"
     }, {
         "value": "Computer Club",
         "comment": "heading",
-        "translation": "Club de Informática"
+        "translation": "Câu lạc bộ Máy tính"
     }, {
         "value": "Hi I'm Frank More. We met at the Hobby Computer Club a week ago. Just wanted to say thanks for talking about your projects. I love your games and have told all my friends about them.",
-        "translation": "Hola soy Frank More. Nos conocimos en el club de informática hace una semana. Solo quería decirte gracias por hablar acerca de tus proyectos. Me encantan sus juegos y les he contado a todos mis amigos acerca de ellos."
+        "translation": "Chào bạn, tôi là Frank More. Chúng ta đã gặp nhau ở Câu lạc bộ Máy tính Nghiệp dư một tuần trước. Tôi chỉ muốn cảm ơn bạn đã chia sẻ về các dự án của mình. Tôi rất thích các trò chơi của bạn và đã kể cho tất cả bạn bè của tôi về chúng."
     }, {
         "value": "Sorry to hear that you are busy.\nGordon",
-        "translation": "Lamento escuchar que estés tan ocupado.\nGordon"
+        "translation": "Rất tiếc khi biết bạn bận.\nGordon"
     }, {
         "value": "Local News",
         "comment": "heading",
-        "translation": "Noticias Locales"
+        "translation": "Tin tức Địa phương"
     }, {
         "value": "Hi, I'm Caroline Richards from the local news. I've heard rumours that you are already working on your next game and would love to do an interview about this. Do you have some time?",
-        "translation": "Hola, soy Caroline Richards, del periódico local. He escuchado rumores acerca de que estás trabajando en tu próximo juego y me encantaría entrevistarte sobre ello. ¿Tienes un minuto?"
+        "translation": "Chào bạn, tôi là Caroline Richards từ tòa soạn báo địa phương. Tôi nghe đồn rằng bạn đang phát triển trò chơi tiếp theo của mình và rất muốn phỏng vấn bạn về điều này. Bạn có chút thời gian không?"
     }, {
         "value": "Great!\n\n\n ... Thank you for your time.{n}The interview should be published soon.",
-        "translation": "Genial\n\n\n... Muchas gracias por su tiempo.{n] La entrevista será publicada muy pronto."
+        "translation": "Tuyệt vời!\n\n\n ... Cảm ơn bạn đã dành thời gian.{n}Bài phỏng vấn sẽ sớm được xuất bản."
     }, {
         "value": "not done",
         "comment": "localNewsPaperFragment",
-        "translation": "no ha hecho"
+        "translation": "chưa thực hiện"
     }, {
         "value": "done",
         "comment": "localNewsPaperFragment",
-        "translation": "listo"
+        "translation": "đã thực hiện"
     }, {
         "value": "{0}, a local start-up, is trying to make it big in the gaming industry. The company has already published {1} games and is working hard on their next.{n}In an interview founder {2} said that the next game is going to be a {3}/{4} game, something the company has {5} before. It's great to see small local companies enter exciting new industries. All the best of luck to {0}.",
         "comment": "{0} is company name, {1} nr. of games, {2} player name, {3} topic name, {4} genre name, {5} either not done/done (localNewsPaperFragment)",
-        "translation": "{0},una compañía local, esta tratando de dejar su huella en la industria de vídeo juegos. La compañía ya publico {1} juegos y se están esforzando para el próximo. {n} En una entrevista el fundador {2} dijo que su próximo juego sera de {3}/{4} lo cual la compañía {5} antes. Es asombroso ver pequeñas compañías entrar en nuevas industrias. Mucha suerte a {0}."
+        "translation": "{0}, một công ty khởi nghiệp địa phương, đang cố gắng tạo dựng tên tuổi trong ngành công nghiệp game. Công ty đã phát hành {1} trò chơi và đang nỗ lực cho sản phẩm tiếp theo.{n}Trong một cuộc phỏng vấn, người sáng lập {2} cho biết trò chơi tiếp theo sẽ là một trò chơi {3}/{4}, một điều mà công ty {5} trước đây. Thật tuyệt vời khi thấy các công ty nhỏ ở địa phương tham gia vào các ngành công nghiệp mới thú vị. Chúc {0} mọi điều may mắn."
     }, {
         "value": "Sorry to bother you",
-        "translation": "Disculpe la molestia"
+        "translation": "Xin lỗi đã làm phiền bạn"
     }, {
         "value": "Media Enquiry",
         "comment": "heading",
-        "translation": "Sondeo de medios"
+        "translation": "Yêu cầu từ Truyền thông"
     }, {
         "value": "Hi, I'm Steve O'Connell, a reporter for Planet GG.\nWe've heard a rumour that your company is developing a game for mature audiences.\nWould you be willing to give an interview about this?",
-        "translation": "Hola, soy Steve O'Connell, reportero de Planet GG.\nNos ha llegado el rumor de que tu compañía está desarrollando un juego para público adulto.\n¿Estarías dispuesto a concedernos una entrevista al respecto?"
+        "translation": "Chào bạn, tôi là Steve O'Connell, phóng viên của Planet GG.\nChúng tôi nghe đồn rằng công ty của bạn đang phát triển một trò chơi cho đối tượng người lớn.\nBạn có sẵn lòng cho một cuộc phỏng vấn về vấn đề này không?"
     }, {
         "value": "Give interview",
         "comment": "decision action button",
-        "translation": "Dar entrevista"
+        "translation": "Trả lời phỏng vấn"
     }, {
         "value": "No comment",
         "comment": "decision action button",
-        "translation": "No hacer comentarios"
+        "translation": "Không bình luận"
     }, {
         "value": "Many industry experts say that sooner or later games with mature themes will become more common. We are curious to see how the market will react to these games.",
-        "translation": "Muchos expertos dicen que, tarde o temprano, los juegos con contenido adulto serán habituales. Tenemos curiosidad por comprobar cómo reaccionará el mercado ante ellos."
+        "translation": "Nhiều chuyên gia trong ngành cho rằng sớm hay muộn thì các trò chơi có chủ đề người lớn cũng sẽ trở nên phổ biến hơn. Chúng tôi rất tò mò muốn biết thị trường sẽ phản ứng thế nào với những trò chơi này."
     }, {
         "value": "Industry News",
         "comment": "heading",
-        "translation": "Noticias del sector"
+        "translation": "Tin tức Ngành"
     }, {
         "value": "Planet GG has recently published an interview with {0}. According to the interview the company is working on its first game targeted at mature players. {1}, owner and CEO of {0} said, 'We think that players are looking for more mature content in games and we are willing to take a risk to give it to them.'{n}",
         "comment": "{0} company name, {1} staff name",
-        "translation": "Planet GG acaba de publicar una entrevista sobre {0}. De acuerdo con la entrevista, la compañía esta trabajando en su primer juego enfocado a jugadores adultos. {1}, dueño y director de {0} comenta: \"Pensamos que los jugadores buscan más contenido maduro en los juegos y vamos a arriesgarnos a dárselo.\"{n}"
+        "translation": "Planet GG gần đây đã đăng một bài phỏng vấn với {0}. Theo bài phỏng vấn, công ty đang phát triển trò chơi đầu tiên nhắm đến đối tượng người chơi trưởng thành. {1}, chủ sở hữu và CEO của {0} cho biết, 'Chúng tôi nghĩ rằng người chơi đang tìm kiếm nhiều nội dung người lớn hơn trong game và chúng tôi sẵn sàng chấp nhận rủi ro để mang đến điều đó cho họ.'{n}"
     }, {
         "value": "Great!\n\n\n ... Thank you for your time.{n}We will publish the interview next week.",
-        "translation": "¡Genial!\n\n\nGracias por tu tiempo.{n}Publicaremos la entrevista la semana que viene."
+        "translation": "Tuyệt vời!\n\n\n ... Cảm ơn bạn đã dành thời gian.{n}Chúng tôi sẽ đăng bài phỏng vấn vào tuần tới."
     }, {
         "value": "There have been rumours circulating in the industry that {0} might be working on a game for mature audiences.",
         "comment": "{0} company name",
-        "translation": "Circulan rumores en la industria de que {0} está trabajando en un juego para un público más adulto."
+        "translation": "Có tin đồn lan truyền trong ngành rằng {0} có thể đang phát triển một trò chơi cho đối tượng người lớn."
     }, {
         "value": "Okay. Thank you for your time.",
-        "translation": "Esta bien. Gracias por tu tiempo."
+        "translation": "Được rồi. Cảm ơn bạn đã dành thời gian."
     }, {
         "value": "Skip Tutorials",
         "comment": "heading",
-        "translation": "Omitir tutoriales"
+        "translation": "Bỏ qua Hướng dẫn"
     }, {
         "value": "Hello there! It seems that you have already played before. You can get right into development and skip the tutorial messages. Note that you can always review tutorial messages (even the ones you have skipped) in the Help menu while you play a game.",
-        "translation": "¡Saludos! Parece que ya has jugado antes. Puedes ir directamente al trabajo y omitir los mensajes del tutorial. Siempre puedes echar un vistazo a los mensajes del tutorial (incluso los que hayas omitido) en el menú Ayuda mientras juegas."
+        "translation": "Chào bạn! Có vẻ như bạn đã chơi trước đây. Bạn có thể bắt tay ngay vào phát triển và bỏ qua các thông báo hướng dẫn. Lưu ý rằng bạn luôn có thể xem lại các thông báo hướng dẫn (kể cả những thông báo bạn đã bỏ qua) trong menu Trợ giúp khi bạn chơi game."
     }, {
         "value": "Skip tutorial!",
         "comment": "decision action button",
-        "translation": "¡Omitir tutorial!"
+        "translation": "Bỏ qua hướng dẫn!"
     }, {
         "value": "Don't skip",
         "comment": "decision action button",
-        "translation": "No omitir"
+        "translation": "Không bỏ qua"
     }, {
         "value": "You have amassed over {0} in cash!\nUsually I would suggest that you should grow your company by moving into a larger office but unfortunately there don't seem to be any larger offices available in the lite version.{n}You can still continue your game until year 4 to see how much cash you will end up with and how many fans you will gain.",
         "comment": "{0} cash amount",
-        "translation": "¡Has acumulado un capital de {0}!\nSugeriría que te mudaras a una oficina más grande para que tu compañía crezca, pero por desgracia las oficinas más grandes no están disponibles en la versión lite.{n}De todas maneras, puedes continuar hasta el año 4 para averiguar cuánto dinero y fans conseguirás."
+        "translation": "Bạn đã tích lũy được hơn {0} tiền mặt!\nThông thường tôi sẽ đề nghị bạn phát triển công ty bằng cách chuyển đến một văn phòng lớn hơn nhưng không may là dường như không có văn phòng lớn nào trong phiên bản lite.{n}Bạn vẫn có thể tiếp tục trò chơi của mình cho đến năm thứ 4 để xem bạn sẽ kiếm được bao nhiêu tiền mặt và bao nhiêu người hâm mộ."
     }, {
         "value": "Congratulations! You have made quite a name for yourself and have saved up a lot of capital. If you want to grow the company further then moving into a new office is the next step. I've found the perfect office, situated in a technology park. Would you like to move your company to the next level?",
-        "translation": "¡Felicidades! Te has labrado cierta reputación y has ahorrado bastante capital. Si quieres que la compañía siga creciendo, el siguiente paso ideal es trasladarte a otra oficina. He encontrado una perfecta en un parque tecnológico. ¿Te gustaría pasar al siguiente nivel?"
+        "translation": "Chúc mừng! Bạn đã tạo dựng được tên tuổi cho mình và tiết kiệm được rất nhiều vốn. Nếu bạn muốn phát triển công ty hơn nữa thì việc chuyển đến một văn phòng mới là bước tiếp theo. Tôi đã tìm thấy một văn phòng hoàn hảo, nằm trong một khu công nghệ cao. Bạn có muốn đưa công ty của mình lên một tầm cao mới không?"
     }, {
         "value": "New Office?",
         "comment": "heading",
-        "translation": "¿Nueva oficina?"
+        "translation": "Văn phòng mới?"
     }, {
         "value": "Move (pay {0})",
         "comment": "decision action button; move as in move to new office",
-        "translation": "Mudarse (pagar {0})"
+        "translation": "Chuyển (trả {0})"
     }, {
         "value": "Not yet",
         "comment": "decision action button",
-        "translation": "Aún no"
+        "translation": "Chưa vội"
     }, {
         "value": "New Office",
-        "translation": "Nueva oficina"
+        "translation": "Văn phòng mới"
     }, {
         "value": "Invest (pay {0})",
         "comment": "decision action button",
-        "translation": "Invertir (pagar {0})"
+        "translation": "Đầu tư (trả {0})"
     }, {
         "value": "New equipment",
-        "translation": "Nuevo equipo"
+        "translation": "Thiết bị mới"
     }, {
         "value": "Boss, {0} has grown well under your management. I think it is time to move the company out of this technology park and into a building worthy of our success.{n}I've seen the perfect building for our new headquarters.\nIt's not cheap but will allow us to grow even further. The new office also has space for additional expansions.\nDo you want to move?",
         "comment": "{0} company name",
-        "translation": "Jefe, {0} ha crecido mucho bajo su administración. Creo que es hora de que la compañía abandone el parque tecnológico y se traslade a una ubicación digna de nuestra reputación, y he encontrado el edificio perfecto. \nNo es nada barato, pero nos permitirá crecer aún más. Además, las nuevas instalaciones nos brindarán el espacio necesario para futuras expansiones.\n¿Quiere mudarse?"
+        "translation": "Sếp ơi, {0} đã phát triển rất tốt dưới sự quản lý của sếp. Tôi nghĩ đã đến lúc chuyển công ty ra khỏi khu công nghệ này và đến một tòa nhà xứng đáng với thành công của chúng ta.{n}Tôi đã thấy một tòa nhà hoàn hảo cho trụ sở mới của chúng ta.\nNó không rẻ nhưng sẽ cho phép chúng ta phát triển hơn nữa. Văn phòng mới cũng có không gian để mở rộng thêm.\nSếp có muốn chuyển không?"
     }, {
         "value": "New office",
-        "translation": "Nueva oficina"
+        "translation": "Văn phòng mới"
     }, {
         "value": "Game Over",
         "comment": "heading",
-        "translation": "Fin del juego"
+        "translation": "Kết thúc Game"
     }, {
         "value": "This is the end of your journey.\n\nYou can either load a saved game, restart this level or start a new game.",
-        "translation": "Este es El final de tu jornada.\n\nPuedes cargar una partida guardada, reiniciar este nivel o comenzar una nueva partida."
+        "translation": "Đây là điểm dừng chân cuối cùng của bạn.\n\nBạn có thể tải một game đã lưu, khởi động lại màn này hoặc bắt đầu một game mới."
     }, {
         "value": "Restart level",
         "comment": "decision action button",
-        "translation": "Reiniciar nivel"
+        "translation": "Khởi động lại màn"
     }, {
         "value": "Start over",
         "comment": "decision action button",
-        "translation": "Volver a empezar"
+        "translation": "Bắt đầu lại"
     }, {
         "value": "We can open our own hardware lab now.",
-        "translation": "Ahora podemos abrir nuestro propio laboratorio de hardware."
+        "translation": "Chúng ta có thể mở phòng thí nghiệm phần cứng riêng ngay bây giờ."
     }, {
         "value": "Let's do it! (pay {0})",
         "comment": "decision action button",
-        "translation": "¡Hagámoslo!(pagar {0})"
+        "translation": "Làm thôi! (trả {0})"
     }, {
         "value": "Hardware lab",
-        "translation": "Laboratorio de Hardware"
+        "translation": "Phòng thí nghiệm Phần cứng"
     }, {
         "value": "Our hardware lab is ready.",
-        "translation": "Nuestro laboratorio de hardware está listo."
+        "translation": "Phòng thí nghiệm phần cứng của chúng ta đã sẵn sàng."
     }, {
         "value": "We can open our own research and development lab now.",
-        "translation": "Podemos abrir nuestro propio laboratorio de I+D."
+        "translation": "Chúng ta có thể mở phòng thí nghiệm nghiên cứu và phát triển (R&D) riêng ngay bây giờ."
     }, {
         "value": "R&D lab",
-        "translation": "Laboratorio de I+D"
+        "translation": "Phòng thí nghiệm R&D"
     }, {
         "value": "Our R&D  lab is ready.",
-        "translation": "Nuestro laboratorio de I+D ya está listo."
+        "translation": "Phòng thí nghiệm R&D của chúng ta đã sẵn sàng."
     }, {
         "value": "Fire employee?",
         "comment": "heading",
-        "translation": "¿Despedir empleado?"
+        "translation": "Sa thải nhân viên?"
     }, {
         "value": "Are you sure you want to fire {0}?",
         "comment": "{0} staff name",
-        "translation": "¿Estás seguro de que quieres despedir a {0}?"
+        "translation": "Bạn có chắc chắn muốn sa thải {0} không?"
     }, {
         "value": "Yes",
-        "translation": "Sí"
+        "translation": "Có"
     }, {
         "value": "No",
-        "translation": "No"
+        "translation": "Không"
     }, {
         "value": "Hi Boss! I have a knack for security and I think we could really do with some security upgrades in our office.\nI have done some research and I think with an investment of {0} we would be a lot safer than we are now.\nWhat do you say?",
         "comment": "{0} amount",
-        "translation": "¡hola jefe! Tengo un talento para la seguridad y pienso que podríamos hacer unas mejoras de seguridad en nuestra oficina.\nHe hecho un poco de investigación y creo que con una inversión de {0} podríamos estar más seguros de lo que estamos ahora\n¿Qué dices?"
+        "translation": "Chào Sếp! Tôi có chút năng khiếu về bảo mật và tôi nghĩ chúng ta thực sự cần nâng cấp một số hạng mục an ninh trong văn phòng của mình.\nTôi đã tìm hiểu và nghĩ rằng với khoản đầu tư {0}, chúng ta sẽ an toàn hơn rất nhiều so với hiện tại.\nSếp thấy sao?"
     }, {
         "value": "Yes (invest {0})",
         "comment": "decision action button",
-        "translation": "Sí (invertir {0})"
+        "translation": "Có (đầu tư {0})"
     }, {
         "value": "Thanks Boss!\nI will get right to it.",
-        "translation": "¡Gracias Jefe!\nYa mismo me pongo a trabajar."
+        "translation": "Cảm ơn Sếp!\nTôi sẽ bắt tay vào việc ngay."
     }, {
         "value": "Okay, sorry that I bothered you.",
-        "translation": "Vale, siento haberte molestado."
+        "translation": "Được rồi, xin lỗi đã làm phiền Sếp."
     }, {
         "value": "Investment",
         "comment": "heading",
-        "translation": "Inversión"
+        "translation": "Đầu tư"
     }, {
         "value": "Dear esteemed sir/madame.\nI'm financial advisor to CEO at WOMOBA OIL LIMITED in Nigeria. I'm writing because I know of your high repute and trustworthiness. Our CEO has authorzied me to invest {0} in {1}.{n}We have deposited the amount at a safe bank and will transfer this money to you but the bank requires confirmation from you. If you wish to receive the funds you must transfer a one-time verification payment of {2}. I trust in you.",
         "comment": "Note: this is a scam msg in game. immitate scammers language such as odd choice of words,  typos etc. {0} investAmount, {1} company name, {2} payment amount",
-        "translation": "Estimado señor/a,\nSoy el consejero del director financiero de WOMOBA OIL LIMITED en Nigeria. Le escribo porque conozco su reputación y fiabilidad. Nuestro director financiero me ha autorizado a invertir {0} en {1}.{n} Hemos depositado dicha cantidad en un banco seguro, pero el banco requiere su confirmación para que se lo podamos transferir. Si desea recibir estos fondos, debe hacer un único pago de verificación de {2}. Confío en usted."
+        "translation": "Kính gửi quý ông/bà.\nTôi là cố vấn tài chính cho CEO tại CÔNG TY TNHH DẦU KHÍ WOMOBA ở Nigeria. Tôi viết thư này vì biết đến uy tín và sự đáng tin cậy của ngài. CEO của chúng tôi đã ủy quyền cho tôi đầu tư {0} vào {1}.{n}Chúng tôi đã gửi số tiền này vào một ngân hàng an toàn và sẽ chuyển tiền cho ngài nhưng ngân hàng yêu cầu xác nhận từ ngài. Nếu ngài muốn nhận tiền, ngài phải chuyển một khoản thanh toán xác minh một lần là {2}. Tôi tin tưởng ở ngài."
     }, {
         "value": "Pay ({0})",
         "comment": "decision action button",
-        "translation": "Pagar ({0})"
+        "translation": "Thanh toán ({0})"
     }, {
         "value": "Decline",
         "comment": "decision action button",
-        "translation": "Rechazar"
+        "translation": "Từ chối"
     }, {
         "value": "Gullibility Tax",
         "comment": "name of expense when player falls into the scam trap.",
-        "translation": "Impuesto de ingenuidad"
+        "translation": "Thuế Cả Tin"
     }, {
         "value": "News",
         "comment": "heading",
-        "translation": "Noticias"
+        "translation": "Tin tức"
     }, {
         "value": "It appears that recently a few companies have fallen victim to Nigerian scammers.\nThe scammers often claimed to invest large sums of money into companies but required a sizable up-front payment to make the deal.{n}Those who were unwise enough to pay will not see their money again.\nPolice are investigating but seem helpless to stop these international scammers.",
-        "translation": "Parece que varias empresas han sido víctimas de unos estafadores nigerianos.\nLos estafadores ofrecían grandes inversiones de dinero a las compañías, pero exigían un pago anticipado para poder cerrar el trato.\n{n} Los que fueron tan insensatos como para pagar no han vuelto a ver su dinero.\nLa policía está investigando, pero parece incapaz de detener a estos estafadores internacionales."
+        "translation": "Có vẻ như gần đây một vài công ty đã trở thành nạn nhân của những kẻ lừa đảo Nigeria.\nNhững kẻ lừa đảo thường tuyên bố đầu tư một khoản tiền lớn vào các công ty nhưng yêu cầu một khoản thanh toán trả trước đáng kể để thực hiện thỏa thuận.{n}Những người thiếu khôn ngoan đã trả tiền sẽ không bao giờ thấy lại số tiền đó nữa.\nCảnh sát đang điều tra nhưng dường như bất lực trong việc ngăn chặn những kẻ lừa đảo quốc tế này."
     }, {
         "value": "OK",
         "translation": "OK"
     }, {
         "value": "The recent pleas for a patch for {0} seem to have been unanswered by {1}.\nMany fans have voiced their disappointment.",
         "comment": "{0} game title, {1} company name",
-        "translation": "Los ruegos de los jugadores por un parche para {0} han sido ignorados por {1}.\nMuchos fans están descontentos por esto."
+        "translation": "Những lời kêu gọi gần đây về một bản vá cho {0} dường như không được {1} đáp lại.\nNhiều người hâm mộ đã bày tỏ sự thất vọng của họ."
     }, {
         "value": "Bugs!",
         "comment": "heading",
-        "translation": "¡Fallos!"
+        "translation": "Lỗi!"
     }, {
         "value": "Oh no! It seems that {0} had quite a few undiscovered bugs when we released it.\nSome of our customers are having a bad time with this and they demand that we patch the game.{n}We could either spend the money and time to patch it or ignore their pleas. If you want to patch the game then {1} on a character and use the action menu to develop a patch but make sure that you don't wait for too long.",
         "comment": "{0} game title, {1} click/touch verb",
-        "translation": "¡Oh, no! Parece que {0} tenía unos cuantos errores sin descubrir cuando lo lanzamos.\nAlgunos de nuestros consumidores están pasando un mal momento con esto y demandan que parchemos el juego.{n} podríamos gastar el dinero y el tiempo para parcharlo o ignorar sus súplicas. Si quiere parchar el juego entonces {1} sobre un personaje y usa el menú de acción para desarrollar un parche pero asegúrate de no esperar por mucho tiempo."
+        "translation": "Ôi không! Có vẻ như {0} có khá nhiều lỗi chưa được phát hiện khi chúng ta phát hành nó.\nMột số khách hàng của chúng ta đang gặp rắc rối với điều này và họ yêu cầu chúng ta vá lỗi trò chơi.{n}Chúng ta có thể chi tiền và thời gian để vá lỗi hoặc phớt lờ lời kêu gọi của họ. Nếu bạn muốn vá lỗi trò chơi, hãy {1} vào một nhân vật và sử dụng menu hành động để phát triển một bản vá nhưng hãy đảm bảo rằng bạn không đợi quá lâu."
     }, {
         "value": "Administrative Expenses",
         "comment": "label of expense for illegal activity",
-        "translation": "Gastos Administrativos"
+        "translation": "Chi phí Hành chính"
     }, {
         "value": "{n}This is a very special offer. Our agents have recently managed to 'borrow' some research information which might be of interest to you.\nIf you are interested then transfer {0} to the enclosed uplink location.\nWe'll contact you, Agent Blowfish",
         "comment": "use writing style of secret agent msg (in game it was decrypted). keep words 'blowfish' and 'uplink' in the message.",
-        "translation": "{n}Esta es una oferta muy especial. Hace poco, nuestros agentes \"pidieron prestada\" cierta información que te puede ser útil.\nEn caso de estar interesado, debes transferir {0} a la ubicación del uplink.\nNos pondremos en contacto contigo, Agente Blowfish"
+        "translation": "{n}Đây là một đề nghị rất đặc biệt. Các đặc vụ của chúng tôi gần đây đã 'mượn' được một số thông tin nghiên cứu có thể bạn sẽ quan tâm.\nNếu bạn hứng thú, hãy chuyển {0} đến địa điểm uplink đính kèm.\nChúng tôi sẽ liên lạc với bạn, Đặc vụ Blowfish"
     }, {
         "value": "Proposition",
         "comment": "heading",
-        "translation": "Propuesta"
+        "translation": "Đề xuất"
     }, {
         "value": "Decrypt Message",
         "comment": "decision action button",
-        "translation": "Desencriptar mensaje"
+        "translation": "Giải mã Tin nhắn"
     }, {
         "value": "Transfer ({0})",
         "comment": "decision action button; as in Transfer amount of money",
-        "translation": "Transferir ({0})"
+        "translation": "Chuyển khoản ({0})"
     }, {
         "value": "Thank you for your business.",
-        "translation": "Encantado de hacer negocios."
+        "translation": "Cảm ơn sự hợp tác của bạn."
     }, {
         "value": "You have successfully researched {0}.",
         "comment": "{0} topic name",
-        "translation": "Has investigado exitosamente {0}."
+        "translation": "Bạn đã nghiên cứu thành công {0}."
     }, {
         "value": "Transaction complete",
         "comment": "heading",
-        "translation": "Transacción completa"
+        "translation": "Giao dịch hoàn tất"
     }, {
         "value": "This is a very special offer. Our agents have recently managed to gain access to some critical systems of one of your competitors.\nIf you want to play war games then transfer {0} to the enclosed location and we'll initiate sabotage.,\nAgent Blowfish",
         "comment": "use writing style of secret agent msg (in game it was decrypted). keep words 'war games' and 'blowfish' in the message.",
-        "translation": "Esta es una oferta especial. Nuestros agentes han descubierto como entrar en los sistemas centrales de uno de tus competidores. Si quieres entrar en esta guerra, transfiere {0} a la dirección enlazada y comenzaremos el sabotaje.\nAgente Blowfish"
+        "translation": "Đây là một đề nghị rất đặc biệt. Các đặc vụ của chúng tôi gần đây đã truy cập được vào một số hệ thống quan trọng của một trong những đối thủ cạnh tranh của bạn.\nNếu bạn muốn chơi trò chiến tranh thì hãy chuyển {0} đến địa điểm đính kèm và chúng tôi sẽ tiến hành phá hoại.,\nĐặc vụ Blowfish"
     }, {
         "value": "Sabotage ({0})",
         "comment": "decision action button",
-        "translation": "Sabotear ({0})"
+        "translation": "Phá hoại ({0})"
     }, {
         "value": "In a statement the game development company {0} has said that they have been the victim of industrial sabotage. Unfortunately development on their current project has been severely affected.\nPolice are investigating.",
         "comment": "{0} is random company name",
-        "translation": "En un comunicado oficial, la desarrolladora {0} ha anunciado que han sido víctimas de sabotaje industrial. Por desgracia, el desarrollo de su actual proyecto se ha visto afectado severamente.\nLa policía está investigando."
+        "translation": "Trong một tuyên bố, công ty phát triển game {0} cho biết họ đã là nạn nhân của hành vi phá hoại công nghiệp. Không may là quá trình phát triển dự án hiện tại của họ đã bị ảnh hưởng nghiêm trọng.\nCảnh sát đang điều tra."
     }, {
         "value": "Hi Boss! A friend of mine is greatly involved in an organization which aims to get more women into technology. They are looking for a sponsor and I thought that this would be a perfect opportunity for us.\nWould you like to help out?",
-        "translation": "¡Hola Jefe! Un amigo mío forma parte de una organización que quiere introducir a más mujeres en el mundo de la tecnología. Buscan a un colaborador y creo que esta sería una buena oportunidad para nosotros.\n¿Deberíamos ayudarlos?"
+        "translation": "Chào Sếp! Một người bạn của tôi đang tham gia rất tích cực vào một tổ chức nhằm mục đích thu hút nhiều phụ nữ hơn vào lĩnh vực công nghệ. Họ đang tìm kiếm nhà tài trợ và tôi nghĩ đây sẽ là một cơ hội hoàn hảo cho chúng ta.\nSếp có muốn giúp đỡ không?"
     }, {
         "value": "Sponsor (pay {0})",
         "comment": "decision action button",
-        "translation": "Patrocinar (pagar {0})"
+        "translation": "Tài trợ (trả {0})"
     }, {
         "value": "Sponsorship",
         "comment": "heading",
-        "translation": "Patrocinio"
+        "translation": "Tài trợ"
     }, {
         "value": "We have got word that {0} has recently sponsored a highly praised move to get more women into technology roles.\n{1}, the CEO at {0} said, 'We would love to see more women in the game industry.'",
         "comment": "{0} company name, {1} staff name",
-        "translation": "Nos hemos enterado de que {0} ha patrocinado hace poco una muy buena campaña para hacer que más mujeres se acerquen al sector de la tecnología.\n{1}, CEO de {0} declaró: \"Nos encantaría ver más mujeres en la industria del videojuego.\""
+        "translation": "Chúng tôi được biết {0} gần đây đã tài trợ cho một động thái rất được hoan nghênh nhằm thu hút thêm phụ nữ vào các vai trò công nghệ.\n{1}, CEO của {0} cho biết, 'Chúng tôi rất mong muốn thấy nhiều phụ nữ hơn trong ngành công nghiệp game.'"
     }, {
         "value": "Boss, it seems that quite a few players use illegal copies of {0}.\nI've managed to identify some of them.\nWe could either sue them to defend our copyright or send them warnings to ask them to stop.\nWhat do you want to do?",
         "comment": "{0} game title",
-        "translation": "Jefe, parece que algunos jugadores usan copias ilegales de {0}.\nHe conseguido identificar a algunos de ellos.\nPodríamos demandarlos para defender el copyright o enviarles advertencias para que se detengan.\n¿Qué quieres hacer?"
+        "translation": "Sếp ơi, có vẻ như khá nhiều người chơi đang sử dụng các bản sao bất hợp pháp của {0}.\nTôi đã tìm ra được một vài người trong số họ.\nChúng ta có thể kiện họ để bảo vệ bản quyền của mình hoặc gửi cảnh báo yêu cầu họ dừng lại.\nSếp muốn làm gì?"
     }, {
         "value": "Sue them",
         "comment": "decision action button",
-        "translation": "Demandarlos"
+        "translation": "Kiện họ"
     }, {
         "value": "Warn them",
         "comment": "decision action button",
-        "translation": "Advertirles"
+        "translation": "Cảnh cáo họ"
     }, {
         "value": "Piracy is an increasingly big problem in the industry. Some companies invest a lot of money and effort to fight piracy while others argue that it's better to take a more relaxed approach and invest in better games instead.",
-        "translation": "La piratería es un problema creciente en el sector de los videojuegos. Algunas compañías invierten dinero y esfuerzo en impedirlo, mientras que otras abordan el problema de una forma más relajada y prefieren invertir en mejores juegos."
+        "translation": "Vi phạm bản quyền là một vấn đề ngày càng lớn trong ngành. Một số công ty đầu tư rất nhiều tiền bạc và công sức để chống lại vi phạm bản quyền trong khi những công ty khác cho rằng tốt hơn là nên có một cách tiếp cận thoải mái hơn và thay vào đó đầu tư vào các trò chơi tốt hơn."
     }, {
         "value": "We have lost {0} fans but won {1} in legal claims.",
         "comment": "{0} nr of fans, {1} cash amount",
-        "translation": "Hemos perdido {0} fans, pero hemos ganado {1} por demandas legales."
+        "translation": "Chúng ta đã mất {0} người hâm mộ nhưng thắng kiện được {1}."
     }, {
         "value": "In what some have called a drastic move, {0} has recently taken legal action against illegal players of their game {1}.",
         "comment": "{0} company name, {1} game name",
-        "translation": "En lo que ha sido tildado de acción drástica, {0} ha tomado acciones legales contra usuarios ilegales del juego {1}."
+        "translation": "Trong một động thái mà một số người gọi là quyết liệt, {0} gần đây đã khởi kiện những người chơi bất hợp pháp trò chơi {1} của họ."
     }, {
         "value": "legal claims",
         "comment": "expense label",
-        "translation": "demandas legales"
+        "translation": "chi phí pháp lý"
     }, {
         "value": "We have gained {0} fans!",
-        "translation": "¡Hemos conseguido {0} fans!"
+        "translation": "Chúng ta đã có thêm {0} người hâm mộ!"
     }, {
         "value": "{0} has recently sent warnings to several players using illegal copies of their game {1}.",
         "comment": "{0} company name, {1} game title",
-        "translation": "Hace poco, {0} envió advertencias a muchos usuarios con copias pirata del juego {1}."
+        "translation": "{0} gần đây đã gửi cảnh báo đến một số người chơi sử dụng các bản sao bất hợp pháp của trò chơi {1} của họ."
     }, {
         "value": "Boss, I've discovered that some really dedicated fans of {0} have created a fan game using a lot of the material from our game.\nThey don't make any money with it and just seem to do it for fellow fans. Our legal advisors strongly suggest that we shouldn't allow this to go on. What do you want to do?",
         "comment": "{0} game title",
-        "translation": "Jefe, me he enterado de que algunos de los fans más dedicados a {0} han creado un juego propio recurriendo a mucho material de nuestro juego. No ganan dinero con ello y lo distribuyen sólo entre otros fans. Nuestros asesores legales recomiendan seriamente que deberíamos detenerlos. ¿Qué sugiere?"
+        "translation": "Sếp ơi, tôi phát hiện ra rằng một số người hâm mộ thực sự tận tâm của {0} đã tạo ra một trò chơi do người hâm mộ làm, sử dụng rất nhiều tài liệu từ trò chơi của chúng ta.\nHọ không kiếm tiền từ nó và dường như chỉ làm vì những người hâm mộ khác. Các cố vấn pháp lý của chúng ta kịch liệt đề nghị rằng chúng ta không nên để chuyện này tiếp diễn. Sếp muốn làm gì?"
     }, {
         "value": "Stop them",
         "comment": "decision action button",
-        "translation": "Deténganlos"
+        "translation": "Ngăn chặn họ"
     }, {
         "value": "Let them be",
         "comment": "decision action button",
-        "translation": "Déjenlos en paz"
+        "translation": "Mặc kệ họ"
     }, {
         "value": "Project disbanded",
         "comment": "heading",
-        "translation": "Proyecto detenido"
+        "translation": "Dự án giải thể"
     }, {
         "value": "Thank you",
         "comment": "heading",
-        "translation": "Gracias"
+        "translation": "Cảm ơn"
     }, {
         "value": "Hi, I'm Denise Ried the main developer of the {0} fan game. I've recently been informed that your legal department has advised you to stop us and I just wanted to say that I'm very grateful that you didn't.{n}{1} is the best company in the world and I'm glad I can be part of the fan community.",
         "comment": "{0} game name, {1} company name",
-        "translation": "Hola, soy Denise Ried, la principal desarrolladora del juego homenaje de {0}. Me han informado recientemente que tu departamento legal te ha aconsejado que nos pares los pies, y he de decir que estoy muy contenta de que no lo hayas hecho.{n}{1} es la mejor compañía del mundo y me alegro mucho de formar parte de su comunidad de fans."
+        "translation": "Chào bạn, tôi là Denise Ried, nhà phát triển chính của trò chơi {0} do người hâm mộ làm. Gần đây tôi được biết bộ phận pháp lý của bạn đã khuyên bạn ngăn chặn chúng tôi và tôi chỉ muốn nói rằng tôi rất biết ơn vì bạn đã không làm vậy.{n}{1} là công ty tuyệt vời nhất thế giới và tôi rất vui khi được là một phần của cộng đồng người hâm mộ."
     }, {
         "value": "Fans",
         "comment": "heading",
-        "translation": "Fans"
+        "translation": "Người hâm mộ"
     }, {
         "value": "We have lost {0} fans!",
-        "translation": "¡Hemos perdido {0} fans!"
+        "translation": "Chúng ta đã mất {0} người hâm mộ!"
     }, {
         "value": "Boss, we would like to stage an internal coding contest! I think we could all learn a lot by doing this. As an incentive we would need a prize for the winner ({0}). We agreed that the prize will go to charity. Should we do it?",
-        "translation": "Jefe, nos gustaría organizar un concurso interno de programación. Creo que nos serviría para aprender mucho. Como incentivo, necesitaríamos un premio para el ganador ({0}). Hemos acordado que el premio irá a obras benéficas. ¿Lo organizamos?"
+        "translation": "Sếp ơi, chúng tôi muốn tổ chức một cuộc thi lập trình nội bộ! Tôi nghĩ tất cả chúng ta có thể học hỏi được rất nhiều từ việc này. Để khích lệ, chúng ta sẽ cần một giải thưởng cho người chiến thắng ({0}). Chúng tôi đã đồng ý rằng giải thưởng sẽ được quyên góp cho từ thiện. Chúng ta có nên làm không?"
     }, {
         "value": "Great! We will start right away!",
-        "translation": "¡Genial! ¡Empezaremos ahora mismo!"
+        "translation": "Tuyệt vời! Chúng ta sẽ bắt đầu ngay!"
     }, {
         "value": "Okay, maybe another time...",
-        "translation": "Vale, puede que la próxima vez..."
+        "translation": "Được rồi, có lẽ để lần khác..."
     }, {
         "value": "Coding Contest",
         "comment": "heading",
-        "translation": "Concurso de programación"
+        "translation": "Cuộc thi Lập trình"
     }, {
         "value": "Thanks for agreeing to the coding contest. It was a big success! {0} won the contest and is lucky to distribute the prize of {1} to charity. We have also learned a lot in the process.",
-        "translation": "Gracias por permitir el concurso de programación. ¡Ha sido todo un éxito! {0} ha ganado el premio de {1} y lo donará a obras de beneficencia. Además, hemos aprendido un montón en el proceso."
+        "translation": "Cảm ơn Sếp đã đồng ý cho cuộc thi lập trình. Đó là một thành công lớn! {0} đã thắng cuộc thi và may mắn được phân phát giải thưởng {1} cho từ thiện. Chúng ta cũng đã học hỏi được rất nhiều trong quá trình này."
     }, {
         "value": "Boss, someone seems to have stolen our credit card information and used it to buy a lot of things in the past three months. Unfortunately we have lost {0}!",
-        "translation": "Jefe, parece que alguien ha robado los datos de nuestra tarjeta de crédito y la ha utilizado para comprar un montón de cosas durante estos últimos tres meses. ¡Hemos perdido {0}!"
+        "translation": "Sếp ơi, có vẻ như ai đó đã đánh cắp thông tin thẻ tín dụng của chúng ta và dùng nó để mua rất nhiều thứ trong ba tháng qua. Không may là chúng ta đã mất {0}!"
     }, {
         "value": "EPA",
         "comment": "heading for 'Environmental Protection Agency' story",
-        "translation": "APMA"
+        "translation": "Cơ quan Bảo vệ Môi trường"
     }, {
         "value": "I am an employee of the Environmental Protection Agency and have an offer for you. Your company has a high electrical footprint right now. If you would install solar panels you could decrease your footprint and save money in the long run. We would sponsor 50% of the costs which brings your investment to {0}!\nWould you like to install it?",
         "comment": "headings for this story need to use acronym consistent with the Environmental Protection Agency translation. look for 'heading for 'Environmental Protection Agency' story'",
-        "translation": "Soy un empleado de la Agencia de Protección Medio Ambiental y tengo una oferta para ti. Tu compañía tiene un impacto eléctrico muy elevado ahora mismo. Si instalas unos paneles solares, podrías reducir este impacto y ahorrar dinero a largo plazo. Podríamos patrocinar el 50% de los costos, lo que reduciría tu inversión total a {0}.\n¿Quieres instalarlos?"
+        "translation": "Tôi là một nhân viên của Cơ quan Bảo vệ Môi trường và tôi có một đề nghị cho bạn. Công ty của bạn hiện đang có lượng tiêu thụ điện rất cao. Nếu bạn lắp đặt các tấm pin mặt trời, bạn có thể giảm lượng tiêu thụ điện và tiết kiệm tiền về lâu dài. Chúng tôi sẽ tài trợ 50% chi phí, đưa khoản đầu tư của bạn xuống còn {0}!\nBạn có muốn lắp đặt không?"
     }, {
         "value": "Install (pay {0})",
         "comment": "decision action button",
-        "translation": "Instalar (pagar {0})"
+        "translation": "Lắp đặt (trả {0})"
     }, {
         "value": "Ignore offer",
         "comment": "decision action button",
-        "translation": "Ignorar oferta"
+        "translation": "Bỏ qua đề nghị"
     }, {
         "value": "solar panels",
         "comment": "heading",
-        "translation": "paneles solares"
+        "translation": "tấm pin mặt trời"
     }, {
         "value": "Great, it was a wise decision installing a solar collector!",
-        "translation": "Genial, ¡instalar un colector solar ha sido una gran idea!"
+        "translation": "Tuyệt vời, lắp đặt bộ thu năng lượng mặt trời là một quyết định sáng suốt!"
     }, {
         "value": "{0} has recently installed solar panels in their offices. While the video game and software industries are one of the cleanest industries on earth they do eat up a lot of electricity so installing solar panels can really make an impact.",
         "comment": "{0} company name",
-        "translation": "{0} ha instalado recientemente paneles solares en sus oficinas. Aunque la industria del software y de los videojuegos es una de las más limpias, sí que utilizan gran cantidad de electricidad, así que instalar paneles solares puede tener un buen impacto."
+        "translation": "{0} gần đây đã lắp đặt các tấm pin mặt trời trong văn phòng của họ. Mặc dù ngành công nghiệp trò chơi điện tử và phần mềm là một trong những ngành công nghiệp sạch nhất trên trái đất nhưng chúng tiêu thụ rất nhiều điện, vì vậy việc lắp đặt các tấm pin mặt trời thực sự có thể tạo ra tác động."
     }, {
         "value": "Sorry to hear that you are declining our offer",
-        "translation": "Lamento que hayas rechazado nuestra oferta"
+        "translation": "Rất tiếc khi biết bạn từ chối lời đề nghị của chúng tôi"
     }, {
         "value": "Boss, it's way too hot in our office and the heat is starting to impact on our work. I've researched and found an air conditioner which would be perfect for us. It costs {0}.\nShould we order it?",
-        "translation": "Jefe, hace demasiado calor en nuestra oficina y esta empezando a tener un impacto negativo en nuestro trabajo. He investigado y encontré un aire acondicionado que sería perfecto para nosotros. El precio es de {0}.\n¿Lo pedimos?"
+        "translation": "Sếp ơi, văn phòng mình nóng quá và cái nóng bắt đầu ảnh hưởng đến công việc của chúng ta rồi. Tôi đã tìm hiểu và tìm được một cái máy lạnh hoàn hảo cho chúng ta. Nó có giá {0}.\nChúng ta có nên đặt mua không?"
     }, {
         "value": "Yes (pay {0})",
         "comment": "decision action button",
-        "translation": "Sí (pagar {0})"
+        "translation": "Có (trả {0})"
     }, {
         "value": "air conditioner",
         "comment": "heading",
-        "translation": "aire acondicionado"
+        "translation": "máy điều hòa"
     }, {
         "value": "Boss, the heat is becoming a serious problem. Just yesterday my mouse melted and my keyboard is covered in sweat. Not a good environment to work in. We really need an air conditioner.{n}Unfortunately the previous offer has expired and we would need to pay {0}.\nShould we order it?",
         "comment": "try to make the reason lightweight and fun",
-        "translation": "Jefe, el calor esta convirtiéndose un serio problema. Justo ayer mi ratón se derritió y mi teclado esta cubierto en sudor. No es un buen ambiente en donde trabajar. Realmente necesitamos un aire acondicionado.{n} Desafortunadamente la anterior oferta expiró y necesitaríamos pagar {0}.\n¿ Deberíamos ordenarlo?"
+        "translation": "Sếp ơi, cái nóng đang trở thành một vấn đề nghiêm trọng. Mới hôm qua con chuột của tôi chảy nhựa và bàn phím thì đầy mồ hôi. Đây không phải là một môi trường làm việc tốt. Chúng ta thực sự cần một cái máy lạnh.{n}Không may là ưu đãi trước đó đã hết hạn và chúng ta sẽ phải trả {0}.\nChúng ta có nên đặt mua không?"
     }, {
         "value": "Boss, We've had enough and ordered the air conditioner ourselves. Thanks for nothing.",
-        "translation": "Jefe, nos hemos hartado de esperar y hemos encargado el aparato de aire acondicionado nosotros mismos. Gracias por nada."
+        "translation": "Sếp ơi, chúng tôi chịu hết nổi rồi và đã tự đặt mua máy lạnh. Cảm ơn vì không làm gì cả."
     }, {
         "value": "Dave Johnson here, CEO of Departure Science. Some of our test subjects were recently exposed to some of your games and, surprisingly, they didn't go totally insane. They seemed to quite enjoy the experience in fact. Anyway, I have some products that need advertising and could do with some product placement.{n}My marketing boys tell me that making you this offer is a bad idea but that's exactly why I want it. I'll pay you {0} to place some of our fine red painted exploding barrels in one of your games. What'd ya say?",
         "comment": "see Portal 2 reference hint",
-        "translation": "Aquí Dave Johnson, director financiero de Departure Science. Algunos de nuestros sujetos de prueba han probado vuestros juegos y, sorprendentemente, no han perdido la cabeza del todo. De hecho, parecen haber disfrutado la experiencia. En cualquier caso, tengo algunos productos que necesitan propaganda y hemos pensado en la publicidad por emplazamiento. {n}Los de marketing dicen que hacerte esta oferta es una mala idea, pero es precisamente por eso que te la hago. Te pagaré {0} por colocar algunos de nuestros estupendos barriles explosivos de color rojo en uno de tus juegos. ¿Qué me dices?"
+        "translation": "Dave Johnson đây, CEO của Departure Science. Một số đối tượng thử nghiệm của chúng tôi gần đây đã tiếp xúc với một vài trò chơi của bạn và, thật ngạc nhiên, họ không hoàn toàn phát điên. Thực tế là họ có vẻ khá thích thú với trải nghiệm đó. Dù sao thì, tôi có một số sản phẩm cần quảng cáo và có thể sử dụng một chút quảng cáo sản phẩm.{n}Mấy cậu bé marketing của tôi nói rằng đưa ra lời đề nghị này cho bạn là một ý tưởng tồi nhưng đó chính xác là lý do tại sao tôi muốn nó. Tôi sẽ trả bạn {0} để đặt một vài thùng thuốc nổ sơn đỏ tuyệt đẹp của chúng tôi vào một trong những trò chơi của bạn. Bạn thấy sao?"
     }, {
         "value": "Product Placement",
         "comment": "heading",
-        "translation": "Publicidad por emplazamiento"
+        "translation": "Quảng cáo Sản phẩm"
     }, {
         "value": "Sure!",
         "comment": "decision action button",
-        "translation": "¡Claro!"
+        "translation": "Chắc chắn rồi!"
     }, {
         "value": "Departure Science",
         "comment": "see Portal 2 reference hint",
-        "translation": "Departamento de investigacion"
+        "translation": "Departure Science"
     }, {
         "value": "Excellent! Good to hear you have some spirit in you. One more thing: Don't feel like you have to go and rush those barrels into your next game. I'd rather have you place them in a game where they fit well.\nJohnson out.",
         "comment": "see Portal 2 reference hint",
-        "translation": "¡Excelente! Es bueno escuchar que que hay algo de espíritu en ti. Una cosa mas: No te sientas como si tuvieras que ir e incorporar lo aprendido en tu próximo juego de inmediato. Preferiría que lo hicieras en un juego donde encajara mejor.\nJohnson fuera."
+        "translation": "Tuyệt vời! Rất vui khi biết bạn có tinh thần như vậy. Một điều nữa: Đừng cảm thấy bạn phải vội vàng đưa những thùng thuốc nổ đó vào trò chơi tiếp theo của mình. Tôi muốn bạn đặt chúng vào một trò chơi mà chúng phù hợp hơn.\nJohnson đây."
     }, {
         "value": "Dave Johnson here! Listen! You did well placing our beloved barrels in {0} - my marketing eggheads say profits are increasing which means more science for us. Well done. Here, have this cake.",
         "comment": "see Portal 2 reference hint",
-        "translation": "¡Aquí Dave Johnson! ¡Oye! Hiciste bien colocando mis preciados barriles en {0}. Los cabezas de chorlito de marketing dicen que nuestros beneficios están aumentando, lo que mejorará nuestra investigación. Bien hecho. Ten, te regalamos este pastel."
+        "translation": "Dave Johnson đây! Nghe này! Bạn đã làm rất tốt khi đặt những thùng thuốc nổ yêu quý của chúng tôi vào {0} - mấy tay marketing của tôi nói rằng lợi nhuận đang tăng lên, điều đó có nghĩa là chúng ta có thêm kinh phí cho khoa học. Làm tốt lắm. Đây, mời bạn miếng bánh."
     }, {
         "value": "Dave Johnson here! Listen! Those red exploding barrels I'd asked you to place in your game. Well, seems that folks didn't really enjoy them as much in {0}. Oh well, was worth a try.",
         "comment": "see Portal 2 reference hint",
-        "translation": "¡Aquí Dave Johnson! ¡Oye! Esos barriles explosivos rojos que te pedí poner en tu juego... bueno, parece que a la gente no le ha gustado mucho en {0}. En fin, el intento valió la pena."
+        "translation": "Dave Johnson đây! Nghe này! Mấy cái thùng thuốc nổ đỏ mà tôi nhờ bạn đặt vào game ấy. Chà, có vẻ như mọi người không thực sự thích chúng trong {0} cho lắm. Thôi kệ, dù sao cũng đáng để thử."
     }, {
         "value": "Message",
         "comment": "heading",
-        "translation": "Mensaje"
+        "translation": "Tin nhắn"
     }, {
         "value": "It seems that you have some serious financial difficulties and your company is about to go bankrupt. After careful consideration we have decided to offer you a deal.",
-        "translation": "Parece que te encuentras en graves problemas financieros y tu compañía está a punto de declararse en bancarrota. Tras considerarlo debidamente, hemos decidido ofrecerte un trato."
+        "translation": "Có vẻ như bạn đang gặp một số khó khăn tài chính nghiêm trọng và công ty của bạn sắp phá sản. Sau khi xem xét cẩn thận, chúng tôi đã quyết định đưa ra một thỏa thuận cho bạn."
     }, {
         "value": "We will give you {0} which should move you out of the danger zone but in return you have to commit to pay us {1} in a year's time.",
-        "translation": "Te proporcionaremos {0} para que puedas alejarte de la zona de peligro, pero a cambio debes comprometerte a pagarnos {1} en el plazo de un año."
+        "translation": "Chúng tôi sẽ cho bạn {0} để giúp bạn thoát khỏi vùng nguy hiểm nhưng đổi lại bạn phải cam kết trả cho chúng tôi {1} trong vòng một năm."
     }, {
         "value": "Bank offer",
         "comment": "heading",
-        "translation": "Oferta bancaria"
+        "translation": "Đề nghị từ Ngân hàng"
     }, {
         "value": "Agree (receive {0})",
         "comment": "decision action button",
-        "translation": "Aceptar (recibir {0})"
+        "translation": "Đồng ý (nhận {0})"
     }, {
         "value": "No (go bankrupt)",
         "comment": "decision action button",
-        "translation": "Negarse (bancarrota)"
+        "translation": "Không (phá sản)"
     }, {
         "value": "Bailout",
         "comment": "heading",
-        "translation": "Rescate bancario"
+        "translation": "Gói cứu trợ"
     }, {
         "value": "Bank",
         "comment": "heading",
-        "translation": "Banco"
+        "translation": "Ngân hàng"
     }, {
         "value": "This is a reminder that we require you to pay back the agreed amount of {0} in three months' time.",
-        "translation": "Te recordamos que deberás pagar de vuelta la cantidad acordada de {0} dentro de tres meses."
+        "translation": "Đây là lời nhắc nhở rằng chúng tôi yêu cầu bạn hoàn trả số tiền đã thỏa thuận là {0} trong vòng ba tháng tới."
     }, {
         "value": "The amount of {0} has been deducted from your account.",
-        "translation": "Se ha descontado de tu cuenta bancaria la cantidad de {0}."
+        "translation": "Số tiền {0} đã được khấu trừ khỏi tài khoản của bạn."
     }, {
         "value": "Bailout payback",
         "comment": "heading",
-        "translation": "Cuota de rescate"
+        "translation": "Hoàn trả gói cứu trợ"
     }, {
         "value": "Boss, I think it's time to announce the {0} to the world. Should we go ahead and make a press release?",
         "comment": "{0} custom console name",
-        "translation": "Jefe, creo que es hora de presentar la {0} en sociedad. ¿Deberíamos anunciarlo en los medios?"
+        "translation": "Sếp ơi, tôi nghĩ đã đến lúc công bố {0} cho cả thế giới biết. Chúng ta có nên tiến hành họp báo không?"
     }, {
         "value": "Announce",
         "comment": "decision action button",
-        "translation": "Anunciar"
+        "translation": "Công bố"
     }, {
         "value": "Don't announce",
         "comment": "decision action button",
-        "translation": "No anunciar"
+        "translation": "Không công bố"
     }, {
         "value": "In a surprise announcement {0}, a company known for games such as {1} has revealed that they have been working on their very own game console. The console which is called {2} is said to compete with the high end consoles from companies like Mirconoft and Vonny.{n}We are eager to see how much of an impact this new console will have.",
-        "translation": "En una declaración sorprendente, {0}, una compañía conocida por juegos como {1} ha revelado que se encuentra trabajando en su propia consola, que se llamará {2} y se cree que competirá contra los soportes avanzados de compañías como Mirconoft y Vonny. {n}Estamos ansiosos por ver el impacto de esta nueva consola."
+        "translation": "Trong một thông báo bất ngờ, {0}, một công ty nổi tiếng với các trò chơi như {1} đã tiết lộ rằng họ đang phát triển một máy chơi game của riêng mình. Máy chơi game này có tên là {2} được cho là sẽ cạnh tranh với các máy chơi game cao cấp từ các công ty như Mirconoft và Vonny.{n}Chúng tôi rất nóng lòng muốn xem máy chơi game mới này sẽ có tác động lớn đến mức nào."
     }, {
         "value": " which had only limited commercial success.",
         "comment": "consoleAnnouncementPastSuccessFragment",
-        "translation": " que tuvo apenas un éxito comercial mediocre."
+        "translation": " chỉ đạt được thành công thương mại hạn chế."
     }, {
         "value": "which had moderate commercial success.",
         "comment": "consoleAnnouncementPastSuccessFragment",
-        "translation": "que tuvo un éxito comercial moderado."
+        "translation": "đã đạt được thành công thương mại ở mức vừa phải."
     }, {
         "value": "which had a sizeable following and really made an impact in the market.",
         "comment": "consoleAnnouncementPastSuccessFragment",
-        "translation": "que tuvo una continuidad considerable y causó un verdadero impacto en el mercado."
+        "translation": "đã có một lượng người theo dõi đáng kể và thực sự tạo ra tác động trên thị trường."
     }, {
         "value": "{0} has announced that they are working on a new game console. The console named {1} is planned as a successor to their earlier contender, the {2} ",
         "comment": "{2} is consoleAnnouncementPastSuccessFragment",
-        "translation": "{0} ha anunciado que está trabajando en una nueva consola. La consola se llama {1} y está destinada a suceder a su anterior competidora, la {2} "
+        "translation": "{0} đã thông báo rằng họ đang phát triển một máy chơi game mới. Máy chơi game có tên {1} được lên kế hoạch là người kế nhiệm cho đối thủ cạnh tranh trước đó của họ, {2} "
     }, {
         "value": "I will get right to it.",
-        "translation": "Me pondré con ello enseguida."
+        "translation": "Tôi sẽ làm ngay."
     }, {
         "value": "Okay, you are the boss.",
-        "translation": "Está bien, tú mandas."
+        "translation": "Được rồi, Sếp là nhất."
     }, {
         "value": "Congratulations on finishing Game Dev Tycoon and thank you for playing! If you enjoyed our little game then please consider rating the game on the Store. You can also send us some feedback",
         "comment": "gameFinishMsg, either stops with a . or continues with fragment",
-        "translation": "¡Felicidades por terminar Game Dev Tycoon y gracias por haberlo jugado! Si has disfrutado nuestro pequeño juego, por favor, puntúa el juego en la tienda. Además, también puedes mandarnos sugerencias"
+        "translation": "Chúc mừng bạn đã hoàn thành Game Dev Tycoon và cảm ơn bạn đã chơi! Nếu bạn thích trò chơi nhỏ của chúng tôi thì hãy xem xét việc đánh giá trò chơi trên Cửa hàng. Bạn cũng có thể gửi cho chúng tôi một số phản hồi"
     }, {
         "value": " and, if you really loved the game, you can (if you wish) vote with your wallet to support us even further.",
         "comment": "fragment of gameFinishMsg",
-        "translation": " y si el juego te ha gustado de verdad, puedes (si lo deseas) votar con tu cartera para apoyarnos aún más."
+        "translation": " và, nếu bạn thực sự yêu thích trò chơi, bạn có thể (nếu muốn) ủng hộ chúng tôi bằng ví tiền của mình để hỗ trợ chúng tôi nhiều hơn nữa."
     }, {
         "value": "See options...",
         "comment": "decision action button",
-        "translation": "Ver opciones..."
+        "translation": "Xem tùy chọn..."
     }, {
         "value": "No, thanks",
         "comment": "decision action button",
-        "translation": "No, gracias"
+        "translation": "Không, cảm ơn"
     }, {
         "value": "Continue game",
         "comment": "heading",
-        "translation": "Continuar la partida"
+        "translation": "Tiếp tục trò chơi"
     }, {
         "value": "Audio Settings",
-        "translation": "Ajustes de sonido"
+        "translation": "Cài đặt Âm thanh"
     }, {
         "value": "Help",
-        "translation": "Ayuda"
+        "translation": "Trợ giúp"
     }, {
         "value": "About",
-        "translation": "Acerca de"
+        "translation": "Giới thiệu"
     }, {
         "value": "Feedback & Support",
-        "translation": "Comentarios y Soporte"
+        "translation": "Phản hồi & Hỗ trợ"
     }, {
         "value": "Privacy Policy (online)",
-        "translation": "Política de privacidad (online)"
+        "translation": "Chính sách Bảo mật (trực tuyến)"
     }, {
         "value": ">> Lite Version <<",
-        "translation": "Versión lite"
+        "translation": ">> Phiên bản Lite <<"
     }, {
         "value": ">> Trial <<",
-        "translation": ">> Prueba <<"
+        "translation": ">> Dùng thử <<"
     }, {
         "value": "Tap to start game ...",
-        "translation": "Pulsa para empezar la partida..."
+        "translation": "Chạm để bắt đầu trò chơi ..."
     }, {
         "value": "Click to start game ...",
-        "translation": "Haz click para empezar la partida ..."
+        "translation": "Nhấp để bắt đầu trò chơi ..."
     }, {
         "value": "Starting game...",
-        "translation": "Iniciando partida..."
+        "translation": "Đang bắt đầu trò chơi..."
     }, {
         "value": "Click to continue ...",
-        "translation": "Nhấn để tiếp tục..."
+        "translation": "Nhấp để tiếp tục ..."
     }, {
         "value": "Starting ...",
-        "translation": "Iniciando..."
+        "translation": "Đang bắt đầu ..."
     }, {
         "value": "Finishing ...",
-        "translation": "Terminando..."
+        "translation": "Đang hoàn thiện ..."
     }, {
         "value": "Completed: ",
         "comment": "research is completed, research name is added",
-        "translation": "Completado: "
+        "translation": "Đã hoàn thành: "
     }, {
         "value": "Research complete",
         "comment": "heading",
-        "translation": "Investigación completada"
+        "translation": "Nghiên cứu hoàn tất"
     }, {
         "value": "You have successfully researched a new topic: '{0}'.",
-        "translation": "Has investigado con éxito un nuevo tema: '{0}'."
+        "translation": "Bạn đã nghiên cứu thành công một chủ đề mới: '{0}'."
     }, {
         "value": "You have successfully researched '{0}'.",
-        "translation": "Has investigado con éxito '{0}'."
+        "translation": "Bạn đã nghiên cứu thành công '{0}'."
     }, {
         "value": "Engine complete!",
         "comment": "heading",
-        "translation": "¡Motor completado!"
+        "translation": "Engine hoàn tất!"
     }, {
         "value": "Your new game engine '{0}' is now complete!",
-        "translation": "¡Tu nuevo motor de juego '{0}' ya está completado!"
+        "translation": "Game engine mới '{0}' của bạn đã hoàn tất!"
     }, {
         "value": "If the issue persists please report this error to {0}",
-        "translation": "Si el problema persiste, por favor informa de este error a {0}"
+        "translation": "Nếu sự cố vẫn tiếp diễn, vui lòng báo cáo lỗi này cho {0}"
     }, {
         "value": "Your bank account is in the red.\nThankfully your bank has enabled you to overdraw your account up to {0} but be careful, if your account balance is below -{0} you will go bankrupt.",
-        "translation": "Su cuenta bancaria está en números rojos.\nAfortunadamente, su banco le ha permitido sobregirar su cuenta hasta {0} pero ten cuidado, si su saldo es inferior a - {0} va a la quiebra."
+        "translation": "Tài khoản ngân hàng của bạn đang âm.\nRất may là ngân hàng của bạn đã cho phép bạn thấu chi tài khoản lên đến {0} nhưng hãy cẩn thận, nếu số dư tài khoản của bạn dưới -{0} bạn sẽ phá sản."
     }, {
         "value": "Warning",
         "comment": "heading",
-        "translation": "Advertencia"
+        "translation": "Cảnh báo"
     }, {
         "value": "Unfortunately you are bankrupt.",
-        "translation": "Por desgracia, estás en bancarrota."
+        "translation": "Thật không may, bạn đã phá sản."
     }, {
         "value": "We have just got confirmation that {0}, which has been in financial trouble lately, has gone bankrupt.\nIt appears that {1}, a behemoth in the gaming industry, has purchased the remains of the company.",
-        "translation": "Acabamos de confirmar que {0}, ha estado en problemas financieros últimamente, ha ido a la quiebra. \nParece que {1}, un gigante en la industria del juego, ha comprado los restos de la empresa."
+        "translation": "Chúng tôi vừa nhận được xác nhận rằng {0}, vốn đang gặp khó khăn về tài chính gần đây, đã phá sản.\nCó vẻ như {1}, một gã khổng lồ trong ngành công nghiệp game, đã mua lại phần còn lại của công ty."
     }, {
         "value": "A spokesperson of {0} said, 'We are very excited to have acquired the rights to all of {1} previously released titles.'\n\nHearing this news, many fans of {1} have expressed their disappointment.",
-        "translation": "Un portavoz de {0} ha dicho: \"estamos muy emocionados por haber adquirido los derecho de todos los títulos que {1} lanzó previamente.\"\nMuchos fans de {1} han mostrado su decepción al oír estas noticias."
+        "translation": "Một phát ngôn viên của {0} cho biết, 'Chúng tôi rất vui mừng khi đã mua được bản quyền của tất cả các tựa game đã phát hành trước đây của {1}.'\n\nNghe tin này, nhiều người hâm mộ của {1} đã bày tỏ sự thất vọng của họ."
     }, {
         "value": "Breaking News",
         "comment": "heading",
-        "translation": "Últimas noticias"
+        "translation": "Tin nóng"
     }, {
         "value": "dev. license",
         "comment": "used as {platformname} dev. license",
-        "translation": "Licencia de desarrollo"
+        "translation": "giấy phép phát triển"
     }, {
         "value": "I love your work",
         "comment": "contractDescrFragment",
-        "translation": "me encanta vuestro trabajo"
+        "translation": "Tôi yêu thích công việc của bạn"
     }, {
         "value": "I am impressed by your talent",
         "comment": "contractDescrFragment",
-        "translation": "estoy impresionado por tu talento"
+        "translation": "Tôi rất ấn tượng với tài năng của bạn"
     }, {
         "value": "I think you have potential",
         "comment": "contractDescrFragment",
-        "translation": "creo que tienes potencial"
+        "translation": "Tôi nghĩ bạn có tiềm năng"
     }, {
         "value": "Hi there,\nI've just finished {0} and {1}.\nI'm in the contracting business and we could use skills like yours. If you are ever short on cash just let me know and I will see if I have some work for you.\nJason",
         "comment": "{1} is contractDescrFragment",
-        "translation": "Hola, \nAcabo de terminar {0} y {1}. \nEstoy en el departamento de contratación y podríamos usar habilidades como la suya. Si alguna vez está corto de efectivo, házmelo saber y veré si tengo un trabajo para usted. \nJason"
+        "translation": "Chào bạn,\nTôi vừa hoàn thành {0} và {1}.\nTôi đang làm trong lĩnh vực hợp đồng và chúng tôi có thể cần những kỹ năng như của bạn. Nếu bạn có lúc nào thiếu tiền mặt, hãy cho tôi biết và tôi sẽ xem liệu có công việc nào cho bạn không.\nJason"
     }, {
         "value": "Contract Work",
         "comment": "heading",
-        "translation": "Contrato laboral"
+        "translation": "Công việc Hợp đồng"
     }, {
         "value": "Hi again,\nI heard that you've been very successful in the gaming business and are starting to grow your team.\nI've updated our client list, so if you are looking for some contract work let me know.\nJason{n}Medium sized contracts have been unlocked.",
-        "translation": "Hola de nuevo,\nEscuché que les ha ido muy bien en el negocio de los juegos y su personal está creciendo.\nHe actualizado la lista de clientes, asi que si estás buscando algún contrato de trabajo avísame.\nJason{n}Los contratos medianos han sido desbloqueados."
+        "translation": "Chào bạn lần nữa,\nTôi nghe nói bạn đã rất thành công trong lĩnh vực kinh doanh game và đang bắt đầu mở rộng đội ngũ của mình.\nTôi đã cập nhật danh sách khách hàng của chúng tôi, vì vậy nếu bạn đang tìm kiếm một số công việc hợp đồng, hãy cho tôi biết.\nJason{n}Các hợp đồng quy mô vừa đã được mở khóa."
     }, {
         "value": "Wow, I have seen some pictures of your new office! Cutting edge stuff!\nI'm sure you are doing very well but if you need to top up your budget I've a couple of big jobs that need to be taken care of.\nJason{n}Large contracts have been unlocked.",
-        "translation": "¡Uau, he visto fotos de tu nueva oficina! ¡De lo más vanguardista!\nEstoy seguro de que te va muy bien, pero si necesitas ampliar tu presupuesto, tengo un par de trabajos importantes de los que hay que hacerse cargo.\nJason{n}Se han desbloqueado los contratos grandes."
+        "translation": "Wow, tôi đã xem một vài bức ảnh về văn phòng mới của bạn! Thật hiện đại!\nTôi chắc chắn bạn đang làm rất tốt nhưng nếu bạn cần thêm ngân sách, tôi có một vài công việc lớn cần được giải quyết.\nJason{n}Các hợp đồng lớn đã được mở khóa."
     }, {
         "value": "Jason here.\nI just got word from the client that the contract was completed successfully. Excellent work!",
-        "translation": "Aquí Jason.\nEl cliente me acaba de decir que el contrato fué completado exitósamente. Excelente trabajo!"
+        "translation": "Jason đây.\nTôi vừa nhận được thông báo từ khách hàng rằng hợp đồng đã được hoàn thành thành công. Làm tốt lắm!"
     }, {
         "value": "Jason here.\nI see that the contract was not completed in time. Be careful what contracts you accept otherwise those penalties quickly add up.{n}Don't worry too much though, I don't hold grudges. If you want to try again let me know.",
-        "translation": "Aqui Jason\nVeo que la contrata no se completó a tiempo. Ten cuidado con las contratas que aceptes , de otro modo esas penalizaciones irán subiendo rápidamente.{n}No te preocupes, no guardo rencor. Si quieres intentarlo de nuevo, házmelo saber."
+        "translation": "Jason đây.\nTôi thấy hợp đồng không được hoàn thành đúng hạn. Hãy cẩn thận với những hợp đồng bạn chấp nhận nếu không những khoản phạt đó sẽ nhanh chóng tăng lên.{n}Tuy nhiên, đừng quá lo lắng, tôi không thù dai đâu. Nếu bạn muốn thử lại, hãy cho tôi biết."
     }, {
         "value": "Usually I have new contracts every six months so check back some time.",
-        "translation": "Habitualmente tengo nuevos contratos cada seis meses. Echa un vistazo cada cierto tiempo."
+        "translation": "Thường thì cứ sáu tháng tôi lại có hợp đồng mới, vì vậy hãy kiểm tra lại sau một thời gian nhé."
     }, {
         "value": "Up-front payment",
         "comment": "heading",
-        "translation": "Pago anticipado"
+        "translation": "Thanh toán trả trước"
     }, {
         "value": "Contract Refund",
         "comment": "heading",
-        "translation": "Contrato de reembolso"
+        "translation": "Hoàn trả Hợp đồng"
     }, {
         "value": "Graphic",
-        "translation": "Gráfico"
+        "translation": "Đồ họa"
     }, {
         "value": "Popular genre: ",
-        "translation": "Género popular: "
+        "translation": "Thể loại phổ biến: "
     }, {
         "value": "Popular: New topics",
-        "translation": "Popular: Nuevos temas"
+        "translation": "Phổ biến: Chủ đề mới"
     }, {
         "value": "Strong audience: ",
-        "translation": "Público predominante: "
+        "translation": "Đối tượng mạnh: "
     }, {
         "value": "Trend: Strange combinations",
-        "translation": "Moda: Combinaciones extrañas"
+        "translation": "Xu hướng: Kết hợp kỳ lạ"
     }, {
         "value": "It seems that the market has normalized again with no particular strong trends at the moment.",
-        "translation": "Parece que el mercado ha vuelto a normalizarse sin que haya ninguna tendencia en particular."
+        "translation": "Có vẻ như thị trường đã bình thường trở lại và hiện tại không có xu hướng mạnh mẽ nào đặc biệt."
     }, {
         "value": "It seems that {0} games are especially popular at the moment.",
-        "translation": "Parece que los juegos de {0} son especialmente populares ahora mismo."
+        "translation": "Có vẻ như các trò chơi {0} đang đặc biệt phổ biến vào lúc này."
     }, {
         "value": "There is a clear trend towards {0} games recently.",
-        "translation": "Los juegos de {0} están claramente de moda."
+        "translation": "Gần đây có một xu hướng rõ ràng đối với các trò chơi {0}."
     }, {
         "value": "It seems that the market responds particularly well to games with new topics at the moment.",
-        "translation": "Parece que, en este momento, el mercado responde particularmente bien a juegos con nuevos temas."
+        "translation": "Có vẻ như thị trường hiện tại đang phản ứng đặc biệt tốt với các trò chơi có chủ đề mới."
     }, {
         "value": "Market Analysis",
         "comment": "heading",
-        "translation": "Análisis del Mercado"
+        "translation": "Phân tích Thị trường"
     }, {
         "value": "Grid income",
         "comment": "heading",
-        "translation": "Beneficios del GRID"
+        "translation": "Thu nhập từ Grid"
     }, {
         "value": "Our own game convention is taking place in 4 weeks!",
-        "translation": "¡Nuestra propia convención de videojuegos tendrá lugar en 4 semanas!"
+        "translation": "Hội nghị game của riêng chúng ta sẽ diễn ra trong 4 tuần nữa!"
     }, {
         "value": "In two months the {0} will be taken off the market!",
-        "translation": "¡Dentro de dos meses, la {0} se retirará del mercado!"
+        "translation": "Trong hai tháng nữa, {0} sẽ bị rút khỏi thị trường!"
     }, {
         "value": "{0} is no longer supported.\nYou've released {1} games for the platform and earned a total of {2}!",
-        "translation": "{0} ya no es soportado\n¡Has lanzado {1} juegos para la plataforma y acumulado un total de {2}!"
+        "translation": "{0} không còn được hỗ trợ nữa.\nBạn đã phát hành {1} trò chơi cho nền tảng này và kiếm được tổng cộng {2}!"
     }, {
         "value": "{0} is no longer supported.",
-        "translation": "{0} ya no es soportado."
+        "translation": "{0} không còn được hỗ trợ nữa."
     }, {
         "value": "We had {0} people visiting our booth this year.",
-        "translation": "{0} personas han visitado nuestra cabina este año."
+        "translation": "Năm nay chúng ta đã có {0} người ghé thăm gian hàng của mình."
     }, {
         "value": "We didn't make it in the top 100 booths this year. Once we gain more fans I'm sure we will!",
-        "translation": "No estamos entre las 100 mejores cabinas del año. En cuanto ganemos más aficionados, ¡seguro que sí estaremos!"
+        "translation": "Năm nay chúng ta không lọt vào top 100 gian hàng. Một khi chúng ta có thêm người hâm mộ, tôi chắc chắn chúng ta sẽ làm được!"
     }, {
         "value": "We were voted the number one booth this year! Congratulations!",
-        "translation": "¡Nos votaron como la mejor cabina del año! ¡Felicitaciones!"
+        "translation": "Chúng ta đã được bình chọn là gian hàng số một năm nay! Xin chúc mừng!"
     }, {
         "value": "Our convention had {0} visitors this year!",
-        "translation": "¡Nuestra convención tuvo {0} visitantes este año!"
+        "translation": "Hội nghị của chúng ta đã có {0} khách tham quan trong năm nay!"
     }, {
         "value": "Game Conference",
         "comment": "heading",
-        "translation": "Conferencia de Videojuegos"
+        "translation": "Hội nghị Game"
     }, {
         "value": "monthly costs",
         "comment": "heading",
-        "translation": "Costes mensuales"
+        "translation": "chi phí hàng tháng"
     }, {
         "value": "Young",
         "comment": "audience category",
-        "translation": "Jóvenes"
+        "translation": "Trẻ"
     }, {
         "value": "Mature",
         "comment": "audience category",
-        "translation": "Adultos"
+        "translation": "Trưởng thành"
     }, {
         "value": "Everyone",
         "comment": "audience category",
-        "translation": "Todos"
+        "translation": "Mọi lứa tuổi"
     }, {
         "value": "in the coming years",
         "comment": "date referal sentence fragment",
-        "translation": "en los próximos años"
+        "translation": "trong những năm tới"
     }, {
         "value": "early next year",
         "comment": "date referal sentence fragment",
-        "translation": "a principios del año que viene"
+        "translation": "đầu năm sau"
     }, {
         "value": "late next year",
         "comment": "date referal sentence fragment",
-        "translation": "a medidados del año que viene"
+        "translation": "cuối năm sau"
     }, {
         "value": "later next year",
         "comment": "date referal sentence fragment",
-        "translation": "a finales del próximo año"
+        "translation": "cuối năm sau nữa"
     }, {
         "value": "later this month",
         "comment": "date referal sentence fragment",
-        "translation": "más tarde, este mes"
+        "translation": "cuối tháng này"
     }, {
         "value": "next month",
         "comment": "date referal sentence fragment",
-        "translation": "el próximo mes"
+        "translation": "tháng tới"
     }, {
         "value": "in two months",
         "comment": "date referal sentence fragment",
-        "translation": "dentro de dos meses"
+        "translation": "trong hai tháng nữa"
     }, {
         "value": "in the coming months",
         "comment": "date referal sentence fragment",
-        "translation": "en los meses siguientes"
+        "translation": "trong những tháng tới"
     }, {
         "value": "at the end of this year",
         "comment": "date referal sentence fragment",
-        "translation": "al final de este año"
+        "translation": "vào cuối năm nay"
     }, {
         "value": "later this year",
         "comment": "date referal sentence fragment",
-        "translation": "más tarde, este año"
+        "translation": "cuối năm nay"
     }, {
         "value": "Recent market studies suggest that the Govodore G64 is steadily outselling competitors in the PC sector. Consumers prefer the lower price, greater availability and the flexible hardware configuration over other home computers.{n}Experts say that this might spell the end of competing hardware manufacturers.",
-        "translation": "Los estudios recientes de mercado sugieren que el Govodore G64 se está imponiendo a sus competidores en el sector del PC. Los consumidores prefieren su bajo coste, mayor disponibilidad y la flexible configuración de hardware por encima de otras computadoras caseras.{n}Los expertos dicen que esto podría precipitar el fin del resto de los fabricantes de hardware."
+        "translation": "Các nghiên cứu thị trường gần đây cho thấy Govodore G64 đang dần vượt mặt các đối thủ cạnh tranh trong lĩnh vực PC. Người tiêu dùng ưa chuộng mức giá thấp hơn, tính sẵn có cao hơn và cấu hình phần cứng linh hoạt hơn so với các máy tính gia đình khác.{n}Các chuyên gia cho rằng điều này có thể báo hiệu sự kết thúc của các nhà sản xuất phần cứng cạnh tranh."
     }, {
         "value": "Recent market data shows that the Govodore G64 seems to be slowly losing market share against other PC manufacturers.{n}In an unofficial statement a G64 employee said that the company has been unsuccessful in introducing higher priced computers to compete against newer and more advanced PCs.",
-        "translation": "Estadísticas recientes demuestran que el Govodore G64 está perdiendo cuota de mercado frente al resto de fabricantes de PC.{n}En un comunicado no oficial, un empleado de G64 ha dicho que la compañía no ha sido capaz de introducir ordenadores de altos precios para competir contra PCs más modernas y avanzadas."
+        "translation": "Dữ liệu thị trường gần đây cho thấy Govodore G64 dường như đang dần mất thị phần vào tay các nhà sản xuất PC khác.{n}Trong một tuyên bố không chính thức, một nhân viên G64 cho biết công ty đã không thành công trong việc giới thiệu các máy tính giá cao hơn để cạnh tranh với các PC mới hơn và tiên tiến hơn."
     }, {
         "value": "Hardware manufacturers around the world were surprised today as Govodore, the creator of the popular G64, has filed for bankruptcy.{n}Govodore failed to introduce a higher priced alternative and was forced to shut down production of the G64. The platform will retire from the market {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Los fabricantes de hardware de todo el mundo muestran su sorpresa al saber que Govodore, el creador del popular G64, se ha declarado en bancarrota.{n}Govodore ha sido incapaz de ofrecer una alternativa de calidad y se ha visto forzada a cancelar la producción del G64. La plataforma se retirará del mercado {0}."
+        "translation": "Các nhà sản xuất phần cứng trên toàn thế giới đã rất ngạc nhiên hôm nay khi Govodore, nhà sáng tạo ra G64 nổi tiếng, đã nộp đơn xin phá sản.{n}Govodore đã không thể giới thiệu một giải pháp thay thế giá cao hơn và buộc phải ngừng sản xuất G64. Nền tảng này sẽ rút khỏi thị trường {0}."
     }, {
         "value": "According to rumours the Japanese company Ninvento is planning to launch its very own home gaming console. Ninvento is known for the widely successful arcade game 'Dinkey King'.{n}Many industry experts doubt that home gaming consoles will take off but we are eager to see what Ninvento will deliver.",
-        "translation": "Según los rumores, la compañía japonesa Ninvento planea lanzar su propia consola casera. Ninvento es conocida por el exitoso arcade \"Dinkey King\".{n}Muchos expertos de la industria dudan de que las videoconsolas caseras tengan éxito, pero estamos ansiosos por ver con qué nos sorprenderá Ninvento."
+        "translation": "Theo tin đồn, công ty Nhật Bản Ninvento đang có kế hoạch ra mắt máy chơi game gia đình của riêng mình. Ninvento nổi tiếng với trò chơi arcade rất thành công 'Dinkey King'.{n}Nhiều chuyên gia trong ngành nghi ngờ rằng máy chơi game gia đình sẽ thành công nhưng chúng tôi rất nóng lòng muốn xem Ninvento sẽ mang đến điều gì."
     }, {
         "value": "Today, Ninvento has confirmed recent rumours and announced their plans to release a new home gaming console called 'TES' {0}.\nThe console features cartridge based games and a uniquely designed controller.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Hoy, Ninvento ha confirmado los recientes rumores y ha anunciado sus planes de lanzar una nueva consola doméstica llamada 'TES' {0}.\nLa consola posee juegos en cartuchos y un controlador con diseño único."
+        "translation": "Hôm nay, Ninvento đã xác nhận những tin đồn gần đây và công bố kế hoạch phát hành một máy chơi game gia đình mới có tên 'TES' {0}.\nMáy chơi game này sử dụng các trò chơi dựa trên băng cạc-trít và một tay cầm điều khiển được thiết kế độc đáo."
     }, {
         "value": "Recent studies suggest that the increasing variety of gaming devices also creates a market for more specialized games.\nSome platforms become more popular with younger gamers while others cater for the more mature age groups.{n}As more and more developers enter the market we expect developers to focus their games on specific age groups to really make an impact.",
-        "translation": "Estudios recientes sugieren que la creciente variedad de dispositivos dará lugar a un mercado para juegos más especializados.\nAlgunas plataformas serán más populares entre jugadores jóvenes, mientras que otras atraerán a los grupos de edad más avanzada.{n}Conforme más diseñadores entren en el mercado, se espera que los mismos centren sus juegos en grupos específicos de edad para lograr un mayor impacto."
+        "translation": "Các nghiên cứu gần đây cho thấy sự đa dạng ngày càng tăng của các thiết bị chơi game cũng tạo ra một thị trường cho các trò chơi chuyên biệt hơn.\nMột số nền tảng trở nên phổ biến hơn với những người chơi game trẻ tuổi trong khi những nền tảng khác phục vụ cho các nhóm tuổi trưởng thành hơn.{n}Khi ngày càng có nhiều nhà phát triển tham gia thị trường, chúng tôi kỳ vọng các nhà phát triển sẽ tập trung trò chơi của họ vào các nhóm tuổi cụ thể để thực sự tạo ra tác động."
     }, {
         "value": "The recently released TES home console by Ninvento has proven to be a massive success. Sales numbers have exceeded expectations by far.{n}As one customer says: 'I love the games that come with the TES and playing with a controller is so much more fun than on a keyboard.'",
-        "translation": "La nueva consola casera TES de Ninvento es un éxito impresionante. Las cifras de ventas sobrepasan con creces las expectativas.{n}Tal y y como ha dicho un cliente: \"Me encantan los juegos de la TES, y jugar con un mando es mucho más divertido que con el teclado.\""
+        "translation": "Máy chơi game gia đình TES mới được phát hành gần đây của Ninvento đã chứng tỏ là một thành công lớn. Doanh số bán hàng đã vượt xa mong đợi.{n}Như một khách hàng nói: 'Tôi yêu thích các trò chơi đi kèm với TES và chơi bằng tay cầm điều khiển thú vị hơn nhiều so với trên bàn phím.'"
     }, {
         "value": "Following the massive success of the TES console there are now rumours circulating that Vena, another Japanese company, is planning to release a home gaming console on their own.",
-        "translation": "Tras el gran éxito de la consola TES, los rumores apuntan a que Vena, otra compañía japonesa, planea lanzar su propia videoconsola casera."
+        "translation": "Sau thành công vang dội của máy chơi game TES, hiện đang có tin đồn lan truyền rằng Vena, một công ty Nhật Bản khác, đang có kế hoạch tự mình phát hành một máy chơi game gia đình."
     }, {
         "value": "Today, Vena has confirmed recent rumours about a new gaming console and announced the Master V.\nThe company claims that the Master V is technically superior to the massively successful TES by Ninvento and plans to release it {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Hoy, Vena confirmó los rumores acerca de su nueva consola y anunció la Master V.\nLa empresa aseguró que la tecnología de la Master V es superior a la mundialmente exitosa TES de Ninvento, y pretende lanzarla al mercado {0}."
+        "translation": "Hôm nay, Vena đã xác nhận những tin đồn gần đây về một máy chơi game mới và công bố Master V.\nCông ty tuyên bố rằng Master V vượt trội về mặt kỹ thuật so với TES cực kỳ thành công của Ninvento và có kế hoạch phát hành nó {0}."
     }, {
         "value": "The recently released gaming console, Master V by Vena, has stirred up the market worldwide.\nIndustry experts say that the console is not very well marketed in North America but that it will flourish in other parts of the world.",
-        "translation": "La nueva videoconsola Master V de Vena ha sacudido el mercado global.\nLos expertos en la industria concuerdan en que la consola no ha sido muy promocionada en Norteamérica, pero que tendrá ventas fructíferas en el resto del mundo."
+        "translation": "Máy chơi game mới được phát hành gần đây, Master V của Vena, đã khuấy động thị trường toàn cầu.\nCác chuyên gia trong ngành cho biết máy chơi game này không được quảng bá tốt ở Bắc Mỹ nhưng sẽ phát triển mạnh ở các khu vực khác trên thế giới."
     }, {
         "value": "With the growing interest in video games there is also a growing audience for video game magazines. These magazines offer a great new way for game developers to market their upcoming games.",
-        "translation": "Conforme aumenta el interés en los videojuegos, también crecen los lectores de las revistas especializadas. Estas publicaciones ofrecen a los diseñadores una estupenda forma de comercializar sus próximos juegos."
+        "translation": "Với sự quan tâm ngày càng tăng đối với trò chơi điện tử, cũng có một lượng khán giả ngày càng tăng đối với các tạp chí trò chơi điện tử. Những tạp chí này mang đến một cách mới tuyệt vời để các nhà phát triển game quảng bá các trò chơi sắp ra mắt của họ."
     }, {
         "value": "Today, Ninvento has announced that they will introduce a portable gaming device called Gameling. The device comes with changeable game cartridges, a monochrome screen on a green background, built-in speakers and even multiplayer support via a connection cable.{n}Compared to PCs and other gaming consoles the Gameling is underpowered but given the lower cost and excellent portability it might find a huge following.{n}The Gameling is said to hit shelves {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Hoy, Ninvento ha anunciado que introducirá un dispositivo portátil llamado Gameling. El dispositivo incluye cartuchos de juego intercambiables, una pantalla monocromática sobre fondo verde, altavoces incorporados e incluso soporte multijugador vía conexión por cable.{n}La Gameling tiene poca potencia en comparación con los PCs y demás consolas, pero podría ganar muchos seguidores debido a su bajo coste y su excelente movilidad.{n}Se dice que la Gameling llegará a las tiendas {0}."
+        "translation": "Hôm nay, Ninvento đã thông báo rằng họ sẽ giới thiệu một thiết bị chơi game cầm tay có tên là Gameling. Thiết bị này đi kèm với các băng trò chơi có thể thay đổi, màn hình đơn sắc trên nền xanh lá cây, loa tích hợp và thậm chí hỗ trợ nhiều người chơi thông qua cáp kết nối.{n}So với PC và các máy chơi game khác, Gameling có cấu hình yếu hơn nhưng với chi phí thấp hơn và tính di động tuyệt vời, nó có thể thu hút một lượng lớn người theo dõi.{n}Gameling được cho là sẽ lên kệ {0}."
     }, {
         "value": "Vena, creator of the Master V console, has announced the Vena Gear, a portable console to directly compete against the Gameling from Ninvento.{n}A spokesperson for the company said, 'Unlike similar devices on the market which don't come close to gaming consoles the Vena Gear has basically the full power of the Master V, except that you can take it with you. The Vena Gear also has a full color screen'.{n}Will this device topple the Gameling? We will see. The Vena Gear will debut {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Vena, creadora de la Master V, ha anunciado la Vena Gear, una consola portátil que competirá directamente contra la Gameling de Ninvento.{n}Un portavoz de la compañía ha dicho: \"al contrario que otros dispositivos del mercado que están lejos del nivel de las consolas, la Vena Gear tiene básicamente todo el poder de la Master V, sólo que puedes llevarla contigo. También tiene una pantalla a todo color\".{n}¿Superará esta consola a la Gameling? Ya lo veremos. La Vena Gear saldrá {0}."
+        "translation": "Vena, nhà sản xuất máy chơi game Master V, đã công bố Vena Gear, một máy chơi game cầm tay để cạnh tranh trực tiếp với Gameling của Ninvento.{n}Một phát ngôn viên của công ty cho biết, 'Không giống như các thiết bị tương tự trên thị trường không thể sánh được với máy chơi game, Vena Gear về cơ bản có đầy đủ sức mạnh của Master V, ngoại trừ việc bạn có thể mang theo bên mình. Vena Gear cũng có màn hình màu đầy đủ'.{n}Liệu thiết bị này có lật đổ được Gameling không? Chúng ta sẽ xem. Vena Gear sẽ ra mắt {0}."
     }, {
         "value": "Vena has announced that they will release a new gaming console {0}. The Vena Oasis comes with 16-bit graphics and sound which promises a new kind of gaming experience.{n}Vena said at the announcement, 'The Oasis is a new start, it will be the genesis of a new generation of gaming consoles and we believe it will do very well in the market'. Some of the games already announced for the console suggest that it will appeal to more mature audiences.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Vena ha anunciado que lanzará una nueva consola de videojuegos {0}. La Vena Oasis tendrá gráficos de 16 bits y sonido, lo que promete una experiencia de juego diferente.{n}Vena ha dicho en su anuncio: \"la Oasis es un nuevo comienzo, la génesis de una nueva generación de consolas. Creemos que rendirá muy bien en el mercado.\" Algunos de los juegos que ya se han anunciado para la consola sugieren que ésta se dirigirá a un público más adulto."
+        "translation": "Vena đã thông báo rằng họ sẽ phát hành một máy chơi game mới {0}. Vena Oasis đi kèm với đồ họa và âm thanh 16-bit hứa hẹn một trải nghiệm chơi game mới mẻ.{n}Vena cho biết tại buổi công bố, 'Oasis là một khởi đầu mới, nó sẽ là khởi nguồn của một thế hệ máy chơi game mới và chúng tôi tin rằng nó sẽ hoạt động rất tốt trên thị trường'. Một số trò chơi đã được công bố cho máy chơi game này cho thấy nó sẽ thu hút những đối tượng người chơi trưởng thành hơn."
     }, {
         "value": "Today, Ninvento announced the much anticipated successor to the popular TES console. 'This is the greatest console we have ever built. It comes with state of the art 16-bit graphics and sound. It is simply super and that's why we decided to call it the Super TES!'.{n}Fans around the world have been waiting for this moment and it seems that they will not be disappointed.",
-        "translation": "Ninvento ha anunciado hoy la muy anticipada sucesora de la popular TES. \"Es la mejor consola que hemos construido jamás. Tanto sus gráficos de 16 bits como su sonido son de última generación. Es simplemente una súper consola, ¡Por eso hemos decidido llamarla Super TES!\"{n}Los fans de todo el mundo llevan tiempo esperando este momento y todo apunta a que no quedarán decepcionados."
+        "translation": "Hôm nay, Ninvento đã công bố người kế nhiệm rất được mong đợi cho máy chơi game TES nổi tiếng. 'Đây là máy chơi game tuyệt vời nhất mà chúng tôi từng chế tạo. Nó đi kèm với đồ họa và âm thanh 16-bit tiên tiến nhất. Nó đơn giản là siêu phẩm và đó là lý do tại sao chúng tôi quyết định gọi nó là Super TES!'.{n}Người hâm mộ trên toàn thế giới đã chờ đợi khoảnh khắc này và có vẻ như họ sẽ không phải thất vọng."
     }, {
         "value": "The media is abuzz with the latest news from this year's Entertainment Conference. In a surprise announcement Vonny, a company known for general electronics has presented a prototype console called the Play System.{n}Apparently Vonny has collaborated with Ninvento, creators of the beloved and successful TES and Super TES consoles to develop what is basically a Super TES with a CD drive.{n}This would be the world's first console using a CD drive.",
-        "translation": "La prensa está entusiasmada por las últimas noticias de la Conferencia de Entretenimiento de este año. En un anuncio sorprendente, Vonny, compañía conocida por sus electromodésticos, ha presentado un prototipo de consola llamado Play System.{n}Vonny ha estado colaborando aparentemente con Ninvento, creador de las exitosas consolas TES y Super TES, para desarrollar básicamente una Super TES con lector de CD.{n}Esta podría ser la primera consola del mundo que use un lector de CD."
+        "translation": "Giới truyền thông đang xôn xao với những tin tức mới nhất từ Hội nghị Giải trí năm nay. Trong một thông báo bất ngờ, Vonny, một công ty nổi tiếng về điện tử gia dụng đã giới thiệu một nguyên mẫu máy chơi game có tên là Play System.{n}Rõ ràng Vonny đã hợp tác với Ninvento, nhà sản xuất các máy chơi game TES và Super TES được yêu thích và thành công, để phát triển một sản phẩm về cơ bản là Super TES có ổ đĩa CD.{n}Đây sẽ là máy chơi game đầu tiên trên thế giới sử dụng ổ đĩa CD."
     }, {
         "value": "Journalists around the world are baffled as only one day after Vonny and Ninvento jointly announced the Play System at the Entertainment Conference things have turned sour.{n}Ninvento announced today that they will cancel the project and instead seek to develop a new console with a different partner.{n}Rumour has it that the distribution deal the companies had worked out was unfavorable to Ninvento handing over much of the control to Vonny.{n}This seems to be the end of the Play System.",
-        "translation": "Tan sólo un día después de que Vonny y Ninvento anunciaran conjuntamente la Play System en la Conferencia de Entretenimiento, las situación ha dado un giro que ha dejado a la prensa internacional estupefacta.{n}Ninvento ha anunciado hoy que cancela el proyecto y que buscará desarrollar una nueva consola con otro asociado.{n}Se rumorea que el acuerdo de distribución no le era favorable a Ninvento, ya que Vonny se quedaba con la mayor parte del control.{n}Este parece el fin de la Play System."
+        "translation": "Các nhà báo trên toàn thế giới đang hoang mang vì chỉ một ngày sau khi Vonny và Ninvento cùng nhau công bố Play System tại Hội nghị Giải trí, mọi chuyện đã trở nên tồi tệ.{n}Ninvento hôm nay thông báo rằng họ sẽ hủy bỏ dự án và thay vào đó tìm cách phát triển một máy chơi game mới với một đối tác khác.{n}Có tin đồn rằng thỏa thuận phân phối mà các công ty đã đạt được không có lợi cho Ninvento khi giao quá nhiều quyền kiểm soát cho Vonny.{n}Đây dường như là dấu chấm hết cho Play System."
     }, {
         "value": "Today, Vonny has announced their very own console called the Playsystem. Apparently the company has completely reworked their earlier Play System prototype after Ninvento cancelled the project.{n}The new Playsystem comes with a CD-ROM drive and 32-bit processors and is wholly owned by Vonny. Industry professionals say that this might be the beginning of a new generation of consoles. Ninvento declined to comment. The Playsystem will enter the market {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Vonny ha anunciado hoy la Playsystem, su propia consola. Parece ser que la compañía ha renovado por completo su anterior prototipo de la Play System despues de que Ninvento cancelara el proyecto.{n}La nueva Playsystem es producto de Vonny e incluye lector de CD-ROM y procesadores de 32 bits. Los profesionales de la industria opinan que este podría ser el principio de una nueva generación de consolas. Ninvento se ha negado a hacer declaraciones. La Playsystem entrará en el mercado {0}."
+        "translation": "Hôm nay, Vonny đã công bố máy chơi game của riêng họ có tên là Playsystem. Rõ ràng công ty đã hoàn toàn làm lại nguyên mẫu Play System trước đó của họ sau khi Ninvento hủy bỏ dự án.{n}Playsystem mới đi kèm với ổ đĩa CD-ROM và bộ xử lý 32-bit và hoàn toàn thuộc sở hữu của Vonny. Các chuyên gia trong ngành cho rằng đây có thể là sự khởi đầu của một thế hệ máy chơi game mới. Ninvento từ chối bình luận. Playsystem sẽ gia nhập thị trường {0}."
     }, {
         "value": "Ninvento announced their next generation console called TES 64 today. Expected {0} it is the world's first gaming console to sport 64-bit processors for graphics and audio. Ninvento said this will allow never-before-seen 3D realism.{n}In recent years the Super TES has lost a lot of market share to more modern consoles. Market experts said that the hardware of the TES 64 is surely impressive, but expressed their surprise that it still uses ROM cartridges instead of the much cheaper and higher capacity CD-ROM format.{n}Nevertheless, the TES 64 seems like an impressive console and Ninvento has said that it plans to aggressively price it against Vonny's Playsystem.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Ninvento ha anunciado hoy su consola de próxima generación, la TES 64. Se espera que salga {0} y será la primera consola del mundo con procesadores gráficos y de sonido con capacidad para 64 bits. Ninvento asegura que esto permitirá un realismo en 3D nunca antes visto.{n}En los últimos años, la Super TES ha perdido mucha cuota de mercado ante consolas más modernas. Los expertos aseguran que el hardware de la TES 64 es sin duda impresionante, aunque sorprende que siga usando cartuchos ROM en lugar del formato CD-ROM, mucho más barato y de mayor capacidad.{n}En cualquier caso, la TES 64 parece una consola impresionante y en Ninvento planean competir agresivamente contra la Playsystem de Vonny."
+        "translation": "Ninvento hôm nay đã công bố máy chơi game thế hệ tiếp theo của họ có tên là TES 64. Dự kiến {0}, đây là máy chơi game đầu tiên trên thế giới sử dụng bộ xử lý 64-bit cho đồ họa và âm thanh. Ninvento cho biết điều này sẽ cho phép tạo ra độ chân thực 3D chưa từng thấy.{n}Trong những năm gần đây, Super TES đã mất rất nhiều thị phần vào tay các máy chơi game hiện đại hơn. Các chuyên gia thị trường cho biết phần cứng của TES 64 chắc chắn rất ấn tượng, nhưng bày tỏ sự ngạc nhiên rằng nó vẫn sử dụng băng ROM thay vì định dạng CD-ROM rẻ hơn nhiều và có dung lượng cao hơn.{n}Tuy nhiên, TES 64 có vẻ là một máy chơi game ấn tượng và Ninvento cho biết họ có kế hoạch định giá cạnh tranh mạnh mẽ với Playsystem của Vonny."
     }, {
         "value": "The day Vena fans have waited a long time for has arrived, as Vena has announced their next generation console, the DreamVast. A company spokesperson said, 'The DreamVast is a dream come true. This console is the most advanced gaming console in history!'.{n}The new console sports powerful graphics hardware promising graphic quality rivaling those on high-end PCs. The DreamVast is also the first console to ship with a modem out-of-the-box, making it ready for online play. The console will be available {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Ha llegado el día que los fans de Vena aguardaban desde hacía mucho, ya que la compañía ha anunciado su consola de próxima generación, la DreamVast. Un portavoz de Vena ha dicho: \"La DreamVast es un sueño hecho realidad. ¡Esta es la videoconsola más avanzada de la historia!\"{n}La nueva consola soporta un potente hardware cuya calidad gráfica rivaliza contra los PCs más avanzados. La DreamVast es también la primera consola que incluye un módem externo, lo que permitirá el juego online. La consola estará disponible {0}."
+        "translation": "Ngày mà người hâm mộ Vena đã chờ đợi từ lâu đã đến, khi Vena công bố máy chơi game thế hệ tiếp theo của họ, DreamVast. Một phát ngôn viên của công ty cho biết, 'DreamVast là một giấc mơ trở thành hiện thực. Máy chơi game này là máy chơi game tiên tiến nhất trong lịch sử!'.{n}Máy chơi game mới này sở hữu phần cứng đồ họa mạnh mẽ hứa hẹn chất lượng đồ họa sánh ngang với các PC cao cấp. DreamVast cũng là máy chơi game đầu tiên được trang bị modem sẵn có, giúp nó sẵn sàng cho việc chơi trực tuyến. Máy chơi game sẽ có mặt trên thị trường {0}."
     }, {
         "value": "Today, Vonny has announced the much anticipated successor to their popular Playsystem console. The Playsystem 2 will have upgraded hardware to compete with newer generation consoles such as the DreamVast.{n}Unlike the DreamVast the Playsystem 2 does not focus much on online play but instead seems to focus on the strengths of the previous Playsystem. A solid upgraded controller including vibration function, upgraded graphics, support for DVD titles and even backwards compatibility with Playsystem 1 games.",
-        "translation": "Vonny ha anunciado hoy la esperada continuación de su popular consola Playsystem. La Playsystem 2 tendrá un hardware mejorado para competir con las consolas de la presente generación como la DreamVast.{n}Al contrario que la DreamVast, la Playsystem 2 no se centra tanto en el juego online como en las cualidades de la anterior Playsystem: un mando muy mejorado con vibración incorporada, mejores gráficos, soporte para títulos DVD e incluso compatibilidad con juegos de la Playsystem 1."
+        "translation": "Hôm nay, Vonny đã công bố người kế nhiệm rất được mong đợi cho máy chơi game Playsystem nổi tiếng của họ. Playsystem 2 sẽ có phần cứng được nâng cấp để cạnh tranh với các máy chơi game thế hệ mới hơn như DreamVast.{n}Không giống như DreamVast, Playsystem 2 không tập trung nhiều vào chơi trực tuyến mà thay vào đó dường như tập trung vào thế mạnh của Playsystem trước đó. Một tay cầm điều khiển được nâng cấp chắc chắn bao gồm chức năng rung, đồ họa được nâng cấp, hỗ trợ các tựa game DVD và thậm chí cả khả năng tương thích ngược với các trò chơi Playsystem 1."
     }, {
         "value": "Since release, the DreamVast from Vena has been one of the fastest selling consoles in history but lately it seems that the anticipation of the upcoming Playsystem 2 release is slowing down sales.{n}If the Playsystem 2 can hold up to the hype when it is released then Vena could be in deep trouble.",
-        "translation": "Desde su lanzamiento, la DreamVast de Vena ha sido una de las consolas de venta más rápida de la historia, pero la reciente expectación por la salida de la Playsystem 2 ha enfriado las ventas. {n}Si la Playsystem 2 puede hacer frente a las expectativas cuando salga al mercado, Vena podría estar en serios problemas."
+        "translation": "Kể từ khi phát hành, DreamVast của Vena là một trong những máy chơi game bán chạy nhất trong lịch sử nhưng gần đây có vẻ như sự mong đợi về việc phát hành Playsystem 2 sắp tới đang làm chậm doanh số bán hàng.{n}Nếu Playsystem 2 có thể đáp ứng được sự kỳ vọng khi nó được phát hành thì Vena có thể gặp rắc rối lớn."
     }, {
         "value": "PC software juggernaut Mirconoft has announced today that they will enter the game console market with their very own gaming console called the mBox.{n}First demonstrations have been impressive, but we will have to wait and see how it fares against the popular DreamVast, as well as against the recently announced and much anticipated Playsystem 2. The new console is said to debut {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "El coloso del software para PC, Mirconoft, ha anunciado hoy que entrará en el mercado con su propia consola, la mBox.{n}Las primeras demostraciones han sido impresionantes, pero habrá que esperar a ver si puede competir contra la popular DreamVast, así como la recientemente anunciada y muy esperada Playsystem 2. El debut de la nueva consola está previsto {0}."
+        "translation": "Gã khổng lồ phần mềm PC Mirconoft hôm nay đã thông báo rằng họ sẽ tham gia thị trường máy chơi game với máy chơi game của riêng mình có tên là mBox.{n}Các buổi trình diễn đầu tiên rất ấn tượng, nhưng chúng ta sẽ phải chờ xem nó hoạt động như thế nào trước DreamVast nổi tiếng, cũng như trước Playsystem 2 mới được công bố gần đây và rất được mong đợi. Máy chơi game mới được cho là sẽ ra mắt {0}."
     }, {
         "value": "The launch of the Playsystem 2 has been a phenomenal success. Stores everywhere are out of stock as manufacturing can barely keep up. Fans have resorted to buying the console on internet auction sites for as much as five times the normal price.{n}While Vonny has managed to have the most successful launch in history, sales of Vena's DreamVast have plummeted.",
-        "translation": "El lanzamiento de la Playsystem 2 ha sido un éxito antológico. Se ha agotado en todas las tiendas y su fabricación apenas puede satisfacer la demanda. Los fans han llegado a comprar la consola en subastas por internet a un precio cinco veces superior al normal.{n}Mientras que Vonny ha logrado el lanzamiento más exitoso de la historia, las ventas de la DreamVast de Vena han caído en picado."
+        "translation": "Sự ra mắt của Playsystem 2 là một thành công phi thường. Các cửa hàng ở khắp mọi nơi đều hết hàng vì sản xuất hầu như không thể theo kịp. Người hâm mộ đã phải mua máy chơi game trên các trang đấu giá trực tuyến với giá cao gấp năm lần giá bình thường.{n}Trong khi Vonny đã có màn ra mắt thành công nhất trong lịch sử, doanh số bán hàng của DreamVast của Vena đã giảm mạnh."
     }, {
         "value": "In a sobering announcement, Vena has today confirmed the discontinuation of the DreamVast. Vena's president said that while many companies will still deliver games for the platform, the company will no longer produce new units in the future.{n}Vena fans worldwide are disappointed, as a beloved part of gaming console history is coming to an end.",
-        "translation": "En una solemne declaración, Vena ha confirmado hoy que la DreamVast no tendrá continuación. El presidente de Vena afirma que, aunque muchas compañías seguirán desarrollando juegos para la plataforma, la empresa no producirá nuevas unidades en el futuro.{n}Los fans de Vena de todo el mundo están decepcionados, ya que una querida parte de la historia de las videoconsolas llega a su fin."
+        "translation": "Trong một thông báo đáng buồn, Vena hôm nay đã xác nhận việc ngừng sản xuất DreamVast. Chủ tịch của Vena cho biết mặc dù nhiều công ty vẫn sẽ cung cấp trò chơi cho nền tảng này, công ty sẽ không sản xuất các đơn vị mới trong tương lai nữa.{n}Người hâm mộ Vena trên toàn thế giới thất vọng, vì một phần yêu thích của lịch sử máy chơi game sắp kết thúc."
     }, {
         "value": "Today, Ninvento announced the new Ninvento Game Sphere, with which it will try to compete with Vonny's market leading Playsystem 2 and Mirconoft's strong alternative, the mBox. The curiously shaped console has similar hardware specifications as other consoles.{n}The Game Sphere is Ninvento's first console to have an optical disc drive instead of cartridges. However, instead of using full sized CD and DVDs, like its competitors, the console features a mini-DVD drive. Game Spheres will start rolling into stores {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Ninvento ha anunciado hoy la nueva Ninvento Game Sphere, que competirá con la Playsystem 2 de Vonny, líder del mercado,  y la potente alternativa de Mirconoft, la mBox. Esta consola de curioso diseño posee unas especificaciones de hardware similares a las de otras consolas.{n}La Game Sphere es la primera consola de Ninvento con un lector óptico de discos en lugar de cartuchos. Sin embargo, en lugar de usar CDs y DVDs como sus competidores, la consola incluye un lector de mini-DVDs. La Game Spheres llegará a las tiendas {0}."
+        "translation": "Hôm nay, Ninvento đã công bố Ninvento Game Sphere mới, với sản phẩm này, họ sẽ cố gắng cạnh tranh với Playsystem 2 đang dẫn đầu thị trường của Vonny và giải pháp thay thế mạnh mẽ của Mirconoft, mBox. Máy chơi game có hình dạng kỳ lạ này có thông số kỹ thuật phần cứng tương tự như các máy chơi game khác.{n}Game Sphere là máy chơi game đầu tiên của Ninvento có ổ đĩa quang thay vì băng cạc-trít. Tuy nhiên, thay vì sử dụng đĩa CD và DVD kích thước đầy đủ như các đối thủ cạnh tranh, máy chơi game này lại có ổ đĩa mini-DVD. Game Spheres sẽ bắt đầu có mặt tại các cửa hàng {0}."
     }, {
         "value": "Rumours are spreading that Ninvento is working on a new game console. Most of the rumours state that it is not a successor to the somewhat disappointing Game Sphere but instead a new console in the mobile market.{n}Ninvento's Gameling has been leading the mobile market thanks to numerous updates and a large list of very popular games available on the platform, but the hardware is aging quickly and many players wonder what will be next.",
-        "translation": "Se extienden los rumores de que Ninvento está trabajando en una nueva videoconsola. Los rumores afirman en su mayoría que no será una sucesora de la ligeramente decepcionante Game Sphere, sino una nueva consola para el mercado móvil.{n}La Gameling de Ninvento ha dominado el mercado móvil gracias a sus numerosas actualizaciones y una larga lista de juegos populares disponibles, pero el hardware está envejeciendo y muchos jugadores se preguntan qué vendrá a continuación."
+        "translation": "Tin đồn đang lan rộng rằng Ninvento đang phát triển một hệ máy chơi game mới. Hầu hết các tin đồn đều cho rằng đây không phải là người kế nhiệm của Game Sphere hơi đáng thất vọng mà là một hệ máy mới trên thị trường di động.{n}Gameling của Ninvento đã dẫn đầu thị trường di động nhờ nhiều bản cập nhật và danh sách lớn các trò chơi rất phổ biến có sẵn trên nền tảng này, nhưng phần cứng đang già đi nhanh chóng và nhiều người chơi tự hỏi điều gì sẽ xảy ra tiếp theo."
     }, {
         "value": "Today, Vonny announced that they are launching a new mobile gaming console called Portable Playsystem, or PPS for short, {0}. Media analysts speculate that this announcement is meant to distract users from Ninvento's launch of the Ninvento GS.{n}While the Ninvento GS utilizes an innovative dual screen, the PPS instead makes use of a single screen and will focus on giving developers access to much more powerful hardware.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Vonny ha anunciado hoy que lanzará una nueva consola portátil llamada Playsystem Portable, o PPS como abreviatura, {0}. Los analistas informativos especulan que este anuncio podría haberse hecho para distraer a los usuarios de Ninvento sobre el lanzamiento de la Ninvento GS.{n}Mientras que la Ninvento GS utiliza un innovador sistema de pantalla doble, la PPS se sirve de una sola pantalla y se centra en ofrecer a los diseñadores acceso a un hardware mucho más potente."
+        "translation": "Hôm nay, Vonny đã công bố rằng họ sẽ ra mắt một hệ máy chơi game di động mới có tên là Portable Playsystem, hay viết tắt là PPS, {0}. Các nhà phân tích truyền thông suy đoán rằng thông báo này nhằm đánh lạc hướng người dùng khỏi việc Ninvento ra mắt Ninvento GS.{n}Trong khi Ninvento GS sử dụng màn hình kép cải tiến, PPS lại sử dụng một màn hình duy nhất và sẽ tập trung vào việc cung cấp cho các nhà phát triển quyền truy cập vào phần cứng mạnh mẽ hơn nhiều."
     }, {
         "value": "Industry experts predict that we will see the next generation of video game consoles as early as next year. 'The hardware advancements in the PC industry have not been reflected in gaming consoles yet and we can expect the next generation to be a truly exciting leap forward.'{n}According to rumours, both Mirconoft and Vonny are in a race to introduce the next-generation console, with Mirconoft apparently already collaborating with partners to prepare titles for what is called the 'mBox 360.'",
-        "translation": "Los expertos de la industria predicen que la siguiente generación de videoconsolas llegará a principios del año que viene. \"Los avances de hardware en la industria del PC no se han reflejado aún en las videoconsolas y podemos esperar que la siguiente generación conlleve un emocionante salto adelante\".{n}Según los rumores, tanto Mirconoft como Vonny compiten por introducir la siguiente consola de nueva generación. Mirconoft parece estar colaborando con otras empresas, preparando títulos para la que se llamará \"mBox 360\"."
+        "translation": "Các chuyên gia trong ngành dự đoán rằng chúng ta sẽ thấy thế hệ máy chơi game tiếp theo sớm nhất là vào năm tới. 'Những tiến bộ về phần cứng trong ngành công nghiệp PC vẫn chưa được phản ánh trong các máy chơi game và chúng ta có thể kỳ vọng thế hệ tiếp theo sẽ là một bước nhảy vọt thực sự thú vị.'{n}Theo tin đồn, cả Mirconoft và Vonny đều đang chạy đua để giới thiệu hệ máy thế hệ tiếp theo, với Mirconoft dường như đã hợp tác với các đối tác để chuẩn bị các tựa game cho hệ máy được gọi là 'mBox 360.'"
     }, {
         "value": "Today, Mirconoft presented their new console called the mBox 360. It is the first in the next generation of expected consoles, and features hardware rivaling mid-end PC counterparts. With a relatively cheap purchase price, Mirconoft will be selling the device at a loss as part of a long-term strategy to gain market share.{n}Gamers around the world are excited by the new console and it is predicted that the mBox 360 will have a massive impact on the console market.",
-        "translation": "Mirconoft ha presentado hoy su nueva consola, la mBox 360. Es la primera de una nueva generación de consolas e incluye un hardware a la altura de los PCs de gama media. A un precio relativamente barato, Mirconoft venderá el dispositivo afrontando pérdidas como parte de su estrategia para recuperar cuota de mercado.{n}Los jugadores de todo el mundo están emocionados con la nueva consola y se prevee que la mBox 360 provocará un enorme impacto en el mercado de las consolas."
+        "translation": "Hôm nay, Mirconoft đã giới thiệu hệ máy mới của họ có tên là mBox 360. Đây là hệ máy đầu tiên trong thế hệ máy chơi game được mong đợi tiếp theo, và có phần cứng cạnh tranh với các máy PC tầm trung. Với mức giá mua tương đối rẻ, Mirconoft sẽ bán thiết bị này chịu lỗ như một phần của chiến lược dài hạn nhằm giành thị phần.{n}Các game thủ trên toàn thế giới rất hào hứng với hệ máy mới này và dự đoán rằng mBox 360 sẽ có tác động lớn đến thị trường console."
     }, {
         "value": "Today, Ninvento has announced their bid in the next-generation console market by announcing the Nuu. Instead of trying to compete with Mirconoft and Vonny on hardware strength and graphical power, Ninvento has decided to deliver a truly unique gaming experience.{n}The Nuu features a controller with a built-in motion sensor, which allows players to stand front of their TV and use the controller as a counterpart to virtual objects such as a tennis racquet.{n}First playtesters were seen with huge grins on their faces. It seems to be a lot of fun.",
-        "translation": "Ninvento anunció hoy su apuesta por las consolas de nueva generación presentando la Nuu. En lugar de intentar competir contra Mirconoft y Vonny en cuanto a potencia gráfica y de hardware, Ninvento ha decidido proporcionar una experiencia de juego verdaderamente única.{n}La Nuu incluye un mando con un sensor basado en el movimiento que permite al jugador colocarse ante el televisor y usar el mando para interactuar con objetos virtuales, como una raqueta de tenis.{n}Los primeros testeadores mostraban sonrisas de enorme satisfacción. Parece ser de lo más divertida."
+        "translation": "Hôm nay, Ninvento đã công bố sự tham gia của họ vào thị trường console thế hệ tiếp theo bằng việc công bố Nuu. Thay vì cố gắng cạnh tranh với Mirconoft và Vonny về sức mạnh phần cứng và đồ họa, Ninvento đã quyết định mang đến một trải nghiệm chơi game thực sự độc đáo.{n}Nuu có một bộ điều khiển với cảm biến chuyển động tích hợp, cho phép người chơi đứng trước TV và sử dụng bộ điều khiển như một vật thể ảo tương ứng, chẳng hạn như vợt tennis.{n}Những người chơi thử nghiệm đầu tiên đều nở nụ cười toe toét. Có vẻ như nó rất vui."
     }, {
         "value": "Today, Vonny has announced the successor to the massively successful Playsystem 2. The new console is predictably called 'Playsystem 3' and comes with an impressive hardware configuration, making it the most powerful console in gaming history.{n}The console also doubles as a player for BlueRay, which Vonny hopes will be the successor to the DVD format. All this power comes with a hefty price tag, also making the Playsystem 3 the most expensive console ever.{n}We will see how consumers will react to this given the lower-cost alternatives; however, considering the massive success of the Playsystem 2, Vonny can be hopeful.\nThe console is expected to ship {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Vonny ha presentado hoy la sucesora de la tremendamente exitosa Playsystem 2. La nueva consola se llamará con todo pronóstico \"Playsystem 3\" y tendrá una configuración de hardware que la convertirá en la consola más potente de la historia.{n}También permitirá que el jugador utilice BlueRay, que Vonny confía en que sea el sucesor del formato DVD. Toda esta potencia viene a expensas de un precio considerable que convierte también a la Playsytem 3 en la consola más cara de la historia.{n}Veremos cómo reaccionarán los consumidores dadas las alternativas de bajo costo; en cualquier caso, teniendo en cuenta el éxito masivo de la Playsytem 2, Vonny puede mostrarse esperanzada.\nSe espera que la consola llegue el {0}."
+        "translation": "Hôm nay, Vonny đã công bố người kế nhiệm của Playsystem 2 cực kỳ thành công. Hệ máy mới này được dự đoán sẽ có tên là 'Playsystem 3' và đi kèm với cấu hình phần cứng ấn tượng, khiến nó trở thành hệ máy mạnh nhất trong lịch sử game.{n}Hệ máy này cũng có thể đóng vai trò như một đầu phát BlueRay, mà Vonny hy vọng sẽ là người kế nhiệm của định dạng DVD. Tất cả sức mạnh này đi kèm với một mức giá đắt đỏ, cũng khiến Playsystem 3 trở thành hệ máy đắt nhất từ trước đến nay.{n}Chúng ta sẽ xem người tiêu dùng phản ứng thế nào với điều này khi có các lựa chọn thay thế chi phí thấp hơn; tuy nhiên, xét đến thành công vang dội của Playsystem 2, Vonny có thể hy vọng.\nHệ máy dự kiến sẽ được xuất xưởng {0}."
     }, {
         "value": "In what some call a bizarre show of arrogance Vonny representatives have been trash-talking Mirconoft's successful mBox 360 while praising their own upcoming Playsystem 3 in the lead-up to their launch {0}.{n}Asked about the unusually high price of the Playsystem 3, a high-ranking company official replied, 'People will work more hours to buy one. We want people to feel that they want it more than anything else.'.{n}We are not sure that players will really want it so badly, as, so far, no major game titles have been announced for the Playsystem 3. It might be a while before developers are able to take full advantage of the powerful new console.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "En lo que para algunos ha sido una extraña muestra de arrogancia, los representantes de Vonny han largado sobre la exitosa mBox 360 de Mirconoft a la par que han alabado su propia Playsystem 3, que saldrá {0}.{n}Al preguntársele por el inusualmente elevado precio de la Playsystem3, un alto miembro de la compañía respondió: \"La gente trabajará más horas para comprarse una. Queremos que la gente desee la consola por encima de todo lo demás.\".{n}No estamos seguros de que los jugadores la deseen tanto ya que, hasta ahora, no se ha anunciado ningún juego importante para la Playsystem 3. A los diseñadores les podría llevar cierto tiempo sacarle todo el partido a esta nueva y potente consola."
+        "translation": "Trong một động thái mà một số người gọi là sự kiêu ngạo kỳ quái, đại diện của Vonny đã nói xấu mBox 360 thành công của Mirconoft trong khi ca ngợi Playsystem 3 sắp ra mắt của chính họ trước thềm buổi ra mắt {0}.{n}Khi được hỏi về mức giá cao bất thường của Playsystem 3, một quan chức cấp cao của công ty đã trả lời: 'Mọi người sẽ làm việc nhiều giờ hơn để mua một chiếc. Chúng tôi muốn mọi người cảm thấy rằng họ muốn nó hơn bất cứ thứ gì khác.'.{n}Chúng tôi không chắc liệu người chơi có thực sự muốn nó đến vậy không, vì cho đến nay, chưa có tựa game lớn nào được công bố cho Playsystem 3. Có thể sẽ mất một thời gian trước khi các nhà phát triển có thể tận dụng tối đa sức mạnh của hệ máy mới này."
     }, {
         "value": "Today, Grapple, a company well known for their role in the early PC industry and, more recently, for their portable music player, grPod, have announced that they will soon release a powerful new mobile phone. The phone has a touch screen and sports a surprisingly powerful CPU.{n}The integrated graphics chipset should also allow the phone to run games and, since the phone comes with its own application delivery platform, it could become a great device for mobile games. The grPhone will be available {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Hoy, Grapple, una compañía conocida por su papel en los albores de la industria del PC y más recientemente por su reproductor de música portátil, el grPod, ha anunciado que lanzará pronto un nuevo y potente teléfono móvil. El teléfono tendrá pantalla táctil e incluirá una CPU sorprendentemente potente.{n}El chip dé gráficos integrado debería permitir que los juegos funcionen en el teléfono y, ya que el teléfono incluye su propia plataforma de descarga de aplicaciones, podría ser ideal para juegos portátiles. El grPhone estará disponible {0}."
+        "translation": "Hôm nay, Grapple, một công ty nổi tiếng với vai trò của họ trong ngành công nghiệp PC thời kỳ đầu và gần đây hơn là máy nghe nhạc di động grPod, đã thông báo rằng họ sẽ sớm phát hành một chiếc điện thoại di động mới mạnh mẽ. Chiếc điện thoại này có màn hình cảm ứng và sở hữu một CPU mạnh mẽ đáng ngạc nhiên.{n}Chipset đồ họa tích hợp cũng cho phép điện thoại chạy game và vì điện thoại đi kèm với nền tảng phân phối ứng dụng riêng, nó có thể trở thành một thiết bị tuyệt vời cho game di động. grPhone sẽ có mặt trên thị trường {0}."
     }, {
         "value": "Today, Grapple, the company responsible for the massively successful grPhone has announced their plans to release a tablet device called the grPad. Tablet devices are not a new idea in the computing industry but earlier attempts never seemed to take off. Many expect the grPad to do very well.",
-        "translation": "Hoy, Grapple, la compañía responsable del tremendamente exitoso grPhone, anunció su intención de lanzar un dispositivo tablet llamado grPad. Las tablets no son una idea nueva en la industria de la computación, pero los intentos anteriores nunca terminaron de prosperar. Mucha gente espera que la grPad se venda muy bien."
+        "translation": "Hôm nay, Grapple, công ty chịu trách nhiệm cho chiếc grPhone cực kỳ thành công, đã công bố kế hoạch phát hành một thiết bị máy tính bảng có tên là grPad. Máy tính bảng không phải là một ý tưởng mới trong ngành công nghiệp máy tính nhưng những nỗ lực trước đó dường như chưa bao giờ thành công. Nhiều người kỳ vọng grPad sẽ hoạt động rất tốt."
     }, {
         "value": "The mPad has received mixed reviews at launch, with many of them highlighting the fact that the mPad is indeed not the same as the grPad from Grapple. We will see what the future holds for this platform.",
-        "translation": "El mPad ha recibido en su lanzamiento críticas dispares que en su mayoría señalan que el mPad está lejos de ser lo mismo que el grPad de Grapple. Veremos qué le depara el futuro a esta plataforma."
+        "translation": "mPad đã nhận được nhiều đánh giá trái chiều khi ra mắt, nhiều trong số đó nhấn mạnh thực tế rằng mPad thực sự không giống với grPad của Grapple. Chúng ta sẽ xem tương lai sẽ ra sao với nền tảng này."
     }, {
         "value": "For fans of the mBox, the long wait for an update to the console will soon be over as Mirconoft has announced that the mBox Next will be available {0}.",
         "comment": "{0} is date referal sentence fragment",
-        "translation": "Los fans de la mBox no tendrán que esperar mucho más para una actualización de la consola, ya que Mirconoft ha anunciado que la mBox Next estará disponible {0}."
+        "translation": "Đối với những người hâm mộ mBox, sự chờ đợi một bản cập nhật cho hệ máy này sẽ sớm kết thúc khi Mirconoft đã thông báo rằng mBox Next sẽ có mặt {0}."
     }, {
         "value": " Mirconoft has lost a substantial share of the market since {0} released their {1} console.{n}",
-        "translation": " Mirconoft ha perdido una importante cuota de mercado desde que {0} lanzara su {1} consola.{n}"
+        "translation": " Mirconoft đã mất một phần đáng kể thị phần kể từ khi {0} phát hành hệ máy {1} của họ.{n}"
     }, {
         "value": "The new console seems to cleverly integrate Mirconoft's own motion sensor add-on for the mBox into one small package. The strength of the hardware seems to match expectations.",
-        "translation": "Parece que la nueva consola integra astutamente el sensor de movimiento de Mirconoft para la mBox en una caja pequeña. La potencia del hardware parece ir acorde con las expectativas."
+        "translation": "Hệ máy mới dường như tích hợp một cách thông minh cảm biến chuyển động bổ trợ của Mirconoft cho mBox vào một gói nhỏ gọn. Sức mạnh của phần cứng có vẻ đáp ứng được kỳ vọng."
     }, {
         "value": " but we will see how well the new console competes with the popular {0} console.",
-        "translation": " pero veremos cómo compite contra la popular consola {0}."
+        "translation": " nhưng chúng ta sẽ xem hệ máy mới này cạnh tranh tốt như thế nào với hệ máy {0} phổ biến."
     }, {
         "value": " but we will see how the new console will fare against its competitors.",
-        "translation": " pero veremos cómo compite la nueva consola contra sus competidoras."
+        "translation": " nhưng chúng ta sẽ xem hệ máy mới này sẽ cạnh tranh như thế nào với các đối thủ của nó."
     }, {
         "value": "Dear {0}, we, the worldwide game developers guild, would like to invite you to a special award ceremony at our main meeting at the end of the year. Please come.\n\n(Hint: The game will end at the end of this year.)",
-        "translation": "Estimado {0}, el gremio de diseñadores de videojuegos se complace en invitarle a una ceremonia especial de premios en nuestro centro habitual a final de año. Le rogamos que acuda.\n\n(Pista: La partida terminará al finalizar este año.)"
+        "translation": "Kính gửi {0}, chúng tôi, hiệp hội các nhà phát triển game toàn cầu, xin trân trọng mời bạn tham dự một buổi lễ trao giải đặc biệt tại cuộc họp chính của chúng tôi vào cuối năm. Xin hãy đến.\n\n(Gợi ý: Trò chơi sẽ kết thúc vào cuối năm nay.)"
     }, {
         "value": "{0}, a newcomer in the game industry, has just released their first game '{1}'.\nThe game ",
         "comment": "fragment, continue with firstGameStoryRatingFragments",
-        "translation": "{0}, un recién llegado a la industria del videojuego, acaba de lanzar su primer juego, \"{1}\".\nEl juego "
+        "translation": "{0}, một tân binh trong ngành công nghiệp game, vừa phát hành trò chơi đầu tiên của họ '{1}'.\nTrò chơi "
     }, {
         "value": "got generally low scores from reviewers but with a bit of experience we are sure that we will see better games from {0} in the future.",
         "comment": "firstGameStoryRatingFragments",
-        "translation": "ha obtenido bajas puntuaciones en general por parte de la crítica, pero estamos seguros de que, con un poco más de experiencia, veremos mejores juegos de {0} en el futuro."
+        "translation": "nhận được điểm số nhìn chung thấp từ các nhà phê bình nhưng với một chút kinh nghiệm, chúng tôi chắc chắn rằng chúng ta sẽ thấy những trò chơi tốt hơn từ {0} trong tương lai."
     }, {
         "value": "had a moderate response from reviewers. We are curious what {0} will deliver in the future.",
         "comment": "firstGameStoryRatingFragments",
-        "translation": "ha tenido una respuesta moderada por parte de la crítica. Hay curiosidad por ver qué nos dará {0} en el futuro."
+        "translation": "nhận được phản hồi vừa phải từ các nhà phê bình. Chúng tôi rất tò mò xem {0} sẽ mang đến điều gì trong tương lai."
     }, {
         "value": "received favorable reviews. \nWith such a good start {0} are sure to gain fans quickly.",
         "comment": "firstGameStoryRatingFragments",
-        "translation": "recibe críticas muy favorables. \nCon un comienzo tan bueno {0} ganara fans rápidamente."
+        "translation": "nhận được những đánh giá tích cực. \nVới một khởi đầu tốt như vậy, {0} chắc chắn sẽ nhanh chóng có được người hâm mộ."
     }, {
         "value": "outstanding",
-        "translation": "excelentes"
+        "translation": "xuất sắc"
     }, {
         "value": "great",
-        "translation": "muy buena"
+        "translation": "tuyệt vời"
     }, {
         "value": "moderate",
-        "translation": "moderadas"
+        "translation": "vừa phải"
     }, {
         "value": "below average",
-        "translation": "por debajo de la media"
+        "translation": "dưới trung bình"
     }, {
         "value": "pretty bad",
-        "translation": "muy malas"
+        "translation": "khá tệ"
     }, {
         "value": "{0} has recently released a sequel to their game {1}. The newest game in the series titled {2} was met with {3} responses.",
-        "translation": "{0} ha sacado recientemente una secuela de su juego {1}. El nuevo título en la serie, titulado {2}, ha recibido críticas {3}."
+        "translation": "{0} gần đây đã phát hành phần tiếp theo cho trò chơi {1} của họ. Trò chơi mới nhất trong sê-ri có tựa đề {2} đã nhận được phản hồi {3}."
     }, {
         "value": "Critics praised that {0} had a newer engine than the original, really driving technical innovation.",
-        "translation": "Los críticos han alabado a {0} por contar con un motor renovado respecto al original, apostando por la innovación tecnológica."
+        "translation": "Các nhà phê bình khen ngợi rằng {0} có một engine mới hơn bản gốc, thực sự thúc đẩy sự đổi mới kỹ thuật."
     }, {
         "value": "A major negative reaction came from fans who felt that with the original coming out just {0} weeks before, the company is trying to milk the franchise for more money without delivering much new for players to enjoy.",
-        "translation": "Ha habido una respuesta ampliamente negativa por parte de los fans, quienes creen que, habiéndose lanzado el original tan sólo {0} semanas antes, la compañía intenta exprimir monetariamente la franquicia sin ofrecer nada nuevo a los jugadores."
+        "translation": "Một phản ứng tiêu cực lớn đến từ người hâm mộ, những người cảm thấy rằng với việc bản gốc ra mắt chỉ {0} tuần trước đó, công ty đang cố gắng vắt kiệt thương hiệu để kiếm thêm tiền mà không mang lại nhiều điều mới mẻ cho người chơi thưởng thức."
     }, {
         "value": "Sequel",
-        "translation": "Secuela"
+        "translation": "Phần tiếp theo"
     }, {
         "value": "{0} has recently released an expansion pack to their game {1}. The expansion pack titled {2} was met with {3} responses.",
-        "translation": "{0} acaba de lanzar un pack de expansión para el juego {1}. La expansión, titulada {2}, ha recibido críticas {3}."
+        "translation": "{0} gần đây đã phát hành một gói mở rộng cho trò chơi {1} của họ. Gói mở rộng có tựa đề {2} đã nhận được phản hồi {3}."
     }, {
         "value": "{n}A major negative reaction came from fans who felt that with the main game coming out just {0} weeks before, the company is trying to milk the franchise for more money without delivering much new for players to enjoy.",
-        "translation": "{n}Ha habido una respuesta ampliamente negativa por parte de los fans, quienes creen que, habiéndose lanzado el original tan sólo {0} semanas antes, la compañía intenta exprimir monetariamente la franquicia sin ofrecer nada nuevo a los jugadores."
+        "translation": "{n}Một phản ứng tiêu cực lớn đến từ người hâm mộ, những người cảm thấy rằng với việc trò chơi chính ra mắt chỉ {0} tuần trước đó, công ty đang cố gắng vắt kiệt thương hiệu để kiếm thêm tiền mà không mang lại nhiều điều mới mẻ cho người chơi thưởng thức."
     }, {
         "value": "Expansion Pack",
-        "translation": "Pack de expansión"
+        "translation": "Gói Mở rộng"
     }, {
         "value": "lite",
         "comment": "as in lite edition of the game",
-        "translation": "Ligera"
+        "translation": "rút gọn"
     }, {
         "value": "trial",
-        "translation": "de prueba"
+        "translation": "dùng thử"
     }, {
         "value": "{0} version",
         "comment": "could either be lite version or trial version",
-        "translation": "versión {0}"
+        "translation": "phiên bản {0}"
     }, {
         "value": "Welcome",
         "comment": "heading to greet the player",
-        "translation": "Bienvenido"
+        "translation": "Chào mừng"
     }, {
         "value": "good",
-        "translation": "buenas"
+        "translation": "tốt"
     }, {
         "value": "It seems that the initial sales for {0} have fallen way below expected numbers. The game received {1} reviews but it seems that the chosen platform isn't very popular with the target audience.",
         "comment": "{1} is adjective like good, moderate, outstanding",
-        "translation": "Parece que las ventas iniciales de {0} han caído por debajo de lo esperado. El juego ha recibido {1} críticas, pero parece que la plataforma elegida no es muy popular entre el público objetivo."
+        "translation": "Có vẻ như doanh số ban đầu của {0} đã giảm mạnh so với con số dự kiến. Trò chơi nhận được {1} đánh giá nhưng có vẻ như nền tảng được chọn không thực sự phổ biến với đối tượng mục tiêu."
     }, {
         "value": "Sales Report",
-        "translation": "Informe de Ventas"
+        "translation": "Báo cáo Doanh thu"
     }, {
         "value": "The latest game by {0} has had reviewers scratching their heads. Rather than bringing a new and innovative game to market the company delivered another {1}/{2} game which is more or less the same setting as their previous game.{n}One reviewer commented:'I think {3} was simply developed too soon after the previous game with not enough innovations in technology and design.'",
-        "translation": "El último juego de {0} tiene a la crítica rascándose la cabeza. En lugar de traer al mercado un juego nuevo e innovador, la compañía ha lanzado otro juego de {1} y {2} con más o menos las mismas características que su anterior título.{n}Un crítico ha comentado: \"Creo que {3} se ha desarrollado demasiado pronto en relación al anterior juego, sin suficientes innovaciones tecnológicas o de diseño.\""
+        "translation": "Trò chơi mới nhất của {0} đã khiến các nhà phê bình phải vò đầu bứt tai. Thay vì mang đến một trò chơi mới lạ và sáng tạo cho thị trường, công ty lại tung ra một trò chơi {1}/{2 khác, ít nhiều giống hệt bối cảnh của trò chơi trước đó của họ.{n}Một nhà phê bình nhận xét: 'Tôi nghĩ {3} đơn giản là được phát triển quá sớm sau trò chơi trước đó mà không có đủ sự đổi mới về công nghệ và thiết kế.'"
     }, {
         "value": "Media Report",
-        "translation": "Informe de los Medios"
+        "translation": "Báo cáo Truyền thông"
     }, {
         "value": "Welcome to your new office!\nNow that you have a bigger office you can also hire staff and forge a world-class development team to make even better games.",
-        "translation": "Bienvenido a su nueva oficina! \nAhora que tiene una oficina más grande también se puede contratar personal y forjar un equipo de desarrollo de clase mundial para hacer aún mejores sus juegos."
+        "translation": "Chào mừng đến văn phòng mới của bạn!\nGiờ đây bạn đã có một văn phòng lớn hơn, bạn cũng có thể thuê nhân viên và xây dựng một đội ngũ phát triển đẳng cấp thế giới để tạo ra những trò chơi thậm chí còn tốt hơn."
     }, {
         "value": "and",
-        "translation": "y"
+        "translation": "và"
     }, {
         "value": "Welcome to the new headquarters of {0}!\nWe now have more space so you can increase the team further. The new office is also close to some renowned universities which gives us great access to new talent.",
-        "translation": "Bienvenido a la nueva sede de {0}! ↵↵\nAhora tenemos suficiente espacio para que pueda aumentar aún más el equipo. La nueva oficina también está situada cerca de algunas universidades de prestigio que nos da un gran acceso a nuevos talentos."
+        "translation": "Chào mừng đến trụ sở mới của {0}!\nGiờ đây chúng ta có nhiều không gian hơn để bạn có thể mở rộng đội ngũ hơn nữa. Văn phòng mới cũng gần một số trường đại học danh tiếng, điều này giúp chúng ta có cơ hội tiếp cận nguồn nhân tài mới tuyệt vời."
     }, {
         "value": "Wow, this new office is amazing and the location is perfect too. I took a walk around the building earlier and had this radical idea.\nWhy don't we open up our own research and development department?{n}This could really speed up our research and would allow us to attack bigger projects and innovations.\nIt wouldn't be cheap but I think it would allow us to be the leading innovator in the gaming industry.{n}Anyway, I have done some research and I think we should open a lab and hire a whole team of researchers. Before we can do this however, we should have at least one design specialist in our team.",
-        "translation": "Caray, esta nueva oficina es increíble y está en el lugar perfecto. Antes he dado un paseo cerca del edificio y se me ha ocurrido una idea radical.\n¿Por qué no abrimos nuestro propio departamento de investigación y desarrollo?{n}Esto aceleraría mucho nuestra investigación y nos permitiría abordar proyectos e innovaciones de mayor tamaño.\nNo sería barato, pero creo que nos permitiría convertirnos en líderes de innovación en la industria de videojuegos.{n}En cualquier caso, he estado investigando y creo que deberíamos abrir un laboratorio y contratar a todo un equipo de investigación. Pero primero, antes de hacerlo necesitamos al menos un especialista de diseño en el equipo."
+        "translation": "Chà, văn phòng mới này thật tuyệt vời và vị trí cũng hoàn hảo nữa. Lúc nãy tôi đi dạo quanh tòa nhà và nảy ra ý tưởng táo bạo này.\nTại sao chúng ta không mở một bộ phận nghiên cứu và phát triển (R&D) của riêng mình nhỉ?{n}Điều này thực sự có thể đẩy nhanh quá trình nghiên cứu của chúng ta và cho phép chúng ta thực hiện các dự án lớn hơn và những đổi mới đột phá.\nSẽ không rẻ đâu nhưng tôi nghĩ nó sẽ cho phép chúng ta trở thành nhà đổi mới hàng đầu trong ngành công nghiệp game.{n}Dù sao thì, tôi đã nghiên cứu một chút và tôi nghĩ chúng ta nên mở một phòng thí nghiệm và thuê cả một đội ngũ nhà nghiên cứu. Tuy nhiên, trước khi làm điều đó, chúng ta cần có ít nhất một chuyên gia thiết kế trong đội của mình."
     }, {
         "value": "Hello {0},\nWe have just learned that you have opened your new headquarters not too far away from our university! We are just about to start a special course about game development and could really use your help.{n}Unfortunately we cannot offer any pay but I think you will find that teaching students about game development will be a great exercise to refine your own skills.\n{1} University{n}New training options available.",
-        "translation": "Hola {0},\nNos acabamos de enterar que has abierto tus nuevas oficinas no muy lejos de nuestra universidad! Estamos por empezar un curso especial sobre desarrollo de juegos y tu ayuda nos serviría de mucho.{n}Desafortunadamente no podemos ofrecerte paga alguna pero creo que encontrarás que enseñar a los estudiantes sobre desarrollo de juegos será una gran práctica para refinar tus propias habilidades.\n{1} Universidad{n}Nuevos entrenamientos disponibles."
+        "translation": "Chào {0},\nChúng tôi vừa biết rằng bạn đã mở trụ sở mới không xa trường đại học của chúng tôi! Chúng tôi sắp bắt đầu một khóa học đặc biệt về phát triển game và rất cần sự giúp đỡ của bạn.{n}Thật không may, chúng tôi không thể trả lương nhưng tôi nghĩ bạn sẽ thấy rằng việc dạy sinh viên về phát triển game sẽ là một bài tập tuyệt vời để trau dồi kỹ năng của chính bạn.\nĐại học {1}{n}Các tùy chọn đào tạo mới đã có."
     }, {
         "value": "Welcome to our very own research and development lab! At the moment it is empty but we have a number of skilled people eager to start working.{n}You don't have to hire them individually, instead you can simply decide on the budget for the R&D lab. The higher the budget, the more researchers will work and the higher the research progress will be.{n}Running your own R&D lab can be very expensive so be careful that you don't overspend. I suggest you start with smaller projects and don't be afraid to cut down the budget if necessary.{n}If there is no active project researchers will generate research points slowly, which you can use to train your main staff and unlock more game options.",
-        "translation": "¡Bienvenido a tu propio laboratorio de investigación y desarrollo! Por el momento esta vacío, pero hay varias personas con talento ansiosas por empezar a trabajar.{n}No has de contratarlas una a una, sino que puedes decidir el presupuesto para el laboratorio de I+D. Cuanto más alto sea el presupuesto, más investigadores trabajarán y más rápido será el progreso de su investigación.{n}Operar tu propio laboratorio de I+D puede ser muy caro, así que ten cuidado de no sobrecargar los costos. Te sugiero que empieces por proyectos pequeños y que no tengas miedo de rebajar el presupuesto si es necesario.{n}Si no hay ningún proyecto activo, los investigadores sólo generarán lentamente puntos de investigación que podrás usar para entrenar a tus empleados y desbloquear más opciones para tus juegos."
+        "translation": "Chào mừng đến với phòng thí nghiệm nghiên cứu và phát triển của riêng chúng ta! Hiện tại nó trống rỗng nhưng chúng ta có một số người tài năng sẵn sàng bắt đầu làm việc.{n}Bạn không cần phải thuê họ riêng lẻ, thay vào đó bạn chỉ cần quyết định ngân sách cho phòng R&D. Ngân sách càng cao, càng có nhiều nhà nghiên cứu làm việc và tiến độ nghiên cứu sẽ càng cao.{n}Vận hành phòng R&D của riêng bạn có thể rất tốn kém vì vậy hãy cẩn thận đừng chi tiêu quá mức. Tôi đề nghị bạn bắt đầu với các dự án nhỏ hơn và đừng ngại cắt giảm ngân sách nếu cần thiết.{n}Nếu không có dự án nào đang hoạt động, các nhà nghiên cứu sẽ tạo ra điểm nghiên cứu một cách từ từ, bạn có thể sử dụng chúng để đào tạo nhân viên chính của mình và mở khóa thêm các tùy chọn trò chơi."
     }, {
         "value": "Welcome to our very own hardware lab! This is the place where we will create our own game console. Before you start, make sure you have a lot of cash saved up. Building a console isn't cheap. When you are ready to start simply {0} on the screen to access the action menu.",
-        "translation": "¡Bienvenido a nuestro laboratorio de hardware! Aquí es donde crearemos nuestra propia consola. Antes de empezar, asegúrate de haber ahorrado una gran cantidad de dinero. Fabricar una consola no es nada barato. Cuando estés listo para empezar, simplemente {0} en la pantalla para acceder al menú de acciones."
+        "translation": "Chào mừng đến với phòng thí nghiệm phần cứng của riêng chúng ta! Đây là nơi chúng ta sẽ tạo ra hệ máy chơi game của riêng mình. Trước khi bắt đầu, hãy đảm bảo bạn đã tiết kiệm đủ tiền mặt. Xây dựng một hệ máy không hề rẻ. Khi bạn sẵn sàng bắt đầu, chỉ cần {0} vào màn hình để truy cập menu hành động."
     }, {
         "value": "We just got word that {0} is retiring its MMO game {1} from the market. The game has been on the market for {2} months and racked up over {3} in sales.",
-        "translation": "Acabamos de enterarnos de que {0} ha retirado {1}, su juego MMO, del mercado. El juego llevaba {2} meses en el mercado y ha alcanzado un total de {3} en ventas."
+        "translation": "Chúng tôi vừa nhận được tin {0} sẽ ngừng phát hành trò chơi MMO {1} của họ. Trò chơi đã có mặt trên thị trường được {2} tháng và đạt doanh thu hơn {3}."
     }, {
         "value": "{1} was likely not profitable anymore as the maintenance costs were likely larger than the income.",
-        "translation": "Seguramente, {1} ya no era rentable, ya que los costos de mantenimiento eran mayores que que los beneficios."
+        "translation": "{1} có lẽ không còn mang lại lợi nhuận nữa vì chi phí bảo trì có thể đã lớn hơn doanh thu."
     }, {
         "value": "We are not quite sure why {0} has decided to take {1} off the market as the game likely still generated income for the company.",
-        "translation": "No estamos del todo seguros de por qué {0} ha decidido retirar {1} del mercado, ya que el juego seguía generando ingresos para la compañía."
+        "translation": "Chúng tôi không hoàn toàn chắc chắn tại sao {0} lại quyết định ngừng phát hành {1} vì trò chơi này có lẽ vẫn đang tạo ra thu nhập cho công ty."
     }, {
         "value": "While fans of {0} weren't happy about the news many of them also play {1} which is still on the market.",
-        "translation": "Aunque a los fans de {0} no les ha alegrado la noticia, muchos de ellos juegan también a {1}, que aún está a la venta."
+        "translation": "Mặc dù người hâm mộ của {0} không vui về tin tức này, nhiều người trong số họ cũng chơi {1} vẫn còn đang được phát hành trên thị trường."
     }, {
         "value": "Fans of {1} have voiced complaints with one fan saying: 'I love {0} and played {1} a lot but now that they took it off the market I don't know what MMO I should play. If only {0} had released a new MMO I wouldn't be so upset.'",
-        "translation": "Los fans de {1} han expresado sus quejas y uno de ellos ha dicho: \"Me encanta {0} y he jugado mucho a {1}, pero ahora que ya no está a la venta no sé a qué MMO debería jugar. Si {0} hubiera lanzado un nuevo MMO no estaría tan enfadado.\""
+        "translation": "Người hâm mộ của {1} đã lên tiếng phàn nàn, một người hâm mộ nói: 'Tôi yêu {0} và đã chơi {1} rất nhiều nhưng bây giờ họ ngừng phát hành nó, tôi không biết nên chơi MMO nào nữa. Giá như {0} phát hành một MMO mới thì tôi đã không buồn như vậy.'"
     }, {
         "value": "{0} has released their game console {1} today.",
-        "translation": "{0} ha lanzado hoy su nueva consola {1}."
+        "translation": "{0} đã phát hành hệ máy chơi game {1} của họ hôm nay."
     }, {
         "value": "The console seems to really push the limits of technology and is the most modern console ever to hit shelves.",
-        "translation": "La consola parece forzar los límites de la tecnología y es la más moderna que jamás ha llegado a las tiendas."
+        "translation": "Hệ máy này dường như thực sự vượt qua giới hạn của công nghệ và là hệ máy hiện đại nhất từng được tung ra thị trường."
     }, {
         "value": "The console does not seem quite on par with the high tech competitors but we will see what players think.",
-        "translation": "La consola no parece estar del todo a la altura en comparación a sus competidoras de alta tecnología, pero veremos qué piensan los jugadores."
+        "translation": "Hệ máy này có vẻ không hoàn toàn ngang bằng với các đối thủ cạnh tranh công nghệ cao nhưng chúng ta sẽ xem người chơi nghĩ gì."
     }, {
         "value": " Looking at the features of {0}, it seems that the ",
-        "translation": "Echando un vistazo a las características de {0}, parece que la "
+        "translation": " Nhìn vào các tính năng của {0}, có vẻ như "
     }, {
         "value": "list is extensive which is a good sign and could lead to a wide variety of games becoming available.",
-        "translation": "lista es extensa, lo que es buena señal y podría dar lugar a una amplia variedad de juegos disponibles."
+        "translation": "danh sách rất phong phú, đó là một dấu hiệu tốt và có thể dẫn đến sự ra đời của nhiều loại trò chơi khác nhau."
     }, {
         "value": "list is a bit slim. Don't expect too many gadgets and controllers to be available for this console.",
-        "translation": "lista es un tanto reducida. No esperen que haya demasiados mandos ni complementos disponibles para esta consola."
+        "translation": "danh sách hơi ít. Đừng mong đợi quá nhiều tiện ích và bộ điều khiển có sẵn cho hệ máy này."
     }, {
         "value": "First tests indicate that {0}",
-        "translation": "Los primeros test indican que la {0} "
+        "translation": "Các thử nghiệm ban đầu cho thấy {0}"
     }, {
         "value": "'s build quality is excellent and will likely run for decades without issues.",
-        "translation": "posee una excelente calidad de fabricación y muy posiblemente funcionará durante décadas sin estropearse."
+        "translation": " có chất lượng hoàn thiện xuất sắc và có khả năng sẽ hoạt động trong nhiều thập kỷ mà không gặp sự cố."
     }, {
         "value": "is of average build quality. Don't expect it to last forever but in general you should not see many issues.",
-        "translation": "tiene una calidad media de fabricación. No esperen que dure para siempre, aunque en general no debería dar muchos problemas."
+        "translation": "có chất lượng hoàn thiện ở mức trung bình. Đừng mong đợi nó sẽ tồn tại mãi mãi nhưng nhìn chung bạn sẽ không gặp nhiều vấn đề."
     }, {
         "value": "is a bit fragile. We wouldn't be surprised if you need to make use of the warranty sooner or later.",
-        "translation": "es un tanto frágil. No debería sorprendernos si nos vemos obligados a usar la tarjeta de garantía tarde o temprano."
+        "translation": "hơi dễ vỡ. Chúng tôi sẽ không ngạc nhiên nếu bạn sớm hay muộn cũng cần đến bảo hành."
     }, {
         "value": "All in all ",
         "comment": "fragment continues with 'we think that the console...'",
-        "translation": "En resumen, "
+        "translation": "Nói chung "
     }, {
         "value": "we think that the console will stir up the market and prove to be very successful.",
         "comment": "fragment, started with 'All in all'",
-        "translation": "creemos que la consola revolucionará el mercado y será de lo más exitosa."
+        "translation": "chúng tôi nghĩ rằng hệ máy này sẽ khuấy động thị trường và chứng tỏ rất thành công."
     }, {
         "value": "we think that the console will do reasonably well in the market and it is a welcome addition.",
         "comment": "fragment, started with 'All in all'",
-        "translation": "creemos que la consola funcionará razonablemente bien en el mercado y será una novedad bien recibida."
+        "translation": "chúng tôi nghĩ rằng hệ máy này sẽ hoạt động tương đối tốt trên thị trường và là một sự bổ sung đáng hoan nghênh."
     }, {
         "value": "it's hard to say whether the console will do well as there are so many other good products on the market.",
         "comment": "fragment, started with 'All in all'",
-        "translation": "es difícil decir si la consola se venderá bien, ya que en el mercado hay alternativas de mucha calidad."
+        "translation": "thật khó để nói liệu hệ máy này có thành công hay không vì có rất nhiều sản phẩm tốt khác trên thị trường."
     }, {
         "value": "first",
-        "translation": "primera"
+        "translation": "đầu tiên"
     }, {
         "value": "second",
-        "translation": "segunda"
+        "translation": "thứ hai"
     }, {
         "value": "third",
-        "translation": "tercera"
+        "translation": "thứ ba"
     }, {
         "value": "{0} has taken their game console {1} off the market.\n{1} was the {2} console created by the company.",
-        "translation": "{0} ha sacado su consola de juegos {1} del mercado.\n{1} fue la {2} consola creada por la compañía."
+        "translation": "{0} đã ngừng bán hệ máy chơi game {1} của họ.\n{1} là hệ máy {2} do công ty tạo ra."
     }, {
         "value": " They are also known for their console {0} which has done very well on the market.",
-        "translation": "También son conocidos por su consola {0} que ha rendido muy bien en el mercado."
+        "translation": " Họ cũng được biết đến với hệ máy {0} đã hoạt động rất tốt trên thị trường."
     }, {
         "value": "Game finished",
-        "translation": "Juego terminado"
+        "translation": "Trò chơi kết thúc"
     }, {
         "value": "Congratulations. You have finished Game Dev Tycoon. We will now calculate your final score and show you some statistics. You may continue playing after that.",
-        "translation": "Felicidades, has terminado Game Dev Tycoon. A continuación calcularemos tu puntuación final y te mostraremos varias estadísticas. Podrás seguir jugando después de ello."
+        "translation": "Chúc mừng. Bạn đã hoàn thành Game Dev Tycoon. Bây giờ chúng tôi sẽ tính điểm cuối cùng của bạn và hiển thị một số thống kê. Bạn có thể tiếp tục chơi sau đó."
     }, {
         "value": "Goal reached",
         "comment": "heading",
-        "translation": "Objetivo cumplido"
+        "translation": "Đạt mục tiêu"
     }, {
         "value": "You now have more than {0} fans! With such a big fan base you should now be able to self-publish medium games.",
-        "translation": "¡Ya tienes más de {0} fans! Con una base de aficionados tan grande, deberías poder auto-publicar juegos de tamaño mediano."
+        "translation": "Bạn hiện có hơn {0} người hâm mộ! Với một lượng fan lớn như vậy, giờ đây bạn có thể tự phát hành các trò chơi cỡ vừa."
     }, {
         "value": "You now have more than {0} fans! With such a big fan base you should now be able to self-publish large games.",
-        "translation": "¡Ya tienes más de {0} fans! Con una base de seguidores tan grande deberías ser capaz de auto-publicar juegos de tamaño grande."
+        "translation": "Bạn hiện có hơn {0} người hâm mộ! Với một lượng fan lớn như vậy, giờ đây bạn có thể tự phát hành các trò chơi cỡ lớn."
     }, {
         "value": "Game Convention",
-        "translation": "Convención de Videojuegos"
+        "translation": "Hội nghị Game"
     }, {
         "value": "Dear {0},\nWe have followed your progress in recent years and would like to extend this formal invitation to participate in the biggest game convention on the planet 'Games, Games, Games' also known as G3.{n}By having your own company booth at G3 you can gain a lot of fans and hype for your games and we think our audience would love to see you there.\nWe will contact you yearly with booth options. Hope to see you at G3.\nThe G3 committee.",
-        "translation": "Querido {0},\nHemos seguido tu progreso en los años recientes y queríamos invitarte formalmente a participar en la mayor convención de videojuegos del planeta, \"Games, Games, Games\", también conocida como G3.{n}Con tu propio stand en la G3, podrías ganar muchos seguidores y promocionar tus videojuegos, ya que creemos que a nuestro público le encantaría verlos allí.\nContactaremos con ustedes cada año para ofrecerles stands. Esperamos verlos en la G3.\nEl comité de la G3."
+        "translation": "Kính gửi {0},\nChúng tôi đã theo dõi sự tiến bộ của bạn trong những năm gần đây và muốn gửi lời mời chính thức này để bạn tham gia hội nghị game lớn nhất hành tinh 'Games, Games, Games' còn được gọi là G3.{n}Bằng cách có gian hàng công ty của riêng bạn tại G3, bạn có thể thu hút rất nhiều người hâm mộ và tạo sự chú ý cho các trò chơi của mình và chúng tôi nghĩ rằng khán giả của chúng tôi sẽ rất muốn gặp bạn ở đó.\nChúng tôi sẽ liên hệ với bạn hàng năm về các lựa chọn gian hàng. Mong sớm gặp lại bạn tại G3.\nỦy ban G3."
     }, {
         "value": "Goal Hint",
         "comment": "heading",
-        "translation": "Pista para el Objetivo"
+        "translation": "Gợi ý Mục tiêu"
     }, {
         "value": "If you have more than 1M in cash you will be able to move to the next level. This might sound a lot but don't worry. Once you release a hit game you will get to this amount easily.",
-        "translation": "Cuando tengas más de 1M en efectivo podrás pasar al siguiente nivel. Puede parecer mucho, pero no te preocupes: en cuanto lances un juego de éxito alcanzarás fácilmente dicha cantidad."
+        "translation": "Nếu bạn có hơn 1 triệu tiền mặt, bạn sẽ có thể lên cấp độ tiếp theo. Nghe có vẻ nhiều nhưng đừng lo lắng. Một khi bạn phát hành một trò chơi thành công, bạn sẽ dễ dàng đạt được số tiền này."
     }, {
         "value": "Engine Reminder",
         "comment": "heading",
-        "translation": "Recordatorio de Motor"
+        "translation": "Nhắc nhở về Engine"
     }, {
         "value": "Don't forget creating custom game engines. This will improve your games a lot! You can create your custom engine through the action menu once you have researched the Custom Engine.",
-        "translation": "No olvides crear motores de juego personalizados. ¡Con esto mejorarás muchísimo tus juegos! Podrás crear tu propio motor a través del menú de acciones en cuanto hayas investigado Motor Personalizado."
+        "translation": "Đừng quên tạo các engine game tùy chỉnh. Điều này sẽ cải thiện trò chơi của bạn rất nhiều! Bạn có thể tạo engine tùy chỉnh của mình thông qua menu hành động sau khi đã nghiên cứu Custom Engine."
     }, {
         "value": "Hi {0},\nI have followed the progress of {1} for a while and it seems that with your recent expansion you have started developing larger games.\nLarger games deserve to be seen by more people and this is where a publisher can come in handy.{n}A publisher will market and publish your game around the world. They will also help fund development. In return they keep most of the profits but since the game will sell a lot more it is usually still worth it.{n}I can put you in touch with some publishers so you can look at some of the available contracts. Just let me know.\nJasmine Droke{n}Find Publishing Contract has been unlocked. It is accessible in the action menu.",
-        "translation": "Hola {0},\nHe estado siguiendo el progreso de {1} por un tiempo y parece que con tu reciente expansión has empezado a desarrollar juegos grandes.\nLos juegos grandes merecen ser vistos por mas personas y ahí es donde un editor puede ser útil.{n}Un editor publicará y publicitará tu juego alrededor del mundo. También te ayudará a financiar el desarrollo. A cambio se quedará la mayor parte de las ganancias pero como tu juego venderá mucho mas normalmente vale la pena.{n}Puedo ponerte en contacto con algunos editores para que puedas buscar algunos de los contratos disponibles. Solo avisame.\nJasmine Droke{n}Encontrar contratos de editor se ha desbloqueado. Accédelos desde el menu de acción."
+        "translation": "Chào {0},\nTôi đã theo dõi tiến độ của {1} một thời gian và có vẻ như với sự mở rộng gần đây, bạn đã bắt đầu phát triển các trò chơi lớn hơn.\nCác trò chơi lớn hơn xứng đáng được nhiều người biết đến hơn và đây là lúc một nhà phát hành có thể hữu ích.{n}Một nhà phát hành sẽ tiếp thị và phát hành trò chơi của bạn trên toàn thế giới. Họ cũng sẽ giúp tài trợ cho việc phát triển. Đổi lại, họ giữ phần lớn lợi nhuận nhưng vì trò chơi sẽ bán được nhiều hơn nên thường vẫn đáng giá.{n}Tôi có thể giới thiệu bạn với một số nhà phát hành để bạn có thể xem xét một số hợp đồng hiện có. Cứ cho tôi biết nhé.\nJasmine Droke{n}Tìm Hợp đồng Phát hành đã được mở khóa. Bạn có thể truy cập nó trong menu hành động."
     }, {
         "value": "Publishing Contracts",
         "comment": "heading",
-        "translation": "Contratos de Distruibidor"
+        "translation": "Hợp đồng Phát hành"
     }, {
         "value": "Engine",
-        "translation": "Motor"
+        "translation": "Engine"
     }, {
         "value": "Gameplay",
-        "translation": "Jugabilidad"
+        "translation": "Lối chơi"
     }, {
         "value": "Story/Quests",
-        "translation": "Historia/Misiones"
+        "translation": "Cốt truyện/Nhiệm vụ"
     }, {
         "value": "Dialogues",
-        "translation": "Diálogos"
+        "translation": "Hội thoại"
     }, {
         "value": "Level Design",
-        "translation": "Diseño de Nivel"
+        "translation": "Thiết kế Màn chơi"
     }, {
         "value": "Artificial Intelligence",
-        "translation": "Inteligencia Artificial"
+        "translation": "Trí tuệ Nhân tạo"
     }, {
         "value": "World Design",
-        "translation": "Diseño de Mundo"
+        "translation": "Thiết kế Thế giới"
     }, {
         "value": "Sound",
-        "translation": "Sonido"
+        "translation": "Âm thanh"
     }, {
         "value": "Advertise in magazines",
-        "translation": "Publicitar en revistas"
+        "translation": "Quảng cáo trên tạp chí"
     }, {
         "value": "Magazines",
         "comment": "short name",
-        "translation": "Revistas"
+        "translation": "Tạp chí"
     }, {
         "value": "Advertise in gaming magazines to get the game well known before it hits the shelves.",
-        "translation": "Promociona el juego en revistas especializadas para darlo a conocer antes de que llegue a las tiendas."
+        "translation": "Quảng cáo trên các tạp chí game để trò chơi được biết đến rộng rãi trước khi lên kệ."
     }, {
         "value": "Magazines & Demos",
-        "translation": "Revistas & Demos"
+        "translation": "Tạp chí & Demo"
     }, {
         "value": "Advertise in gaming magazines and distribute demos of the game to give players an opportunity to try the game.",
-        "translation": "Promociona el juego en revistas especializadas y distribuye demos para que los jugadores puedan probarlo."
+        "translation": "Quảng cáo trên các tạp chí game và phân phát các bản demo của trò chơi để người chơi có cơ hội thử nghiệm."
     }, {
         "value": "Small Marketing Campaign",
-        "translation": "Campaña de Promoción Pequeña"
+        "translation": "Chiến dịch Marketing Nhỏ"
     }, {
         "value": "Small Campaign",
         "comment": "short name",
-        "translation": "Campaña Pequeña"
+        "translation": "Chiến dịch Nhỏ"
     }, {
         "value": "Start a global marketing campaign including magazine ads, demos and interviews.",
-        "translation": "Empieza una campaña global de promoción con anuncios en revistas, demos y entrevistas."
+        "translation": "Bắt đầu một chiến dịch marketing toàn cầu bao gồm quảng cáo trên tạp chí, demo và phỏng vấn."
     }, {
         "value": "Large Marketing Campaign",
-        "translation": "Campaña de Promoción Extensa"
+        "translation": "Chiến dịch Marketing Lớn"
     }, {
         "value": "Large Campaign",
         "comment": "short name",
-        "translation": "Campaña Extensa"
+        "translation": "Chiến dịch Lớn"
     }, {
         "value": "Start a global marketing campaign to promote the game far and wide. Organize exclusive reviews, behind the scenes reports, TV trailers and more.",
-        "translation": "Empiesa una campaña global de promoción para publicitar el juego en todas partes. Organiza críticas exclusivas, vídeos de \"cómo se hizo\", anuncios en TV y más."
+        "translation": "Bắt đầu một chiến dịch marketing toàn cầu để quảng bá trò chơi rộng rãi. Tổ chức các bài đánh giá độc quyền, báo cáo hậu trường, trailer TV và hơn thế nữa."
     }, {
         "value": "Logo Animation",
         "comment": "heading",
-        "translation": "Animación de Logotipo"
+        "translation": "Hoạt ảnh Logo"
     }, {
         "value": "Create an animation for an existing logo.",
-        "translation": "Crea una animación para un logotipo ya creado."
+        "translation": "Tạo một hoạt ảnh cho một logo hiện có."
     }, {
         "value": "Character Design",
         "comment": "heading",
-        "translation": "Diseño de Personajes"
+        "translation": "Thiết kế Nhân vật"
     }, {
         "value": "Design some game characters.",
-        "translation": "Diseña varios personajes para un juego."
+        "translation": "Thiết kế một số nhân vật game."
     }, {
         "value": "Playtest",
         "comment": "heading",
-        "translation": "Testeo"
+        "translation": "Chơi thử"
     }, {
         "value": "Help to playtest a game.",
-        "translation": "Ayuda a testear un juego."
+        "translation": "Giúp chơi thử một trò chơi."
     }, {
         "value": "Game Backdrops",
         "comment": "heading",
-        "translation": "Paisajes de Juego"
+        "translation": "Hình nền Game"
     }, {
         "value": "Design some simple background graphics for a game.",
-        "translation": "Diseña varios fondos gráficos sencillos para un juego."
+        "translation": "Thiết kế một số đồ họa nền đơn giản cho một trò chơi."
     }, {
         "value": "Setup Computers",
         "comment": "heading",
-        "translation": "Instalar Computadores"
+        "translation": "Thiết lập Máy tính"
     }, {
         "value": "Install Mirconoft BOSS on computers",
-        "translation": "Instala BOSS de Mirconoft en computadores"
+        "translation": "Cài đặt Mirconoft BOSS trên máy tính"
     }, {
         "value": "Debug program",
         "comment": "heading",
-        "translation": "Depurar programa"
+        "translation": "Gỡ lỗi chương trình"
     }, {
         "value": "Spritesheet Software",
         "comment": "heading",
-        "translation": "Software de Animación"
+        "translation": "Phần mềm Spritesheet"
     }, {
         "value": "Our staff needs to be taught how to use these modern technologies.",
-        "translation": "Nuestra personal necesita aprender a usar estas tecnologías modernas."
+        "translation": "Nhân viên của chúng ta cần được đào tạo cách sử dụng các công nghệ hiện đại này."
     }, {
         "value": "Library Software",
         "comment": "heading",
-        "translation": "Software de Biblioteca"
+        "translation": "Phần mềm Thư viện"
     }, {
         "value": "Develop a simple library management system",
-        "translation": "Diseña un sistema sencillo de administración de bibliotecas"
+        "translation": "Phát triển một hệ thống quản lý thư viện đơn giản"
     }, {
         "value": "Usability Study",
         "comment": "heading",
-        "translation": "Estudio de Utilidad"
+        "translation": "Nghiên cứu Khả năng sử dụng"
     }, {
         "value": "Perform a detailed usability study.",
-        "translation": "Realiza un estudio de utilidad detallado."
+        "translation": "Thực hiện một nghiên cứu chi tiết về khả năng sử dụng."
     }, {
         "value": "Review Game Concept",
         "comment": "heading",
-        "translation": "Valorar Idea de Juego"
+        "translation": "Đánh giá Ý tưởng Game"
     }, {
         "value": "Review a game concept using your expertise.",
-        "translation": "Valora una idea para un juego aprovechando tus conocimientos."
+        "translation": "Đánh giá một ý tưởng game bằng chuyên môn của bạn."
     }, {
         "value": "Game Art",
         "comment": "heading",
-        "translation": "Arte para Videojuegos"
+        "translation": "Đồ họa Game"
     }, {
         "value": "Help out on a project with some game art",
-        "translation": "Colabora en un proyecto de juego con diseño artístico"
+        "translation": "Giúp đỡ một dự án bằng một số đồ họa game"
     }, {
         "value": "Clean up database",
         "comment": "heading",
-        "translation": "Limpiar base de datos"
+        "translation": "Dọn dẹp cơ sở dữ liệu"
     }, {
         "value": "Should one table really have 200 columns? Probably not.",
-        "translation": "¿Debería una tabla tener 200 columnas? Quizá no."
+        "translation": "Một bảng có thực sự nên có 200 cột không? Có lẽ là không."
     }, {
         "value": "Accounting Software",
         "comment": "heading",
-        "translation": "Software de Contabilidad"
+        "translation": "Phần mềm Kế toán"
     }, {
         "value": "Develop a simple accounting software. Are those ever simple?",
-        "translation": "Desarrolla un sencillo software de contabilidad. ¿ha habido alguno sencillo?"
+        "translation": "Phát triển một phần mềm kế toán đơn giản. Chúng có bao giờ đơn giản không nhỉ?"
     }, {
         "value": "Time Tracking",
         "comment": "heading",
-        "translation": "Seguimiento del Tiempo"
+        "translation": "Theo dõi Thời gian"
     }, {
         "value": "Design and develop a time tracking system.",
-        "translation": "Diseña y desarrolla un sistema de seguimiento del tiempo."
+        "translation": "Thiết kế và phát triển một hệ thống theo dõi thời gian."
     }, {
         "value": "Design a board game",
         "comment": "heading",
-        "translation": "Diseñar un juego de mesa"
+        "translation": "Thiết kế một trò chơi cờ bàn"
     }, {
         "value": "Let's see how your skills translate to traditional games.",
-        "translation": "Veamos cómo se adaptan tus habilidades a los juegos tradicionales."
+        "translation": "Hãy xem kỹ năng của bạn áp dụng vào các trò chơi truyền thống như thế nào."
     }, {
         "value": "Horoscope Generator",
         "comment": "heading",
-        "translation": "Generador de Horóscopo"
+        "translation": "Trình tạo Tử vi"
     }, {
         "value": "Making up horoscopes is hard work. We want it automated.",
-        "translation": "Lleva mucho trabajo hacer un horóscopo; lo queremos automatizado."
+        "translation": "Việc tạo ra các lá số tử vi rất tốn công. Chúng tôi muốn tự động hóa nó."
     }, {
         "value": "Character Dialogues",
         "comment": "heading",
-        "translation": "Diálogos de Personaje"
+        "translation": "Hội thoại Nhân vật"
     }, {
         "value": "Improve our character dialogues.",
-        "translation": "Mejora los diálogos de nuestro personaje."
+        "translation": "Cải thiện hội thoại nhân vật của chúng ta."
     }, {
         "value": "Futuristic Application",
         "comment": "heading",
-        "translation": "Aplicación Futurista"
+        "translation": "Ứng dụng Tương lai"
     }, {
         "value": "We need an application that looks futuristic for a movie.",
-        "translation": "Necesitamos una aplicación que parezca futurista para una película."
+        "translation": "Chúng tôi cần một ứng dụng trông có vẻ tương lai cho một bộ phim."
     }, {
         "value": "Vacuum Robot",
         "comment": "heading",
-        "translation": "Aspiradora Robotizada"
+        "translation": "Robot Hút bụi"
     }, {
         "value": "Create a revolutionary AI for a vacuum robot",
-        "translation": "Crea una IA revolucionaria para una aspiradora robótica"
+        "translation": "Tạo ra một AI mang tính cách mạng cho robot hút bụi"
     }, {
         "value": "Website",
         "comment": "heading",
-        "translation": "Página Web"
+        "translation": "Trang web"
     }, {
         "value": "We just heard of this thing called internet. We want to have one.",
-        "translation": "Acabamos de oír hablar de algo llamado Internet. Queremos tener uno de esos."
+        "translation": "Chúng tôi vừa nghe nói về thứ gọi là internet. Chúng tôi muốn có một cái."
     }, {
         "value": "Game Port",
         "comment": "heading",
-        "translation": "Adaptar videojuego"
+        "translation": "Chuyển hệ Game"
     }, {
         "value": "Port a game to a different platform.",
-        "translation": "Adapta un juego a una plataforma diferente."
+        "translation": "Chuyển một trò chơi sang một nền tảng khác."
     }, {
         "value": "Cut Scenes",
         "comment": "heading",
-        "translation": "Cortes de Escena"
+        "translation": "Cảnh cắt"
     }, {
         "value": "Deliver professional cut scenes for a game.",
-        "translation": "Crea escenas cinematográficas profesionales para un juego."
+        "translation": "Tạo ra các cảnh cắt chuyên nghiệp cho một trò chơi."
     }, {
         "value": "Space Shuttle",
         "comment": "heading",
-        "translation": "Transbordador espacial"
+        "translation": "Tàu con thoi"
     }, {
         "value": "Deliver part of the space shuttle control software.",
-        "translation": "Proporciona parte del software de control de un transbordador espacial."
+        "translation": "Cung cấp một phần của phần mềm điều khiển tàu con thoi."
     }, {
         "value": "Alien Search",
         "comment": "heading",
-        "translation": "Búsqueda Alienígena"
+        "translation": "Tìm kiếm Người ngoài hành tinh"
     }, {
         "value": "Optimize our search for alien life forms using advanced AI techniques.",
-        "translation": "Optimiza nuestra búsqueda de formas de vida alienígena con técnicas avanzadas de IA."
+        "translation": "Tối ưu hóa việc tìm kiếm các dạng sống ngoài hành tinh của chúng ta bằng các kỹ thuật AI tiên tiến."
     }, {
         "value": "Movies",
         "comment": "heading",
-        "translation": "Películas"
+        "translation": "Phim ảnh"
     }, {
         "value": "We need your skills in our latest blockbuster production.",
-        "translation": "Requerimos de tus habilidades en nuestra última superproducción."
+        "translation": "Chúng tôi cần kỹ năng của bạn trong dự án bom tấn mới nhất của mình."
     }, {
         "value": "Thank you for taking care of this for us.",
-        "translation": "Gracias por encargarte de esto."
+        "translation": "Cảm ơn bạn đã lo liệu việc này cho chúng tôi."
     }, {
         "value": "Well done.",
-        "translation": "Bien hecho."
+        "translation": "Làm tốt lắm."
     }, {
         "value": "Just what we wanted.",
-        "translation": "Justo lo que queríamos."
+        "translation": "Đúng thứ chúng tôi muốn."
     }, {
         "value": "Excellent work.",
-        "translation": "Excelente trabajo."
+        "translation": "Công việc xuất sắc."
     }, {
         "value": "Thank you for the quick work.",
-        "translation": "Gracias por tu rápido trabajo."
+        "translation": "Cảm ơn bạn đã làm việc nhanh chóng."
     }, {
         "value": "Would hire again.",
-        "translation": "Te contrataríamos de nuevo."
+        "translation": "Sẽ thuê lại."
     }, {
         "value": "Nice job.",
-        "translation": "Buen trabajo."
+        "translation": "Làm tốt lắm."
     }, {
         "value": "Success!",
-        "translation": "¡Éxito!"
+        "translation": "Thành công!"
     }, {
         "value": "Contract Successful",
         "comment": "heading",
-        "translation": "Contrato Cumplido"
+        "translation": "Hợp đồng Thành công"
     }, {
         "value": "We will transfer {0} to your account.",
-        "translation": "Ingresaremos {0} en tu cuenta."
+        "translation": "Chúng tôi sẽ chuyển {0} vào tài khoản của bạn."
     }, {
         "value": "contract payment",
         "comment": "heading",
-        "translation": "pago de contrato"
+        "translation": "thanh toán hợp đồng"
     }, {
         "value": "This is very disappointing.",
-        "translation": "Esto es muy decepcionante."
+        "translation": "Điều này thật đáng thất vọng."
     }, {
         "value": "You didn't complete the contract on time",
-        "translation": "No completaste el contrato a tiempo"
+        "translation": "Bạn đã không hoàn thành hợp đồng đúng hạn"
     }, {
         "value": "Hope you can make it next time.",
-        "translation": "Esperemos que puedas hacerlo la próxima vez."
+        "translation": "Hy vọng lần sau bạn có thể làm được."
     }, {
         "value": "Seems like this was too big of a job for you.",
-        "translation": "Parece que este fue un trabajo demasiado grande para usted."
+        "translation": "Có vẻ như công việc này quá sức với bạn."
     }, {
         "value": "Unfortunately the deadline is here.",
-        "translation": "Por desgracia, el plazo de entrega ha vencido."
+        "translation": "Thật không may, đã đến hạn chót."
     }, {
         "value": "Contract Failed",
         "comment": "heading",
-        "translation": "Contrato No Cumplido"
+        "translation": "Hợp đồng Thất bại"
     }, {
         "value": "A penalty of {0} will be applied to your account.",
-        "translation": "Se aplicará una penalización de {0} a tu cuenta."
+        "translation": "Một khoản phạt {0} sẽ được áp dụng vào tài khoản của bạn."
     }, {
         "value": "contract penalty",
         "comment": "heading",
-        "translation": "penalización de contrato"
+        "translation": "phạt hợp đồng"
     }, {
         "value": "The game meets the required ratings. We are looking forward to future business.",
-        "translation": "El juego cumple con las puntuaciones requeridas. Esperamos hacer más negocios contigo."
+        "translation": "Trò chơi đáp ứng các đánh giá yêu cầu. Chúng tôi mong muốn hợp tác trong tương lai."
     }, {
         "value": "The game doesn't live up to expectations.\nAs per contract a penalty will be applied to your account.",
-        "translation": "El juego no ha cumplido las expectativas.\nPor contrato se realizara una penalización a tu cuenta."
+        "translation": "Trò chơi không đáp ứng được kỳ vọng.\nTheo hợp đồng, một khoản phạt sẽ được áp dụng vào tài khoản của bạn."
     }, {
         "value": "Publisher",
         "comment": "heading",
-        "translation": "Distribuidor"
+        "translation": "Nhà phát hành"
     }, {
         "value": "Any Topic",
-        "translation": "Cualquier Tema"
+        "translation": "Bất kỳ Chủ đề nào"
     }, {
         "value": "Any Genre",
-        "translation": "Cualquier Género"
+        "translation": "Bất kỳ Thể loại nào"
     }, {
         "value": "Publisher: {0}",
-        "translation": "Distribuidor: {0}"
+        "translation": "Nhà phát hành: {0}"
     }, {
         "value": "General",
-        "translation": "General"
+        "translation": "Chung"
     }, {
         "value": "New research available:",
-        "translation": "Nueva investigación disponible:"
+        "translation": "Nghiên cứu mới có sẵn:"
     }, {
         "value": "New Research!",
         "comment": "heading",
-        "translation": "¡Nueva investigación!"
+        "translation": "Nghiên cứu Mới!"
     }, {
         "value": "Text based",
-        "translation": "Basado en texto"
+        "translation": "Dạng văn bản"
     }, {
         "value": "2D Graphics V{0}",
-        "translation": "Gráficos 2D V.{0}"
+        "translation": "Đồ họa 2D V{0}"
     }, {
         "value": "3D Graphics V{0}",
-        "translation": "Gráficos 3D V.{0}"
+        "translation": "Đồ họa 3D V{0}"
     }, {
         "value": "Basic sounds",
-        "translation": "Sonidos básicos"
+        "translation": "Âm thanh cơ bản"
     }, {
         "value": "Mono sound",
-        "translation": "Sonido Mono"
+        "translation": "Âm thanh Mono"
     }, {
         "value": "Stereo sound",
-        "translation": "Sonido Estéreo"
+        "translation": "Âm thanh Stereo"
     }, {
         "value": "Soundtrack",
-        "translation": "Banda sonora"
+        "translation": "Nhạc nền"
     }, {
         "value": "Surround sound",
-        "translation": "Sonido envolvente"
+        "translation": "Âm thanh vòm"
     }, {
         "value": "Orchestral soundtrack",
-        "translation": "Banda sonora orquestal"
+        "translation": "Nhạc nền giao hưởng"
     }, {
         "value": "A.I.",
-        "translation": "I.A."
+        "translation": "A.I."
     }, {
         "value": "Better A.I.",
-        "translation": "I.A. Mejorada."
+        "translation": "A.I. Tốt hơn"
     }, {
         "value": "A.I. Companions",
-        "translation": "Compañeros I.A"
+        "translation": "Bạn đồng hành A.I."
     }, {
         "value": "Self-learning A.I.",
-        "translation": "I.A. con autoaprendizaje."
+        "translation": "A.I. tự học"
     }, {
         "value": "Achievements",
-        "translation": "Logros"
+        "translation": "Thành tựu"
     }, {
         "value": "Character progression",
-        "translation": "Progreso de personaje"
+        "translation": "Tiến triển nhân vật"
     }, {
         "value": "Skill trees",
-        "translation": "Árbol de habilidades"
+        "translation": "Cây kỹ năng"
     }, {
         "value": "Savegame",
-        "translation": "Guardar Partida"
+        "translation": "Lưu game"
     }, {
         "value": "Multiplayer",
-        "translation": "Multijugador"
+        "translation": "Chơi nhiều người"
     }, {
         "value": "Video playback",
-        "translation": "Reproducción de vídeo"
+        "translation": "Phát lại video"
     }, {
         "value": "Basic physics",
-        "translation": "Física básica"
+        "translation": "Vật lý cơ bản"
     }, {
         "value": "Mod support",
-        "translation": "Soporte de mods"
+        "translation": "Hỗ trợ mod"
     }, {
         "value": "Online play",
-        "translation": "Juego online"
+        "translation": "Chơi trực tuyến"
     }, {
         "value": "Save to cloud",
-        "translation": "Guardar en nube"
+        "translation": "Lưu lên đám mây"
     }, {
         "value": "MMO Support",
-        "translation": "Soporte MMO"
+        "translation": "Hỗ trợ MMO"
     }, {
         "value": "Software Development Kit",
-        "translation": "Kit de Desarrollo de Software"
+        "translation": "Bộ Công cụ Phát triển Phần mềm"
     }, {
         "value": "Linear story",
-        "translation": "Historia lineal"
+        "translation": "Cốt truyện tuyến tính"
     }, {
         "value": "Simple cutscenes",
-        "translation": "Escenas sencillas"
+        "translation": "Cảnh cắt đơn giản"
     }, {
         "value": "Branching story",
-        "translation": "Historia ramificada"
+        "translation": "Cốt truyện phân nhánh"
     }, {
         "value": "Advanced cutscenes",
-        "translation": "Escenas avanzadas"
+        "translation": "Cảnh cắt nâng cao"
     }, {
         "value": "Full motion video",
-        "translation": "Vídeo de movimiento completo"
+        "translation": "Video chuyển động đầy đủ"
     }, {
         "value": "Interactive story",
-        "translation": "Historia interactiva"
+        "translation": "Cốt truyện tương tác"
     }, {
         "value": "Moral choices",
-        "translation": "Elecciones morales"
+        "translation": "Lựa chọn đạo đức"
     }, {
         "value": "Immersive story telling",
-        "translation": "Narrativa inmersiva"
+        "translation": "Kể chuyện nhập vai"
     }, {
         "value": "Reactive quests",
-        "translation": "Misiones reactivas"
+        "translation": "Nhiệm vụ tương tác"
     }, {
         "value": "Better dialogues",
-        "translation": "Diálogos mejorados"
+        "translation": "Hội thoại tốt hơn"
     }, {
         "value": "Dialogue tree",
-        "translation": "Árbol de diálogos"
+        "translation": "Cây hội thoại"
     }, {
         "value": "Voice over",
-        "translation": "Doblaje de voz"
+        "translation": "Lồng tiếng"
     }, {
         "value": "Simple body language",
-        "translation": "Lenguaje corporal sencillo"
+        "translation": "Ngôn ngữ cơ thể đơn giản"
     }, {
         "value": "Advanced body language",
-        "translation": "Lenguaje corporal avanzado"
+        "translation": "Ngôn ngữ cơ thể nâng cao"
     }, {
         "value": "Celebrity voice acting",
-        "translation": "Voces de famosos"
+        "translation": "Lồng tiếng người nổi tiếng"
     }, {
         "value": "Realistic body language",
-        "translation": "Lenguaje corporal realista"
+        "translation": "Ngôn ngữ cơ thể thực tế"
     }, {
         "value": "Open world",
-        "translation": "Mundo abierto"
+        "translation": "Thế giới mở"
     }, {
         "value": "Day & night cycle",
-        "translation": "Ciclo día y noche"
+        "translation": "Chu kỳ ngày & đêm"
     }, {
         "value": "Rich backstory",
-        "translation": "Profundidad de historia"
+        "translation": "Cốt truyện phong phú"
     }, {
         "value": "Virtual economy",
-        "translation": "Economía virtual"
+        "translation": "Kinh tế ảo"
     }, {
         "value": "Realistic weather",
-        "translation": "Climatología realista"
+        "translation": "Thời tiết thực tế"
     }, {
         "value": "Dynamic world",
-        "translation": "Mundo dinámico"
+        "translation": "Thế giới động"
     }, {
         "value": "Level editor",
-        "translation": "Editor de niveles"
+        "translation": "Trình chỉnh sửa màn chơi"
     }, {
         "value": "Easter eggs",
-        "translation": "Huevos de Pascua"
+        "translation": "Trứng Phục sinh"
     }, {
         "value": "Mini games",
-        "translation": "Mini-juegos"
+        "translation": "Trò chơi nhỏ"
     }, {
         "value": "No loading screens",
-        "translation": "Sin pantallas de carga"
+        "translation": "Không có màn hình tải"
     }, {
         "value": "Medium Games",
-        "translation": "Juegos Medianos"
+        "translation": "Game Cỡ Vừa"
     }, {
         "value": "Project Management",
-        "translation": "Administración de Proyecto"
+        "translation": "Quản lý Dự án"
     }, {
         "value": "Large Games",
-        "translation": "Juegos Grandes"
+        "translation": "Game Cỡ Lớn"
     }, {
         "value": "Game Design",
-        "translation": "Diseño de Juego"
+        "translation": "Thiết kế Game"
     }, {
         "value": "Target Audience",
-        "translation": "Público Objetivo"
+        "translation": "Đối tượng Mục tiêu"
     }, {
         "value": "Sequels",
-        "translation": "Secuelas"
+        "translation": "Phần tiếp theo"
     }, {
         "value": "Casual games",
-        "translation": "Juegos Casuales"
+        "translation": "Game thông thường"
     }, {
         "value": "Marketing",
         "translation": "Marketing"
     }, {
         "value": "Publishing",
-        "translation": "Distribuidor"
+        "translation": "Phát hành"
     }, {
         "value": "Multi genre",
-        "translation": "Multigénero"
+        "translation": "Đa thể loại"
     }, {
         "value": "Expansion pack",
-        "translation": "Pack de expansión"
+        "translation": "Gói mở rộng"
     }, {
         "value": "Red Exploding Barrels",
-        "translation": "Barriles Rojos Explosivos"
+        "translation": "Thùng Nổ Đỏ"
     }, {
         "value": "Special Items",
-        "translation": "Objetos Especiales"
+        "translation": "Vật phẩm Đặc biệt"
     }, {
         "value": "Lab report",
-        "translation": "Informe de Laboratorio"
+        "translation": "Báo cáo Phòng thí nghiệm"
     }, {
         "value": "Internet Opportunities",
-        "translation": "Posibilidades de Internet"
+        "translation": "Cơ hội từ Internet"
     }, {
         "value": "The internet will change our lives forever. This project will investigate how we can use the internet to make better games and deliver better experiences. Completing this project should unlock new options for research.",
-        "translation": "Internet cambiará nuestras vidas para siempre. Este proyecto investigará cómo podemos aprovechar Internet para hacer juegos mejores, con mejores experiencias. Al completar este proyecto se desbloquearán nuevas opciones de investigación."
+        "translation": "Internet sẽ thay đổi cuộc sống của chúng ta mãi mãi. Dự án này sẽ điều tra cách chúng ta có thể sử dụng internet để tạo ra những trò chơi tốt hơn và mang lại trải nghiệm tốt hơn. Hoàn thành dự án này sẽ mở khóa các tùy chọn nghiên cứu mới."
     }, {
         "value": "After careful examination we come to the conclusion that the internet is a huge opportunity in the gaming industry. We already see some small signs how successful multiplayer games can be but multiplayer is usually an additional feature to a game and not the main focus.{n}We think we could develop technologies to create a massively multiplayer online game (short MMO), a game where tens of thousands of players can play together. To create such an MMO more research is necessary.{n}The second discovery is that we could start developing an online distribution platform. Instead of players buying games in local stores they could download games directly from our servers. This would cut out the middle man and we could gain a large share of the market and additional income to fund our developments.",
-        "translation": "Tras una observación detallada, hemos concluido que Internet supone una gran oportunidad en la industria de los videojuegos. Ya hemos visto alguna señal de lo que pueden llegar a ser los juegos multijugador, pero nadie se ha centrado en el multijugador como principal reclamo de un juego.{n}Creemos ser capaces de desarrollar tecnologías para crear un juego online multijugador masivo (abreviado MMO), un juego en el que decenas de miles de jugadores puedan jugar juntos. Para crear un MMO se requiere investigar más.{n}El segundo descubrimiento es que podemos empezar a desarrollar una plataforma de distribución online. Los jugadores podrán descargarse juegos directamente de nuestros servidores en lugar de comprarlos en tiendas. Esto acabará con los intermediarios, con lo que podríamos ganar una gran cuota de mercado e ingresos adicionales para financiar nuestros desarrollos."
+        "translation": "Sau khi xem xét cẩn thận, chúng tôi đi đến kết luận rằng internet là một cơ hội lớn trong ngành công nghiệp game. Chúng tôi đã thấy một số dấu hiệu nhỏ về mức độ thành công của các trò chơi nhiều người chơi nhưng nhiều người chơi thường là một tính năng bổ sung cho trò chơi chứ không phải là trọng tâm chính.{n}Chúng tôi nghĩ rằng chúng tôi có thể phát triển các công nghệ để tạo ra một trò chơi trực tuyến nhiều người chơi (viết tắt là MMO), một trò chơi mà hàng chục ngàn người chơi có thể chơi cùng nhau. Để tạo ra một MMO như vậy cần nhiều nghiên cứu hơn.{n}Khám phá thứ hai là chúng tôi có thể bắt đầu phát triển một nền tảng phân phối trực tuyến. Thay vì người chơi mua game ở các cửa hàng địa phương, họ có thể tải game trực tiếp từ máy chủ của chúng tôi. Điều này sẽ loại bỏ người trung gian và chúng tôi có thể giành được thị phần lớn và thu nhập bổ sung để tài trợ cho các hoạt động phát triển của mình."
     }, {
         "value": "Codename: Grid",
-        "translation": "Nombre clave: Grid"
+        "translation": "Mật danh: Grid"
     }, {
         "value": "A bold plan to develop an internet-based distribution platform for games. Rather than buying games through retailers players worldwide can simply download them. The platform features digital rights management to combat piracy and also enables a new market for smaller developers to show off their products.",
-        "translation": "Un audaz plan para desarrollar una plataforma de distribución de juegos basada en internet. En lugar de comprar juegos en puntos de venta, los jugadores de todo el mundo no tendrán más que descargarlos. La plataforma incluye la administración de derechos digitales para combatir la piratería, y activa también un nuevo mercado para que los pequeños diseñadores muestren sus productos."
+        "translation": "Một kế hoạch táo bạo nhằm phát triển một nền tảng phân phối game dựa trên internet. Thay vì mua game qua các nhà bán lẻ, người chơi trên toàn thế giới có thể chỉ cần tải chúng xuống. Nền tảng này có tính năng quản lý bản quyền kỹ thuật số để chống vi phạm bản quyền và cũng tạo ra một thị trường mới cho các nhà phát triển nhỏ hơn giới thiệu sản phẩm của họ."
     }, {
         "value": "Boss, it is done and it is live! Grid is the name of our very own internet-based distribution platform.",
-        "translation": "¡Jefe, ya lo tenemos aquí! El \"Grid\" es el nombre de nuestra propia plataforma de distribución a través de Internet."
+        "translation": "Sếp ơi, xong rồi và nó đã hoạt động! Grid là tên của nền tảng phân phối dựa trên internet của riêng chúng ta."
     }, {
         "value": "Since we already have our own console we have integrated this service into our console. This should boost our market share considerably.",
-        "translation": "Como tenemos nuestra propia consola, hemos integrado este servicio a la misma. Esto debería impulsar significativamente nuestra cuota de mercado."
+        "translation": "Vì chúng ta đã có hệ máy console riêng, chúng ta đã tích hợp dịch vụ này vào hệ máy của mình. Điều này sẽ thúc đẩy đáng kể thị phần của chúng ta."
     }, {
         "value": "This system should boost the market share of the PC considerably and if we ever have our own console it will also be of great benefit.",
-        "translation": "Este sistema impulsará considerablemente la cuota de mercado del PC y, si llegáramos a tener nuestra propia consola, también sería un gran beneficio."
+        "translation": "Hệ thống này sẽ thúc đẩy đáng kể thị phần của PC và nếu chúng ta có hệ máy console riêng, nó cũng sẽ mang lại lợi ích lớn."
     }, {
         "value": "Grid will generate income every month which should boost our ability to create new games and develop new projects.",
-        "translation": "El Grid generará ingresos cada mes, lo que impulsará nuestra habilidad para crear y desarrollar nuevos juegos y proyectos."
+        "translation": "Grid sẽ tạo ra thu nhập hàng tháng, điều này sẽ thúc đẩy khả năng của chúng ta trong việc tạo ra các trò chơi mới và phát triển các dự án mới."
     }, {
         "value": "Own Convention",
-        "translation": "Convención Propia"
+        "translation": "Hội nghị Riêng"
     }, {
         "value": "It's all well and good to have a booth at the yearly game convention and show off our products but with our large fan base we should consider staging our very own convention instead!",
-        "translation": "Está muy bien tener un stand en la convención anual de videojuegos para mostrar nuestros productos, pero con la gran base de fans que tenemos, ¡habría que considerar el organizar nuestra propia convención!"
+        "translation": "Thật tốt khi có một gian hàng tại hội nghị game hàng năm và giới thiệu sản phẩm của chúng ta, nhưng với lượng fan lớn của mình, chúng ta nên cân nhắc việc tổ chức một hội nghị của riêng mình!"
     }, {
         "value": "Boss, we have completed the organization of our own convention.",
-        "translation": "Jefe, hemos terminado de organizar nuestra propia convención."
+        "translation": "Sếp ơi, chúng ta đã hoàn thành việc tổ chức hội nghị của riêng mình."
     }, {
         "value": "3D Graphics V6",
-        "translation": "Gráficos 3D V6"
+        "translation": "Đồ họa 3D V6"
     }, {
         "value": "Pushing the boundaries of photorealism this revolutionary graphics engine will blow away everything that has come before. Near infinite draw distance, ultra-high polygon counts and realistic particle and volumetric effects.",
-        "translation": "Extendiendo las fronteras del fotorrealismo, este revolucionario motor gráfico deja en ridículo a todo lo que se ha visto hasta ahora. Una distancia de visión casi infinita, número elevadísimo de polígonos, partículas relistas y efectos volumétricos."
+        "translation": "Vượt qua ranh giới của chủ nghĩa ảnh thực, engine đồ họa mang tính cách mạng này sẽ thổi bay mọi thứ đã có trước đây. Khoảng cách vẽ gần như vô hạn, số lượng đa giác cực cao và các hiệu ứng hạt và thể tích thực tế."
     }, {
         "value": "We have successfully completed the research on our next generation graphics technology and we can now start building a game engine to make use of this research.",
-        "translation": "Hemos investigado con éxito nuestra tecnología gráfica de nueva generación y ya podemos crear un motor de juego para aprovechar este avance."
+        "translation": "Chúng tôi đã hoàn thành thành công nghiên cứu về công nghệ đồ họa thế hệ tiếp theo của mình và giờ đây chúng tôi có thể bắt đầu xây dựng một game engine để tận dụng nghiên cứu này."
     }, {
         "value": "3D Graphics V7",
-        "translation": "Gráficos 3D V7"
+        "translation": "Đồ họa 3D V7"
     }, {
         "value": "The ultimate in graphics technology. This will look better than reality. If anyone ever builds a holodeck then this is the graphics engine it would run on.",
-        "translation": "La tecnología gráfica definitiva. Esto se verá mejor que la misma realidad. Si alguien construye alguna vez una holocubierta, funcionará con este motor."
+        "translation": "Công nghệ đồ họa tối thượng. Cái này sẽ trông đẹp hơn cả thực tế. Nếu có ai đó từng xây dựng một holodeck thì đây chính là engine đồ họa mà nó sẽ chạy."
     }, {
         "value": "We have done it! Our research was successful and we should be able to support our concepts for the ultimate graphics technology in our next game engine. This will be a revolution for the gaming industry!",
-        "translation": "¡Lo hemos conseguido! Nuestra investigación ha tenido éxito y ya deberíamos poder aplicar nuestras ideas para la tecnología gráfica definitiva en nuestro próximo motor de juego. ¡Esto revolucionará la industria de los videojuegos!"
+        "translation": "Chúng ta đã làm được! Nghiên cứu của chúng ta đã thành công và chúng ta sẽ có thể hỗ trợ các ý tưởng của mình cho công nghệ đồ họa tối thượng trong game engine tiếp theo. Đây sẽ là một cuộc cách mạng cho ngành công nghiệp game!"
     }, {
         "value": "License Game Engines",
-        "translation": "Motores de Juego con Licencia"
+        "translation": "Cấp phép Engine Game"
     }, {
         "value": "We have a lot of experience in creating custom game engines. Why not sub-license our engines to other developers? Not only will this cement our market position as a technology leader but it will also help offset the growing costs of developing engines.",
-        "translation": "Tenemos mucha experiencia en la creación de motores de juego. ¿Por qué no sublicenciarlos para otros diseñadores? No sólo solidificaríamos nuestra posición en el mercado como líderes tecnológicos; también ayudaría a compensar los crecientes costes de los motores de desarrollo."
+        "translation": "Chúng tôi có rất nhiều kinh nghiệm trong việc tạo ra các engine game tùy chỉnh. Tại sao không cấp phép lại các engine của chúng tôi cho các nhà phát triển khác? Điều này không chỉ củng cố vị thế thị trường của chúng tôi với tư cách là người dẫn đầu về công nghệ mà còn giúp bù đắp chi phí phát triển engine ngày càng tăng."
     }, {
         "value": "Software doesn't run without hardware. We are experts in creating software but why not also investigate whether we can create our own hardware?",
-        "translation": "Un software no funciona sin hardware. Ya que somos expertos en la creación de software, ¿por qué no investigar también si podemos crear nuestro hardware propio?"
+        "translation": "Phần mềm không thể chạy nếu không có phần cứng. Chúng tôi là chuyên gia trong việc tạo ra phần mềm nhưng tại sao không điều tra xem liệu chúng tôi có thể tạo ra phần cứng của riêng mình hay không?"
     }, {
         "value": "Our research is complete. There is definitely a big opportunity ahead of us. If we create our own hardware lab and have the appropriate technology specialists to run it then we could even create our very own gaming console!{n}It would not be cheap and it will probably take us a few years but maybe we could even trump the likes of an mBox or the Playsystem!",
-        "translation": "Hemos terminado la investigación. Está claro que tenemos una gran oportunidad por delante. Si creamos nuestro propio laboratorio de hardware y contamos con los especialistas tecnológicos adecuados para dirigirlo, ¡podríamos crear incluso nuestra propia consola!{n}No sería barato y probablemente nos llevaría varios años, ¡pero podríamos obtener un triunfo similar al de la mBox o la Playsystem!"
+        "translation": "Nghiên cứu của chúng tôi đã hoàn tất. Chắc chắn có một cơ hội lớn phía trước. Nếu chúng tôi tạo ra phòng thí nghiệm phần cứng của riêng mình và có các chuyên gia công nghệ phù hợp để vận hành nó thì chúng tôi thậm chí có thể tạo ra hệ máy chơi game của riêng mình!{n}Sẽ không rẻ và có lẽ sẽ mất vài năm nhưng có thể chúng tôi thậm chí còn vượt qua cả những cái tên như mBox hay Playsystem!"
     }, {
         "value": "Before we can think about creating this lab we need at least one technology specialist on our team so this should be our priority.",
-        "translation": "Antes de que podamos pensar en crear este laboratorio necesitamos un especialista en tecnología en el equipo, así que esa debería ser nuestra prioridad."
+        "translation": "Trước khi chúng ta có thể nghĩ đến việc tạo ra phòng thí nghiệm này, chúng ta cần ít nhất một chuyên gia công nghệ trong đội của mình, vì vậy đây phải là ưu tiên của chúng ta."
     }, {
         "value": "MMO",
         "translation": "MMO"
     }, {
         "value": "Massively Multiplayer Online games! We know how much fun it is to play multiplayer games but imagine that instead of playing with a handful of players you could play with thousands! This project will unlock a brand new genre to allow you to create MMO games.",
-        "translation": "¡Juegos Masivos Multijugador Online! Sabemos lo divertido que es un juego multijugador, ¡pero imagina lo que sería jugar con miles de jugadores en lugar de unos pocos! Este proyecto desbloqueará un género completamente nuevo que te permitirá crear juegos MMO."
+        "translation": "Game Online Nhiều Người Chơi Khổng Lồ! Chúng ta biết chơi game nhiều người vui như thế nào nhưng hãy tưởng tượng thay vì chơi với một vài người, bạn có thể chơi với hàng ngàn người! Dự án này sẽ mở khóa một thể loại hoàn toàn mới cho phép bạn tạo ra các trò chơi MMO."
     }, {
         "value": "Boss, our research into massively multiplayer online (MMO) games is complete. The possibilities of MMOs are big but they are also risky. In our research we realized that before we can begin to develop an MMO we will need to create a special game engine for it.{n}You will need to complete the research for the MMO support feature with one of your staff. Once it is integrated into a game engine you can start building an MMO but be careful. It seems that MMOs only work with the best theme/genre combinations and you will also need to have specialists on your team to make an MMO successful.",
-        "translation": "Jefe nuestra investigación de juegos masivos multijugador online (MMO) se ha completado. Las posibilidades de los MMOs son grandes, pero también arriesgadas. En nuestra investigación hemos descubierto para desarrollar un MMO necesitaremos crear un motor especial.{n}Deberás completar la investigación del soporte MMO con alguno de tus empleados. Una vez lo integres a un motor de juego podrás empezar a crear un MMO, pero ten cuidado. Parece que estos juegos sólo funcionan con las mejores combinaciones tema/género, y también neceistarás especialistas en tu equipo para que sea exitoso."
+        "translation": "Sếp ơi, nghiên cứu của chúng ta về các trò chơi trực tuyến nhiều người chơi (MMO) đã hoàn tất. Tiềm năng của MMO rất lớn nhưng cũng đầy rủi ro. Trong quá trình nghiên cứu, chúng tôi nhận ra rằng trước khi có thể bắt đầu phát triển MMO, chúng ta sẽ cần tạo ra một engine game đặc biệt cho nó.{n}Bạn sẽ cần hoàn thành nghiên cứu về tính năng hỗ trợ MMO với một trong những nhân viên của mình. Sau khi nó được tích hợp vào một engine game, bạn có thể bắt đầu xây dựng một MMO nhưng hãy cẩn thận. Có vẻ như MMO chỉ hoạt động với các kết hợp chủ đề/thể loại tốt nhất và bạn cũng sẽ cần có các chuyên gia trong đội của mình để MMO thành công."
     }, {
         "value": "AAA Games",
-        "translation": "Juegos AAA"
+        "translation": "Game AAA"
     }, {
         "value": "We have proven that we can make large games work. How about we see how we can make games that are so massive in scope and of such high quality that they will create an entire new label. To borrow a term from the finance sector they will be triple A rated games or to borrow from the movie industry, true blockbusters.",
-        "translation": "Hemos demostrado ser capaces de hacer juegos grandes que funcionen. ¿Qué tal si comprobamos si podemos hacer juegos tan enormes en extensión y de tal calidad que reciban una definición totalmente nueva? Tomando prestado un término del sector financiero, se les podría llamar juegos de tipo AAA, o superproducciones en lenguaje cinematográfico."
+        "translation": "Chúng ta đã chứng minh rằng chúng ta có thể làm cho các trò chơi lớn hoạt động. Vậy tại sao chúng ta không xem xét cách tạo ra những trò chơi có quy mô lớn và chất lượng cao đến mức chúng sẽ tạo ra một nhãn hiệu hoàn toàn mới. Mượn một thuật ngữ từ lĩnh vực tài chính, chúng sẽ là những trò chơi được xếp hạng ba A hoặc mượn từ ngành công nghiệp điện ảnh, những bộ phim bom tấn thực sự."
     }, {
         "value": "Boss, our research into AAA games is complete and we can now begin to create AAA games. A triple A game requires well-trained staff and it is best to have specialists in the different areas to make sure the team does their best work.{n}When creating a AAA game we can also use the R&D lab to develop a special marketing campaign which greatly enhances the hype around the game.",
-        "translation": "Jefe, hemos completado la investigación de juegos AAA, con lo que ya podemos crearlos. Un juego AAA requiere una plantilla bien entrenada y es mejor contar con especialistas en distintos campos para asegurarnos de que el equipo lo hace lo mejor que puede.{n}Mientras creemos un juego AAA, también podemos echar mano del laboratorio de I+D para que diseñe una campaña publicitaria especial que incrementará muchísimo la expectación en torno al juego."
+        "translation": "Sếp ơi, nghiên cứu của chúng ta về các trò chơi AAA đã hoàn tất và giờ đây chúng ta có thể bắt đầu tạo ra các trò chơi AAA. Một trò chơi AAA đòi hỏi đội ngũ nhân viên được đào tạo bài bản và tốt nhất là có các chuyên gia trong các lĩnh vực khác nhau để đảm bảo đội ngũ làm việc hiệu quả nhất.{n}Khi tạo một trò chơi AAA, chúng ta cũng có thể sử dụng phòng R&D để phát triển một chiến dịch marketing đặc biệt giúp tăng cường đáng kể sự chú ý xung quanh trò chơi."
     }, {
         "value": "The hardware lab can also be used to develop special hardware products such as keyboard, mice and headsets that are sold with the game.",
-        "translation": "El laboratorio de hardware también puede usarse para desarrollar productos especiales de hardware como teclados, ratones y cascos para venderlos junto con el juego."
+        "translation": "Phòng thí nghiệm phần cứng cũng có thể được sử dụng để phát triển các sản phẩm phần cứng đặc biệt như bàn phím, chuột và tai nghe được bán kèm với trò chơi."
     }, {
         "value": "Marketing Campaign",
-        "translation": "Campaña Publicitaria"
+        "translation": "Chiến dịch Marketing"
     }, {
         "value": "Let's use our in-house skills to design a special marketing campaign for our AAA title.",
-        "translation": "Echemos mano de las habilidades internas para diseñar una campaña publicitaria especial para nuestro título AAA."
+        "translation": "Hãy sử dụng kỹ năng nội bộ của chúng ta để thiết kế một chiến dịch marketing đặc biệt cho tựa game AAA của mình."
     }, {
         "value": "Custom Hardware",
-        "translation": "Hardware Personalizado"
+        "translation": "Phần cứng Tùy chỉnh"
     }, {
         "value": "Let's use our in-house hardware lab to design and develop special hardware products to coincide with the release of our AAA title.",
-        "translation": "Usemos el laboratorio interno de hardware para desarrollar productos especiales de hardware que coincidan con el lanzamiento de nuestro título AAA."
+        "translation": "Hãy sử dụng phòng thí nghiệm phần cứng nội bộ của chúng ta để thiết kế và phát triển các sản phẩm phần cứng đặc biệt trùng với thời điểm phát hành tựa game AAA của mình."
     }, {
         "value": "The first reviews for our newly released game, {0}, came in!",
-        "translation": "¡Han llegado las primeras críticas de {0}, el juego que acabamos de lanzar!"
+        "translation": "Những bài đánh giá đầu tiên cho trò chơi mới phát hành của chúng ta, {0}, đã có rồi!"
     }, {
         "value": "Game review",
         "comment": "heading",
-        "translation": "Crítica del juego"
+        "translation": "Đánh giá game"
     }, {
         "value": "They achieved a great balance between technology and design.",
-        "translation": "Han logrado un muy buen equilibrio entre tecnología y diseño."
+        "translation": "Họ đã đạt được sự cân bằng tuyệt vời giữa công nghệ và thiết kế."
     }, {
         "value": "They should focus more on design.",
-        "translation": "Deberían centrarse más en el diseño."
+        "translation": "Họ nên tập trung hơn vào thiết kế."
     }, {
         "value": "They should focus more on technology.",
-        "translation": "Deberían centrarse más en la tecnología."
+        "translation": "Họ nên tập trung hơn vào công nghệ."
     }, {
         "value": "Their focus on {0} served this game very well.",
-        "translation": "Su enfoque en {0} le ha venido muy bien al juego."
+        "translation": "Sự tập trung của họ vào {0} đã phục vụ rất tốt cho trò chơi này."
     }, {
         "value": "Their focus on {0} is a bit odd.",
-        "translation": "Su enfoque en {0} es un tanto extraño."
+        "translation": "Sự tập trung của họ vào {0} hơi kỳ lạ."
     }, {
         "value": "They shouldn't forget about {0}.",
-        "translation": "No deberían olvidarse de {0}."
+        "translation": "Họ không nên quên {0}."
     }, {
         "value": "{0} and {1} is a great combination.",
-        "translation": "{0} y {1} es una muy buena combinación."
+        "translation": "{0} và {1} là một sự kết hợp tuyệt vời."
     }, {
         "value": "Another {0}/{1} game?",
-        "translation": "¿Otro juego de {0} y {1}?"
+        "translation": "Lại một game {0}/{1} nữa à?"
     }, {
         "value": "{0} games don't work well on {1}.",
-        "translation": "Los juegos de {0} no funcionan bien en {1}."
+        "translation": "Game {0} không hoạt động tốt trên {1}."
     }, {
         "value": "{0} games work well on {1}.",
-        "translation": "Los juegos de {0} funcionan bien en {1}."
+        "translation": "Game {0} hoạt động tốt trên {1}."
     }, {
         "value": "Already a expansion pack?",
-        "translation": "¿Una expansión tan pronto?"
+        "translation": "Đã có gói mở rộng rồi sao?"
     }, {
         "value": "Didn't we just play {0} recently?",
-        "translation": "¿No hemos jugado recientemente a {0}?"
+        "translation": "Chẳng phải chúng ta vừa mới chơi {0} gần đây sao?"
     }, {
         "value": "Riddled with bugs.",
-        "translation": "Plagado de bugs."
+        "translation": "Đầy rẫy lỗi."
     }, {
         "value": "Too many bugs.",
-        "translation": "Demasiados bugs."
+        "translation": "Quá nhiều lỗi."
     }, {
         "value": "Technology is not state of the art.",
-        "translation": "Su tecnología no es precisamente el no va más."
+        "translation": "Công nghệ chưa phải là hiện đại nhất."
     }, {
         "value": "What a horrible expansion pack!",
-        "translation": "¡Qué pack de expansión más horrible!"
+        "translation": "Thật là một gói mở rộng kinh khủng!"
     }, {
         "value": "What a horrible sequel!",
-        "translation": "¡Qué secuela más espantosa!"
+        "translation": "Thật là một phần tiếp theo kinh khủng!"
     }, {
         "value": "Average expansion pack.",
-        "translation": "Una expansión del montón."
+        "translation": "Gói mở rộng trung bình."
     }, {
         "value": "Average sequel.",
-        "translation": "Una secuela mejorable."
+        "translation": "Phần tiếp theo trung bình."
     }, {
         "value": "Great expansion pack.",
-        "translation": "Una muy buena expansión."
+        "translation": "Gói mở rộng tuyệt vời."
     }, {
         "value": "Great sequel!",
-        "translation": "¡Estupenda secuela!"
+        "translation": "Phần tiếp theo tuyệt vời!"
     }, {
         "value": "As {0} as the name.",
         "comment": "{0} adjective",
-        "translation": "Tan {0} como su nombre indica."
+        "translation": "{0} như cái tên của nó."
     }, {
         "value": "boring",
-        "translation": "aburrido"
+        "translation": "nhàm chán"
     }, {
         "value": "generic",
-        "translation": "genérico"
+        "translation": "chung chung"
     }, {
         "value": "uninspired",
-        "translation": "poco inspirado"
+        "translation": "thiếu cảm hứng"
     }, {
         "value": "dull",
-        "translation": "aburrido"
+        "translation": "tẻ nhạt"
     }, {
         "value": "The name says it all.",
-        "translation": "El nombre lo dice todo."
+        "translation": "Cái tên nói lên tất cả."
     }, {
         "value": "N/A not worth a statement.",
-        "translation": "No vale la pena malgastar el aliento en esto."
+        "translation": "Không áp dụng/Không đáng để bình luận."
     }, {
         "value": "One of the worst!",
-        "translation": "¡De lo peor que se ha visto!"
+        "translation": "Một trong những thứ tệ nhất!"
     }, {
         "value": "Makes you cry.",
-        "translation": "Te hace llorar."
+        "translation": "Làm bạn phát khóc."
     }, {
         "value": "Don't buy!",
-        "translation": "¡No lo compren!"
+        "translation": "Đừng mua!"
     }, {
         "value": "Horrible.",
-        "translation": "Horrible."
+        "translation": "Kinh khủng."
     }, {
         "value": "I still have nightmares!",
-        "translation": "¡Aún tengo pesadillas!"
+        "translation": "Tôi vẫn còn gặp ác mộng!"
     }, {
         "value": "A disaster!",
-        "translation": "¡Un desastre!"
+        "translation": "Một thảm họa!"
     }, {
         "value": "Really bad.",
-        "translation": "Realmente malo."
+        "translation": "Thực sự tệ."
     }, {
         "value": "Utterly uninspiring.",
-        "translation": "Totalmente sin inspiración."
+        "translation": "Hoàn toàn thiếu cảm hứng."
     }, {
         "value": "Not fun.",
-        "translation": "No divierte."
+        "translation": "Không vui."
     }, {
         "value": "Boring.",
-        "translation": "Aburrido."
+        "translation": "Nhàm chán."
     }, {
         "value": "Disappointing.",
-        "translation": "Decepcionante."
+        "translation": "Đáng thất vọng."
     }, {
         "value": "Bin material.",
-        "translation": "Material de deshecho."
+        "translation": "Đồ bỏ đi."
     }, {
         "value": "Bad.",
-        "translation": "Malo."
+        "translation": "Tệ."
     }, {
         "value": "Abysmal.",
-        "translation": "Abismal."
+        "translation": "Tồi tệ."
     }, {
         "value": "Waste of money.",
-        "translation": "Que pérdida de dinero."
+        "translation": "Phí tiền."
     }, {
         "value": "Waste of time.",
-        "translation": "Una pérdida de tiempo."
+        "translation": "Phí thời gian."
     }, {
         "value": "Not much fun.",
-        "translation": "No entretiene mucho."
+        "translation": "Không vui lắm."
     }, {
         "value": "Pretty bad.",
-        "translation": "Bastante malo."
+        "translation": "Khá tệ."
     }, {
         "value": "Not bad. Not good.",
-        "translation": "Ni bueno, ni malo."
+        "translation": "Không tệ. Không tốt."
     }, {
         "value": "Meh!",
-        "translation": "¡Bah!"
+        "translation": "Chậc!"
     }, {
         "value": "OK.",
-        "translation": "No está mal."
+        "translation": "Được."
     }, {
         "value": "Uninspiring.",
-        "translation": "Poco inspirado."
+        "translation": "Thiếu cảm hứng."
     }, {
         "value": "Falls a bit short.",
-        "translation": "Se queda un poco corto."
+        "translation": "Hơi thiếu một chút."
     }, {
         "value": "Fun at stages.",
-        "translation": "Divertido a ratos."
+        "translation": "Vui ở một số giai đoạn."
     }, {
         "value": "Has its moments.",
-        "translation": "Tiene sus momentos."
+        "translation": "Có những khoảnh khắc đáng nhớ."
     }, {
         "value": "Have seen better.",
-        "translation": "Los hemos visto mejores."
+        "translation": "Đã từng thấy tốt hơn."
     }, {
         "value": "Shows potential.",
-        "translation": "Muestra potencial."
+        "translation": "Cho thấy tiềm năng."
     }, {
         "value": "Quirky but good.",
-        "translation": "Peculiar, pero bueno."
+        "translation": "Kỳ quặc nhưng hay."
     }, {
         "value": "I like it.",
-        "translation": "Me gusta."
+        "translation": "Tôi thích nó."
     }, {
         "value": "Good game.",
-        "translation": "Buen juego."
+        "translation": "Game hay."
     }, {
         "value": "Enjoyable.",
-        "translation": "Entretenido."
+        "translation": "Thú vị."
     }, {
         "value": "Nice experience.",
-        "translation": "Una buena experiencia."
+        "translation": "Trải nghiệm tốt."
     }, {
         "value": "Beautiful.",
-        "translation": "Precioso."
+        "translation": "Tuyệt đẹp."
     }, {
         "value": "Very good.",
-        "translation": "Muy bueno."
+        "translation": "Rất tốt."
     }, {
         "value": "Very enjoyable.",
-        "translation": "Muy entretenido."
+        "translation": "Rất thú vị."
     }, {
         "value": "Love it!",
-        "translation": "¡Me encanta!"
+        "translation": "Yêu nó!"
     }, {
         "value": "Played it for days.",
-        "translation": "Me he pasado días jugándolo."
+        "translation": "Chơi nó cả ngày."
     }, {
         "value": "Great!",
-        "translation": "¡Genial!"
+        "translation": "Tuyệt vời!"
     }, {
         "value": "Almost perfect.",
-        "translation": "Casi perfecto."
+        "translation": "Gần như hoàn hảo."
     }, {
         "value": "One of the best.",
-        "translation": "Uno de los mejores."
+        "translation": "Một trong những cái hay nhất."
     }, {
         "value": "More please.",
-        "translation": "Más, por favor."
+        "translation": "Thêm nữa đi."
     }, {
         "value": "Great game.",
-        "translation": "Un gran juego."
+        "translation": "Game tuyệt vời."
     }, {
         "value": "Outstanding game.",
-        "translation": "Un juego extraordinario."
+        "translation": "Game xuất sắc."
     }, {
         "value": "Can't wait for the sequel.",
-        "translation": "Espero con ansia la secuela."
+        "translation": "Không thể chờ đợi phần tiếp theo."
     }, {
         "value": "A masterpiece.",
-        "translation": "Una obra maestra."
+        "translation": "Một kiệt tác."
     }, {
         "value": "Best of its kind.",
-        "translation": "El mejor de su género."
+        "translation": "Hay nhất trong thể loại này."
     }, {
         "value": "Truly great.",
-        "translation": "Realmente genial."
+        "translation": "Thực sự tuyệt vời."
     }, {
         "value": "Everyone loves it!",
-        "translation": "¡A todo el mundo le encanta!"
+        "translation": "Mọi người đều thích nó!"
     }, {
         "value": "Must have!",
-        "translation": "¡Imprescindible!"
+        "translation": "Phải có!"
     }, {
         "value": "Outstanding achievement.",
-        "translation": "Un sensacional logro."
+        "translation": "Thành tựu xuất sắc."
     }, {
         "value": "Awesome!",
-        "translation": "¡Increíble!"
+        "translation": "Tuyệt vời!"
     }, {
         "value": "My new favorite!",
-        "translation": "¡Mi nuevo favorito!"
+        "translation": "Món yêu thích mới của tôi!"
     }, {
         "value": "{0} sales",
-        "translation": "{0} ventas"
+        "translation": "Doanh thu {0}"
     }, {
         "value": "{0} maintenance",
-        "translation": "{0} mantenimiento"
+        "translation": "Bảo trì {0}"
     }, {
         "value": "{0} was so successful that we now have {1} fans!",
-        "translation": "¡{0} ha tenido tanto éxito que ahora tenemos {1} fans!"
+        "translation": "{0} thành công đến nỗi bây giờ chúng ta có {1} người hâm mộ!"
     }, {
         "value": "{0} sold {1} units in its first week on the market.",
-        "translation": "{0} ha vendido {1} unidades en su primera semana a la venta."
+        "translation": "{0} đã bán được {1} bản trong tuần đầu tiên ra mắt."
     }, {
         "value": "We made it in the charts at #{0}!",
-        "translation": "¡Hemos llegado al número {0} de la lista de ventas!"
+        "translation": "Chúng ta đã lọt vào bảng xếp hạng ở vị trí #{0}!"
     }, {
         "value": "First week of sales!",
-        "translation": "¡Primera semana de ventas!"
+        "translation": "Tuần đầu tiên bán hàng!"
     }, {
         "value": "{0} is now off the market. It sold {1} units generating {2} in sales.",
-        "translation": "{0} ya no está en el mercado. Ha vendido {1} unidades y generado {2} en ventas."
+        "translation": "{0} hiện đã ngừng bán. Nó đã bán được {1} bản, tạo ra {2} doanh thu."
     }, {
         "value": "Game off the market.",
         "comment": "heading",
-        "translation": "Juego retirado del mercado."
+        "translation": "Game ngừng bán."
     }, {
         "value": " SDK",
         "comment": "short for Software Development Kit",
-        "translation": " KDS"
+        "translation": " SDK"
     }, {
         "value": "Sales Record",
         "comment": "heading",
-        "translation": "Récord de Ventas"
+        "translation": "Kỷ lục Doanh thu"
     }, {
         "value": "{0} has achieved a company sales record with over {1} units sold!\nThis is an important milestone in the history of {2}!",
-        "translation": "{0} ha alcanzado un record de ventas en la compañía con mas de {1} unidades vendidas!\nEsta es una marca importante en la historia de {2}!"
+        "translation": "{0} đã đạt kỷ lục doanh thu công ty với hơn {1} bản được bán ra!\nĐây là một cột mốc quan trọng trong lịch sử của {2}!"
     }, {
         "value": "We just got word that {0} which was recently released by {1} has racked up over {2} in sales.",
-        "translation": "Acabamos de enterarnos de que {0}, recientemente lanzado por {1}, ha amasado más de {2} en ventas."
+        "translation": "Chúng tôi vừa nhận được tin rằng {0} do {1} phát hành gần đây đã thu về hơn {2} doanh thu."
     }, {
         "value": "If the game were a music record it would have {0} status.{n}",
         "comment": "{0} gold, platinum etc.",
-        "translation": "Si el juego fuera un disco de música, habría obtenido la calificación de {0}.{n}"
+        "translation": "Nếu trò chơi là một bản thu âm nhạc, nó sẽ đạt được trạng thái {0}.{n}"
     }, {
         "value": "An incredible achievement",
-        "translation": "Un logro increíble"
+        "translation": "Một thành tựu đáng kinh ngạc"
     }, {
         "value": "This is an unbelievably high number.",
-        "translation": "Este es un número increíblemente alto."
+        "translation": "Đây là một con số cao không thể tin được."
     }, {
         "value": "This game truly deserves to be called AAA.",
-        "translation": "Este juego es merecedor de llamarse AAA."
+        "translation": "Trò chơi này thực sự xứng đáng được gọi là AAA."
     }, {
         "value": "Only a true master of the industry could achieve such a milestone. {0} will forever be remembered in gaming history for this.",
-        "translation": "Sólo unos maestros de la industria podrían alcanzar un logro semejante. A {0} se le recordará para siempre en la historia de los videojuegos por esto."
+        "translation": "Chỉ một bậc thầy thực sự của ngành công nghiệp mới có thể đạt được cột mốc như vậy. {0} sẽ mãi mãi được ghi nhớ trong lịch sử game vì điều này."
     }, {
         "value": "The excitement around the game seems to have no end.",
-        "translation": "El entusiasmo que despierta el juego parece no tener fin."
+        "translation": "Sự phấn khích xung quanh trò chơi dường như không có hồi kết."
     }, {
         "value": "We wonder how many more it will sell.",
-        "translation": "Nos preguntamos cuántas más podrá vender."
+        "translation": "Chúng tôi tự hỏi nó sẽ bán được bao nhiêu bản nữa."
     }, {
         "value": "Competitors have been observed muttering jealous remarks.",
-        "translation": "Los competidores murmuran comentarios envidiosos al respecto."
+        "translation": "Các đối thủ cạnh tranh đã bị bắt gặp lẩm bẩm những lời nhận xét ghen tị."
     }, {
         "value": "Go {0}! Well done!",
-        "translation": "¡Vamos, {0}! ¡Así se hace!"
+        "translation": "Cố lên {0}! Làm tốt lắm!"
     }, {
         "value": "According to our market research the recently published game '{0}' is a surprise hit with players.",
-        "translation": "Según los datos del mercado, el juego recientemente publicado, \"{0}\", ha sido un éxito inesperado entre los jugadores."
+        "translation": "Theo nghiên cứu thị trường của chúng tôi, trò chơi '{0}' được phát hành gần đây là một cú hit bất ngờ với người chơi."
     }, {
         "value": "The developer {0} is fairly new to the gaming industry but we cannot wait for what they will develop next!",
-        "translation": "La diseñadora {0} es más bien nueva en la industria del videojuego, ¡pero estamos impacientes por ver qué harán a continuación!"
+        "translation": "Nhà phát triển {0} còn khá mới trong ngành công nghiệp game nhưng chúng tôi không thể chờ đợi xem họ sẽ phát triển gì tiếp theo!"
     }, {
         "value": "The latest game by {0} has received very positive reviews overall!\n{1} gave it a '{2}' saying '{3}'.",
-        "translation": "El último juego de {0} ha recibido críticas muy positivas en general! \n{1} le dio un '{2}' diciendo '{3}'."
+        "translation": "Trò chơi mới nhất của {0} đã nhận được những đánh giá rất tích cực nhìn chung!\n{1} đã cho nó điểm '{2}' và nói rằng '{3}'."
     }, {
         "value": "If {0} continues to innovate like this they might become a new fan favorite!",
-        "translation": "¡Si {0} sigue innovando así, podrían convertirse en uno de los favoritos de los aficionados!"
+        "translation": "Nếu {0} tiếp tục đổi mới như thế này, họ có thể trở thành một cái tên được người hâm mộ yêu thích!"
     }, {
         "value": "{0}, the newest game by {1} has caused a storm of good reviews and excited customers.",
-        "translation": "{0}, el último juego de {1}, ha provocado una ola de buenas críticas y compradores entusiasmados."
+        "translation": "{0}, trò chơi mới nhất của {1} đã tạo ra một cơn bão những đánh giá tốt và những khách hàng hào hứng."
     }, {
         "value": "Industry professionals say that {0} is one of these rare games that will set a new quality standard for future games.{n}",
-        "translation": "Los profesionales de la industria aseguran que {0} es uno de esos juegos únicos que marcarán un estándar de calidad en los futuros títulos.{n}"
+        "translation": "Các chuyên gia trong ngành nói rằng {0} là một trong những trò chơi hiếm hoi sẽ đặt ra một tiêu chuẩn chất lượng mới cho các trò chơi trong tương lai.{n}"
     }, {
         "value": "It seems that {0} really has made gaming history with {1}!\nWell done!",
-        "translation": "Parece que {0} realmente ha hecho historia con {1}!\n¡Bien hecho!"
+        "translation": "Có vẻ như {0} thực sự đã làm nên lịch sử game với {1}!\nLàm tốt lắm!"
     }, {
         "value": "If you are not a fan of {0} now then chances are you will be after playing their latest hit {1}.",
-        "translation": "Si aún no son fans de {0}, seguramente lo serán después de jugar a su último éxito, {1}."
+        "translation": "Nếu bây giờ bạn không phải là người hâm mộ của {0} thì rất có thể bạn sẽ trở thành sau khi chơi cú hit mới nhất của họ {1}."
     }, {
         "value": "Ladies and gentlemen, the surprise hit of the year is {1} by {0}.",
-        "translation": "Damas y caballeros, la sorpresa del año es {1}, de {0}."
+        "translation": "Thưa quý vị, cú hit bất ngờ của năm là {1} của {0}."
     }, {
         "value": "When I started playing {1} I had no idea what I was in for.",
-        "translation": "Cuando empecé a jugar a {1}, no tenía ni idea de lo que me esperaba."
+        "translation": "Khi tôi bắt đầu chơi {1}, tôi không hề biết mình sẽ phải đối mặt với điều gì."
     }, {
         "value": "There are a lot of good surprises waiting for you in {1}.",
-        "translation": "Hay muchas sorpresas esperándote en {1}."
+        "translation": "Có rất nhiều bất ngờ thú vị đang chờ bạn trong {1}."
     }, {
         "value": "Another memorable game by {0} has been released.",
-        "translation": "Otro juego memorable de la mano de {0} ha salido al mercado."
+        "translation": "Một trò chơi đáng nhớ khác của {0} đã được phát hành."
     }, {
         "value": "I have been playing {1} and have tremendously enjoyed the experience.",
-        "translation": "He estado jugando a {1} y he disfrutado tremendamente la experiencia."
+        "translation": "Tôi đã chơi {1} và vô cùng thích thú với trải nghiệm này."
     }, {
         "value": "{0} surprises us again with a very enjoyable game.",
-        "translation": "{0} vuelve a sorprendernos con un juego muy entretenido."
+        "translation": "{0} lại gây bất ngờ cho chúng ta với một trò chơi rất thú vị."
     }, {
         "value": "Rarely will a game captivate you as much as {1}.",
-        "translation": "Pocas veces un juego cautiva tanto como {1}."
+        "translation": "Hiếm có trò chơi nào có thể thu hút bạn nhiều như {1}."
     }, {
         "value": "{1} really deserves the top spots in the charts.",
-        "translation": "{1} merece realmente el número uno en las listas."
+        "translation": "{1} thực sự xứng đáng đứng đầu bảng xếp hạng."
     }, {
         "value": "Simply one of the best games I've played.",
-        "translation": "Sencillamente, uno de los mejores juegos a los que he jugado."
+        "translation": "Đơn giản là một trong những trò chơi hay nhất tôi từng chơi."
     }, {
         "value": "Well, what can I say? Stop reading. Start playing.",
-        "translation": "Bien. ¿qué puedo decir? Deja de leer y juégalo."
+        "translation": "Chà, tôi có thể nói gì đây? Ngừng đọc đi. Bắt đầu chơi thôi."
     }, {
         "value": "A stellar effort by {0}.",
-        "translation": "Un trabajo estelar por parte de {0}."
+        "translation": "Một nỗ lực xuất sắc của {0}."
     }, {
         "value": "To {0}: Keep the hits coming please :)",
-        "translation": "A {0}: Sigan haciendo éxitos, por favor :)"
+        "translation": "Gửi {0}: Tiếp tục tạo ra những cú hit nhé :)"
     }, {
         "value": "Only a game with unicorns, rainbows, pirates and ninjas could possibly be better.",
-        "translation": "Sólo un juego con unicornios, arcoiris, piratas y ninjas podría ser mejor."
+        "translation": "Chỉ có một trò chơi với kỳ lân, cầu vồng, cướp biển và ninja mới có thể hay hơn."
     }, {
         "value": "Summary: best. game. ever.",
-        "translation": "En resumen: El mejor juego de la historia."
+        "translation": "Tóm lại: game. hay. nhất. từ. trước. đến. nay."
     }, {
         "value": "There is a rare technical polish in this game which really comes through in the overall experience.",
-        "translation": "En este juego hay un pulido técnico distintivo que destaca realmente en la experiencia general."
+        "translation": "Có một sự chau chuốt kỹ thuật hiếm có trong trò chơi này, điều thực sự thể hiện rõ trong trải nghiệm tổng thể."
     }, {
         "value": "The game shines of technical excellence. Clearly the developers know what they are doing.",
-        "translation": "El juego brilla por su excelencia técnica. Está claro que los diseñadores sabían lo que hacían."
+        "translation": "Trò chơi tỏa sáng với sự xuất sắc về kỹ thuật. Rõ ràng là các nhà phát triển biết họ đang làm gì."
     }, {
         "value": "I was positively surprised to see the level of polish that went into the underlying game engine. The effort really paid off.",
-        "translation": "Me sorprendió gratamente lo trabajado que estaba el motor subyacente del juego. El esfuerzo ha merecido la pena."
+        "translation": "Tôi đã rất ngạc nhiên một cách tích cực khi thấy mức độ chau chuốt được đầu tư vào engine game nền tảng. Nỗ lực đó thực sự đã được đền đáp."
     }, {
         "value": "In this type of game the core gameplay mechanics are really important and the developer has nailed it.",
-        "translation": "En este tipo de juegos, la mecánica de la jugabilidad es muy importante y los diseñadores han dado en el clavo."
+        "translation": "Trong loại game này, cơ chế gameplay cốt lõi thực sự quan trọng và nhà phát triển đã làm rất tốt."
     }, {
         "value": "I have rarely seen such responsive game controls. A true joy to play.",
-        "translation": "Pocas veces he visto un control de juego tan receptivo. Jugarlo es una verdadera delicia."
+        "translation": "Tôi hiếm khi thấy một hệ thống điều khiển game nhạy bén như vậy. Thực sự là một niềm vui khi chơi."
     }, {
         "value": "The attention to detail to the core gameplay has really paid off.",
-        "translation": "La atención al detalle en el sistema de jugabilidad ha dado sus frutos."
+        "translation": "Sự chú ý đến từng chi tiết của gameplay cốt lõi thực sự đã mang lại hiệu quả."
     }, {
         "value": "This game doesn't just tell a story, no, it manages to draw you in so that you truly feel part of an adventure.",
-        "translation": "Este juego no se limita a contar una historia. No; te arrastra de tal manera que te sientes parte de la aventura."
+        "translation": "Trò chơi này không chỉ kể một câu chuyện, không, nó còn thu hút bạn đến mức bạn thực sự cảm thấy mình là một phần của cuộc phiêu lưu."
     }, {
         "value": "A true achievement in interactive story telling, the characters and the captivating scenarios just stick in your mind.",
-        "translation": "Todo un logro en la narrativa interactiva. Los personajes y los cautivadores escenarios se te quedan grabados en la mente."
+        "translation": "Một thành tựu thực sự trong kể chuyện tương tác, các nhân vật và những kịch bản hấp dẫn cứ mãi luẩn quẩn trong tâm trí bạn."
     }, {
         "value": "Whoever wrote the story of {1} will likely win a prize for it.",
-        "translation": "Quienquiera que escribiera la historia de {1} ganará seguramente un premio por ello."
+        "translation": "Bất cứ ai viết câu chuyện của {1} đều có khả năng giành được giải thưởng cho nó."
     }, {
         "value": "The character dialogues in this game are just oustanding. Rarely will you be so captivated in a conversation.",
-        "translation": "Los diálogos de los personajes del juego son brillantes. Pocas veces habrás estado tan cautivado por una conversación."
+        "translation": "Các đoạn hội thoại của nhân vật trong trò chơi này thật xuất sắc. Hiếm khi bạn bị cuốn hút vào một cuộc trò chuyện đến vậy."
     }, {
         "value": "The term dialogue tree really doesn't do {1} justice. This game has a dialogue forest... in a good way.",
-        "translation": "El término \"árbol de diálogos\" no le hace justicia a {1}. Lo que este juego tiene es un auténtico bosque de diálogos."
+        "translation": "Thuật ngữ cây hội thoại thực sự không thể hiện hết được {1}. Trò chơi này có cả một rừng hội thoại... theo một cách tốt."
     }, {
         "value": "A perfect example on how dialogues in a game can be so much more thrilling than in a movie or book. At every stage I felt like I really had choices and was driving the story.",
-        "translation": "Un ejemplo perfecto de cómo los diálogos de un juego puede ser mucho más apasionantes que los de una película o un libro. En cada momento sentía tener opciones y estar conduciendo la historia."
+        "translation": "Một ví dụ hoàn hảo về cách các đoạn hội thoại trong game có thể hấp dẫn hơn nhiều so với phim ảnh hay sách truyện. Ở mọi giai đoạn, tôi đều cảm thấy mình thực sự có lựa chọn và đang dẫn dắt câu chuyện."
     }, {
         "value": "The progression in this story is just perfect. Just when you start to think things settle down something surprising will happen.",
-        "translation": "La progresión de la historia es simplemente perfecta. Cuando crees que las cosas se están enfriando, ocurre algo sorprendente."
+        "translation": "Diễn biến trong câu chuyện này thật hoàn hảo. Ngay khi bạn bắt đầu nghĩ rằng mọi thứ đã ổn định thì một điều bất ngờ sẽ xảy ra."
     }, {
         "value": "The level design is both sophisticated and surprisingly intuitive. I never felt like I was guided through a level but I never ever got lost either. A true achievement.",
-        "translation": "El diseño de los niveles es sofisticado y a la vez sorprendentemente intuitivo. Nunca me pareció que los niveles me estuvieran guiando, pero tampoco me perdía en ellos. Un auténtico logro."
+        "translation": "Thiết kế màn chơi vừa tinh vi vừa trực quan một cách đáng ngạc nhiên. Tôi chưa bao giờ cảm thấy bị dẫn dắt qua một màn chơi nhưng cũng chưa bao giờ bị lạc. Một thành tựu thực sự."
     }, {
         "value": "Simply iconic level designs, from start to finish.",
-        "translation": "El diseño de niveles, de principio a fin, es ya icónico."
+        "translation": "Đơn giản là những thiết kế màn chơi mang tính biểu tượng, từ đầu đến cuối."
     }, {
         "value": "The computer-controlled entities in this game are so incredibly convincing that I caught myself talking at them at times.",
-        "translation": "Las entidades controladas por la máquina son tan increíblemente convincentes que me sorprendí hablando con ellas a veces."
+        "translation": "Các thực thể do máy tính điều khiển trong trò chơi này thuyết phục đến mức đôi khi tôi thấy mình đang nói chuyện với chúng."
     }, {
         "value": "Rarely manages a game to blend the A.I. so well into the game world that you just feel completely immersed.",
-        "translation": "Pocas veces logra un juego encajar la I.A. de tal forma que te sientas completamente inmerso."
+        "translation": "Hiếm có trò chơi nào quản lý để hòa trộn A.I. tốt đến vậy vào thế giới game khiến bạn cảm thấy hoàn toàn đắm chìm."
     }, {
         "value": "The game responds to the player in such a realistic fashion that it makes you sometimes forget that this is just a game.",
-        "translation": "El juego responde al jugador de forma tan realista que a veces se te olvida de que es tan sólo un juego."
+        "translation": "Trò chơi phản hồi người chơi một cách thực tế đến nỗi đôi khi bạn quên mất đây chỉ là một trò chơi."
     }, {
         "value": "A wonderfully imaginative gameworld makes {1} a joy to discover. You will spend hours travelling through this world.",
-        "translation": "Su universo fantásticamente imaginativo hace de {1} un gozo por descubrir. Pasarás horas viajando a través de su mundo."
+        "translation": "Một thế giới game giàu trí tưởng tượng tuyệt vời khiến {1} trở thành một niềm vui để khám phá. Bạn sẽ dành hàng giờ để du hành qua thế giới này."
     }, {
         "value": "This is world design at its best. Brave, imaginative and unapologetically following its incredible artistic vision.",
-        "translation": "Esto es la cima del diseño virtual. Una visión artística valiente, imaginativa y osada."
+        "translation": "Đây là thiết kế thế giới ở đỉnh cao nhất. Dũng cảm, giàu trí tưởng tượng và không ngần ngại theo đuổi tầm nhìn nghệ thuật đáng kinh ngạc của nó."
     }, {
         "value": "The attention to detail in the world design really sets this game apart from others in the genre.",
-        "translation": "La atención al detalle en el diseño de su universo marca una diferencia entre este y otros juegos del género."
+        "translation": "Sự chú ý đến từng chi tiết trong thiết kế thế giới thực sự khiến trò chơi này khác biệt so với những trò chơi khác cùng thể loại."
     }, {
         "value": "Visually pleasing is an understatement. This game looks incredibly good.",
-        "translation": "Decir que es un gusto para la vista es poco. El juego tiene un aspecto increíble."
+        "translation": "Đẹp mắt về mặt hình ảnh là một cách nói giảm nói tránh. Trò chơi này trông cực kỳ đẹp."
     }, {
         "value": "The art style in {1} blends so well with the general feeling of the game. A perfect match.",
-        "translation": "El estilo artístico de {1} encaja fantásticamente en la atmósfera del juego. Una combinación perfecta."
+        "translation": "Phong cách nghệ thuật trong {1} hòa quyện rất tốt với cảm giác chung của trò chơi. Một sự kết hợp hoàn hảo."
     }, {
         "value": "Truly oustanding visual design is only one of the many reasons why {1} deserves your attention.",
-        "translation": "El sobresaliente diseño virtual es sólo una de las razones por las que {1} merece tu atención."
+        "translation": "Thiết kế hình ảnh thực sự xuất sắc chỉ là một trong nhiều lý do tại sao {1} xứng đáng với sự chú ý của bạn."
     }, {
         "value": "I rarely highlight the sound of a game instead of the many other noteworthy features but in {1} the sound design was truly awe-inspiring.",
-        "translation": "Pocas veces destaco el sonido de un juego en lugar de otros aspectos mencionables, pero en {1}, el diseño sonoro es realmente inspirador."
+        "translation": "Tôi hiếm khi làm nổi bật âm thanh của một trò chơi thay vì nhiều tính năng đáng chú ý khác nhưng trong {1}, thiết kế âm thanh thực sự gây kinh ngạc."
     }, {
         "value": "The sound in this game gives you goose bumps. Very well designed.",
-        "translation": "El sonido de este juego provoca escalofríos. Muy bien diseñado."
+        "translation": "Âm thanh trong trò chơi này khiến bạn nổi da gà. Thiết kế rất tốt."
     }, {
         "value": "The game doesn't just look good it sounds incredibly good too. A true feast for players who appreciate high quality sound.",
-        "translation": "Este juego no sólo se ve bien; también se oye maravillosamente. Un auténtico festín para los jugadores que aprecian el sonido de alta calidad."
+        "translation": "Trò chơi không chỉ trông đẹp mà còn nghe cực kỳ hay. Một bữa tiệc thực sự cho những người chơi đánh giá cao âm thanh chất lượng cao."
     }, {
         "value": "Sports",
         "comment": "game topic",
-        "translation": "Deportes"
+        "translation": "Thể thao"
     }, {
         "value": "Military",
         "comment": "game topic",
-        "translation": "Militar"
+        "translation": "Quân sự"
     }, {
         "value": "Medieval",
         "comment": "game topic",
-        "translation": "Medieval"
+        "translation": "Trung cổ"
     }, {
         "value": "Space",
         "comment": "game topic",
-        "translation": "Espacial"
+        "translation": "Không gian"
     }, {
         "value": "Racing",
         "comment": "game topic",
-        "translation": "Carreras"
+        "translation": "Đua xe"
     }, {
         "value": "Fantasy",
         "comment": "game topic",
-        "translation": "Fantasía"
+        "translation": "Giả tưởng"
     }, {
         "value": "Pirate",
         "comment": "game topic",
-        "translation": "Piratas"
+        "translation": "Cướp biển"
     }, {
         "value": "Sci-Fi",
         "comment": "game topic",
-        "translation": "Ciencia Ficción"
+        "translation": "Khoa học viễn tưởng"
     }, {
         "value": "Airplane",
         "comment": "game topic",
-        "translation": "Aviones"
+        "translation": "Máy bay"
     }, {
         "value": "Dungeon",
         "comment": "game topic",
-        "translation": "Mazmorra"
+        "translation": "Hầm ngục"
     }, {
         "value": "Mystery",
         "comment": "game topic",
-        "translation": "Misterio"
+        "translation": "Bí ẩn"
     }, {
         "value": "Martial Arts",
         "comment": "game topic",
-        "translation": "Artes Marciales"
+        "translation": "Võ thuật"
     }, {
         "value": "History",
         "comment": "game topic",
-        "translation": "Historia"
+        "translation": "Lịch sử"
     }, {
         "value": "Horror",
         "comment": "game topic",
-        "translation": "Miedo"
+        "translation": "Kinh dị"
     }, {
         "value": "Business",
         "comment": "game topic",
-        "translation": "Negocios"
+        "translation": "Kinh doanh"
     }, {
         "value": "Transport",
         "comment": "game topic",
-        "translation": "Transporte"
+        "translation": "Vận tải"
     }, {
         "value": "Comedy",
         "comment": "game topic",
-        "translation": "Comedia"
+        "translation": "Hài kịch"
     }, {
         "value": "Ninja",
         "comment": "game topic",
-        "translation": "Ninjas"
+        "translation": "Ninja"
     }, {
         "value": "Romance",
         "comment": "game topic",
-        "translation": "Novela"
+        "translation": "Lãng mạn"
     }, {
         "value": "Spy",
         "comment": "game topic",
-        "translation": "Espías"
+        "translation": "Điệp viên"
     }, {
         "value": "Cyberpunk",
         "comment": "game topic",
@@ -2343,587 +2343,587 @@ Languages.vi = {
     }, {
         "value": "UFO",
         "comment": "game topic",
-        "translation": "OVNI"
+        "translation": "UFO"
     }, {
         "value": "Hospital",
         "comment": "game topic",
-        "translation": "Hospital"
+        "translation": "Bệnh viện"
     }, {
         "value": "Evolution",
         "comment": "game topic",
-        "translation": "Evolución"
+        "translation": "Tiến hóa"
     }, {
         "value": "Time Travel",
         "comment": "game topic",
-        "translation": "Viaje en el Tiempo"
+        "translation": "Du hành thời gian"
     }, {
         "value": "Life",
         "comment": "game topic",
-        "translation": "Vida"
+        "translation": "Cuộc sống"
     }, {
         "value": "Virtual Pet",
         "comment": "game topic",
-        "translation": "Mascota Virtual"
+        "translation": "Thú cưng ảo"
     }, {
         "value": "Vocabulary",
         "comment": "game topic",
-        "translation": "Vocabulario"
+        "translation": "Từ vựng"
     }, {
         "value": "Hunting",
         "comment": "game topic",
-        "translation": "Caza"
+        "translation": "Săn bắn"
     }, {
         "value": "Law",
         "comment": "game topic",
-        "translation": "Ley"
+        "translation": "Luật pháp"
     }, {
         "value": "Game Dev",
         "comment": "game topic",
-        "translation": "Diseñar Juegos"
+        "translation": "Phát triển Game"
     }, {
         "value": "City",
         "comment": "game topic",
-        "translation": "Ciudad"
+        "translation": "Thành phố"
     }, {
         "value": "School",
         "comment": "game topic",
-        "translation": "Escuela"
+        "translation": "Trường học"
     }, {
         "value": "Fashion",
         "comment": "game topic",
-        "translation": "Moda"
+        "translation": "Thời trang"
     }, {
         "value": "Hacking",
         "comment": "game topic",
-        "translation": "Hackers"
+        "translation": "Hack"
     }, {
         "value": "Government",
         "comment": "game topic",
-        "translation": "Gobierno"
+        "translation": "Chính phủ"
     }, {
         "value": "Prison",
         "comment": "game topic",
-        "translation": "Cárcel"
+        "translation": "Nhà tù"
     }, {
         "value": "Surgery",
         "comment": "game topic",
-        "translation": "Cirugía"
+        "translation": "Phẫu thuật"
     }, {
         "value": "Music",
         "comment": "game topic",
-        "translation": "Música"
+        "translation": "Âm nhạc"
     }, {
         "value": "Rhythm",
         "comment": "game topic",
-        "translation": "Ritmo"
+        "translation": "Nhịp điệu"
     }, {
         "value": "Superheroes",
         "comment": "game topic",
-        "translation": "Superhéroes"
+        "translation": "Siêu anh hùng"
     }, {
         "value": "Post Apocalyptic",
         "comment": "game topic",
-        "translation": "Post Apocalíptico"
+        "translation": "Hậu tận thế"
     }, {
         "value": "Alternate History",
         "comment": "game topic",
-        "translation": "Historia Alternativa"
+        "translation": "Lịch sử thay thế"
     }, {
         "value": "Vampire",
         "comment": "game topic",
-        "translation": "Vampiros"
+        "translation": "Ma cà rồng"
     }, {
         "value": "Werewolf",
         "comment": "game topic",
-        "translation": "Hombres Lobo"
+        "translation": "Người sói"
     }, {
         "value": "Aliens",
         "comment": "game topic",
-        "translation": "Alienígenas"
+        "translation": "Người ngoài hành tinh"
     }, {
         "value": "Wild West",
         "comment": "game topic",
-        "translation": "Viejo Oeste"
+        "translation": "Miền Tây hoang dã"
     }, {
         "value": "Dance",
         "comment": "game topic",
-        "translation": "Baile"
+        "translation": "Khiêu vũ"
     }, {
         "value": "Management",
-        "translation": "Administración"
+        "translation": "Quản lý"
     }, {
         "value": "Staff Management",
-        "translation": "Administración de Personal"
+        "translation": "Quản lý Nhân viên"
     }, {
         "value": "Well done!\nYou've successfully completed your management course and you are now able to hire your very first employee!\n To get started close this message and then {0} the 'Fill Position...' button which is visible near the big desk.",
-        "translation": "¡Bien hecho!\n¡Has completado exitosamente tu curso de gerencia y ahora eres capaz de contratar tu primer empleado!\nPara empezar cierra este mensaje y luego haz {0} en el botón de 'Ocupar vacante' que está cerca del gran escritorio."
+        "translation": "Làm tốt lắm!\nBạn đã hoàn thành xuất sắc khóa học quản lý và bây giờ bạn có thể thuê nhân viên đầu tiên của mình!\n Để bắt đầu, hãy đóng thông báo này và sau đó {0} vào nút 'Tuyển dụng...' hiển thị gần bàn làm việc lớn."
     }, {
         "value": "Staff Welcome Training",
-        "translation": "Curso de Bienvenida al Equipo"
+        "translation": "Đào tạo Chào mừng Nhân viên"
     }, {
         "value": "Special",
-        "translation": "Especial"
+        "translation": "Đặc biệt"
     }, {
         "value": "Develop patch",
-        "translation": "Crear parche"
+        "translation": "Phát triển bản vá"
     }, {
         "value": "It seems that {0} has finally released their patch for {1}. One fan said: 'I can't believe it took them so long to release a patch! I surely hope that they are more efficient next time!'",
-        "translation": "Parece que {0} ha lanzado al fin su parche para {1}. Un fan ha dicho: \"¡No puedo creer que les haya llevado tanto tiempo sacar un parche! ¡Espero que la próxima vez sean más eficientes!\""
+        "translation": "Có vẻ như {0} cuối cùng đã phát hành bản vá cho {1}. Một người hâm mộ nói: 'Tôi không thể tin được họ lại mất nhiều thời gian đến vậy để phát hành bản vá! Tôi chắc chắn hy vọng lần sau họ sẽ hiệu quả hơn!'"
     }, {
         "value": "{0} has recently released a much needed patch for {1}.\nOne fan said: 'I love companies like {0}. They don't just milk their customers for more money but also understand our concerns and make sure that we can enjoy our games!'.",
-        "translation": "{0} ha lanzado recientemente un muy necesitado parche para {1}.\nUn fan dijo: 'Amo las compañías como {0}. No solo exprimen a sus clientes por mas dinero sino que también entienden nuestras preocupaciones y se aseguran de que disfrutemos nuestros juegos!."
+        "translation": "{0} gần đây đã phát hành một bản vá rất cần thiết cho {1}.\nMột người hâm mộ nói: 'Tôi yêu những công ty như {0}. Họ không chỉ vắt kiệt tiền của khách hàng mà còn hiểu những lo lắng của chúng tôi và đảm bảo rằng chúng tôi có thể tận hưởng trò chơi của mình!'."
     }, {
         "value": "Design Specialist (Req. 700 D)",
-        "translation": "Especialista en Diseño (Req. 700 D)"
+        "translation": "Chuyên gia Thiết kế (Yêu cầu 700 Đ)"
     }, {
         "value": "Specialists",
-        "translation": "Especialistas"
+        "translation": "Chuyên gia"
     }, {
         "value": "Technology Specialist (Req. 700 T)",
-        "translation": "Especialista en Tecnología (Req. 700 T)"
+        "translation": "Chuyên gia Công nghệ (Yêu cầu 700 T)"
     }, {
         "value": "Boost (Req. D:500 or T:500)",
-        "translation": "Impulso (Req. D:500 o T:500)"
+        "translation": "Tăng tốc (Yêu cầu Đ:500 hoặc T:500)"
     }, {
         "value": "Boost Max. Level 3 (Req. D:700 or T:700)",
-        "translation": "Impulso Máx. Nivel 3 (Req. D:700 o T:700)"
+        "translation": "Tăng tốc Tối đa Cấp 3 (Yêu cầu Đ:700 hoặc T:700)"
     }, {
         "value": "Specialization",
-        "translation": "Especialización"
+        "translation": "Chuyên môn hóa"
     }, {
         "value": "{0} [Req. {1}D/{2}T]",
-        "translation": "{0} [Req. {1}D/{2}T]"
+        "translation": "{0} [Yêu cầu {1}Đ/{2}T]"
     }, {
         "value": "Coding contest",
-        "translation": "Concurso de programación"
+        "translation": "Cuộc thi lập trình"
     }, {
         "value": "Teach and learn",
-        "translation": "Instruye y aprende"
+        "translation": "Dạy và học"
     }, {
         "value": "Game Design Course",
-        "translation": "Curso de Diseño de Juegos"
+        "translation": "Khóa học Thiết kế Game"
     }, {
         "value": "Programming Course",
-        "translation": "Curso de Programación"
+        "translation": "Khóa học Lập trình"
     }, {
         "value": "Product Management Course",
-        "translation": "Curso de Gestión de Productos"
+        "translation": "Khóa học Quản lý Sản phẩm"
     }, {
         "value": "R&D Course",
-        "translation": "Curso de I+D"
+        "translation": "Khóa học R&D"
     }, {
         "value": "Practice, Practice, Practice",
-        "translation": "Practica, Practica, Practica"
+        "translation": "Thực hành, Thực hành, Thực hành"
     }, {
         "value": "G3 Pixel Cup",
-        "translation": "Trofeo Pixel G3"
+        "translation": "Cúp Pixel G3"
     }, {
         "value": "G3 Code Jam",
-        "translation": "Sesión de Programación G3"
+        "translation": "G3 Code Jam"
     }, {
         "value": "G3 Game Jam",
-        "translation": "Sesión de Juego G3"
+        "translation": "G3 Game Jam"
     }, {
         "value": "G3 Time Trials",
-        "translation": "Pruebas Contrarreloj G3"
+        "translation": "Thử thách Thời gian G3"
     }, {
         "value": "G3 Innovation Challenge",
-        "translation": "Reto de la Innovación G3"
+        "translation": "Thử thách Sáng tạo G3"
     }, {
         "value": "Book studies",
-        "translation": "Estudiar libros"
+        "translation": "Nghiên cứu sách vở"
     }, {
         "value": "Congratulations!\nYou've successfully completed {0}.",
-        "translation": "Felicidades!\nHas completado exitosamente {0}."
+        "translation": "Xin chúc mừng!\nBạn đã hoàn thành xuất sắc {0}."
     }, {
         "value": "Training Complete",
-        "translation": "Entrenamiento Completado"
+        "translation": "Hoàn thành Đào tạo"
     }, {
         "value": "Tutorial",
-        "translation": "Tutorial"
+        "translation": "Hướng dẫn"
     }, {
         "value": "tap",
         "comment": "verb",
-        "translation": "Pulsa"
+        "translation": "chạm"
     }, {
         "value": "click",
         "comment": "verb",
-        "translation": "clic"
+        "translation": "nhấp"
     }, {
         "value": "Create a company",
         "comment": "heading",
-        "translation": "Crea una compañía"
+        "translation": "Tạo công ty"
     }, {
         "value": "Congratulations!\nYou've just started your very own game development company!\nAt the moment your office is in a garage and you are the only employee but don't worry, many successful businesses have started out this way!{n}Let's start developing your first game.\nClose this message and then {0} anywhere on the screen to bring up the action menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Felicidades!\nHas iniciado tu propia compañía de desarrollo de juegos!\nEn este momento tu oficina está en un garage y tu eres el único empleado pero no te preocupes, muchos negocios exitosos empezaron de esta manera!{n}Empecemos desarrollando tu primer juego.\nCierra este mensaje y luego haz {0} en cualquier parte de la pantalla para abrir el menú de acción."
+        "translation": "Xin chúc mừng!\nBạn vừa thành lập công ty phát triển game của riêng mình!\nHiện tại văn phòng của bạn ở trong một nhà để xe và bạn là nhân viên duy nhất nhưng đừng lo, nhiều doanh nghiệp thành công đã bắt đầu theo cách này!{n}Hãy bắt đầu phát triển trò chơi đầu tiên của bạn.\nĐóng thông báo này và sau đó {0} vào bất kỳ đâu trên màn hình để mở menu hành động."
     }, {
         "value": "Create a game",
         "comment": "heading",
-        "translation": "Crear un juego"
+        "translation": "Tạo trò chơi"
     }, {
         "value": "Before development can begin you have to decide what kind of game you want to create and give your game a name.\nYou can also select which graphic technology your game should use.{n}Your options are initially limited but once you have a bit of experience you will be able to unlock new options.",
-        "translation": "Antes de que pueda empezar el desarollo debes decidir que tipo de juego quieres crear y darle un nombre a tu juego.\nTambién puedes seleccionar que tecnología de gráficos utilizará tu juego.{n}Tus opciones están limitadas inicialmente pero una vez que tengas un poco de experiencia podrás desbloquear nuevas opciones."
+        "translation": "Trước khi bắt đầu phát triển, bạn phải quyết định loại trò chơi bạn muốn tạo và đặt tên cho trò chơi của mình.\nBạn cũng có thể chọn công nghệ đồ họa mà trò chơi của bạn sẽ sử dụng.{n}Các lựa chọn của bạn ban đầu bị hạn chế nhưng một khi bạn có một chút kinh nghiệm, bạn sẽ có thể mở khóa các tùy chọn mới."
     }, {
         "value": "Game points",
         "comment": "heading",
-        "translation": "Puntos de juego"
+        "translation": "Điểm trò chơi"
     }, {
         "value": "First game finished",
         "comment": "heading",
-        "translation": "Primer juego terminado"
+        "translation": "Trò chơi đầu tiên hoàn thành"
     }, {
         "value": "swipe from the edge of the screen to bring up the app bar",
         "comment": "appbar fragment",
-        "translation": "arrastra el borde de la pantalla para desplegar la barra de aplicaciones"
+        "translation": "vuốt từ cạnh màn hình để mở thanh ứng dụng"
     }, {
         "value": "right click to bring up the app bar",
         "comment": "appbar fragment",
-        "translation": "haz click derecho para abrir la barra de aplicaciones"
+        "translation": "nhấp chuột phải để mở thanh ứng dụng"
     }, {
         "value": "swipe from the right edge of the screen",
         "comment": "charmsbar fragment",
-        "translation": "arrastra desde el borde derecho de la pantalla"
+        "translation": "vuốt từ cạnh phải màn hình"
     }, {
         "value": "bring your cursor to the top right corner of the screen and then move down.",
         "comment": "charmsbar fragment",
-        "translation": "mueve el cursor a la esquina superior derecha de la pantalla y luego bájalo."
+        "translation": "di chuyển con trỏ của bạn đến góc trên bên phải màn hình rồi di chuyển xuống."
     }, {
         "value": "Appbar and help menu",
         "comment": "heading",
-        "translation": "Menú de ayuda y Apps"
+        "translation": "Thanh ứng dụng và menu trợ giúp"
     }, {
         "value": "Contracts unlocked",
         "comment": "heading",
-        "translation": "Contratos desbloqueados"
+        "translation": "Hợp đồng đã mở khóa"
     }, {
         "value": "Contracts have now been unlocked.\nTo see available contracts close this message and then {0} anywhere on the screen to bring up the action menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Se han desbloqueado los contratos.\nPara ver los contratos disponibles cierra este mensaje y luego haz {0} en cualquier lugar de la pantalla para abrir el menú de acción."
+        "translation": "Hợp đồng hiện đã được mở khóa.\nĐể xem các hợp đồng có sẵn, hãy đóng thông báo này và sau đó {0} vào bất kỳ đâu trên màn hình để mở menu hành động."
     }, {
         "value": "Contracts",
-        "translation": "Contratos"
+        "translation": "Hợp đồng"
     }, {
         "value": "Contracts are a useful tool to earn some extra cash when your balance is low and can also be useful to generate a small number of research points.\nContracts require you to generate a certain amount of design and technology points before the time runs out.{n}Decide carefully what contract you accept. If you miss the deadline for a contract you will have to pay a penalty so it's better to start out with smaller contracts and see how much you can handle.",
-        "translation": "Los contratos son una herramienta útil para ganar algo de dinero extra cuando tu balance es bajo y también puede ser útil para generar un pequeño número de puntos de investigación.\nLos contratos requieren que generes cierta cantidad de puntos de diseño y tecnología antes de que el tiempo se acabe.{n}Decide con cuidado que contrato aceptas. Si te pasas de la fecha de entrega tendrás que pagar una penalización así que es mejor empezar con pequeños contratos y ver qué tanto puedes manejar."
+        "translation": "Hợp đồng là một công cụ hữu ích để kiếm thêm tiền khi số dư của bạn thấp và cũng có thể hữu ích để tạo ra một số ít điểm nghiên cứu.\nHợp đồng yêu cầu bạn tạo ra một lượng điểm thiết kế và công nghệ nhất định trước khi hết thời gian.{n}Hãy quyết định cẩn thận hợp đồng nào bạn chấp nhận. Nếu bạn bỏ lỡ thời hạn của một hợp đồng, bạn sẽ phải trả tiền phạt vì vậy tốt hơn là nên bắt đầu với các hợp đồng nhỏ hơn và xem bạn có thể xử lý được bao nhiêu."
     }, {
         "value": "Game released",
         "comment": "heading",
-        "translation": "Juego publicado"
+        "translation": "Game đã phát hành"
     }, {
         "value": "Your game is now complete and will be handed off to publishing.\nWe should see reviews and sales coming in for the game soon!",
-        "translation": "Tu juego está ahora completo y será enviado para ser publicitado.\nLas críticas y las ventanas deberían llegar pronto!"
+        "translation": "Trò chơi của bạn hiện đã hoàn thành và sẽ được chuyển giao cho nhà phát hành.\nChúng ta sẽ sớm thấy các bài đánh giá và doanh số bán hàng của trò chơi!"
     }, {
         "value": "Game development completed",
         "comment": "heading",
-        "translation": "Desarrollo de juego completado"
+        "translation": "Hoàn thành phát triển game"
     }, {
         "value": "The development of your game has now finished. While developing games you gain experience and improve your skills.\nWhen development is completed you will be presented with a summary of the experience gained.",
-        "translation": "El desarrollo en tu juego ha terminado. Mientras desarrollas juegos ganas experiencia y mejoras tus habilidades.\nCuando el desarrollo esté completo se te presentará un resumen con la experiencia ganada."
+        "translation": "Quá trình phát triển trò chơi của bạn hiện đã kết thúc. Trong quá trình phát triển game, bạn tích lũy kinh nghiệm và cải thiện kỹ năng của mình.\nKhi quá trình phát triển hoàn tất, bạn sẽ được xem một bản tóm tắt về kinh nghiệm đã đạt được."
     }, {
         "value": "First sales",
         "comment": "heading",
-        "translation": "Primeras ventas"
+        "translation": "Doanh thu đầu tiên"
     }, {
         "value": "Now that your game is on sale you will receive the income from the game every week.\nYou can see how well your game is doing by looking at the sales graph in the top right of the screen.",
-        "translation": "Ahora que tu juego está en venta recibirás ganancias del juego cada semana.\nPuedes ver qué tan bien le está yendo a tu juego mirando el gráfico de ventas en la esquina superior derecha de la pantalla."
+        "translation": "Bây giờ trò chơi của bạn đã được bán, bạn sẽ nhận được thu nhập từ trò chơi mỗi tuần.\nBạn có thể xem trò chơi của mình hoạt động tốt như thế nào bằng cách xem biểu đồ doanh thu ở góc trên bên phải màn hình."
     }, {
         "value": "Research",
         "comment": "heading",
-        "translation": "Investigación"
+        "translation": "Nghiên cứu"
     }, {
         "value": "Research is important to unlock new options and make better games.\nYou should try to save enough research points to be able to create your own game engine.\nThis will greatly improve your games.{n}Hint: Try to develop games with different topic and genre combinations for a slight research boost.",
-        "translation": "La investigación es importante para desbloquear nuevas opciones y hacer mejores juegos.\nDeberías intentar acumular sufientes puntos de investigación para poder crear tu propio motor de juego.\nEsto mejorara mucho tus juegos.{n}Pista: Intenta desarrollar juegos con diferentes combinaciones de temas y géneros para un pequeño aumento de investigación."
+        "translation": "Nghiên cứu rất quan trọng để mở khóa các tùy chọn mới và tạo ra những trò chơi tốt hơn.\nBạn nên cố gắng tiết kiệm đủ điểm nghiên cứu để có thể tạo ra engine game của riêng mình.\nĐiều này sẽ cải thiện đáng kể trò chơi của bạn.{n}Gợi ý: Hãy thử phát triển các trò chơi với các chủ đề và thể loại khác nhau để tăng nhẹ điểm nghiên cứu."
     }, {
         "value": "Development phases",
         "comment": "heading",
-        "translation": "Fases de desarrollo"
+        "translation": "Các giai đoạn phát triển"
     }, {
         "value": "Game development runs through three stages. At the beginning of each stage you can decide what areas of the game you want to focus on.\nPicking the right focus for your game greatly increases the points you generate.{n}Think about what areas are important for your game and decrease the focus on areas you think are less important. If you want to read a brief description of the different areas please refer to the Help menu.",
-        "translation": "El desarrollo del juego se ejecuta a través de tres etapas. Al comienzo de cada etapa se puede decidir qué áreas del juego deseas enfocar. \nElegir el enfoque correcto para su juego aumenta en gran medida los puntos que usted genera. {N} Piensa en qué áreas son importantes para su juego y disminuir el énfasis en áreas que usted piensa que son menos importantes. Si quieres leer una breve descripción de las diferentes zonas, consulte el menú Ayuda."
+        "translation": "Phát triển game trải qua ba giai đoạn. Khi bắt đầu mỗi giai đoạn, bạn có thể quyết định những lĩnh vực nào của trò chơi bạn muốn tập trung vào.\nViệc chọn đúng trọng tâm cho trò chơi của bạn sẽ làm tăng đáng kể số điểm bạn tạo ra.{n}Hãy suy nghĩ về những lĩnh vực quan trọng đối với trò chơi của bạn và giảm bớt sự tập trung vào những lĩnh vực bạn cho là ít quan trọng hơn. Nếu bạn muốn đọc mô tả ngắn gọn về các lĩnh vực khác nhau, vui lòng tham khảo menu Trợ giúp."
     }, {
         "value": "Research custom engine",
         "comment": "heading",
-        "translation": "Investigar motor propio"
+        "translation": "Nghiên cứu engine tùy chỉnh"
     }, {
         "value": "Now you can create your own game engines.\nTo get started close this message and {0} anywhere to bring up the action menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Ahora puedes crear tus propios motores de juego.\nPara empezar cierra este mensaje y {0} en cualquier parte para abrir el menú de acción."
+        "translation": "Bây giờ bạn có thể tạo engine game của riêng mình.\nĐể bắt đầu, hãy đóng thông báo này và {0} vào bất kỳ đâu để mở menu hành động."
     }, {
         "value": "Research engine part",
         "comment": "heading",
-        "translation": "Investigar parte de motor"
+        "translation": "Nghiên cứu bộ phận engine"
     }, {
         "value": "You have just researched your first engine part.\nTo be able to use this in your games you need to create a new engine which includes this part.",
-        "translation": "Acabas de investigar tu primera parte de un motor de juego.\nPara poder usarla en tus juegos necesitas crear un nuevo motor que incluya esta parte."
+        "translation": "Bạn vừa nghiên cứu xong bộ phận engine đầu tiên của mình.\nĐể có thể sử dụng nó trong các trò chơi của bạn, bạn cần tạo một engine mới bao gồm bộ phận này."
     }, {
         "value": "Creating engine",
         "comment": "heading",
-        "translation": "Crear motor"
+        "translation": "Đang tạo engine"
     }, {
         "value": "You are now creating your own custom game engine.\n\nOnce the engine is finished you will be able to use it when creating new games.",
-        "translation": "Ahora estás creando tu propio motor de juego.\n\nUna vez que el motor esté terminado podrás usarlo para crear nuevos juegos."
+        "translation": "Bạn hiện đang tạo engine game tùy chỉnh của riêng mình.\n\nSau khi engine hoàn thành, bạn sẽ có thể sử dụng nó khi tạo các trò chơi mới."
     }, {
         "value": "Target audience",
         "comment": "heading",
-        "translation": "Público objetivo"
+        "translation": "Đối tượng mục tiêu"
     }, {
         "value": "You can now specify what your main target audience is for your game. Games can be targeted at young people, at everyone or at more mature audiences.{n}Picking the right target audience for your game is important. Your target platform can also play a role. Some platforms are especially popular with a specific audience.",
-        "translation": "Ahora puedes especificar el público al que irá principalmente dirigido el juego. Los juegos pueden dirigirse a gente joven, a todo el mundo o a un público adulto.{n}Es importante escoger el público objetivo adecuado. La plataforma objetivo también puede influir. Algunas plataformas son especialmente populares entre un público específico."
+        "translation": "Bây giờ bạn có thể chỉ định đối tượng mục tiêu chính cho trò chơi của mình. Các trò chơi có thể nhắm đến giới trẻ, mọi người hoặc đối tượng người lớn hơn.{n}Việc chọn đúng đối tượng mục tiêu cho trò chơi của bạn rất quan trọng. Nền tảng mục tiêu của bạn cũng có thể đóng một vai trò. Một số nền tảng đặc biệt phổ biến với một đối tượng cụ thể."
     }, {
         "value": "Marketing Unlocked",
         "comment": "heading",
-        "translation": "Marketing Desbloqueado"
+        "translation": "Marketing đã Mở khóa"
     }, {
         "value": "You've successfully unlocked marketing. You can access marketing options in the action menu but only while a game is in development.",
-        "translation": "Has desbloqueado con éxito el marketing. Ya puedes acceder a las opciones de marketing en el menú de opciones, pero sólo mientras haya un juego en desarrollo."
+        "translation": "Bạn đã mở khóa thành công marketing. Bạn có thể truy cập các tùy chọn marketing trong menu hành động nhưng chỉ khi trò chơi đang trong quá trình phát triển."
     }, {
         "value": "Marketing can be very effective to reach more potential customers but it can be very expensive too. It is best to experiment carefully with marketing to get a feel for what works best. Don't invest too much and remember that timing is important. Don't invest in your marketing efforts too early in development or too late.{n}It is also important to know that no matter how much money you pump into marketing, it will not make a bad game successful. To the contrary, it can even hurt to market bad games too much as it can upset your existing fans.",
-        "translation": "El marketing puede ser efectivo para alcanzar más clientes potenciales, pero también puede ser caro. Es mejor experimentar cuidadosamente con el marketing para hacerse una idea de qué funciona mejor. No inviertas demasiado y recuerda que la sincronización es crucial: no inviertas en una fase demasiado temprana o tardía del desarrollo.{n}También es importante saber que, por mucho dinero que le metas al marketing, no hará que el juego tenga éxito; al contrario, puede incluso perjudicarlo, ya que podría disgustar a los fans que ya tienes."
+        "translation": "Marketing có thể rất hiệu quả để tiếp cận nhiều khách hàng tiềm năng hơn nhưng cũng có thể rất tốn kém. Tốt nhất là nên thử nghiệm cẩn thận với marketing để có cảm nhận về những gì hoạt động tốt nhất. Đừng đầu tư quá nhiều và hãy nhớ rằng thời điểm rất quan trọng. Đừng đầu tư vào các nỗ lực marketing của bạn quá sớm trong quá trình phát triển hoặc quá muộn.{n}Điều quan trọng nữa là phải biết rằng dù bạn có bơm bao nhiêu tiền vào marketing, nó cũng sẽ không làm cho một trò chơi tồi tệ thành công. Ngược lại, việc marketing quá nhiều cho những trò chơi tồi tệ thậm chí có thể gây hại vì nó có thể làm phật lòng những người hâm mộ hiện tại của bạn."
     }, {
         "value": "Hype points",
         "comment": "heading",
-        "translation": "Puntos de expectación"
+        "translation": "Điểm Hype"
     }, {
         "value": "Developing a great game is not the only recipe for success. It is essential to build hype to ensure that players are excited about your game.{n}In the beginning of your career, hype is mostly generated through random events but once you gain more experience you can use marketing and other strategies to generate hype.",
-        "translation": "Desarrollar un gran juego no es la única receta del éxito. Es esencial crear expectación para asegurar que los jugadores estén ilusionados con tu juego.{n}En los inicios de tu carrera la expectación se genera sobre todo con eventos aleatorios, pero cuando ganes más experiencia podrás servirte del marketing y otras estrategias para crearla."
+        "translation": "Phát triển một trò chơi tuyệt vời không phải là công thức duy nhất để thành công. Điều cần thiết là phải tạo dựng sự cường điệu (hype) để đảm bảo người chơi hào hứng với trò chơi của bạn.{n}Khi bắt đầu sự nghiệp, sự cường điệu chủ yếu được tạo ra thông qua các sự kiện ngẫu nhiên nhưng một khi bạn có nhiều kinh nghiệm hơn, bạn có thể sử dụng marketing và các chiến lược khác để tạo ra sự cường điệu."
     }, {
         "value": "Level 2",
         "comment": "heading",
-        "translation": "Fase 2"
+        "translation": "Cấp độ 2"
     }, {
         "value": "You now may also train yourself and your staff to improve skills.\nLet's try this by completing a management course which is required before you can hire your first employee.{n}To get started close this message and then {0} on your character to bring up the training menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Ahora también puedes entrenarte a ti y a tu personal para mejorar habilidades.\nIntentemos hacerlo completando un curso de gerencia que se necesita antes de que puedas contratar tu primer empleado.{n} Para empezar cierra este mensaje y luego haz {0} en tu personaje para abrir el menú de entrenamiento."
+        "translation": "Bây giờ bạn cũng có thể đào tạo bản thân và nhân viên của mình để cải thiện kỹ năng.\nHãy thử điều này bằng cách hoàn thành một khóa học quản lý, đây là điều kiện bắt buộc trước khi bạn có thể thuê nhân viên đầu tiên của mình.{n}Để bắt đầu, hãy đóng thông báo này và sau đó {0} vào nhân vật của bạn để mở menu đào tạo."
     }, {
         "value": "First engine",
         "comment": "heading",
-        "translation": "Primer motor"
+        "translation": "Engine đầu tiên"
     }, {
         "value": "Congratulations! Your first custom game engine is now ready.\nYou should try using it in your next game.",
-        "translation": "Felicitaciones! Tu primer motor de juego propio está listo.\nDeberías intentar usarlo en tu próximo juego."
+        "translation": "Xin chúc mừng! Engine game tùy chỉnh đầu tiên của bạn đã sẵn sàng.\nBạn nên thử sử dụng nó trong trò chơi tiếp theo của mình."
     }, {
         "value": "Finding staff",
         "comment": "heading",
-        "translation": "Encontrar empleado"
+        "translation": "Tìm kiếm nhân viên"
     }, {
         "value": "Before you can hire someone you have to advertise the open position, set an advertising budget and decide how you want to test your applicants.{n}A high budget will increase the number of applicants and the different tests will help find people with the right balance of design and technology skills.",
-        "translation": "Antes de que puedas contratar a alguien has de promocionar el puesto vacante, establecer un presupuesto de promoción y decidir cómo poner a prueba a los candidatos.{n}Un alto presupuesto aumentará el número de candidatos y las distintas pruebas te ayudarán a encontrar gente con el equilibrio adecuado entre habilidades de diseño y tecnología."
+        "translation": "Trước khi bạn có thể thuê ai đó, bạn phải quảng cáo vị trí tuyển dụng, đặt ngân sách quảng cáo và quyết định cách bạn muốn kiểm tra ứng viên của mình.{n}Ngân sách cao sẽ tăng số lượng ứng viên và các bài kiểm tra khác nhau sẽ giúp tìm ra những người có sự cân bằng phù hợp giữa kỹ năng thiết kế và công nghệ."
     }, {
         "value": "Staff vacation",
         "comment": "heading",
-        "translation": "Vacaciones del empleado"
+        "translation": "Nhân viên nghỉ phép"
     }, {
         "value": "From time to time your employees need to recharge their batteries and go on vacation. You can tell that an employee is in need of rest when their efficiency steadily decreases.{n}To give them a holiday just {0} on them and select Send on Vacation",
         "comment": "{0} click/touch verb",
-        "translation": "Poco a poco, tus empleados necesitarán recargar las pilas e irse de vacaciones. Sabrás que un empleado necesita descansar cuando su eficiencia empiece a decrecer.{n}Para darles vacaciones, {0} en ellos y elige \"Dar Vacaciones\""
+        "translation": "Thỉnh thoảng nhân viên của bạn cần nạp lại năng lượng và đi nghỉ. Bạn có thể biết một nhân viên cần nghỉ ngơi khi hiệu quả làm việc của họ giảm dần đều.{n}Để cho họ nghỉ phép, chỉ cần {0} vào họ và chọn Gửi đi nghỉ phép."
     }, {
         "value": "Hiring staff",
         "comment": "heading",
-        "translation": "Contratar empleados"
+        "translation": "Tuyển dụng nhân viên"
     }, {
         "value": "The search for the open position is complete!\nYou can now review the list of applicants and hire someone for this position.{n}Don't forget that you can always train your employees to improve their skills.",
-        "translation": "¡La búsqueda de vacantes se ha completado!\nAhora puedes revisar la lista de candidatos y alguien para ocupar el puesto.{n}No olvides entrenar siempre a tus empleados para subir sus habilidades."
+        "translation": "Việc tìm kiếm vị trí tuyển dụng đã hoàn tất!\nBây giờ bạn có thể xem lại danh sách ứng viên và thuê một người cho vị trí này.{n}Đừng quên rằng bạn luôn có thể đào tạo nhân viên của mình để cải thiện kỹ năng của họ."
     }, {
         "value": "Staff hired",
         "comment": "heading",
-        "translation": "Empleado contratado"
+        "translation": "Nhân viên đã được thuê"
     }, {
         "value": "Congratulations on your first hire!\nNew employees have to settle in before they become fully effective.\nWhen a character is not fully efficient you can see an efficiency bar next to them. This bar will fill up slowly over time.{n}It is usually a good idea to give your new staff a Welcome training to get them up to speed quickly.\nThis will maximize their efficiency way faster than normally.\nTo do this close this message and then {0} on the character to bring up the action menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Felicidades por tu primer empleado!\nLos nuevos empleados tienen que establecerse antes de que sean totalmente efectivos.\nCuando un personaje no está totalmente efectivo puedes ver una barra de eficiencia a su lado. Esta barra se llenará lentamente con el tiempo.{n} Normalmente es una buena idea darle a tus nuevos empleados un Curso de bienvenida para acelerar el proceso.\nEsto aumentará su eficiencia mucho mas rápido de lo normal.\nPara hacerlo cierra este mensaje y luego haz {0} en el personaje para abrir el menú de acción."
+        "translation": "Chúc mừng bạn đã tuyển dụng được nhân viên đầu tiên!\nNhân viên mới cần thời gian ổn định trước khi họ có thể làm việc hiệu quả hoàn toàn.\nKhi một nhân vật chưa đạt hiệu quả tối đa, bạn có thể thấy một thanh hiệu quả bên cạnh họ. Thanh này sẽ từ từ đầy lên theo thời gian.{n}Thường thì nên cho nhân viên mới của bạn một khóa đào tạo Chào mừng để giúp họ nhanh chóng bắt kịp công việc.\nĐiều này sẽ tối đa hóa hiệu quả của họ nhanh hơn nhiều so với bình thường.\nĐể làm điều này, hãy đóng thông báo này và sau đó {0} vào nhân vật để mở menu hành động."
     }, {
         "value": "Hiring more staff",
         "comment": "heading",
-        "translation": "Contratar más empleados"
+        "translation": "Tuyển thêm nhân viên"
     }, {
         "value": "You can hire up to four employees in this office. Don't try to hire everyone at once as staff are expensive.\nMany rookies hire too early and go bankrupt.\nIt is best to take it slow.",
-        "translation": "Puedes contratar hasta cuatro empleados en esta oficina. No intentes contratar a todos a la vez ya que el personal es caro.\nMuchos novatos contratan muy pronto y terminan en bancarrota.\nEs mejor ir lentamente."
+        "translation": "Bạn có thể thuê tối đa bốn nhân viên trong văn phòng này. Đừng cố gắng thuê tất cả mọi người cùng một lúc vì nhân viên rất tốn kém.\nNhiều người mới vào nghề thuê quá sớm và bị phá sản.\nTốt nhất là nên từ từ."
     }, {
         "value": "Boosts",
         "comment": "heading",
-        "translation": "Impulsos"
+        "translation": "Tăng tốc"
     }, {
         "value": "Boosts are a powerful tool that allow you to temporarily increase the output of your staff.\nThey are most effective when timed strategically during the development of a game or during training.{n}Boosts need to recharge before you can use them. You can activate a boost as soon as the recharge progress is complete but you can also wait a little longer to further increase the effectiveness of the boost.",
-        "translation": "Los impulsos son una poderosa herramienta que te ayuda a incrementar temporalmente la producción de tus empleados.\nSon mas efectivos si se usan estratégicamente durante el desarrollo de un juego o durante un entrenamient.{n}Los impulsos necesitan recargarse antes de que los puedas usar. Puedes activar un impulso tan pronto como termine la regarga pero puedes esperar un poco mas si quieres aumentar la efectividad del impulso."
+        "translation": "Tăng tốc là một công cụ mạnh mẽ cho phép bạn tạm thời tăng năng suất của nhân viên.\nChúng hiệu quả nhất khi được sử dụng một cách chiến lược trong quá trình phát triển game hoặc trong quá trình đào tạo.{n}Tăng tốc cần thời gian hồi phục trước khi bạn có thể sử dụng lại. Bạn có thể kích hoạt tăng tốc ngay khi quá trình hồi phục hoàn tất nhưng bạn cũng có thể đợi thêm một chút để tăng thêm hiệu quả của việc tăng tốc."
     }, {
         "value": "Additional game features",
         "comment": "heading",
-        "translation": "Más caracaterísticas de juego"
+        "translation": "Các tính năng game bổ sung"
     }, {
         "value": "During development you can also select additional features for your game. Right now you can only pick 'Basic Sounds' but your options will increase quickly. Selecting additional features makes the game generally better but also increases its cost.{n}You will also see the graphic type you selected when you defined the game. This is just to remind you of your choice. You cannot change the type of graphics mid-game.",
-        "translation": "Durante el desarrollo puedes elegir características adicionales para tu juego. Por ahora sólo puedes elegir \"Sonidos básicos\", pero tus opciones aumentarán rápidamente. Elegir opciones adicionales suele hacer que el juego sea mejor, pero también incrementa el costo.{n}También verás el tipo de gráficos elegidos cuando definas el juego. Esto es sólo para recordarte tu elección. No puedes cambiar los gráficos en mitad del juego."
+        "translation": "Trong quá trình phát triển, bạn cũng có thể chọn các tính năng bổ sung cho trò chơi của mình. Hiện tại bạn chỉ có thể chọn 'Âm thanh Cơ bản' nhưng các tùy chọn của bạn sẽ tăng lên nhanh chóng. Việc chọn các tính năng bổ sung thường làm cho trò chơi tốt hơn nhưng cũng làm tăng chi phí của nó.{n}Bạn cũng sẽ thấy loại đồ họa bạn đã chọn khi xác định trò chơi. Điều này chỉ để nhắc bạn về lựa chọn của mình. Bạn không thể thay đổi loại đồ họa giữa chừng."
     }, {
         "value": "Finishing phase",
         "comment": "heading",
-        "translation": "Fase final"
+        "translation": "Giai đoạn hoàn thiện"
     }, {
         "value": "The development of your first game is now complete. You can press the 'Finish' button to publish your game but you should only do that once you fix the majority of bugs.{n}Releasing a game without fixing bugs can severely affect your ratings so you should only ever consider that if you need the cash and you can't afford to wait.",
-        "translation": "Has terminado el desarrollo de tu primer juego. Ya puedes pulsar el botón \"Terminar\" para publicarlo, pero sólo deberías hacerlo cuando hayas arreglado la mayoría de los bugs.{n}Lanzar un juego sin arreglar los bugs puede afectar bastante a tus críticas, así que considera hacerlo sólo cuando necesites dinero y no puedas permitirte esperar."
+        "translation": "Quá trình phát triển trò chơi đầu tiên của bạn hiện đã hoàn tất. Bạn có thể nhấn nút 'Hoàn thành' để phát hành trò chơi của mình nhưng bạn chỉ nên làm điều đó sau khi đã sửa phần lớn lỗi.{n}Việc phát hành một trò chơi mà không sửa lỗi có thể ảnh hưởng nghiêm trọng đến xếp hạng của bạn, vì vậy bạn chỉ nên cân nhắc điều đó nếu bạn cần tiền và không thể đợi được."
     }, {
         "value": "Training",
         "comment": "heading",
-        "translation": "Entrenamiento"
+        "translation": "Đào tạo"
     }, {
         "value": "If you want to create hit-games and have a world class team then training is important.\n For best results train your staff regularly but don't overwhelm them with too many sessions at once.{n}There are different training options available.\nSome options are better to increase certain skills than others. Experimenting is the best way to figure out which training options fit your plans.\nIt is useful to have a mix of 'specialists' and allrounders in your team but aim to have at least one design specialist and technology specialist.",
-        "translation": "Si quieres crear juegos exitosos y tener un personal de clase mundial entonces el entrenamiento es importante.\nPara mejores resultados entrena a tu personal regularmente pero no los sobrecargues con muchas sesiones a la vez.{n}Hay diferentes opciones de entrenamiento disponibles.\nAlgunas opciones son mejores para mejorar ciertas habilidades. Experimentar es la mejor forma de saber qué opción de entrenamiento se adapta a tus planes.\nEs útil tener una mezca de 'especialistas' y 'generalistas' en tu equipo pero apunta a tener al menos un especialista en diseño y uno en tecnología."
+        "translation": "Nếu bạn muốn tạo ra những trò chơi bom tấn và có một đội ngũ đẳng cấp thế giới thì việc đào tạo rất quan trọng.\nĐể có kết quả tốt nhất, hãy đào tạo nhân viên của bạn thường xuyên nhưng đừng làm họ quá tải với quá nhiều buổi học cùng một lúc.{n}Có nhiều lựa chọn đào tạo khác nhau.\nMột số lựa chọn tốt hơn để tăng cường các kỹ năng nhất định so với những lựa chọn khác. Thử nghiệm là cách tốt nhất để tìm ra lựa chọn đào tạo nào phù hợp với kế hoạch của bạn.\nViệc có một đội ngũ kết hợp giữa 'chuyên gia' và những người đa năng là hữu ích, nhưng hãy đặt mục tiêu có ít nhất một chuyên gia thiết kế và một chuyên gia công nghệ."
     }, {
         "value": "Level 5 unlocks",
         "comment": "heading",
-        "translation": "Desbloqueos de nivel 5"
+        "translation": "Mở khóa cấp 5"
     }, {
         "value": "Someone on your team has reached experience level 5! This unlocks a special training item called Boost. The training for it is expensive and you can only do it once the character has at least 500 design or technology points but the investment is well worth it.{n}Once trained, the boost allows you to temporarily increase the output of your staff and can really help you to make a hit-game.",
-        "translation": "¡Alguien de la plantilla ha llegado al nivel 5 de experiencia! Esto desbloquea un objeto especial de entrenamiento llamado Impulso. Su entrenamiento es caro y sólo podrás hacerlo cuando el personaje sume al menos 500 puntos de experiencia o tecnología, pero es una inversión que vale la pena.{n}Una vez entrenado, el impulso te permite incrementar temporalmente el rendimiento de la plantilla, lo que te ayudará mucho a crear un juego exitoso."
+        "translation": "Ai đó trong đội của bạn đã đạt cấp độ kinh nghiệm 5! Điều này mở khóa một vật phẩm đào tạo đặc biệt gọi là Tăng tốc. Việc đào tạo cho nó rất tốn kém và bạn chỉ có thể thực hiện một lần khi nhân vật có ít nhất 500 điểm thiết kế hoặc công nghệ nhưng sự đầu tư này rất xứng đáng.{n}Sau khi được đào tạo, tăng tốc cho phép bạn tạm thời tăng năng suất của nhân viên và thực sự có thể giúp bạn tạo ra một trò chơi bom tấn."
     }, {
         "value": "Publishers",
         "comment": "heading",
-        "translation": "Distribuidores"
+        "translation": "Nhà phát hành"
     }, {
         "value": "Using a publisher is a great way to get your games in front of a large audience which in turns helps to grow your fan base.\nOnce your fan base is big enough you can self-publish your larger games without the need for a publisher.\nFor medium games you should aim to have at least 100K fans before you publish them yourself.{n}To use a publisher you need to sign a contract. The contract will dictate what game you need to create. Pay attention to all the details, most importantly the minimum score that the contract dictates. If the game you release does not meet the minimum score you will have to pay a penalty, which can be costly.{n}It is also important to pay attention to the royalty rate. The higher the rate the more money you will make from the contract.",
-        "translation": "Usar un editor es una muy buena manera de que tus juegos alcancen una audiencia mas grande lo cual ayuda a aumentar tu cantidad de fans.\nUna vez que tu cantidad de fans es suficientemente grande puedes publicar tus juegos mas grandes tu mismo sin necesidad de un editor.\nPara juegos medianos deberías intentar tener al menos 100K fans antes de publicarlos tu mismo.{n}Para usar un editor necesitas firmar un contrato. Los contratos establecen que juego necesitas crear. Presta atención a todos los detalles, especialmente en el puntaje mínimo que establece el contrato. Si el juego que lanzas no cumple el puntaje mínimo tendrás que pagar una penalización la cual puede ser costosa.{n}También es importante prestar atención a la tasa de ganancias. Cuanto mas alta es la tasa mayor es el dinero que harás con el contrato."
+        "translation": "Sử dụng nhà phát hành là một cách tuyệt vời để đưa trò chơi của bạn đến với đông đảo khán giả, điều này giúp tăng lượng người hâm mộ của bạn.\nKhi lượng người hâm mộ của bạn đủ lớn, bạn có thể tự phát hành các trò chơi lớn hơn của mình mà không cần nhà phát hành.\nĐối với các trò chơi cỡ vừa, bạn nên đặt mục tiêu có ít nhất 100 nghìn người hâm mộ trước khi tự mình phát hành chúng.{n}Để sử dụng nhà phát hành, bạn cần ký hợp đồng. Hợp đồng sẽ quy định bạn cần tạo trò chơi nào. Hãy chú ý đến tất cả các chi tiết, quan trọng nhất là điểm số tối thiểu mà hợp đồng quy định. Nếu trò chơi bạn phát hành không đạt điểm số tối thiểu, bạn sẽ phải trả tiền phạt, điều này có thể rất tốn kém.{n}Điều quan trọng nữa là phải chú ý đến tỷ lệ tiền bản quyền. Tỷ lệ càng cao, bạn càng kiếm được nhiều tiền từ hợp đồng."
     }, {
         "value": "Design specialist",
         "comment": "heading",
-        "translation": "Especialista en diseño"
+        "translation": "Chuyên gia thiết kế"
     }, {
         "value": "R&D lab is ready",
         "comment": "heading",
-        "translation": "Laboratorio de I+D listo"
+        "translation": "Phòng R&D đã sẵn sàng"
     }, {
         "value": "To start a project simply {0} the screen to bring up the research menu.\nOnce you start a project you can also cancel it using the same menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Para iniciar un proyecto simplemente {0} en la pantalla para abrir el menu de investigación.\nUna vez que iniciaste un proyecto puedes cancelarlo usando el mismo menú."
+        "translation": "Để bắt đầu một dự án, chỉ cần {0} vào màn hình để mở menu nghiên cứu.\nKhi bạn bắt đầu một dự án, bạn cũng có thể hủy bỏ nó bằng cùng một menu."
     }, {
         "value": "Hardware lab is ready",
         "comment": "heading",
-        "translation": "El laboratorio de hardware está listo"
+        "translation": "Phòng thí nghiệm phần cứng đã sẵn sàng"
     }, {
         "value": "R&D project started",
         "comment": "heading",
-        "translation": "Proyecto I+D iniciado"
+        "translation": "Dự án R&D đã bắt đầu"
     }, {
         "value": "The project is now started and as your researchers work on it you will see the progress in the status card. Don't forget to adjust the budget! If the budget is 0 the project will never progress.",
-        "translation": "El proyecto ha empezado. Podrás ver su progreso en la tarjeta de estado conforme tus investigadores trabajen en él. ¡No olvides ajustar el presupuesto! Si el presupuesto es 0, el proyecto nunca progresará."
+        "translation": "Dự án hiện đã bắt đầu và khi các nhà nghiên cứu của bạn làm việc với nó, bạn sẽ thấy tiến độ trong thẻ trạng thái. Đừng quên điều chỉnh ngân sách! Nếu ngân sách bằng 0, dự án sẽ không bao giờ tiến triển."
     }, {
         "value": "Console Development",
-        "translation": "Desarrollo de Consola"
+        "translation": "Phát triển Console"
     }, {
         "value": "Developing your own console is a very costly undertaking. Not only do you have to pay a big chunk of money up front for the project but you will also have to pay your hardware lab crew. Only attempt to create a console if you are confident that you have enough capital.{n}When developing a console you can decide on how your console will look like and decide on the technical features as well as the quality assurance budget. The more sophisticated your technology is the better the console will fare against competing products. The more budget you reserve for QA the better the quality of your console will be.",
-        "translation": "Desarrollar tu propia consola es un proyecto muy caro. No sólo tendras de pagar mucho por el proyecto sino que también deberás pagar a la plantilla de tu laboratorio de hardware. Intenta crear una consola sólo si estás seguro de contar con suficiente capital.{n}Al desarrollar una consola puedes decidir qué aspecto tendrá y elegir sus características técnicas, así como el presupuesto destinado a la garantía de calidad. Cuanto más sofisticada sea la tecnología, mejor competirá la consola contra los productos competidores. Cuanto más presupuesto guardes para la GC, mejor será la calidad de la consola."
+        "translation": "Phát triển console của riêng bạn là một công việc rất tốn kém. Bạn không chỉ phải trả một khoản tiền lớn ban đầu cho dự án mà còn phải trả lương cho đội ngũ phòng thí nghiệm phần cứng của mình. Chỉ nên cố gắng tạo console nếu bạn tự tin rằng mình có đủ vốn.{n}Khi phát triển console, bạn có thể quyết định giao diện của console, các tính năng kỹ thuật cũng như ngân sách đảm bảo chất lượng. Công nghệ của bạn càng tinh vi, console càng có khả năng cạnh tranh tốt hơn với các sản phẩm đối thủ. Ngân sách bạn dành cho QA càng nhiều, chất lượng console của bạn càng tốt."
     }, {
         "value": "Console released",
         "comment": "heading",
-        "translation": "Consola a la venta"
+        "translation": "Console đã phát hành"
     }, {
         "value": "Your very own game console is now on the market. Game consoles are complex machines and when you sell a lot of them it is only natural that some of them need to be repaired.{n}While your console is on sale your hardware team will have to work off maintenance points. Depending on the quality of the console and how many you sell these points vary from week to week.{n}Try to give your hardware lab enough budget so that they stay on top of the maintenance, otherwise customers will become unhappy when they have to wait too long for their consoles to be repaired. You can see how well your team is doing in the console information card in the top left of the screen.",
-        "translation": "Tu propia consola ya está en el mercado. Las consolas de videojuegos son máquinas complejas y, al vender muchas de ellas, es normal que algunas necesiten ser reparadas.{n}Mientras tu consola esté a la venta, tu equipo de hardware deberá trabajar en puntos de mantenimiento. En función de la calidad de la consola y de las unidades vendidas, esos puntos varían cada semana.{n}Procura darle al laboratorio de hardware presupuesto suficiente para cumplir con el mantenimiento al máximo o los clientes se enfadarán por tener que esperar demasiado a la reparación de sus consolas. Puedes ver lo bien que lo está haciendo tu equipo en la tarjeta de información de consola, arriba y a la izquierda de la pantalla."
+        "translation": "Hệ máy chơi game của riêng bạn hiện đã có mặt trên thị trường. Máy chơi game là những cỗ máy phức tạp và khi bạn bán được nhiều, việc một số máy cần sửa chữa là điều tự nhiên.{n}Trong khi hệ máy của bạn đang được bán, đội ngũ phần cứng của bạn sẽ phải làm việc để giải quyết các điểm bảo trì. Tùy thuộc vào chất lượng của hệ máy và số lượng bạn bán được, các điểm này sẽ thay đổi theo từng tuần.{n}Hãy cố gắng cung cấp đủ ngân sách cho phòng thí nghiệm phần cứng của bạn để họ có thể theo kịp việc bảo trì, nếu không khách hàng sẽ không hài lòng khi phải đợi quá lâu để sửa chữa hệ máy của họ. Bạn có thể xem đội ngũ của mình hoạt động tốt như thế nào trong thẻ thông tin console ở góc trên bên trái màn hình."
     }, {
         "value": "MMO on sale",
         "comment": "heading",
-        "translation": "MMO a la venta"
+        "translation": "MMO đang bán"
     }, {
         "value": "Your MMO is on sale now. MMOs work slightly different than normal games. MMOs not only generate income but also cause maintenance costs as we need to run game servers and provide customer services. You will see the amount of maintenance paid in the sales card.{n}Unlike other games which have a limited sales duration MMOs sell indefinitely. You will have to decide yourself when you want to take an MMO off the market. To take an MMO off the market simply {0} on the sales card to bring up a menu.{n}Since MMOs are so expensive to create you might want to try to expand your current MMO rather than create a new one. To do this you will need to create a expansion pack, which you can start to research now.",
-        "translation": "Tu MMO ya está a la venta. Los MMOs funcionan de forma ligeramente distinta al resto de los juegos. No sólo generan beneficios sino también costes de mantenimiento, ya que hemos de manejar servidores y proveer servicios al cliente. Verás la cantidad del pago de mantenimiento en la tarjeta de ventas.{n}Al contrario que otros juegos, los MMOs se venden durante un tiempo indefinido. Tendrás que decidir tú mismo cuándo retirar un MMO del mercado; para ello simplemente {0} en la tarjeta de ventas para abrir un menú.{n}Ya que la creación de un MMO es cara, quizá quieras expandir tu actual MMO en lugar de crear uno nuevo. Para esto necesitas crear un pack de expansión que ya puedes empezar a investigar."
+        "translation": "MMO của bạn hiện đang được bán. MMO hoạt động hơi khác so với các trò chơi thông thường. MMO không chỉ tạo ra thu nhập mà còn gây ra chi phí bảo trì vì chúng ta cần vận hành máy chủ trò chơi và cung cấp dịch vụ khách hàng. Bạn sẽ thấy số tiền bảo trì được thanh toán trong thẻ bán hàng.{n}Không giống như các trò chơi khác có thời gian bán hàng hạn chế, MMO được bán vô thời hạn. Bạn sẽ phải tự quyết định khi nào muốn ngừng bán một MMO. Để ngừng bán một MMO, chỉ cần {0} vào thẻ bán hàng để mở menu.{n}Vì MMO rất tốn kém để tạo ra, bạn có thể muốn thử mở rộng MMO hiện tại của mình thay vì tạo một MMO mới. Để làm điều này, bạn sẽ cần tạo một gói mở rộng, mà bạn có thể bắt đầu nghiên cứu ngay bây giờ."
     }, {
         "value": "Additional Specialists",
         "comment": "heading",
-        "translation": "Especialistas Adicionales"
+        "translation": "Chuyên gia Bổ sung"
     }, {
         "value": "While you only need one specialist to start running a lab you can train more than one. Additional specialists decrease the overall running cost of your lab.",
-        "translation": "Sólo necesitas un especialista para empezar a dirigir un laboratorio, pero puedes entrenar a más de uno. Los especialistas adicionales reducen el coste total del mantenimiento del laboratorio."
+        "translation": "Mặc dù bạn chỉ cần một chuyên gia để bắt đầu vận hành phòng thí nghiệm, bạn có thể đào tạo nhiều hơn một người. Các chuyên gia bổ sung sẽ giảm chi phí vận hành tổng thể của phòng thí nghiệm của bạn."
     }, {
         "value": "Finish",
         "comment": "button",
-        "translation": "Terminar"
+        "translation": "Hoàn thành"
     }, {
         "value": "Fill Position",
-        "translation": "Ocupar Vacante"
+        "translation": "Tuyển dụng"
     }, {
         "value": "Hint",
-        "translation": "Pista"
+        "translation": "Gợi ý"
     }, {
         "value": "You have to complete the Staff Management training before you can hire someone. Simply {0} on your player character to access the training menu.",
-        "translation": "Has de completar el curso de Administración de Empresas antes de poder contratar a alguien.{0} en el personaje de tu jugador para acceder al menú de entrenamiento."
+        "translation": "Bạn phải hoàn thành khóa đào tạo Quản lý Nhân viên trước khi có thể thuê ai đó. Chỉ cần {0} vào nhân vật người chơi của bạn để truy cập menu đào tạo."
     }, {
         "value": "{0} per month",
-        "translation": "{0} al mes"
+        "translation": "{0} mỗi tháng"
     }, {
         "value": "Small Booth",
         "comment": "heading",
-        "translation": "Puesto Pequeño"
+        "translation": "Gian hàng Nhỏ"
     }, {
         "value": "This is a small pop up stand where we can show our marketing material. It isn't very impressive but a common setup at the G3.",
-        "translation": "Este es un pequeño puesto emergente para mostrar nuestro material de marketing. Nada impresionante, pero es el puesto más común en la G3."
+        "translation": "Đây là một gian hàng nhỏ dạng pop-up nơi chúng ta có thể trưng bày tài liệu marketing của mình. Nó không ấn tượng lắm nhưng là một kiểu thiết lập phổ biến tại G3."
     }, {
         "value": "Medium Booth",
         "comment": "heading",
-        "translation": "Puesto Mediano"
+        "translation": "Gian hàng Vừa"
     }, {
         "value": "This is a larger booth in a better location. We should expect more visitors with this booth and have space to give away demos of our games.",
-        "translation": "Un puesto más grande en un lugar mejor. Con este puesto podemos esperar más visitantes y un espacio suficiente para regalar demos de nuestros juegos."
+        "translation": "Đây là một gian hàng lớn hơn ở vị trí tốt hơn. Chúng ta nên mong đợi nhiều khách tham quan hơn với gian hàng này và có không gian để tặng bản demo trò chơi của chúng ta."
     }, {
         "value": "Large Booth",
         "comment": "heading",
-        "translation": "Puesto Grande"
+        "translation": "Gian hàng Lớn"
     }, {
         "value": "With this package we get our own section in the main hall of the G3. We can expect a large number of visitors.",
-        "translation": "Con este paquete obtenemos nuestra propia sección en la sala principal del G3. Podemos esperar un número muy alto de visitantes."
+        "translation": "Với gói này, chúng ta sẽ có khu vực riêng trong sảnh chính của G3. Chúng ta có thể mong đợi một lượng lớn khách tham quan."
     }, {
         "value": "Custom",
         "comment": "heading, as in Custom Booth",
-        "translation": "Propio"
+        "translation": "Tùy chỉnh"
     }, {
         "value": "Game #",
         "comment": "followed by number",
-        "translation": "Juego#"
+        "translation": "Game #"
     }, {
         "value": "Action",
         "comment": "genre",
-        "translation": "Acción"
+        "translation": "Hành động"
     }, {
         "value": "Adventure",
         "comment": "genre",
-        "translation": "Aventura"
+        "translation": "Phiêu lưu"
     }, {
         "value": "RPG",
         "comment": "genre",
-        "translation": "Rol"
+        "translation": "Nhập vai"
     }, {
         "value": "Simulation",
         "comment": "genre",
-        "translation": "Simulación"
+        "translation": "Mô phỏng"
     }, {
         "value": "Strategy",
         "comment": "genre",
-        "translation": "Estrategia"
+        "translation": "Chiến thuật"
     }, {
         "value": "Casual",
         "comment": "genre",
-        "translation": "Casual"
+        "translation": "Phổ thông"
     }, {
         "value": "Take off market",
         "comment": "menu item",
-        "translation": "Retirar del mercado"
+        "translation": "Ngừng bán"
     }, {
         "value": "Develop patch ({0})",
         "comment": "menu item",
-        "translation": "Crear parche ({0})"
+        "translation": "Phát triển bản vá ({0})"
     }, {
         "value": "Research...",
         "comment": "menu item",
-        "translation": "Investigar..."
+        "translation": "Nghiên cứu..."
     }, {
         "value": "Train...",
         "comment": "menu item",
-        "translation": "Entrenar..."
+        "translation": "Đào tạo..."
     }, {
         "value": "Send on Vacation",
         "comment": "menu item",
-        "translation": "Dar Vacaciones"
+        "translation": "Cho đi nghỉ"
     }, {
         "value": "Fire...",
         "comment": "menu item",
-        "translation": "Despedir..."
+        "translation": "Sa thải..."
     }, {
         "value": "Marketing...",
         "comment": "menu item",
@@ -2931,530 +2931,530 @@ Languages.vi = {
     }, {
         "value": "Develop New Game...",
         "comment": "menu item",
-        "translation": "Crear Nuevo Juego..."
+        "translation": "Phát triển Game Mới..."
     }, {
         "value": "Develop Sequel...",
         "comment": "menu item",
-        "translation": "Crear Secuela..."
+        "translation": "Phát triển Phần tiếp theo..."
     }, {
         "value": "Develop Expansion Pack...",
         "comment": "menu item",
-        "translation": "Crear Pack de Expansión..."
+        "translation": "Phát triển Gói Mở rộng..."
     }, {
         "value": "Create Custom Engine...",
         "comment": "menu item",
-        "translation": "Crear Motor Propio..."
+        "translation": "Tạo Engine Tùy chỉnh..."
     }, {
         "value": "Find Contract Work...",
         "comment": "menu item",
-        "translation": "Encontrar Contrato Laboral..."
+        "translation": "Tìm Hợp đồng..."
     }, {
         "value": "Find Publishing Deal...",
         "comment": "menu item",
-        "translation": "Encontrar Distribuidor..."
+        "translation": "Tìm Thỏa thuận Phát hành..."
     }, {
         "value": "Staff List...",
         "comment": "menu item",
-        "translation": "Lista de Empleados..."
+        "translation": "Danh sách Nhân viên..."
     }, {
         "value": "Game History...",
         "comment": "menu item",
-        "translation": "Historia de Juegos..."
+        "translation": "Lịch sử Game..."
     }, {
         "value": "Cancel Project...",
         "comment": "menu item",
-        "translation": "Cancelar Proyecto..."
+        "translation": "Hủy Dự án..."
     }, {
         "value": "Start Project...",
         "comment": "menu item",
-        "translation": "Iniciar Proyecto..."
+        "translation": "Bắt đầu Dự án..."
     }, {
         "value": "Develop Console...",
         "comment": "menu item",
-        "translation": "Crear Consola..."
+        "translation": "Phát triển Console..."
     }, {
         "value": "Previously shown tutorial messages for the active game are shown here. To see tutorial messages here, please continue an existing game or start a new one. You can start a new game via the app bar.",
-        "translation": "Los mensajes del tutorial previamente mostrados aparecen aquí. Para ver aquí los mensajes del tutorial, por favor continúa una partida existente o empieza una nueva. Puedes empezar una nueva partida a través de la barra de aplicaciones."
+        "translation": "Các thông báo hướng dẫn đã hiển thị trước đó cho trò chơi đang hoạt động được hiển thị ở đây. Để xem các thông báo hướng dẫn ở đây, vui lòng tiếp tục một trò chơi hiện có hoặc bắt đầu một trò chơi mới. Bạn có thể bắt đầu một trò chơi mới thông qua thanh ứng dụng."
     }, {
         "value": "Pick Topic",
         "comment": "button",
-        "translation": "Escoger Tema"
+        "translation": "Chọn Chủ đề"
     }, {
         "value": "Pick Platform",
         "comment": "button",
-        "translation": "Escoger Plataforma"
+        "translation": "Chọn Nền tảng"
     }, {
         "value": "Dev. cost: ",
-        "translation": "Cost. Des: "
+        "translation": "Chi phí P.triển: "
     }, {
         "value": "License cost: ",
-        "translation": "Costo de Licencia: "
+        "translation": "Phí bản quyền: "
     }, {
         "value": "Marketshare: ",
-        "translation": "Cuota mercado: "
+        "translation": "Thị phần: "
     }, {
         "value": "Pick Genre",
         "comment": "heading",
-        "translation": "Elegir Género"
+        "translation": "Chọn Thể loại"
     }, {
         "value": "Pick Engine",
         "comment": "heading",
-        "translation": "Escoger Motor"
+        "translation": "Chọn Engine"
     }, {
         "value": "The big game convention will take place in four weeks time. Do you want to participate?",
-        "translation": "La gran convención de videojuegos tendrá lugar dentro de cuatro semanas. ¿Quieres participar?"
+        "translation": "Hội chợ game lớn sẽ diễn ra trong bốn tuần nữa. Bạn có muốn tham gia không?"
     }, {
         "value": "Costs: {0}",
-        "translation": "Costos: {0}"
+        "translation": "Chi phí: {0}"
     }, {
         "value": "Game Convention: G3",
         "comment": "heading",
-        "translation": "Convención de Juegos: G3"
+        "translation": "Hội chợ Game: G3"
     }, {
         "value": "{0} Convention",
         "comment": "heading",
-        "translation": "Convención {0}"
+        "translation": "Hội chợ {0}"
     }, {
         "value": "Console Name",
-        "translation": "Nombre de consola"
+        "translation": "Tên Console"
     }, {
         "value": "{0} costs",
-        "translation": "{0} costes"
+        "translation": "Chi phí {0}"
     }, {
         "value": "Backlog: {0}",
-        "translation": "Pedidos: {0}"
+        "translation": "Tồn đọng: {0}"
     }, {
         "value": "{0} not researched",
-        "translation": "{0} no investigado"
+        "translation": "{0} chưa được nghiên cứu"
     }, {
         "value": "Min Score: {0}",
-        "translation": "Punt Mínima: {0}"
+        "translation": "Điểm tối thiểu: {0}"
     }, {
         "value": "Game Size:",
-        "translation": "Tamaño de Juego:"
+        "translation": "Quy mô Game:"
     }, {
         "value": "Target Audience:",
-        "translation": "Público Objetivo:"
+        "translation": "Đối tượng mục tiêu:"
     }, {
         "value": "Royalties: {0}%",
-        "translation": "Derechos: {0}%"
+        "translation": "Tiền bản quyền: {0}%"
     }, {
         "value": "Up-front Pay: {0}",
-        "translation": "Pago anticipado: {0}"
+        "translation": "Trả trước: {0}"
     }, {
         "value": "Penalty: {0}",
-        "translation": "Penalización: {0}"
+        "translation": "Tiền phạt: {0}"
     }, {
         "value": " (no license)",
-        "translation": " (sin licencia)"
+        "translation": " (chưa có giấy phép)"
     }, {
         "value": "Pay: {0}",
-        "translation": "Pago: {0}"
+        "translation": "Thanh toán: {0}"
     }, {
         "value": "{0} weeks",
-        "translation": "{0} semanas"
+        "translation": "{0} tuần"
     }, {
         "value": "There are no contracts currently available.",
-        "translation": "Ahora mismo no hay contratos disponibles."
+        "translation": "Hiện tại không có hợp đồng nào."
     }, {
         "value": "Development Stage {0}",
-        "translation": "Fase de Desarrollo {0}"
+        "translation": "Giai đoạn Phát triển {0}"
     }, {
         "value": "{0} Lvl. {1}",
         "comment": "{0} feature name, {1} lvl number",
-        "translation": "{0} Niv. {1}"
+        "translation": "{0} Cấp {1}"
     }, {
         "value": "Cost: {0}",
-        "translation": "Costo: {0}"
+        "translation": "Chi phí: {0}"
     }, {
         "value": "Drag staff here",
-        "translation": "Arrastra aquí a los empleados"
+        "translation": "Kéo nhân viên vào đây"
     }, {
         "value": "Design: ",
-        "translation": "Diseño: "
+        "translation": "Thiết kế: "
     }, {
         "value": "Tech.: ",
-        "translation": "Tecnología: "
+        "translation": "Công nghệ: "
     }, {
         "value": "Dev. stage {0}",
-        "translation": "Fase desarr. {0}"
+        "translation": "Giai đoạn PT {0}"
     }, {
         "value": "Game Engine #{0}",
         "comment": "{0} is number",
-        "translation": "Motor de Juego #{0}"
+        "translation": "Engine Game #{0}"
     }, {
         "value": "Sequel to {0}",
-        "translation": "Secuela de {0}"
+        "translation": "Phần tiếp theo của {0}"
     }, {
         "value": "Game Concept",
-        "translation": "Concepto de Juego"
+        "translation": "Ý tưởng Game"
     }, {
         "value": "{0} does not support {1} games!",
         "comment": "{0} platform, {1} game size",
-        "translation": "¡{0} no soporta juegos {0}!"
+        "translation": "{0} không hỗ trợ game {1}!"
     }, {
         "value": "MMO's cannot be small or medium.",
-        "translation": "Los MMOs no pueden ser pequeños ni medianos."
+        "translation": "MMO không thể có quy mô nhỏ hoặc vừa."
     }, {
         "value": "Engine does not support MMO.",
-        "translation": "Este motor no soporta MMOs."
+        "translation": "Engine không hỗ trợ MMO."
     }, {
         "value": "Most expensive ({0}): {1}",
-        "translation": "Más caro ({0}): {1}"
+        "translation": "Đắt nhất ({0}): {1}"
     }, {
         "value": "Most profitable ({0}): {1}",
-        "translation": "Más rentable: ({0}): {1}"
+        "translation": "Lợi nhuận cao nhất ({0}): {1}"
     }, {
         "value": "Least profitable ({0}): {1}",
-        "translation": "Menos rentable ({0}): {1}"
+        "translation": "Lợi nhuận thấp nhất ({0}): {1}"
     }, {
         "value": "Most used topic ({0}): {1}",
-        "translation": "Tema más usado({0}): {1}"
+        "translation": "Chủ đề dùng nhiều nhất ({0}): {1}"
     }, {
         "value": "Most used genre ({0}): {1}",
-        "translation": "Género más usado ({0}): {1}"
+        "translation": "Thể loại dùng nhiều nhất ({0}): {1}"
     }, {
         "value": "Researched topics: {0}",
-        "translation": "Temas investigados: {0}"
+        "translation": "Chủ đề đã nghiên cứu: {0}"
     }, {
         "value": "Total research completed: {0}",
-        "translation": "Investigación total completada: {0}"
+        "translation": "Tổng nghiên cứu đã hoàn thành: {0}"
     }, {
         "value": "Design points generated: {0}",
-        "translation": "Puntos de diseño generados: {0}"
+        "translation": "Điểm thiết kế đã tạo: {0}"
     }, {
         "value": "Technology points generated: {0}",
-        "translation": "Puntos de tecnología generados: {0}"
+        "translation": "Điểm công nghệ đã tạo: {0}"
     }, {
         "value": "Small games: {0}",
-        "translation": "Juegos pequeños: {0}"
+        "translation": "Game nhỏ: {0}"
     }, {
         "value": "Medium games: {0}",
-        "translation": "Juegos medianos: {0}"
+        "translation": "Game vừa: {0}"
     }, {
         "value": "Large games: {0}",
-        "translation": "Juegos grandes: {0}"
+        "translation": "Game lớn: {0}"
     }, {
         "value": "AAA games: {0}",
-        "translation": "Juegos AAA: {0}"
+        "translation": "Game AAA: {0}"
     }, {
         "value": "Good games: {0}",
-        "translation": "Juegos buenos: {0}"
+        "translation": "Game hay: {0}"
     }, {
         "value": "Top hits: {0}",
-        "translation": "Números uno: {0}"
+        "translation": "Top game nổi tiếng: {0}"
     }, {
         "value": "Publishers used: {0}",
-        "translation": "Editores utilizados: {0}"
+        "translation": "Nhà phát hành đã dùng: {0}"
     }, {
         "value": "Self-published games: {0}",
-        "translation": "Juegos auto-publicados: {0}"
+        "translation": "Game tự phát hành: {0}"
     }, {
         "value": "Best seller: {0} ({1} units)",
-        "translation": "Más vendido: {0} ({1} unidades)"
+        "translation": "Bán chạy nhất: {0} ({1} bản)"
     }, {
         "value": "Fans: {0}",
-        "translation": "Fans: {0}"
+        "translation": "Người hâm mộ: {0}"
     }, {
         "value": "Cash: {0}",
-        "translation": "Dinero: {0}"
+        "translation": "Tiền mặt: {0}"
     }, {
         "value": "Custom consoles: {0}",
-        "translation": "Consolas propias: {0}"
+        "translation": "Console tùy chỉnh: {0}"
     }, {
         "value": "It seems that something went wrong when purchasing the app.\nPlease close the app and try again later.\n If the issue persists please contact\n\n{0}",
-        "translation": "Parece que algo salió mal al comprar la aplicación.\nPor favor, cierre la aplicación y vuelva a intentarlo más tarde.\n…Si el problema persiste póngase en contacto con\n{0}"
+        "translation": "Có vẻ đã xảy ra lỗi khi mua ứng dụng.\nVui lòng đóng ứng dụng và thử lại sau.\nNếu sự cố vẫn tiếp diễn, vui lòng liên hệ\n\n{0}"
     }, {
         "value": "Store Confirmation Error",
         "comment": "heading",
-        "translation": "Error de Confirmación en Tienda"
+        "translation": "Lỗi Xác nhận Cửa hàng"
     }, {
         "value": "It seems that something went wrong when trying to purchase the app.\nThis usually indicates a problem with the Store. Please try again later and if the issue persists please contact\n\n{0}",
-        "translation": "Parece que algo salió mal mientras se intentaba comprar la aplicación.\nEsto suele indicar un problema con la Store. Por favor intenta de nuvo mas tarde y si el problema persiste por favor contáctanos.\n\n{0}"
+        "translation": "Có vẻ đã xảy ra lỗi khi cố gắng mua ứng dụng.\nĐiều này thường cho thấy có vấn đề với Cửa hàng. Vui lòng thử lại sau và nếu sự cố vẫn tiếp diễn, vui lòng liên hệ\n\n{0}"
     }, {
         "value": "Store Error",
         "comment": "heading",
-        "translation": "Error de Tienda"
+        "translation": "Lỗi Cửa hàng"
     }, {
         "value": "It seems that something went wrong when trying to go to the Store page for the full app.\nPlease try again and if the issue persists please contact {0} or search for Game Dev Tycoon manually on the Windows Store.",
-        "translation": "Al parecer algo salió mal al intentar acceder a la página de la Tienda para obtener la aplicación completa.\nPor favor intenta de nuevo y si el problema persiste por favor contacta a {0} o busca manualmente Game Dev Tycoon en la Tienda de Windows."
+        "translation": "Có vẻ đã xảy ra lỗi khi cố gắng truy cập trang Cửa hàng cho ứng dụng đầy đủ.\nVui lòng thử lại và nếu sự cố vẫn tiếp diễn, vui lòng liên hệ {0} hoặc tìm kiếm Game Dev Tycoon theo cách thủ công trên Windows Store."
     }, {
         "value": "You have reached the end of the {0} version.\nIf you like what you've seen so far then you should definitely check out the full game. You can find a brief description of what awaits you below.",
-        "translation": "Has alcanzado el final de la versión {0}.\nSi te gusta lo que has visto hasta ahora, sin duda deberías echarle un ojo al juego completo. Debajo encontrarás una breve descripción de lo que te espera."
+        "translation": "Bạn đã hoàn thành phiên bản {0}.\nNếu bạn thích những gì đã trải nghiệm, bạn chắc chắn nên xem thử phiên bản đầy đủ. Bạn có thể tìm thấy mô tả ngắn gọn về những gì đang chờ đợi bạn bên dưới."
     }, {
         "value": "\n\n<strong>If you unlock the full game you can continue playing the game you've already started.</strong>",
-        "translation": "\n\n↵\n↵\n<strong>Si desbloqueas el juego completo podrás seguir jugando la partida que ya empezaste.</strong>"
+        "translation": "\n\n<strong>Nếu bạn mở khóa phiên bản đầy đủ, bạn có thể tiếp tục chơi trò chơi bạn đã bắt đầu.</strong>"
     }, {
         "value": "Go to full game ...",
-        "translation": "Ir al juego completo..."
+        "translation": "Đến bản đầy đủ ..."
     }, {
         "value": " Unlock full game ...",
-        "translation": " Desbloquear juego completo..."
+        "translation": " Mở khóa bản đầy đủ ..."
     }, {
         "value": "Cash",
-        "translation": "Efectivo"
+        "translation": "Tiền mặt"
     }, {
         "value": "Total fans",
-        "translation": "Total de Fans"
+        "translation": "Tổng số người hâm mộ"
     }, {
         "value": "Total game releases",
-        "translation": "Total de juegos lanzados"
+        "translation": "Tổng số game đã phát hành"
     }, {
         "value": "Total unit sales",
-        "translation": "Total de unidades vendidas"
+        "translation": "Tổng số bản đã bán"
     }, {
         "value": "Total design points generated",
-        "translation": "Total de puntos de diseño generados"
+        "translation": "Tổng điểm thiết kế đã tạo"
     }, {
         "value": "Total technology points generated",
-        "translation": "Total de puntos de tecnología generados"
+        "translation": "Tổng điểm công nghệ đã tạo"
     }, {
         "value": "Total research completed",
-        "translation": "Investigación total completada"
+        "translation": "Tổng nghiên cứu đã hoàn thành"
     }, {
         "value": "Most sales ({0})",
-        "translation": "Ventas máximas ({0})"
+        "translation": "Doanh thu cao nhất ({0})"
     }, {
         "value": "Most fans ({0})",
-        "translation": "Máximo de fans ({0})"
+        "translation": "Nhiều fan nhất ({0})"
     }, {
         "value": "Most expensive ({0})",
-        "translation": "El más costoso ({0})"
+        "translation": "Đắt nhất ({0})"
     }, {
         "value": "Most profitable ({0})",
-        "translation": "El más rentable ({0})"
+        "translation": "Lợi nhuận cao nhất ({0})"
     }, {
         "value": "Least profitable ({0})",
-        "translation": "El menos rentable ({0})"
+        "translation": "Lợi nhuận thấp nhất ({0})"
     }, {
         "value": "Most used topic ({0})",
-        "translation": "El tema más usado ({0})"
+        "translation": "Chủ đề dùng nhiều nhất ({0})"
     }, {
         "value": "Most used genre ({0})",
-        "translation": "El género más usado ({0})"
+        "translation": "Thể loại dùng nhiều nhất ({0})"
     }, {
         "value": "Thank you for playing the {0} version.\nIf you like what you've seen so far then you should definitely check out the full game.",
-        "translation": "Gracias por jugar la {0} versión.\nSi te gusta lo que has visto hasta ahora, definitivamente deberías echarle un vistazo a la versión completa."
+        "translation": "Cảm ơn bạn đã chơi phiên bản {0}.\nNếu bạn thích những gì đã trải nghiệm, bạn chắc chắn nên xem thử phiên bản đầy đủ."
     }, {
         "value": "If you unlock the full game you can continue playing the game you've already started.",
-        "translation": "Si desbloqueas el juego completo podrás segur jugando la partida que ya empezaste."
+        "translation": "Nếu bạn mở khóa phiên bản đầy đủ, bạn có thể tiếp tục chơi trò chơi bạn đã bắt đầu."
     }, {
         "value": "coming soon",
-        "translation": "Próximamente"
+        "translation": "sắp ra mắt"
     }, {
         "value": "Y{0} M{1} W{2}",
         "comment": "date display",
-        "translation": "A{0} M{1} S{2}"
+        "translation": "N{0} T{1} Tu{2}"
     }, {
         "value": "Loss:",
-        "translation": "Pérdida:"
+        "translation": "Lỗ:"
     }, {
         "value": "Select Game",
         "comment": "heading",
-        "translation": "Seleccione Juego"
+        "translation": "Chọn Game"
     }, {
         "value": "Game History",
-        "translation": "Historial de Juegos"
+        "translation": "Lịch sử Game"
     }, {
         "value": "Select",
         "comment": "button",
-        "translation": "Seleccionar"
+        "translation": "Chọn"
     }, {
         "value": "Company Name",
-        "translation": "Nombre de la Compañia"
+        "translation": "Tên Công ty"
     }, {
         "value": "Player Name",
-        "translation": "Nombre del Jugador"
+        "translation": "Tên Người chơi"
     }, {
         "value": "Auto",
-        "translation": "Auto"
+        "translation": "Tự động"
     }, {
         "value": "Slot ",
-        "translation": "Partida "
+        "translation": "Ô lưu "
     }, {
         "value": "Rank: ",
-        "translation": "Rango: "
+        "translation": "Hạng: "
     }, {
         "value": "Units: ",
-        "translation": "Unidades: "
+        "translation": "Số bản: "
     }, {
         "value": "No scores yet. Once you finish a game your high score will be listed here.",
-        "translation": "Todavía no hay puntajes. Una vez que termine una partida,su puntuación más alta estará aquí."
+        "translation": "Chưa có điểm số nào. Sau khi bạn hoàn thành một trò chơi, điểm cao của bạn sẽ được liệt kê ở đây."
     }, {
         "value": "How do you want to market {0}?",
-        "translation": "¿Cómo quieres promocionar {0}?"
+        "translation": "Bạn muốn quảng bá {0} như thế nào?"
     }, {
         "value": "Today the new game platform {0} by {1} has been released.",
-        "translation": "Hoy fue lanzada la nueva plataforma de juegos {0} por {1}."
+        "translation": "Hôm nay, nền tảng game mới {0} của {1} đã được phát hành."
     }, {
         "value": "Project Size: ",
-        "translation": "Tamaño del proyecto: "
+        "translation": "Quy mô Dự án: "
     }, {
         "value": "New Topic",
-        "translation": "Nuevo Tema"
+        "translation": "Chủ đề Mới"
     }, {
         "value": "New Combo",
-        "translation": "Nuevo Combo"
+        "translation": "Kết hợp Mới"
     }, {
         "value": "Good Management",
-        "translation": "Buena Administración"
+        "translation": "Quản lý Tốt"
     }, {
         "value": "(Bonus: x{0} - {1})",
         "comment": "{0} bonusMultiplier, {1} label",
-        "translation": "(Bonos: x{0} - {1})"
+        "translation": "(Thưởng: x{0} - {1})"
     }, {
         "value": "Lvl. ",
-        "translation": "Nivel. "
+        "translation": "Cấp "
     }, {
         "value": "Due to increase in experience the following staff have earned a raise:",
-        "translation": "Debido al aumento de experiencia, los siguientes empleados se han ganado un aumento:"
+        "translation": "Do tăng kinh nghiệm, các nhân viên sau đã được tăng lương:"
     }, {
         "value": "Salary increase",
         "comment": "heading",
-        "translation": "Aumento de salario"
+        "translation": "Tăng lương"
     }, {
         "value": "Special training available for:",
-        "translation": "Entrenamiento especial disponible para:"
+        "translation": "Đào tạo đặc biệt có sẵn cho:"
     }, {
         "value": "Special training",
         "comment": "heading",
-        "translation": "Entrenamiento especial"
+        "translation": "Đào tạo đặc biệt"
     }, {
         "value": "What do you want to research?",
-        "translation": "¿Qué es lo que quiere investigar?"
+        "translation": "Bạn muốn nghiên cứu gì?"
     }, {
         "value": "Training Options",
         "comment": "heading",
-        "translation": "Opciones de Aprendizaje"
+        "translation": "Tùy chọn Đào tạo"
     }, {
         "value": "Start Research",
         "comment": "button",
-        "translation": "Iniciar Investigación"
+        "translation": "Bắt đầu Nghiên cứu"
     }, {
         "value": "Start Training",
         "comment": "button",
-        "translation": "Empezar Entrenamiento"
+        "translation": "Bắt đầu Đào tạo"
     }, {
         "value": "RP",
         "comment": "RP short for research points",
-        "translation": "PI"
+        "translation": "ĐNC"
     }, {
         "value": "cr.",
         "comment": "cr. short for credits",
-        "translation": "Creditos."
+        "translation": "cr."
     }, {
         "value": "Reviews for {0}",
-        "translation": "Análisis por {0}"
+        "translation": "Đánh giá cho {0}"
     }, {
         "value": "Complex Algorithms",
-        "translation": "Algoritmos Complejos"
+        "translation": "Thuật toán Phức tạp"
     }, {
         "value": "Game Demo",
-        "translation": "Demo de Juego"
+        "translation": "Bản Demo Game"
     }, {
         "value": "Showreel",
-        "translation": "Video Demostrativo"
+        "translation": "Video Giới thiệu"
     }, {
         "value": "Searching...",
         "comment": "button",
-        "translation": "Buscando..."
+        "translation": "Đang tìm kiếm..."
     }, {
         "value": "Find Staff",
         "comment": "heading",
-        "translation": "Buscar Personal"
+        "translation": "Tìm Nhân viên"
     }, {
         "value": "Cost: ",
-        "translation": "Costo: "
+        "translation": "Chi phí: "
     }, {
         "value": "Level: ",
-        "translation": "Nivel: "
+        "translation": "Cấp độ: "
     }, {
         "value": "fans",
-        "translation": "fans"
+        "translation": "người hâm mộ"
     }, {
         "value": "{0} Fans",
-        "translation": "{0} Fans"
+        "translation": "{0} Người hâm mộ"
     }, {
         "value": " ({0}) - purchased!",
-        "translation": " ({0}) - ¡comprado!"
+        "translation": " ({0}) - đã mua!"
     }, {
         "value": "No project",
-        "translation": "Ningun proyecto"
+        "translation": "Chưa có dự án"
     }, {
         "value": "Design",
-        "translation": "Diseño"
+        "translation": "Thiết kế"
     }, {
         "value": "Technology",
-        "translation": "Tecnología"
+        "translation": "Công nghệ"
     }, {
         "value": "Bugs",
-        "translation": "Errores"
+        "translation": "Lỗi"
     }, {
         "value": "Remaining",
         "comment": "label for visual which shows 'points remaining'",
-        "translation": "Restantes"
+        "translation": "Còn lại"
     }, {
         "value": "Custom Game Engine",
-        "translation": "Motor de Juego Personalizado"
+        "translation": "Engine Game Tùy chỉnh"
     }, {
         "value": "Contract",
-        "translation": "Contrato"
+        "translation": "Hợp đồng"
     }, {
         "value": "Time Left",
         "comment": "label for progressbar",
-        "translation": "Tiempo restante"
+        "translation": "Thời gian còn lại"
     }, {
         "value": "No Project",
-        "translation": "Ningun proyecto"
+        "translation": "Chưa có Dự án"
     }, {
         "value": "Hype {0}",
         "comment": "hype {0} points",
-        "translation": "Expectación {0}"
+        "translation": "Hype {0}"
     }, {
         "value": "High score",
-        "translation": "Puntaje Alto"
+        "translation": "Điểm cao"
     }, {
         "value": "New",
-        "translation": "Nuevo"
+        "translation": "Mới"
     }, {
         "value": "Save",
-        "translation": "Guardar"
+        "translation": "Lưu"
     }, {
         "value": "Load",
-        "translation": "Cargar"
+        "translation": "Tải"
     }, {
         "value": "High Score",
-        "translation": "Puntaje Alto"
+        "translation": "Điểm Cao"
     }, {
         "value": "Paused",
-        "translation": "Pausado"
+        "translation": "Đã tạm dừng"
     }, {
         "value": "Saving...",
-        "translation": "Guardando..."
+        "translation": "Đang lưu..."
     }, {
         "value": "Go full screen to play!",
-        "translation": "¡Ir a pantalla completa para jugar!"
+        "translation": "Chuyển sang toàn màn hình để chơi!"
     }, {
         "value": "Budget",
-        "translation": "Presupuesto"
+        "translation": "Ngân sách"
     }, {
         "value": "Choose",
-        "translation": "Seleccionar"
+        "translation": "Chọn"
     }, {
         "value": "Game is finished!",
-        "translation": "¡Has terminado el juego!"
+        "translation": "Game đã hoàn thành!"
     }, {
         "value": "Small",
         "comment": "game size",
-        "translation": "Pequeño"
+        "translation": "Nhỏ"
     }, {
         "value": "Medium",
         "comment": "game size",
-        "translation": "medio"
+        "translation": "Vừa"
     }, {
         "value": "Large",
         "comment": "game size",
-        "translation": "Grande"
+        "translation": "Lớn"
     }, {
         "value": "AAA",
         "comment": "game size",
@@ -3462,1736 +3462,1736 @@ Languages.vi = {
     }, {
         "value": "Y",
         "comment": "target audience button content, Y as in young",
-        "translation": "J"
+        "translation": "Trẻ"
     }, {
         "value": "E",
         "comment": "target audience button content, E as in everyone",
-        "translation": "T"
+        "translation": "Mọi lứa tuổi"
     }, {
         "value": "M",
         "comment": "target audience button content, M as in mature",
-        "translation": "A"
+        "translation": "Trưởng thành"
     }, {
         "value": "Pick Game Engine",
-        "translation": "Elegir Motor"
+        "translation": "Chọn Engine Game"
     }, {
         "value": "Next",
-        "translation": "Siguiente"
+        "translation": "Tiếp theo"
     }, {
         "value": "Feature Selection",
-        "translation": "Selección de Características"
+        "translation": "Chọn Tính năng"
     }, {
         "value": "Start Development",
-        "translation": "Comenzar Desarrollo"
+        "translation": "Bắt đầu Phát triển"
     }, {
         "value": "Company Details",
-        "translation": "Datos de la Compañia"
+        "translation": "Chi tiết Công ty"
     }, {
         "value": "Continue",
-        "translation": "Continuar"
+        "translation": "Tiếp tục"
     }, {
         "value": "Load Game",
-        "translation": "Cargar Juego"
+        "translation": "Tải Game"
     }, {
         "value": "Choose Save Slot",
-        "translation": "Elija un espacio para guardar"
+        "translation": "Chọn Ô Lưu"
     }, {
         "value": "Level:",
-        "translation": "Nivel:"
+        "translation": "Cấp độ:"
     }, {
         "value": "Design:",
-        "translation": "Diseño:"
+        "translation": "Thiết kế:"
     }, {
         "value": "Technology:",
-        "translation": "Tecnología:"
+        "translation": "Công nghệ:"
     }, {
         "value": "Speed:",
-        "translation": "Velocidad:"
+        "translation": "Tốc độ:"
     }, {
         "value": "Research:",
-        "translation": "Investigación:"
+        "translation": "Nghiên cứu:"
     }, {
         "value": "Create a new Engine",
-        "translation": "Crear un nuevo Motor"
+        "translation": "Tạo Engine mới"
     }, {
         "value": "Create Engine",
-        "translation": "Crear Motor"
+        "translation": "Tạo Engine"
     }, {
         "value": "Quality Assurance Budget",
-        "translation": "Presupuesto de Garantía de Calidad"
+        "translation": "Ngân sách Đảm bảo Chất lượng"
     }, {
         "value": "Special Project",
-        "translation": "Proyecto Especial"
+        "translation": "Dự án Đặc biệt"
     }, {
         "value": "Start Project",
-        "translation": "Iniciar Proyecto"
+        "translation": "Bắt đầu Dự án"
     }, {
         "value": "Time Allocation (Preview)",
-        "translation": "Asignación de Tiempo (V.Previa)"
+        "translation": "Phân bổ Thời gian (Xem trước)"
     }, {
         "value": "Selected Features",
-        "translation": "Características Seleccionadas"
+        "translation": "Các Tính năng Đã chọn"
     }, {
         "value": "Staff",
-        "translation": "Empleados"
+        "translation": "Nhân viên"
     }, {
         "value": "New Record!",
-        "translation": "¡Nuevo Record!"
+        "translation": "Kỷ lục Mới!"
     }, {
         "value": "Experience gained",
-        "translation": "Experiencia ganada"
+        "translation": "Kinh nghiệm nhận được"
     }, {
         "value": "XP Bonus:",
-        "translation": "Bonificación de XP:"
+        "translation": "Thưởng XP:"
     }, {
         "value": "Release Game",
-        "translation": "Lanzar Juego"
+        "translation": "Phát hành Game"
     }, {
         "value": "Trash Game",
-        "translation": "Desechar Juego"
+        "translation": "Bỏ Game"
     }, {
         "value": "Level Up!",
-        "translation": "¡Subio de Nivel!"
+        "translation": "Lên cấp!"
     }, {
         "value": "Units Sold:",
-        "translation": "Unidades Vendidas:"
+        "translation": "Số bản đã bán:"
     }, {
         "value": "Costs:",
-        "translation": "Costos:"
+        "translation": "Chi phí:"
     }, {
         "value": "Income:",
-        "translation": "Ingresos:"
+        "translation": "Thu nhập:"
     }, {
         "value": "Profit:",
-        "translation": "Ganancia:"
+        "translation": "Lợi nhuận:"
     }, {
         "value": "Released:",
-        "translation": "Lanzamiento:"
+        "translation": "Phát hành:"
     }, {
         "value": "Fans:",
-        "translation": "Fans:"
+        "translation": "Người hâm mộ:"
     }, {
         "value": "Avg. Review Score:",
-        "translation": "Punt. Crítica Media:"
+        "translation": "Điểm Đánh giá TB:"
     }, {
         "value": "Top Sales Rank:",
-        "translation": "Max. Puesto Ventas:"
+        "translation": "Hạng Doanh thu Cao nhất:"
     }, {
         "value": "Do you really want to throw away this game?",
-        "translation": "¿Seguro que quieres desechar este juego?"
+        "translation": "Bạn có thực sự muốn bỏ trò chơi này không?"
     }, {
         "value": "Note:",
-        "translation": "Nota:"
+        "translation": "Lưu ý:"
     }, {
         "value": "You do not lose the experience gained during development.",
-        "translation": "No perderás la experiencia obtenida durante el desarrollo."
+        "translation": "Bạn không mất kinh nghiệm đã đạt được trong quá trình phát triển."
     }, {
         "value": "Do you really want to remove this from the market?",
-        "translation": "¿Seguro que quieres retirarlo del mercado?"
+        "translation": "Bạn có thực sự muốn gỡ bỏ sản phẩm này khỏi thị trường không?"
     }, {
         "value": "You will no longer get any income from it.",
-        "translation": "No obtendrás más ingresos por ello."
+        "translation": "Bạn sẽ không còn nhận được bất kỳ thu nhập nào từ nó."
     }, {
         "value": "Do you really want to cancel this project?",
-        "translation": "¿Realmente quiere cancelar este proyecto?"
+        "translation": "Bạn có thực sự muốn hủy dự án này không?"
     }, {
         "value": "All progress on the project will be",
-        "translation": "¡Todo avance en el proyecto se"
+        "translation": "Tất cả tiến độ của dự án sẽ bị"
     }, {
         "value": "lost!",
-        "translation": "perderá!"
+        "translation": "mất!"
     }, {
         "value": "Do you really want to overwrite this game?",
-        "translation": "¿Realmente quiere sobrescribir esta partida?"
+        "translation": "Bạn có thực sự muốn ghi đè lên trò chơi này không?"
     }, {
         "value": "Some of the features in the full game",
-        "translation": "Algunas características en el juego completo"
+        "translation": "Một số tính năng trong phiên bản đầy đủ"
     }, {
         "value": "Move your company into bigger offices.",
-        "translation": "Traslada tu compañía a una oficina más grandes."
+        "translation": "Chuyển công ty của bạn đến văn phòng lớn hơn."
     }, {
         "value": "Hire and train staff.",
-        "translation": "Contrata y entrena empleados."
+        "translation": "Thuê và đào tạo nhân viên."
     }, {
         "value": "Develop bigger/better games and unlock even more options.",
-        "translation": "Crea juegos más grandes, mejores y desbloquea aún más opciones."
+        "translation": "Phát triển các trò chơi lớn hơn/tốt hơn và mở khóa nhiều tùy chọn hơn nữa."
     }, {
         "value": "Unlock secret labs and conduct industry-changing projects.",
-        "translation": "Desbloquea laboratorios secretos y lleva a cabo proyectos revolucionarios."
+        "translation": "Mở khóa các phòng thí nghiệm bí mật và thực hiện các dự án thay đổi ngành công nghiệp."
     }, {
         "value": "And much more!",
-        "translation": "¡Y mucho más!"
+        "translation": "Và nhiều hơn nữa!"
     }, {
         "value": "Unlock Full Game ...",
-        "translation": "Desbloquear Juego Completo..."
+        "translation": "Mở khóa Toàn bộ Game ..."
     }, {
         "value": "Final Score",
-        "translation": "Puntuación Final"
+        "translation": "Điểm Cuối cùng"
     }, {
         "value": "Close",
-        "translation": "Cerrar"
+        "translation": "Đóng"
     }, {
         "value": "Send us feedback",
-        "translation": "Envíanos tus impresiones"
+        "translation": "Gửi phản hồi cho chúng tôi"
     }, {
         "value": "Want to provide some feedback or report some issues? Send us an email to support@greenheartgames.com - While we might not respond to every email we do read/consider everything that is sent to us.",
-        "translation": "¿Quieres proporcionar tus impresiones o informar de algún problema? Envíanos un e-mail a support@greenheartgames.com. Quizá no podamos responder a todos los mails, pero sí leemos y consideramos todo lo que recibimos."
+        "translation": "Bạn muốn cung cấp phản hồi hoặc báo cáo sự cố? Hãy gửi email cho chúng tôi tới support@greenheartgames.com - Mặc dù chúng tôi có thể không trả lời mọi email, chúng tôi sẽ đọc/xem xét mọi thứ được gửi đến."
     }, {
         "value": "Send feedback ...",
-        "translation": "Enviar impresiones..."
+        "translation": "Gửi phản hồi ..."
     }, {
         "value": "Rate and Review",
-        "translation": "Valora y Critica"
+        "translation": "Đánh giá và Nhận xét"
     }, {
         "value": "If you like the game please consider rating it on the Store. If you want to support an issue please do not do this via a Store rating as we will be unable to reply.",
-        "translation": "Por favor, si te gusta el juego, considera valorarlo en la Tienda. Si quieres informar de un error te rogamos no lo hagas a través de la Tienda, ya que quizá no podamos responder."
+        "translation": "Nếu bạn thích trò chơi, vui lòng xem xét đánh giá nó trên Cửa hàng. Nếu bạn muốn hỗ trợ một vấn đề, vui lòng không thực hiện việc này thông qua đánh giá trên Cửa hàng vì chúng tôi sẽ không thể trả lời."
     }, {
         "value": "Rate and Review ...",
-        "translation": "Valora y Critica..."
+        "translation": "Đánh giá và Nhận xét ..."
     }, {
         "value": "Vote with your wallet",
-        "translation": "Vota con tu billetera"
+        "translation": "Ủng hộ bằng tiền của bạn"
     }, {
         "value": "If you would've gladly paid a little more for the game or you just want to help make sure that we can continue bringing you games in the future then you can buy one of the supporter packs below. You will support a small independent start-up. This does not unlock any in-game perks and is entirely optional. You do get an achievement though :)",
-        "translation": "Si quisieras pagar un poco más por el juego o simplemente contribuir a que podamos seguir brindándo juegos en el futuro, puedes comprar uno de los packs de aficionado de abajo. Ayudarás a una pequeña compañía independiente. Esto no desbloqueará ninguna característica del juego y es puramente opcional, aunque sí te llevarás un logro :)"
+        "translation": "Nếu bạn sẵn lòng trả thêm một chút cho trò chơi hoặc bạn chỉ muốn giúp đảm bảo rằng chúng tôi có thể tiếp tục mang đến cho bạn nhiều trò chơi hơn trong tương lai, thì bạn có thể mua một trong các gói hỗ trợ bên dưới. Bạn sẽ hỗ trợ một công ty khởi nghiệp nhỏ độc lập. Điều này không mở khóa bất kỳ đặc quyền nào trong trò chơi và hoàn toàn là tùy chọn. Tuy nhiên, bạn sẽ nhận được một thành tựu :)"
     }, {
         "value": "Thank you for playing!",
-        "translation": "¡Gracias por jugar!"
+        "translation": "Cảm ơn bạn đã chơi!"
     }, {
         "value": "Current Game Statistics",
-        "translation": "Estadísticas de la Partida"
+        "translation": "Thống kê Game Hiện tại"
     }, {
         "value": "Pre-filter Applicants",
-        "translation": "Filtro previo de Candidatos"
+        "translation": "Lọc trước Ứng viên"
     }, {
         "value": "Start looking",
-        "translation": "Empezar a buscar"
+        "translation": "Bắt đầu tìm kiếm"
     }, {
         "value": "First Last",
-        "translation": "Apellido"
+        "translation": "Họ Tên"
     }, {
         "value": "Experience",
-        "translation": "Experiencia"
+        "translation": "Kinh nghiệm"
     }, {
         "value": "Speed",
-        "translation": "Rapidez"
+        "translation": "Tốc độ"
     }, {
         "value": "Salary",
-        "translation": "Salario"
+        "translation": "Lương"
     }, {
         "value": "Hire Staff",
-        "translation": "Contratar Personal"
+        "translation": "Thuê Nhân viên"
     }, {
         "value": "Hire",
-        "translation": "Contratar"
+        "translation": "Thuê"
     }, {
         "value": "Accept Contract",
-        "translation": "Aceptar Contrato"
+        "translation": "Chấp nhận Hợp đồng"
     }, {
         "value": "Achievement Unlocked",
-        "translation": "Logro Desbloqueado"
+        "translation": "Đã mở khóa Thành tựu"
     }, {
         "value": "Sound Effects",
-        "translation": "Efectos de Sonido"
+        "translation": "Hiệu ứng Âm thanh"
     }, {
         "value": "Game Music",
-        "translation": "Música del Juego"
+        "translation": "Nhạc Game"
     }, {
         "value": "Volume",
-        "translation": "Volumen"
+        "translation": "Âm lượng"
     }, {
         "value": "Hint:",
-        "translation": "Pista:"
+        "translation": "Gợi ý:"
     }, {
         "value": "We cannot respond to ratings & reviews on the Store.",
-        "translation": "No podemos responder a valoraciones y críticas a través de la Tienda."
+        "translation": "Chúng tôi không thể trả lời các đánh giá & nhận xét trên Cửa hàng."
     }, {
         "value": "If you want to get in contact with us please do not do this via a Store rating/review but use one of the options below.",
-        "translation": "Si quieres contactar con nosotros, por favor no lo hagas a través de las valoraciones de la Tienda sino con una de las opciones de abajo."
+        "translation": "Nếu bạn muốn liên hệ với chúng tôi, vui lòng không thực hiện việc này thông qua đánh giá/nhận xét trên Cửa hàng mà hãy sử dụng một trong các tùy chọn bên dưới."
     }, {
         "value": "Support",
-        "translation": "Apoyo"
+        "translation": "Hỗ trợ"
     }, {
         "value": "Best for technical issues, detailed feedback or private messages.",
-        "translation": "Lo mejor para problemas técnicos, impresiones detalladas o mensajes privados."
+        "translation": "Tốt nhất cho các vấn đề kỹ thuật, phản hồi chi tiết hoặc tin nhắn riêng tư."
     }, {
         "value": "Social Media",
-        "translation": "Zona Social"
+        "translation": "Mạng Xã hội"
     }, {
         "value": "Development stages",
-        "translation": "Fases de Desarrollo"
+        "translation": "Các giai đoạn phát triển"
     }, {
         "value": "Stage 1",
-        "translation": "Fase 1"
+        "translation": "Giai đoạn 1"
     }, {
         "value": "The game engine provides the basic building block of a game, the underlying technology. A good engine also enables things like multiplayer support, video playback and realistic physics.",
-        "translation": "El motor del juego proporciona la estructura de construcción del juego, la tecnología subyacente. Un buen motor también aporta cosas como el soporte multijugador, la reproducción de video y una física realista."
+        "translation": "Engine game cung cấp khối xây dựng cơ bản của một trò chơi, công nghệ nền tảng. Một engine tốt cũng cho phép những thứ như hỗ trợ nhiều người chơi, phát lại video và vật lý thực tế."
     }, {
         "value": "Gameplay defines how a player interacts with the game and how the game mechanics, the rules that make a game tick, work.",
-        "translation": "El gameplay define como el jugador interacciona con el juego y como funcionan sus reglas."
+        "translation": "Lối chơi xác định cách người chơi tương tác với trò chơi và cách cơ chế trò chơi, các quy tắc khiến trò chơi hoạt động, vận hành."
     }, {
         "value": "Storytelling and giving players goals to complete have been the basics of games for a long time.",
-        "translation": "La historia y el dar a los jugadores objetivos que completar han sido las cosas más basicas en los juegos desde hace tiempo."
+        "translation": "Kể chuyện và giao mục tiêu cho người chơi hoàn thành đã là những yếu tố cơ bản của trò chơi trong một thời gian dài."
     }, {
         "value": "Stage 2",
-        "translation": "Fase 2"
+        "translation": "Giai đoạn 2"
     }, {
         "value": "Dialogues are part of storytelling as well but also provide interaction between NPC's (non-player characters) and the player.",
-        "translation": "Los dialogos son parte de la historia contada  pero tambien provienen de la interacción entre PNJs (personajes no jugador) y el jugador."
+        "translation": "Đối thoại cũng là một phần của việc kể chuyện nhưng cũng cung cấp sự tương tác giữa NPC (nhân vật không phải người chơi) và người chơi."
     }, {
         "value": "Level design defines the structure a player takes through a game. This includes simple things like where objects are located but also the story arcs in a game.",
-        "translation": "El diseño de nivel define la estructura que un jugador toma a través del juego. Esto incluye cosas simples como donde los objetos están colocados pero también los arcos de historia en un juego."
+        "translation": "Thiết kế màn chơi xác định cấu trúc mà người chơi trải qua trong một trò chơi. Điều này bao gồm những thứ đơn giản như vị trí của các đối tượng mà còn cả các tình tiết câu chuyện trong trò chơi."
     }, {
         "value": "A.I. is how computer controlled entities (enemies, companions or the world itself) reacts to the player.",
-        "translation": "La I.A, son las entidades controladas por computadora(enemigos, aliados o el mismo mundo) que reacciona con el jugador."
+        "translation": "A.I. là cách các thực thể do máy tính điều khiển (kẻ thù, bạn đồng hành hoặc chính thế giới) phản ứng với người chơi."
     }, {
         "value": "Stage 3",
-        "translation": "Fase 3"
+        "translation": "Giai đoạn 3"
     }, {
         "value": "Some games invent an entire virtual world. World design delivers a back story to a game and makes the game world more sophisticated and believable.",
-        "translation": "Algunos juegos inventan un mundo virtual entero. El diseño de mundos entrega una historia de fondo a un juego y hace al mundo del juego mas sofisticado e increíble."
+        "translation": "Một số trò chơi tạo ra cả một thế giới ảo. Thiết kế thế giới mang đến một câu chuyện nền cho trò chơi và làm cho thế giới trò chơi trở nên phức tạp và đáng tin cậy hơn."
     }, {
         "value": "Graphics",
-        "translation": "Graficos"
+        "translation": "Đồ họa"
     }, {
         "value": "The most obvious part of a game are its graphics but that doesn't mean it is always the most important part.",
-        "translation": "La parte mas obvia de un juego son sus graficos pero eso no significa que siempre sea lo mas importante."
+        "translation": "Phần dễ thấy nhất của một trò chơi là đồ họa của nó nhưng điều đó không có nghĩa là nó luôn là phần quan trọng nhất."
     }, {
         "value": "Good Judgement",
         "comment": "achievement title",
-        "translation": "Buen Juicio"
+        "translation": "Đánh giá Tốt"
     }, {
         "value": "Cult Status",
         "comment": "achievement title",
-        "translation": "Estado de Culto"
+        "translation": "Địa vị Sùng bái"
     }, {
         "value": "Set a new standard for the early gaming industry.",
         "comment": "achievement",
-        "translation": "Establece un nuevo estándar para la temprana industria del juego."
+        "translation": "Thiết lập một tiêu chuẩn mới cho ngành công nghiệp game thời kỳ đầu."
     }, {
         "value": "100K Engine",
         "comment": "achievement title",
-        "translation": "Motor de 100K"
+        "translation": "Engine 100K"
     }, {
         "value": "Invest over 100K in a new game engine.",
         "comment": "achievement",
-        "translation": "Invierte mas de 100K en un nuevo motor."
+        "translation": "Đầu tư hơn 100K vào một engine game mới."
     }, {
         "value": "500K Engine",
         "comment": "achievement title",
-        "translation": "Motor de 500K"
+        "translation": "Engine 500K"
     }, {
         "value": "Invest over 500K in a new game engine.",
         "comment": "achievement",
-        "translation": "Invierte mas de 500K en un nuevo motor."
+        "translation": "Đầu tư hơn 500K vào một engine game mới."
     }, {
         "value": "1M Engine",
         "comment": "achievement title",
-        "translation": "Motor de 1M"
+        "translation": "Engine 1 Triệu"
     }, {
         "value": "Invest over one million in a new game engine.",
         "comment": "achievement",
-        "translation": "Invierte mas de un millón en un nuevo motor."
+        "translation": "Đầu tư hơn một triệu vào một engine game mới."
     }, {
         "value": "Gold",
         "comment": "achievement title",
-        "translation": "Oro"
+        "translation": "Vàng"
     }, {
         "value": "Sell half a million copies of a game without the help of a publisher.",
         "comment": "achievement",
-        "translation": "Vende medio millón de copias de un juego sin la ayuda de un distribuidor."
+        "translation": "Bán nửa triệu bản game mà không cần sự giúp đỡ của nhà phát hành."
     }, {
         "value": "Platinum",
         "comment": "achievement title",
-        "translation": "Platino"
+        "translation": "Bạch kim"
     }, {
         "value": "Sell one million copies of a game without the help of a publisher.",
         "comment": "achievement",
-        "translation": "Vende un millón de copias de un juego sin la ayuda de un distribuidor."
+        "translation": "Bán một triệu bản game mà không cần sự giúp đỡ của nhà phát hành."
     }, {
         "value": "Diamond",
         "comment": "achievement title",
-        "translation": "Diamante"
+        "translation": "Kim cương"
     }, {
         "value": "Sell ten million copies of a game without the help of a publisher.",
         "comment": "achievement",
-        "translation": "Vende diez millones de copias de un juego sin la ayuda de un distribuidor."
+        "translation": "Bán mười triệu bản game mà không cần sự giúp đỡ của nhà phát hành."
     }, {
         "value": "Unobtainium (seriously?)",
         "comment": "achievement title, refers to unobtanium, mocks the name of the rare mineral in the movie Avatar",
-        "translation": "Imposible (¿En serio?)"
+        "translation": "Unobtainium (nghiêm túc đấy?)"
     }, {
         "value": "Sell one hundred million copies of a game without the help of a publisher.",
         "comment": "achievement",
-        "translation": "Vende cien millones de copias de un juego sin la ayuda de un distribuidor."
+        "translation": "Bán một trăm triệu bản game mà không cần sự giúp đỡ của nhà phát hành."
     }, {
         "value": "Professional",
         "comment": "achievement title",
-        "translation": "Profesional"
+        "translation": "Chuyên nghiệp"
     }, {
         "value": "Reach level 5 with a character.",
         "comment": "achievement",
-        "translation": "Alcanza el nivel 5 con un personaje."
+        "translation": "Đạt cấp 5 với một nhân vật."
     }, {
         "value": "Legend",
         "comment": "achievement title",
-        "translation": "Leyenda"
+        "translation": "Huyền thoại"
     }, {
         "value": "Reach level 10 with a character.",
         "comment": "achievement",
-        "translation": "Alcanza el nivel 10 con un personaje."
+        "translation": "Đạt cấp 10 với một nhân vật."
     }, {
         "value": "Diversity",
         "comment": "achievement title",
-        "translation": "Diversidad"
+        "translation": "Đa dạng"
     }, {
         "value": "Have male and female staff.",
         "comment": "achievement",
-        "translation": "Ten empleados masculinos y femeninos."
+        "translation": "Có nhân viên nam và nữ."
     }, {
         "value": "Famous",
         "comment": "achievement title",
-        "translation": "Famoso"
+        "translation": "Nổi tiếng"
     }, {
         "value": "Hire someone famous.",
         "comment": "achievement",
-        "translation": "Contrata a alguien Famoso."
+        "translation": "Thuê một người nổi tiếng."
     }, {
         "value": "Full House",
         "comment": "achievement title",
-        "translation": "Casa Completa"
+        "translation": "Đủ Người"
     }, {
         "value": "Have the maximum number of employees.",
         "comment": "achievement",
-        "translation": "Consigue el máximo numero de empleados."
+        "translation": "Có số lượng nhân viên tối đa."
     }, {
         "value": "Game Dev Tycoon",
         "translation": "Game Dev Tycoon"
     }, {
         "value": "Finish Game Dev Tycoon.",
         "comment": "achievement",
-        "translation": "Game Dev Tycoon Finalizado."
+        "translation": "Hoàn thành Game Dev Tycoon."
     }, {
         "value": "Perfect Game",
         "comment": "achievement title",
-        "translation": "Juego Perfecto"
+        "translation": "Game Hoàn hảo"
     }, {
         "value": "Release a game with a clean score of 10.",
         "comment": "achievement",
-        "translation": "Publica un juego con una puntuación media de 10."
+        "translation": "Phát hành một trò chơi với điểm số hoàn hảo là 10."
     }, {
         "value": "Detective",
         "comment": "achievement title",
-        "translation": "Investigador"
+        "translation": "Thám tử"
     }, {
         "value": "Find at least one of the easter eggs in the game.",
         "comment": "achievement",
-        "translation": "Encuentra por lo menos uno de los Huevos de Pascua del juego."
+        "translation": "Tìm ít nhất một trong những easter egg trong trò chơi."
     }, {
         "value": "Treasure Hunter",
         "comment": "achievement title",
-        "translation": "Cazador de Tesoros"
+        "translation": "Thợ săn Kho báu"
     }, {
         "value": "Activate the hidden treasure in the garage.",
         "comment": "achievement",
-        "translation": "Activa el tesoro escondido en el garaje."
+        "translation": "Kích hoạt kho báu ẩn trong gara."
     }, {
         "value": "Bluehair reporting for space duty",
         "comment": "achievement refers to Wing Commander, leave 'Bluehair'",
-        "translation": "Bluehair reportandose para trabajo espacial"
+        "translation": "Bluehair báo cáo nhận nhiệm vụ không gian"
     }, {
         "value": "Little known fact: Cats go all aggro in space.",
         "comment": "achievement refers to Wing Commander",
-        "translation": "Dato poco conocido: los gatos se vuelven agresivos en el espacio."
+        "translation": "Một sự thật ít người biết: Mèo trở nên rất hung hăng trong không gian."
     }, {
         "value": "Welcome to Mars",
         "comment": "achievement title, refers to Doom",
-        "translation": "Bienvenido a Marte"
+        "translation": "Chào mừng đến Sao Hỏa"
     }, {
         "value": "How did I get here? Why is there a chainsaw? Who cares!",
         "comment": "achievement refers to Doom",
-        "translation": "¿Cómo he llegado hasta aquí? ¿Por qué hay una motosierra? ¡A quién le importa!"
+        "translation": "Làm sao tôi đến được đây? Tại sao lại có cưa máy? Ai quan tâm chứ!"
     }, {
         "value": "Best ride to work ever",
         "comment": "achievement title, referes to half life",
-        "translation": "El mejor viaje al trabajo de la historia"
+        "translation": "Chuyến đi làm tuyệt nhất từ trước đến nay"
     }, {
         "value": "Workplace safety anyone?",
         "comment": "achievement referes to half life",
-        "translation": "¿Seguridad laboral, por favor?"
+        "translation": "An toàn lao động đâu rồi?"
     }, {
         "value": "Welcome to your hospital",
         "comment": "achievement title, refers to Theme Hospital",
-        "translation": "Bienvenido a tu hospital"
+        "translation": "Chào mừng đến bệnh viện của bạn"
     }, {
         "value": "Patients are reminded not to die in the corridors.",
         "comment": "achievement refers to Theme Hospital, use official translation for this.",
-        "translation": "Se les recuerda a los pacientes que no mueran en los pasillos."
+        "translation": "Bệnh nhân được nhắc nhở không được chết ở hành lang."
     }, {
         "value": "Welcome Chief",
         "comment": "achievement title, refers to Halo",
-        "translation": "Bienvenido Jefe"
+        "translation": "Chào mừng Sếp"
     }, {
         "value": "This world is round but different.",
         "comment": "achievement refers to Halo",
-        "translation": "Este mundo es redondo pero diferente."
+        "translation": "Thế giới này tròn nhưng khác biệt."
     }, {
         "value": "The sky is not the limit.",
         "comment": "achievement title, refers to Star Citizen",
-        "translation": "El cielo no es el límite."
+        "translation": "Bầu trời không phải là giới hạn."
     }, {
         "value": "Welcome back Chris. We've missed you.",
         "comment": "achievement refers to Chris Roberts",
-        "translation": "Bienvenido de nuevo Chris. Te echábamos de menos."
+        "translation": "Chào mừng trở lại Chris. Chúng tôi đã nhớ bạn."
     }, {
         "value": "Painting with nature.",
         "comment": "achievement title, refers to Okami",
-        "translation": "Pintando con naturalidad."
+        "translation": "Vẽ bằng thiên nhiên."
     }, {
         "value": "Pay homage to a specific Japanese video game.",
         "comment": "achievement refers to Okami",
-        "translation": "Rinden homenaje a un videojuego japonés en específico."
+        "translation": "Tỏ lòng kính trọng với một trò chơi điện tử Nhật Bản cụ thể."
     }, {
         "value": "Inception",
         "comment": "achievement title",
-        "translation": "Origen"
+        "translation": "Khởi nguồn"
     }, {
         "value": "Develop the game within the game.",
         "comment": "achievement, inception",
-        "translation": "Desarrolla el juego dentro del juego."
+        "translation": "Phát triển trò chơi trong trò chơi."
     }, {
         "value": "Fan",
-        "translation": "Fan"
+        "translation": "Người hâm mộ"
     }, {
         "value": "Pick an inspired company name.",
         "comment": "achievement",
-        "translation": "Elige un nombre inspirandote en una compañia real."
+        "translation": "Chọn một tên công ty đầy cảm hứng."
     }, {
         "value": "Versatile",
         "comment": "achievement title",
-        "translation": "Versátil"
+        "translation": "Đa năng"
     }, {
         "value": "Release a successful game in each of the five main genres.",
         "comment": "achievement",
-        "translation": "Crear un juego exitoso en cada uno de los cinco géneros principales."
+        "translation": "Phát hành một trò chơi thành công ở mỗi thể loại trong năm thể loại chính."
     }, {
         "value": "Eat Cake",
         "comment": "achievement title",
-        "translation": "Comer Pastel"
+        "translation": "Ăn Bánh"
     }, {
         "value": "Show them red barrels some action.",
         "comment": "achievement",
-        "translation": "Dale a esas barreras rojas un poco de acción."
+        "translation": "Cho những thùng đỏ đó thấy một chút hành động."
     }, {
         "value": "Supporter",
         "comment": "achievement title",
-        "translation": "Soporte"
+        "translation": "Người ủng hộ"
     }, {
         "value": "Support a young start-up. Buy the game.",
         "comment": "achievement",
-        "translation": "Apoya a una empresa joven. Compra el juego."
+        "translation": "Hỗ trợ một công ty khởi nghiệp trẻ. Mua trò chơi."
     }, {
         "value": "Support Greenheart Games by buying an optional supporter pack.",
         "comment": "achievement",
-        "translation": "Apoya a Greenheart Games comprando un pack opcional."
+        "translation": "Hỗ trợ Greenheart Games bằng cách mua một gói hỗ trợ tùy chọn."
     }, {
         "value": "Admirer",
         "comment": "achievement title",
-        "translation": "Admirador"
+        "translation": "Người ngưỡng mộ"
     }, {
         "value": "Fun fact: We almost named our company Megaflop Productions!",
         "comment": "achievement, leave 'Megaflop Productions'",
-        "translation": "Dato curioso: Casi nos hacemos llamar Megaflop Producciones!"
+        "translation": "Sự thật thú vị: Chúng tôi suýt nữa đã đặt tên công ty là Megaflop Productions!"
     }, {
         "value": "Writer's Block",
         "comment": "achievement title",
-        "translation": "Bloqueo del escritor"
+        "translation": "Bí Ý tưởng"
     }, {
         "value": "Naming games is sometimes difficult.",
         "comment": "achievement",
-        "translation": "Ponerle nombre al juego es complicado."
+        "translation": "Đặt tên game đôi khi thật khó."
     }, {
         "value": "While sound is not as often noticed as the graphics of a game, sound design plays a vital part to making a game great.",
-        "translation": "Aunque el sonido no suele destacar tanto como los gráficos de un juego, el diseño de sonido es vital a la hora de hacer un gran videojuego."
+        "translation": "Mặc dù âm thanh không thường được chú ý như đồ họa của một trò chơi, thiết kế âm thanh đóng một vai trò quan trọng để tạo nên một trò chơi tuyệt vời."
     }, {
         "value": "Hints",
-        "translation": "Pistas"
+        "translation": "Gợi ý"
     }, {
         "value": "Think about what game you want to create, then decide what areas are really important for this game and focus on those. Don't hesitate to experiment and to change the values of the sliders around a lot.",
-        "translation": "Piensa en qué tipo de juego quieres crear, luego decide qué áreas son las que realmente importan y enfócate en ellas. No dudes en experimentar y cambiar los valores de los menús deslizables."
+        "translation": "Hãy suy nghĩ về trò chơi bạn muốn tạo, sau đó quyết định những lĩnh vực nào thực sự quan trọng đối với trò chơi này và tập trung vào chúng. Đừng ngần ngại thử nghiệm và thay đổi nhiều giá trị của các thanh trượt."
     }, {
         "value": "Tutorial message history",
-        "translation": "Historial de tutoriales"
+        "translation": "Lịch sử tin nhắn hướng dẫn"
     }, {
         "value": "Create a game with a good topic/genre combination.",
         "comment": "achievement",
-        "translation": "Crea un juego con una buena combinación de género y tema."
+        "translation": "Tạo một trò chơi với sự kết hợp chủ đề/thể loại tốt."
     }, {
         "value": "Turn it up to 11",
         "comment": "achievement title",
-        "translation": "Súbelo a 11"
+        "translation": "Chơi tới bến"
     }, {
         "value": "Get a reviewer to give you a 11/10 rating.",
         "comment": "achievement",
-        "translation": "Consigue que hagan una valoración de 11 sobre 10 a tu juego."
+        "translation": "Khiến một nhà phê bình cho bạn điểm 11/10."
     }, {
         "value": "Save failed",
-        "translation": "Error al guardar"
+        "translation": "Lưu thất bại"
     }, {
         "value": "Could not load settings from steam cloud",
-        "translation": "No se pudo cargar las opciones desde Steam Cloud"
+        "translation": "Không thể tải cài đặt từ Steam Cloud"
     }, {
         "value": "Could not save to steam cloud",
-        "translation": "No se pudo guardar en Steam Cloud"
+        "translation": "Không thể lưu vào Steam Cloud"
     }, {
         "value": "Could not save settings",
-        "translation": "No se pudo guardar la configuración"
+        "translation": "Không thể lưu cài đặt"
     }, {
         "value": "Could not save game",
-        "translation": "No se puede guardar la partida"
+        "translation": "Không thể lưu game"
     }, {
         "value": "Hi, I'm Denise Ried the main developer of the {0} fan game. I just want to tell you that upon your recent 'request' from your legal department my project has shut down.{n}I poured a lot of effort into this and have always loved your company but I guarantee you that I shall not 'bother' nor support you ever again.",
         "comment": "{0} game name",
-        "translation": "Hola, soy Denise Ried el principal desarollador del club de fans de {0}. Solo queria decirle que  gracias a su reciente 'solicitud' por parte de su departamento legal mi proyecto se ha parado.{n}Se puso muchisimo esfuerzo en esto y siempre me encanto su empresa, pero te garantizo que no me 'molesta' pero no le apoyare nunca mas."
+        "translation": "Chào bạn, tôi là Denise Ried, nhà phát triển chính của trò chơi fanmade {0}. Tôi chỉ muốn nói với bạn rằng theo 'yêu cầu' gần đây từ bộ phận pháp lý của bạn, dự án của tôi đã phải dừng lại.{n}Tôi đã đổ rất nhiều công sức vào dự án này và luôn yêu quý công ty của bạn, nhưng tôi đảm bảo rằng tôi sẽ không bao giờ 'làm phiền' hay ủng hộ bạn nữa."
     }, {
         "value": "If you wish you can continue playing but please note that there will be no more platform releases or other story elements.",
-        "translation": "Si lo desea, puede seguir jugando, pero tenga en cuenta que no habrá más consolas nuevas u otras historias."
+        "translation": "Nếu muốn, bạn có thể tiếp tục chơi nhưng xin lưu ý rằng sẽ không có thêm bản phát hành nền tảng nào hoặc các yếu tố cốt truyện khác."
     }, {
         "value": "Agree",
         "comment": "decision action button",
-        "translation": "Aceptar"
+        "translation": "Đồng ý"
     }, {
         "value": "Given that their most recent game {0} enjoyed universal success we simply cannot wait for them to unveil their new project!",
-        "translation": "Teniendo en cuenta que su más reciente juego de {0} disfrutó de un éxito universal, simplemente no podemos esperar a que den a conocer su nuevo proyecto!"
+        "translation": "Với việc trò chơi gần đây nhất của họ {0} đã đạt được thành công vang dội, chúng tôi đơn giản là không thể chờ đợi họ công bố dự án mới của mình!"
     }, {
         "value": "Hopefully the company can do better than last time. We don't need another {0}.",
-        "translation": "Esperemos que la compañía pueda hacerlo mejor que la última vez. No necesitamos otra {0}."
+        "translation": "Hy vọng công ty có thể làm tốt hơn lần trước. Chúng ta không cần thêm một {0} nữa."
     }, {
         "value": "Thank you for your time.",
-        "translation": "Gracias por su tiempo."
+        "translation": "Cảm ơn bạn đã dành thời gian."
     }, {
         "value": "More on {0}",
-        "translation": "Más sobre {0}"
+        "translation": "Thêm về {0}"
     }, {
         "value": "they are still experimenting what area",
         "comment": "sentence fragment",
-        "translation": "ellos todavía estan experimentando que area"
+        "translation": "họ vẫn đang thử nghiệm lĩnh vực nào"
     }, {
         "value": "and it seems that other industry professionals agree with this. Every game development project has limited resources so it's very important to use the time most effectively.",
         "comment": "sentence fragment",
-        "translation": "y parece que el resto de los profesionales de la industria está de acuerdo con esto. Cada proyecto de desarrollo de videojuegos tiene recursos limitados asi que es muy importante usar el tiempo de la manera mas efectiva."
+        "translation": "và có vẻ như các chuyên gia khác trong ngành cũng đồng ý với điều này. Mọi dự án phát triển game đều có nguồn lực hạn chế nên việc sử dụng thời gian hiệu quả nhất là rất quan trọng."
     }, {
         "value": "but it seems that other industry professionals disagree with that point of view saying that {0} is usually more important for this type of game.",
         "comment": "sentence fragment",
-        "translation": "pero parece que otros profesionales de la industria están de acuerdo con ese punto de vista diciendo que {0} es generalmente más importante para este tipo de juego."
+        "translation": "nhưng có vẻ như các chuyên gia khác trong ngành không đồng ý với quan điểm đó, họ cho rằng {0} thường quan trọng hơn đối với loại trò chơi này."
     }, {
         "value": "give away",
-        "translation": "obsequiar"
+        "translation": "tặng đi"
     }, {
         "value": "sell",
-        "translation": "Vender"
+        "translation": "bán"
     }, {
         "value": "negative",
-        "translation": "negativo"
+        "translation": "tiêu cực"
     }, {
         "value": "Boss, it seems the fans who requested that we open source {0} were particularly upset with our decision and have caused quite a negative stirr. We've lost {1} fans.",
-        "translation": "Jefe, parece ser que los fans que pidieron que liberásemos el código de {0} están disgustados con nuestra decisión y esto ha causado un efecto negativo. Hemos perdido {1} fans."
+        "translation": "Sếp ơi, có vẻ như những người hâm mộ yêu cầu chúng ta mở mã nguồn {0} đặc biệt không hài lòng với quyết định của chúng ta và đã gây ra một sự xáo trộn tiêu cực. Chúng ta đã mất {1} người hâm mộ."
     }, {
         "value": "gained",
-        "translation": "conseguido"
+        "translation": "đã giành được"
     }, {
         "value": "it cost us {0}",
-        "translation": "nos costó {0}"
+        "translation": "chúng ta tốn {0}"
     }, {
         "value": "we made {0}",
         "comment": "{0} is amount of money",
-        "translation": "ganamos {0}"
+        "translation": "chúng ta kiếm được {0}"
     }, {
         "value": "Legal Department",
-        "translation": "Departamento Legal"
+        "translation": "Phòng Pháp lý"
     }, {
         "value": "Go to court. [~{0}% chance]",
-        "translation": "Ir a juicio. [~{0}% chance]"
+        "translation": "Ra tòa. [~{0}% cơ hội]"
     }, {
         "value": "The court dismissed the patent infringement claims made against us stating that the claim was ridiculous. All costs were paid by the suing party.",
-        "translation": "El tribunal desestimó las demandas de infracción de patentes hecha contra nosotros diciendo que la reclamación era ridícula. Todos los gastos fueron pagados por la parte demandante."
+        "translation": "Tòa án đã bác bỏ các khiếu nại vi phạm bằng sáng chế chống lại chúng tôi, cho rằng khiếu nại đó là vô lý. Mọi chi phí đều do bên khởi kiện chi trả."
     }, {
         "value": "We rallied our fans to publicly fight against All Your IP Belongs To US",
         "comment": "continues with fragment",
-        "translation": "Hemos convocado a nuestros fans para luchar públicamente contra \"toda su ip nos pertenece\""
+        "translation": "Chúng tôi đã tập hợp người hâm mộ để công khai chống lại All Your IP Belongs To US"
     }, {
         "value": " and fight we did! We not only caused them to retract their claims but we also won {0} fans and the public's admiration. I doubt we will hear from those patent trolls again.",
         "comment": "sentence fragment",
-        "translation": " y lo hemos logrado! no sólo los llevó a retractarse de sus afirmaciones, sino que también hemos ganado {0} fans y la admiración del público. Dudo que volvamos a escuchar a los trolls de patentes de nuevo."
+        "translation": " và chúng tôi đã chiến đấu! Chúng tôi không chỉ khiến họ rút lại yêu sách mà còn giành được {0} người hâm mộ và sự ngưỡng mộ của công chúng. Tôi nghi ngờ chúng ta sẽ còn nghe tin từ những kẻ troll bằng sáng chế đó nữa."
     }, {
         "value": " but it seems that our efforts were fruitless. Seems we still have to pay {0} and the court costs of {1}. Maybe next time we'll have more luck.",
         "comment": "sentence fragment",
-        "translation": " pero parece que nuestros esfuerzos fueron insuficientes. Parece que todavía tenemos que pagar {0} y los costos de la corte de {1}. Quizá la próxima vez tengamos más suerte."
+        "translation": " nhưng có vẻ như những nỗ lực của chúng tôi là vô ích. Có vẻ như chúng tôi vẫn phải trả {0} và án phí {1}. Có lẽ lần sau chúng ta sẽ may mắn hơn."
     }, {
         "value": "Settings",
-        "translation": "Ajustes"
+        "translation": "Cài đặt"
     }, {
         "value": "Verifying...",
-        "translation": "Verificando..."
+        "translation": "Đang xác minh..."
     }, {
         "value": "Could not initialize loaded game",
-        "translation": "No es posible iniciar el juego cargado"
+        "translation": "Không thể khởi tạo trò chơi đã tải"
     }, {
         "value": "We made it into the top 100 conference attractions this year at place {0}.",
-        "translation": "Hemos logrado entrar en el top 100 de conferencias, hemos quedado en el puesto {0}."
+        "translation": "Chúng ta đã lọt vào top 100 điểm thu hút của hội nghị năm nay ở vị trí {0}."
     }, {
         "value": "okay",
-        "translation": "adecuada"
+        "translation": "tạm ổn"
     }, {
         "value": "terrible",
-        "translation": "terrible"
+        "translation": "kinh khủng"
     }, {
         "value": "unknown",
-        "translation": "desconocido"
+        "translation": "không rõ"
     }, {
         "value": "not at all important",
-        "translation": "nada importante"
+        "translation": "hoàn toàn không quan trọng"
     }, {
         "value": "not very important",
-        "translation": "no muy importante"
+        "translation": "không quan trọng lắm"
     }, {
         "value": "very important",
-        "translation": "muy importante"
+        "translation": "rất quan trọng"
     }, {
         "value": "Error",
-        "translation": "Error"
+        "translation": "Lỗi"
     }, {
         "value": "Mirconoft has announced the delay of their new gaming console, mBox. The new release date is '{0}'. Rumour has it that the incredible success of the Playsystem 2 launch has prompted Mirconoft to delay their own debut.",
         "comment": "{0} is date referral sentence fragment",
-        "translation": "Mirconoft ha anunciado un retraso en su nueva consola de juegos, mBox. La nueva fecha de lanzamiento es '{0}'. Los rumores dicen que el increible éxito del lanzamiento de la Playsystem 2 ha provocado que Mirconoft retrase su propio estreno."
+        "translation": "Mirconoft đã thông báo trì hoãn hệ máy chơi game mới của họ, mBox. Ngày phát hành mới là '{0}'. Có tin đồn rằng thành công đáng kinh ngạc của việc ra mắt Playsystem 2 đã khiến Mirconoft trì hoãn việc ra mắt sản phẩm của riêng mình."
     }, {
         "value": "Today, Ninvento has announced a new mobile console called the Ninvento GS. It features two screens, one of them touch sensitive, and promises unique gameplay. While Ninvento has been struggling to regain their market lead ever since the TES 64 they still have a very strong position on the mobile market.{n}The Ninvento GS promises to strengthen this position and aims to breath life into a stagnating mobile market. The console will be in stores {0}.",
         "comment": "{0} is date referral sentence fragment",
-        "translation": "Hoy, Ninvento ha anunciado una nueva consola portatil llamada Ninvento GS. Esta posee dos pantallas, una de ellas sensible al tácil y promete una jugabilidad única. Mientras que Ninvento ha estado luchando por recuperar su liderazgo en el mercado desde la TES 64, aun tiene una fuerte posición en el mercado portatil.{n} La Ninvento GS promete fortalecer esta posición y apunta a dar vida a un estancado mercado portatil. La consola estará en las tiendas {0}."
+        "translation": "Hôm nay, Ninvento đã công bố một hệ máy di động mới có tên là Ninvento GS. Nó có hai màn hình, một trong số đó có cảm ứng, và hứa hẹn lối chơi độc đáo. Mặc dù Ninvento đã phải vật lộn để giành lại vị trí dẫn đầu thị trường kể từ TES 64, họ vẫn có một vị thế rất mạnh trên thị trường di động.{n}Ninvento GS hứa hẹn sẽ củng cố vị thế này và nhằm mục đích thổi luồng sinh khí mới vào thị trường di động đang trì trệ. Hệ máy này sẽ có mặt tại các cửa hàng {0}."
     }, {
         "value": "Today, Mirconoft has announced their very own tablet device to combat the massive marketshare of Grapple's grPad device. The mPad features a sophisticated cover that comes with a integrated, ultra-thin keyboard. The tablet itself has a widescreen display and a integrated stand.{n}The mPad seems to be a combination of a traditional notebook and a tablet, and promises to shake up the market. The new product will be on the market {0}.",
         "comment": "{0} is date referral sentence fragment",
-        "translation": "Hoy, MIrconoft ha anunciado su propio dispositivo tablet para luchar contra la increible demanda de de la grPad de Grapple. La mPad parece ser una combinación de una tradicional notebook y una tablet y promete sacudir al mercado. Este nuevo producto saldrá al mercado {0}."
+        "translation": "Hôm nay, Mirconoft đã công bố thiết bị máy tính bảng của riêng họ để cạnh tranh với thị phần khổng lồ của thiết bị grPad của Grapple. mPad có một vỏ bọc tinh xảo đi kèm với bàn phím siêu mỏng tích hợp. Bản thân máy tính bảng có màn hình rộng và chân đế tích hợp.{n}mPad dường như là sự kết hợp giữa máy tính xách tay truyền thống và máy tính bảng, và hứa hẹn sẽ làm rung chuyển thị trường. Sản phẩm mới sẽ có mặt trên thị trường {0}."
     }, {
         "value": "For fans of the mBox, the long wait for an update to the console will soon be over as Mirconoft has announced that the mBox One will be available {0}.",
         "comment": "{0} is date referral sentence fragment",
-        "translation": "Para los fans de la mBox, la larga espera de una actualización para la consola terminará pronto ya que Mirconoft ha anunciado que la mBox One estará disponible {0}."
+        "translation": "Đối với những người hâm mộ mBox, sự chờ đợi một bản cập nhật cho hệ máy này sẽ sớm kết thúc khi Mirconoft đã thông báo rằng mBox One sẽ có mặt {0}."
     }, {
         "value": "The new console is marketed as a unified entertainment platform and comes with voice control and a camera which is always watching to enable gesture control. A camera which is always on is not the only controversial feature as the new console also seems to require internet access at least once a day to function properly, does not support previous mBox games and seems to place restrictions on how games can be shared or resold.{n}Clearly, Mirconoft wants to push the current status quo and deliver a console for a new future of gaming but we are not sure if players will share Micronoft's vision.",
-        "translation": "La nueva consola ha sido promocionada como una plataforma unificada de entretenimiento y viene con control por voz y una cámara siempre observando para permitir control por gestos. Una cámara que está siempre encendida no es la única característica que genera controversia ya que la nueva consola también parece que requiere acceso a internet al menos una vez por día para funcionar correctamente, no soporta juegos anteriores de mBox y parece que impondrá restricciones en como los juegos pueden ser compartidos o revendidos.{n}Claramente Mirconoft quiere impulsar su actual statu quo y entregar una consola para un nuevo futuro en los juegos pero no estamos seguro si los jugadores compartirán la visión de Mirconoft."
+        "translation": "Hệ máy mới được tiếp thị như một nền tảng giải trí hợp nhất và đi kèm với điều khiển bằng giọng nói và một camera luôn theo dõi để cho phép điều khiển bằng cử chỉ. Một camera luôn bật không phải là tính năng gây tranh cãi duy nhất vì hệ máy mới này dường như cũng yêu cầu truy cập internet ít nhất một lần một ngày để hoạt động bình thường, không hỗ trợ các trò chơi mBox trước đó và dường như đặt ra những hạn chế về cách chia sẻ hoặc bán lại trò chơi.{n}Rõ ràng, Mirconoft muốn thúc đẩy hiện trạng và mang đến một hệ máy cho một tương lai mới của ngành game nhưng chúng tôi không chắc liệu người chơi có chia sẻ tầm nhìn của Mirconoft hay không."
     }, {
         "value": "Just after Mirconoft have announced their new bet in the upcoming console generation, Vonny has announced that they will release their new, long-awaited console, the Playsystem 4, {0}. The console seems to do everything that the Playsystem 3 did, only better.{n}Unlike the mBox One, the Playsystem 4 doesn't have an always-online requirement and seems much more player friendly. We think that there is hardly a risk of Vonny fans being disappointed",
         "comment": "{0} is date referral sentence fragment, sentence itself is a fragment and continues with 'but ...'",
-        "translation": "Justo después de que Mirconoft anunció su nueva apuesta para la próxima generación de consolas, Vonny ha anunciado que lanzarán su nuevo, largamente esperada consola, la Playsystem 4, {0}. La consola parece hacer todo lo que la Playsystem 3 hacía, solo que mejor.{n}A diferencia de la mBox One, la Playsystem 4 no requiere estar siempre conectada a internet y para mucho mas fácil de usar. Creemos que es muy improbable que los fan de Vonny sean decepcionados"
+        "translation": "Ngay sau khi Mirconoft công bố sản phẩm mới của họ trong thế hệ console sắp tới, Vonny đã thông báo rằng họ sẽ phát hành hệ máy mới được chờ đợi từ lâu, Playsystem 4, {0}. Hệ máy này dường như làm được mọi thứ mà Playsystem 3 đã làm, chỉ có điều tốt hơn.{n}Không giống như mBox One, Playsystem 4 không yêu cầu kết nối trực tuyến liên tục và có vẻ thân thiện với người chơi hơn nhiều. Chúng tôi nghĩ rằng khó có nguy cơ người hâm mộ Vonny sẽ thất vọng"
     }, {
         "value": "Vonny and {0}",
-        "translation": "Vonny y {0}"
+        "translation": "Vonny và {0}"
     }, {
         "value": "A company by the name of RiseVR has developed a virtual reality headset which promises to finally start the path towards true 3D immersion. The new headset called Visorius looks like a pair of giant ski-goggles and provides a large field of vision as well as near-perfect motion tracking.",
-        "translation": "Una compañía llamada RiseVr ha desarrollado un visor de realidad virtual que promete iniciar el camino hacia la verdadera inmersión 3D. El nuevo visor llamado Visorius luce como unas gafas para la nieve gigantes y provee un amplio campo de visión así como también una casi perfecta detección de movimiento."
+        "translation": "Một công ty có tên RiseVR đã phát triển một bộ kính thực tế ảo hứa hẹn cuối cùng sẽ mở ra con đường hướng tới sự đắm chìm 3D thực sự. Bộ kính mới có tên Visorius trông giống như một cặp kính trượt tuyết khổng lồ và cung cấp một trường nhìn rộng cũng như theo dõi chuyển động gần như hoàn hảo."
     }, {
         "value": "Mirconoft has announced their plans to release a completely revamped version of the mBox {0} called mBox Next. The new console seems to cleverly integrate Mirconoft's own motion sensor add-on for the mBox One into one small package.{n}Visually, the mBox Next is reminiscent of the earlier mBox 360 with a much lighter tone marking a departure from the bulky and dark style of the mBox One. The technology of the mBox Next seems promising  ",
         "comment": "{0} is date referral sentence fragment, sentence itself is a fragment and continues with 'but ...'",
-        "translation": "Mirconoft ha anunciado sus planes de lanzar una totalmente renovada versión de la mBox {0} llamada mBox Next. La nueva consola parece que ingeniosamente integra el propio sensor de movimiento de Mirconoft integrado para la mBox One en un pequeño paquete.{n}Visualmente la mBox Next es similar a la primera mBox 360 con un color mucho mas claro marcando una salida del voluminoso y oscuro estilo de la mBox One. La tecnología de la mBox Next suena prometedora  "
+        "translation": "Mirconoft đã công bố kế hoạch phát hành một phiên bản hoàn toàn mới của mBox {0} có tên là mBox Next. Hệ máy mới dường như tích hợp một cách thông minh cảm biến chuyển động bổ trợ của Mirconoft cho mBox One vào một gói nhỏ gọn.{n}Về mặt hình ảnh, mBox Next gợi nhớ đến mBox 360 trước đó với tông màu sáng hơn nhiều, đánh dấu sự khác biệt so với phong cách cồng kềnh và tối tăm của mBox One. Công nghệ của mBox Next có vẻ hứa hẹn  "
     }, {
         "value": "Many have expected that Vonny will announce a new platform before Mirconoft's mBox Next will hit the market and, today, Vonny did just that. Keeping with company tradition, and in contrast to competitor Mirconoft's naming practices, the newly announced console is aptly named Playsystem 5.{n}The Playsystem 5 seems an incremental update, coming out {0} with a form-factor that reminds of the early Playsystem 3. The new system promises to be a solid update",
         "comment": "{0} is date referral sentence fragment, sentence itself is a fragment and continues with 'but ...'",
-        "translation": "Muchos esperaban que Vonny lanzara su nueva plataforma antes que la mBox Next de Mirconoft llegue al mercado y hoy Vonny acaba de hacerlo. Manteniendo la tradición de la compañía y en contraste con las modelo de nombres de su competidor, la recientemente anunciada consola fué nombrada acertadamente Playsystem 5.{n}La Playsystem 5 parece ser una actualización incrementa, siendo lanzada {0} con un diseño que recuerda a la anterior Playsystem 3. Este nuevo sistema promete ser una buena actualización"
+        "translation": "Nhiều người đã kỳ vọng rằng Vonny sẽ công bố một nền tảng mới trước khi mBox Next của Mirconoft có mặt trên thị trường và hôm nay, Vonny đã làm đúng như vậy. Giữ vững truyền thống của công ty, và trái ngược với cách đặt tên của đối thủ Mirconoft, hệ máy mới được công bố có tên rất phù hợp là Playsystem 5.{n}Playsystem 5 dường như là một bản cập nhật gia tăng, ra mắt {0} với kiểu dáng gợi nhớ đến Playsystem 3 đời đầu. Hệ thống mới hứa hẹn sẽ là một bản cập nhật vững chắc"
     }, {
         "value": "This is the {0} version of Game Dev Tycoon in which you can play until year five.",
         "comment": "{0} is either lite or trial",
-        "translation": "Esta es la versión {0} de Game Dev Tycoon en el que usted puede jugar hasta cinco años."
+        "translation": "Đây là phiên bản {0} của Game Dev Tycoon, trong đó bạn có thể chơi đến năm thứ năm."
     }, {
         "value": "Looking at our past multi-platform games it becomes clear that we should be able to drastically reduce the cost of developing a single game for multiple platforms if we could better optimize our game engines for multi-platform development.",
-        "translation": "Observando nuestros anteriores juegos multiplataforma está claro que deberíamos poder reducir drásticamente el costo de desarrollo de un juego para múltiples plataformas si podemos optimizar nuestros motores de juego para desarrollo multiplataforma."
+        "translation": "Nhìn lại các trò chơi đa nền tảng trước đây của chúng ta, rõ ràng là chúng ta có thể giảm đáng kể chi phí phát triển một trò chơi cho nhiều nền tảng nếu chúng ta có thể tối ưu hóa tốt hơn các engine game của mình cho việc phát triển đa nền tảng."
     }, {
         "value": "New Insight",
         "comment": "heading",
-        "translation": "Nueva visión"
+        "translation": "Hiểu biết Mới"
     }, {
         "value": "Help debugging a convoluted BASE program.",
-        "translation": "Ayuda a depurar un complejo programa BASE."
+        "translation": "Giúp gỡ lỗi một chương trình BASE phức tạp."
     }, {
         "value": "Advanced Stereoscopic 3D",
-        "translation": "3D estereoscópica avanzada"
+        "translation": "3D Lập thể Nâng cao"
     }, {
         "value": "Simple A.I.",
-        "translation": "I.A. simple"
+        "translation": "A.I. Đơn giản"
     }, {
         "value": "Game tutorials",
-        "translation": "Tutoriales del juego"
+        "translation": "Hướng dẫn trong game"
     }, {
         "value": "Cooperative play",
-        "translation": "Juego cooperativo"
+        "translation": "Chơi phối hợp"
     }, {
         "value": "Advanced physics",
-        "translation": "física avanzada"
+        "translation": "Vật lý nâng cao"
     }, {
         "value": "Multi-Platform optimized",
-        "translation": "Multi-plataforma optimizada"
+        "translation": "Tối ưu hóa Đa nền tảng"
     }, {
         "value": "Dynamic environment",
-        "translation": "entorno dinámico"
+        "translation": "Môi trường động"
     }, {
         "value": "Multi-Platform",
-        "translation": "Multi-Plataforma"
+        "translation": "Đa nền tảng"
     }, {
         "value": "{0} and {1} is a terrible combination.",
-        "translation": "{0} y {1} es una combinación terrible."
+        "translation": "{0} và {1} là một sự kết hợp tồi tệ."
     }, {
         "value": "{0} is a horrible topic for {1} audiences.",
-        "translation": "{0} es un muy mal tema para la audiencia {1}."
+        "translation": "{0} là một chủ đề kinh khủng cho đối tượng {1}."
     }, {
         "value": "blunt",
-        "translation": "Simple"
+        "translation": "nhạt nhẽo"
     }, {
         "value": "They put as much thought into the game as into the game's name.",
-        "translation": "Han puesto tanto esfuerzo en el juego como en el nombre."
+        "translation": "Họ đầu tư vào trò chơi cũng nhiều như vào tên của nó vậy."
     }, {
         "value": "Good, despite the name.",
-        "translation": "Bueno, a pesar de su nombre."
+        "translation": "Tốt, mặc dù cái tên hơi kỳ."
     }, {
         "value": "Could have been better.",
-        "translation": "Podría haber sido mejor."
+        "translation": "Có thể đã tốt hơn."
     }, {
         "value": "11 out of 10. Game of the year, any year!",
-        "translation": "11 de 10. Mejor juego del año, en cualquier año!"
+        "translation": "11/10. Game của năm, bất kể năm nào!"
     }, {
         "value": "11 out of 10. A exceptional score for an exceptional game.",
-        "translation": "11 de 10. Una puntuación excepcional para un juego excepcional."
+        "translation": "11/10. Một điểm số đặc biệt cho một trò chơi đặc biệt."
     }, {
         "value": "In an exclusive interview a while ago, {0} from {1}",
         "comment": "followed by sentence fragment (hypgfr1 or hypgfr2)",
-        "translation": "En una entrevista exclusiva hace un tiempo, {0} de {1}"
+        "translation": "Trong một cuộc phỏng vấn độc quyền cách đây một thời gian, {0} từ {1}"
     }, {
         "value": " made very bold remarks about their then-in-development game {0} predicting that it will be über successful.",
         "comment": "fragment: hypgfr1",
-        "translation": " ha dado atrevidas opiniones sobre su juego en desarrollo {0} prediciendo que sera todo un éxito."
+        "translation": " đã đưa ra những nhận xét rất táo bạo về trò chơi {0} đang được phát triển của họ, dự đoán rằng nó sẽ thành công rực rỡ."
     }, {
         "value": " was holding back when discussing their expections for {0}.",
         "comment": "fragment: hypgfr2",
-        "translation": " se contuvo mientras discutiamos sus expectativas para {0}."
+        "translation": " đã tỏ ra dè dặt khi thảo luận về kỳ vọng của họ đối với {0}."
     }, {
         "value": "was spot on as the game has received very positive reviews.",
         "comment": "fragment",
-        "translation": "acertó en sus predicciones ya que el juego ha recibido críticas muy positivas."
+        "translation": "đã hoàn toàn chính xác vì trò chơi đã nhận được những đánh giá rất tích cực."
     }, {
         "value": "was just humble as the game received critical acclaim.",
         "comment": "fragment",
-        "translation": "solo estaba siendo humilde ya que el juego recibió el reconocimiento de la crítica."
+        "translation": "chỉ khiêm tốn thôi vì trò chơi đã nhận được sự hoan nghênh của giới phê bình."
     }, {
         "value": "should've been more careful as the final product doesn't match the hyped expectations.",
         "comment": "fragment",
-        "translation": "debió haber tenido mas cuidado ya que el procuto final no alcanzó las altas expectativas."
+        "translation": "lẽ ra nên cẩn thận hơn vì sản phẩm cuối cùng không đáp ứng được những kỳ vọng được thổi phồng."
     }, {
         "value": "was right to stay realistic as the game is good but nothing too our of the ordinary.",
         "comment": "fragment",
-        "translation": "estuvo en lo correcto al ser realista ya que el juego es bueno pero no es nada fuera de lo ordinario."
+        "translation": "đã đúng khi giữ thái độ thực tế vì trò chơi hay nhưng không có gì quá nổi bật."
     }, {
         "value": "needs a lesson in how to be humble as the game received mediocre reviews.",
         "comment": "fragment",
-        "translation": "necesita una lección de como ser humilde ya que el juego recibió críticas mediocres."
+        "translation": "cần một bài học về sự khiêm tốn vì trò chơi nhận được những đánh giá tầm thường."
     }, {
         "value": "Now, that the game is out on the market the consensus is that {0} {1}",
         "comment": "{0} is player name, {1} is description",
-        "translation": "Ahora que el juego está en el mercado, la conclusión es que {0} {1}"
+        "translation": "Giờ đây, khi trò chơi đã có mặt trên thị trường, sự đồng thuận là {0} {1}"
     }, {
         "value": "Overall, this had a negative effect on sales.",
-        "translation": "Al final esto tuvo un efecto negativo en las ventas."
+        "translation": "Nhìn chung, điều này đã có tác động tiêu cực đến doanh số."
     }, {
         "value": "Steam initialization failed",
-        "translation": "Falló el inicio de Steam"
+        "translation": "Khởi tạo Steam thất bại"
     }, {
         "value": "Zombies",
         "comment": "game topic",
-        "translation": "Zombies"
+        "translation": "Thây ma"
     }, {
         "value": "After publishing a game you can invest a little bit of time to analyze your creation and generate a game report. Game reports are a great way to gain research points as well as valuable insights into what works and what doesn't work when developing a game.{n}To generate a game report close this message and then {0} anywhere on the screen to bring up the action menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Luego de publicar un juego puedes invertir un poco de tiempo en analizar tu creación y generar un reporte del juego. Un reporte del juego es una estupenda manera de ganar puntos de investigación así como también revelaciones sobre que sirve y qué no sirve mientras desarrollas un juego.{n}Para generar un reporte de juego cierra este mensaje y luego haz {0} en cualquier lugar de la pantalla para abrir el menú de acción."
+        "translation": "Sau khi phát hành một trò chơi, bạn có thể dành một chút thời gian để phân tích sản phẩm của mình và tạo báo cáo trò chơi. Báo cáo trò chơi là một cách tuyệt vời để nhận điểm nghiên cứu cũng như những hiểu biết giá trị về những gì hiệu quả và không hiệu quả khi phát triển trò chơi.{n}Để tạo báo cáo trò chơi, hãy đóng thông báo này và sau đó {0} vào bất kỳ đâu trên màn hình để mở menu hành động."
     }, {
         "value": "If you ever want to review the tutorial messages then you can do so in the Help menu. To access the Help menu and other features such as saving, loading and creating a game simply {0}.{n}You can also change game settings by using the Settings charm. To show the charms bar simply {1} You can then {2} on Settings.",
         "comment": "{0} is appbar fragment, {1} is charmsbar fragment, {2} is click/tap verb",
-        "translation": "Si alguna vez quieres volver a ver los mensajes de tutorial puedes hacerlo en el menú de Ayuda. Para acceder al menú de Ayuda y otras opciones como guardar, cargar y crear un juego, simplemente {0}.{n}También puedes cambiar las opciones del juego usando el menú de configuración. Para mostrar el menú de configuración simplemente {1} Luego puedes hacer {2} en configuración."
+        "translation": "Nếu bạn muốn xem lại các thông báo hướng dẫn, bạn có thể làm như vậy trong menu Trợ giúp. Để truy cập menu Trợ giúp và các tính năng khác như lưu, tải và tạo trò chơi, chỉ cần {0}.{n}Bạn cũng có thể thay đổi cài đặt trò chơi bằng cách sử dụng charm Cài đặt. Để hiển thị thanh charm, chỉ cần {1} Sau đó, bạn có thể {2} vào Cài đặt."
     }, {
         "value": "Main Menu",
         "comment": "heading",
-        "translation": "Menú principal"
+        "translation": "Menu Chính"
     }, {
         "value": "Staff responsibilities",
         "comment": "heading",
-        "translation": "Responsabilidades del equipo"
+        "translation": "Trách nhiệm Nhân viên"
     }, {
         "value": "You need a design specialist to open a research and development lab. You can train someone to become a specialist via the training menu but the option is only available once they have a certain design skill level.{n}You can also train technology specialists which come in handy for later options.",
-        "translation": "Necesitas un especialista en diseño para abrir un laboratorio de investigación y desarollo. Puedes entrenar a alguien para convertirse en un especialista desde el menu de entrenamiento pero la opción solo está disponible una vez que tienen cierto nivel de diseño.{n}También puedes entrenar especialistas en tecnología que serán útiles para opciones futuras."
+        "translation": "Bạn cần một chuyên gia thiết kế để mở phòng nghiên cứu và phát triển. Bạn có thể đào tạo ai đó trở thành chuyên gia thông qua menu đào tạo nhưng tùy chọn này chỉ khả dụng khi họ đạt đến một trình độ kỹ năng thiết kế nhất định.{n}Bạn cũng có thể đào tạo các chuyên gia công nghệ, những người sẽ hữu ích cho các tùy chọn sau này."
     }, {
         "value": "To visit the lab simply {0} the screen and drag to the left or use the arrow keys on the keyboard. Alternatively, you can also click on the little R&D Lab information card in the bottom right of the screen.",
         "comment": "{0} click/touch verb",
-        "translation": "Para visitar el laboratorio simplemente {0} en la pantalla y arrastrala para la izquierda o usa las teclas de flechas en el teclado. También puedes hacer click en la pequeña tarjeta de información del laboratorio de IyD en la esquina inferior derecha de la pantalla."
+        "translation": "Để đến phòng lab, chỉ cần {0} vào màn hình và kéo sang trái hoặc sử dụng các phím mũi tên trên bàn phím. Ngoài ra, bạn cũng có thể nhấp vào thẻ thông tin R&D Lab nhỏ ở góc dưới bên phải màn hình."
     }, {
         "value": "To visit the hardware lab simply {0} the screen and drag to the right or use the arrow keys on the keyboard. Alternatively, you can also click on the little Hardware Lab information card in the top left of the screen.",
         "comment": "{0} click/touch verb",
-        "translation": "Para visitar el laboratorio de harware simplemente {0} en la pantalla y arrastrala a la derecha o usa las teclas de flechas en el teclado. También puedes hacer click en la pequeña ficha del laboratorio de HW en la esquina superior izquierda."
+        "translation": "Để đến phòng lab phần cứng, chỉ cần {0} vào màn hình và kéo sang phải hoặc sử dụng các phím mũi tên trên bàn phím. Ngoài ra, bạn cũng có thể nhấp vào thẻ thông tin Hardware Lab nhỏ ở góc trên bên trái màn hình."
     }, {
         "value": "Game Reports",
         "comment": "heading",
-        "translation": "Reportes de juegos"
+        "translation": "Báo cáo Game"
     }, {
         "value": "Get Steam Key",
-        "translation": "Obtener clave de Steam"
+        "translation": "Lấy Khóa Steam"
     }, {
         "value": "Could not verify app receipt from Windows Store.",
-        "translation": "No se pudo verificar el recibo de la aplicación desde Windows Store."
+        "translation": "Không thể xác minh biên nhận ứng dụng từ Windows Store."
     }, {
         "value": "Generate game report...",
         "comment": "menu item",
-        "translation": "Generar reporte de juego..."
+        "translation": "Tạo báo cáo game..."
     }, {
         "value": "Remove Platform",
-        "translation": "Quitar Plataforma"
+        "translation": "Xóa Nền tảng"
     }, {
         "value": "You require a developer license to be able to develop for this platform.<br/><br/> Do you want to pay <strong>{0}</strong> to acquire a license for the <strong>{1}</strong>?",
-        "translation": "Necesitas una licencia de desarollador para poder desarollar para esta plataforma.<br/><br/> ¿Quieres pagar <strong>{0}</strong> para adquirir una licencia para <strong>{1}</strong>?"
+        "translation": "Bạn cần giấy phép nhà phát triển để có thể phát triển cho nền tảng này.<br/><br/> Bạn có muốn trả <strong>{0}</strong> để có được giấy phép cho <strong>{1}</strong> không?"
     }, {
         "value": "Variation {0}",
-        "translation": "Variación {0}"
+        "translation": "Biến thể {0}"
     }, {
         "value": "{0} combo",
         "translation": "combo {0}"
     }, {
         "value": "Effect: ",
-        "translation": "Efectos: "
+        "translation": "Hiệu ứng: "
     }, {
         "value": "Since you have played the game before you can choose to use all previously gained hints in this new game.",
-        "translation": "Como has jugado el juego antes, puedes elegir usar todas las pistas desbloqueadas anteriormente en esta nueva partida."
+        "translation": "Vì bạn đã chơi trò chơi này trước đây, bạn có thể chọn sử dụng tất cả các gợi ý đã thu được trước đó trong trò chơi mới này."
     }, {
         "value": "We have some additional insights:",
-        "translation": "Tenemos información adicional:"
+        "translation": "Chúng tôi có một số thông tin chuyên sâu bổ sung:"
     }, {
         "value": "Game Report",
-        "translation": "Reporte de Juego"
+        "translation": "Báo cáo Game"
     }, {
         "value": "{0} and {1} is a {2} combination.",
-        "translation": "{0} y {1} es una combinación {2}."
+        "translation": "{0} và {1} là một sự kết hợp {2}."
     }, {
         "value": "Importance of {0} for this type of game: {1}",
         "comment": "where {1} is something like --- or +++",
-        "translation": "La importancia de {0} para este tipo de juego es: {1}"
+        "translation": "Tầm quan trọng của {0} đối với loại trò chơi này: {1}"
     }, {
         "value": "The market really doesn't like when we publish very similar games too close to each other.",
-        "translation": "Al mercado en verdad no le gusta cuando publicamos juegos muy similares en poco tiempo."
+        "translation": "Thị trường thực sự không thích khi chúng ta phát hành những trò chơi rất giống nhau quá gần nhau."
     }, {
         "value": "{0} is still new to the team.",
         "comment": "{0} is a single name",
-        "translation": "{0} es aun nuevo en el equipo."
+        "translation": "{0} vẫn còn mới với đội."
     }, {
         "value": "{0} are still new to the team.",
         "comment": "{0} is a list of names",
-        "translation": "{0} son aún nuevos en el equipo."
+        "translation": "{0} vẫn còn mới với đội."
     }, {
         "value": "We should try to focus our entire team on the development of a game.",
-        "translation": "Deberíamos intentar enfocar todo nuestro equipo en el desarrollo de un juego."
+        "translation": "Chúng ta nên cố gắng tập trung toàn bộ đội ngũ vào việc phát triển một trò chơi."
     }, {
         "value": "Self-publishing {1} games will be most efficient when we have at least {0} fans. Publishing deals can give us great exposure and help us reach more players.",
-        "translation": "Autopublicar juegos {1} será mas rentable cuando tengamos al menos {0} fans. Los contratos de publicación nos pueden dar una gran exhibición y ayudan a llegar a mas jugadores."
+        "translation": "Tự phát hành game {1} sẽ hiệu quả nhất khi chúng ta có ít nhất {0} người hâm mộ. Các thỏa thuận phát hành có thể giúp chúng ta quảng bá rộng rãi và tiếp cận nhiều người chơi hơn."
     }, {
         "value": "{0}",
         "comment": "{0} game name",
         "translation": "{0}"
     }, {
         "value": "Cash:",
-        "translation": "Dinero:"
+        "translation": "Tiền mặt:"
     }, {
         "value": "Advanced Options",
-        "translation": "Opciones Avanzadas"
+        "translation": "Tùy chọn Nâng cao"
     }, {
         "value": "30 years (fast-paced)",
-        "translation": "30 años (rápido)"
+        "translation": "30 năm (tốc độ nhanh)"
     }, {
         "value": "42 years",
-        "translation": "42 años"
+        "translation": "42 năm"
     }, {
         "value": "is ready!",
         "comment": "game title is mentioned the line before",
-        "translation": "¡está listo!"
+        "translation": "đã sẵn sàng!"
     }, {
         "value": "Acquire license?",
-        "translation": "Comprar licencia"
+        "translation": "Mua giấy phép?"
     }, {
         "value": "Play the full 30 years of the game, all the way to modern day technology and beyond!",
-        "translation": "¡Juega los 30 años del juego, hasta la tecnología moderna y más allá!"
+        "translation": "Chơi trọn vẹn 30 năm của trò chơi, đến tận công nghệ hiện đại và hơn thế nữa!"
     }, {
         "value": "Exit to Desktop",
-        "translation": "Salir al escritorio"
+        "translation": "Thoát ra Màn hình chính"
     }, {
         "value": "On",
-        "translation": "Encendido"
+        "translation": "Bật"
     }, {
         "value": "When on (default) then insights learned through generating game reports are shown in the UI. Turn this option off for a bigger challenge. (Note: This option does not affect Tutorials in any way.)",
-        "translation": "Cuando está activada (Predeterminadamente) lo aprendido es generado en reportes de juegos que son mostrados en la Interfaz de Usuario. Quite esta opción para un mayor desafío. (Nota: Esta opción no afecta a los tutoriales en ningun sentido.)"
+        "translation": "Khi bật (mặc định) thì những thông tin thu được qua việc tạo báo cáo game sẽ được hiển thị trên giao diện người dùng. Tắt tùy chọn này để có thử thách lớn hơn. (Lưu ý: Tùy chọn này không ảnh hưởng đến Hướng dẫn theo bất kỳ cách nào.)"
     }, {
         "value": "Window",
-        "translation": "Ventana"
+        "translation": "Cửa sổ"
     }, {
         "value": "Update Available",
-        "translation": "Actualización disponible"
+        "translation": "Có bản cập nhật"
     }, {
         "value": "Please update to the latest version.",
-        "translation": "Por favor, actualice a la última versión."
+        "translation": "Vui lòng cập nhật lên phiên bản mới nhất."
     }, {
         "value": "End User License Agreement",
-        "translation": "Acuerdo de licencia de usuario final"
+        "translation": "Thỏa thuận Cấp phép Người dùng Cuối"
     }, {
         "value": "I Disagree",
-        "translation": "No estoy de acuerdo"
+        "translation": "Tôi không đồng ý"
     }, {
         "value": "Forum",
-        "translation": "Foro"
+        "translation": "Diễn đàn"
     }, {
         "value": "Best to stay in touch or for quick questions.",
-        "translation": "Mejor estar en contacto para preguntas rápidas."
+        "translation": "Tốt nhất để giữ liên lạc hoặc cho các câu hỏi nhanh."
     }, {
         "value": "Load failed",
-        "translation": "Carga fallida"
+        "translation": "Tải thất bại"
     }, {
         "value": "Could not save settings to steam cloud",
-        "translation": "No se pudo guardar la configuración en Steam Cloud"
+        "translation": "Không thể lưu cài đặt lên Steam Cloud"
     }, {
         "value": "Could not load from steam cloud",
-        "translation": "No se pudo cargar desde Steam Cloud"
+        "translation": "Không thể tải từ Steam Cloud"
     }, {
         "value": "Could not load remote settings",
-        "translation": "No se pudo cargar la configuración remota"
+        "translation": "Không thể tải cài đặt từ xa"
     }, {
         "value": "Congratulations on finishing Game Dev Tycoon and thank you for playing! If you enjoyed our little game then please consider telling your friends about it.",
-        "translation": "¡Felicidades por terminar Game Dev Tycoon y gracias por jugar! Si te ha gustado nuestro pequeño juego, entonces recomiéndanos a tus amigos."
+        "translation": "Chúc mừng bạn đã hoàn thành Game Dev Tycoon và cảm ơn bạn đã chơi! Nếu bạn thích trò chơi nhỏ của chúng tôi thì hãy cân nhắc nói với bạn bè của bạn về nó nhé."
     }, {
         "value": "{0} has declined a request for an interview about their current project.\n",
-        "translation": "{0} ha rechazado una solicitud para una entrevista sobre su proyecto actual.\n"
+        "translation": "{0} đã từ chối yêu cầu phỏng vấn về dự án hiện tại của họ.\n"
     }, {
         "value": "With {0} only receiving a lukewarm reception, fans are sure to be expecting better from them and we are curious about their next title.",
-        "translation": "Con {0} solo tuvieron una recepcion tibia, los fans esperaban algo mejor de ellos y y estan expectantes por su proximo titulo."
+        "translation": "Với việc {0} chỉ nhận được sự đón nhận thờ ơ, người hâm mộ chắc chắn sẽ mong đợi điều tốt hơn từ họ và chúng tôi rất tò mò về tựa game tiếp theo của họ."
     }, {
         "value": "I don't know",
-        "translation": "No lo sé"
+        "translation": "Tôi không biết"
     }, {
         "value": "positive",
-        "translation": "positivo"
+        "translation": "tích cực"
     }, {
         "value": "mixed",
-        "translation": "mixto"
+        "translation": "trái chiều"
     }, {
         "value": "Old Engine",
-        "translation": "Viejo motor"
+        "translation": "Engine Cũ"
     }, {
         "value": "Boss, our recent decision to {0} our engine {1} was met with {2} responses from fans. Overall we {3} fans and {4}.",
-        "translation": "Jefe, nuestra reciente decisión de {0} nuestro motor {1} se reunió con {2} respuestas de los fans. En general, {3} fans y {4}."
+        "translation": "Sếp ơi, quyết định gần đây của chúng ta về việc {0} engine {1} của chúng ta đã nhận được phản hồi {2} từ người hâm mộ. Nhìn chung, chúng ta {3} người hâm mộ và {4}."
     }, {
         "value": "lost",
-        "translation": "perdido"
+        "translation": "mất"
     }, {
         "value": "Pay for license ({0})",
-        "translation": "Pagar por la licencia ({0})"
+        "translation": "Trả tiền bản quyền ({0})"
     }, {
         "value": "Rally fans! [~{0}% chance]",
-        "translation": "Aficionados a los rallyes! [~{0}% de probabilidad]"
+        "translation": "Kêu gọi người hâm mộ! [~{0}% cơ hội]"
     }, {
         "value": "Unfortunately, it seems that the patent infringement case was decided against us. We have to pay the full amount of {0} as well as the court costs of {1}. This is ridiculous.",
-        "translation": "Desafortunadamente, parece que el caso de infracción de patentes se puso en nuestra contra. Tenemos que pagar la cantidad completa de {0} así como los costes de la corte de {1}. Esto es ridículo."
+        "translation": "Thật không may, có vẻ như vụ kiện vi phạm bằng sáng chế đã được quyết định chống lại chúng ta. Chúng ta phải trả toàn bộ số tiền {0} cũng như chi phí tòa án là {1}. Điều này thật vô lý."
     }, {
         "value": "All Your IP Belongs To US",
-        "translation": "All Your IP Belongs To US"
+        "translation": "Tất Cả IP Của Bạn Thuộc Về Chúng Tôi"
     }, {
         "value": "Could not load game",
-        "translation": "No se pudo cargar el juego"
+        "translation": "Không thể tải game"
     }, {
         "value": "bad",
-        "translation": "bastante mala"
+        "translation": "tệ"
     }, {
         "value": "Audience match:",
-        "translation": "Coincidencia de audiencia:"
+        "translation": "Đối tượng phù hợp:"
     }, {
         "value": "Genre match:",
-        "translation": "Coincidencia de género:"
+        "translation": "Thể loại phù hợp:"
     }, {
         "value": "not important",
-        "translation": "poco importante"
+        "translation": "không quan trọng"
     }, {
         "value": "quite important",
-        "translation": "muy importante"
+        "translation": "khá quan trọng"
     }, {
         "value": "After a massive public backlash to the controversial features announced for the upcoming mBox One, Mirconoft has today published a letter outlining their change of plans. The mBox One will no longer require a constant internet connection and will not place restrictions on how games are sold or shared.{n}Clearly the different and much more popular strategies of companies like {0}, as well as vocal players themselves, have forced this change of direction.",
-        "translation": "Después de una masiva reacción negativa del público a las polémicas características anunciadas para la próximo mbox One, Mirconoft ha publicado hoy una carta indicando un cambio de planes. La Mbox ya no necesitará una conexión permanente a Internet y no impondrá restricciones a la venta de juegos o compartirlos.{n} Es evidente que diferentes estrategias, mucho más populares, de compañías como {0},así como de los portavoces de los jugadores, han forzado este cambio de dirección."
+        "translation": "Sau phản ứng dữ dội của công chúng đối với các tính năng gây tranh cãi được công bố cho mBox One sắp ra mắt, Mirconoft hôm nay đã công bố một lá thư nêu rõ sự thay đổi kế hoạch của họ. mBox One sẽ không còn yêu cầu kết nối internet liên tục và sẽ không đặt ra các hạn chế về cách bán hoặc chia sẻ trò chơi.{n}Rõ ràng là các chiến lược khác biệt và phổ biến hơn nhiều của các công ty như {0}, cũng như chính những người chơi lên tiếng, đã buộc phải thay đổi hướng đi này."
     }, {
         "value": "A first test left some players feeling a little motion-sick but with the right game this technology can surely deliver a new level of immersion.",
-        "translation": "Una primera prueba dejó algunos jugadores sintiéndose un poco mareados, pero con el uso adecuado esta tecnología sin duda puede ofrecer un nuevo nivel de inmersión."
+        "translation": "Một thử nghiệm ban đầu khiến một số người chơi cảm thấy hơi chóng mặt nhưng với trò chơi phù hợp, công nghệ này chắc chắn có thể mang lại một cấp độ nhập vai mới."
     }, {
         "value": "The worldwide game developers guild has awarded {0}, CEO of {1} the lifetime achievement award for contributions to the game industry. {0} has, during a stunning {3} year career at {1} delivered many ground breaking games.{n}The company is most recently known for {2}.",
-        "translation": "El gremio de desarrolladores mundiales ha otorgado a {0}, CEO de {1} el premio de toda una vida  por las contribuciones de la industria del juego. {0} lleva durante unos impresionante {3} años de carrera en {1} liberando muchos juegos innovadores. {n} La compañía es mas recientemente conocida por {2}."
+        "translation": "Hiệp hội các nhà phát triển game toàn cầu đã trao giải thưởng thành tựu trọn đời cho {0}, CEO của {1} vì những đóng góp cho ngành công nghiệp game. {0}, trong suốt {3} năm sự nghiệp đáng kinh ngạc tại {1}, đã mang đến nhiều trò chơi đột phá.{n}Công ty gần đây được biết đến nhiều nhất với {2}."
     }, {
         "value": "Better user experience",
-        "translation": "Mejor experiencia de usuario"
+        "translation": "Trải nghiệm người dùng tốt hơn"
     }, {
         "value": "Visorius Support",
-        "translation": "Soporte de Visorius"
+        "translation": "Hỗ trợ Visorius"
     }, {
         "value": "Our review inspired by the game's name: bad review #{0}.",
-        "translation": "Nuestra revisión inspirado en el nombre del juego: mala crítica #{0}."
+        "translation": "Đánh giá của chúng tôi lấy cảm hứng từ tên trò chơi: đánh giá tệ #{0}."
     }, {
         "value": "It's better than the name.",
-        "translation": "Es mejor que el nombre."
+        "translation": "Nó hay hơn cái tên."
     }, {
         "value": "11 out of 10. Nuff said.",
-        "translation": "11 de 10. Suficiente, dijo."
+        "translation": "11/10. Không cần nói nhiều."
     }, {
         "value": "11 out of 10. Rules don't apply to this outstanding game.",
-        "translation": "11 de 10. Las reglas no se aplican a este excelente juego."
+        "translation": "11/10. Quy tắc không áp dụng cho trò chơi xuất sắc này."
     }, {
         "value": "Overall, this had a positive effect on sales.",
-        "translation": "En general, esto tuvo un efecto positivo en las ventas."
+        "translation": "Nhìn chung, điều này có tác động tích cực đến doanh số bán hàng."
     }, {
         "value": "No response from server. Please try again later.",
-        "translation": "No hay respuesta del servidor. Por favor, inténtelo de nuevo más tarde."
+        "translation": "Không có phản hồi từ máy chủ. Vui lòng thử lại sau."
     }, {
         "value": "Could not get app receipt from Windows Store.",
-        "translation": "No se pudo obtener el recibo de la aplicación desde Windows Store."
+        "translation": "Không thể lấy biên nhận ứng dụng từ Windows Store."
     }, {
         "value": "Would you like to import all previously gained hints into this game?",
-        "translation": "¿Te gustaría importar todas las sugerencias adquiridas en este juego?"
+        "translation": "Bạn có muốn nhập tất cả các gợi ý đã thu được trước đó vào trò chơi này không?"
     }, {
         "value": "No new insights",
-        "translation": "No hay nuevas ideas"
+        "translation": "Không có thông tin mới"
     }, {
         "value": "Our post-release analysis of {0} is complete and we got the following results:",
-        "translation": "Nuestros análisis post-lanzamiento de {0} está completo y tenemos los siguientes resultados:"
+        "translation": "Phân tích sau phát hành của chúng tôi về {0} đã hoàn tất và chúng tôi có kết quả sau:"
     }, {
         "value": "{0} seems to be {1} for this type of game.",
-        "translation": "{0} parece ser {1} para este tipo de juego."
+        "translation": "{0} có vẻ {1} đối với loại trò chơi này."
     }, {
         "value": "The optimal team size for a {0} game seems to be {1}.",
-        "translation": "El tamaño óptimo del equipo para un juego de {0} parece ser {1}."
+        "translation": "Quy mô đội tối ưu cho một trò chơi {0} dường như là {1}."
     }, {
         "value": "A few more games and the team will have higher potential",
-        "translation": "Unos pocos juegos más y el equipo tendrá un potencial superior"
+        "translation": "Thêm một vài trò chơi nữa và đội sẽ có tiềm năng cao hơn"
     }, {
         "value": "Our fan base is big enough to make self-publishing {0} games viable. Unless a publishing deal gives us a great royalty rate we are likely better off publishing {0} games ourselves",
-        "translation": "Nuestra base de fans es lo suficientemente grande para hacer la auto-publicación de {0} juegos viable. A menos de que una productora nos de un buen ratio de royalties, será mejor para la compañia publicar {0} juegos por nuestra cuenta"
+        "translation": "Lượng người hâm mộ của chúng ta đủ lớn để việc tự phát hành game {0} trở nên khả thi. Trừ khi một thỏa thuận phát hành mang lại cho chúng ta tỷ lệ tiền bản quyền lớn, nếu không chúng ta có lẽ nên tự phát hành game {0}"
     }, {
         "value": "Game Length",
-        "translation": "Duración de la partida"
+        "translation": "Thời lượng Game"
     }, {
         "value": "35 years (recommended)",
-        "translation": "35 años (recomendado)"
+        "translation": "35 năm (khuyến nghị)"
     }, {
         "value": "Note: You can always continue playing after the main game is over. The game length simply specifies how fast new platforms come to market and when the high score is calculated.",
-        "translation": "Nota: Siempre puede continuar después de la partida principal ha terminado.La duración del juego se limita a señalar cómo las nuevas plataformas rápidas llegan al mercado y cuando se calcula la puntuación más alta."
+        "translation": "Lưu ý: Bạn luôn có thể tiếp tục chơi sau khi trò chơi chính kết thúc. Thời lượng trò chơi chỉ đơn giản xác định tốc độ ra mắt của các nền tảng mới và thời điểm tính điểm cao."
     }, {
         "value": "Off",
-        "translation": "Apagado"
+        "translation": "Tắt"
     }, {
         "value": "Audio",
-        "translation": "Sonido"
+        "translation": "Âm thanh"
     }, {
         "value": "Toggle Fullscreen",
-        "translation": "Pantalla Completa"
+        "translation": "Chuyển đổi Toàn màn hình"
     }, {
         "value": "A newer version of this game is available.",
-        "translation": "Está disponible una nueva versión de este juego."
+        "translation": "Một phiên bản mới hơn của trò chơi này đã có sẵn."
     }, {
         "value": "Get Update",
-        "translation": "Actualizar"
+        "translation": "Cập nhật"
     }, {
         "value": "I Agree",
-        "translation": "Estoy de acuerdo"
+        "translation": "Tôi đồng ý"
     }, {
         "value": "Exit",
-        "translation": "Salir"
+        "translation": "Thoát"
     }, {
         "value": "Best for discussions, tips and tricks and to communicate with other fans.",
-        "translation": "Lo mejor para los debates, consejos, trucos y comunicarte con otros fans."
+        "translation": "Tốt nhất cho các cuộc thảo luận, mẹo và thủ thuật và để giao tiếp với những người hâm mộ khác."
     }, {
         "value": "Language",
-        "translation": "Idioma"
+        "translation": "Ngôn ngữ"
     }, {
         "value": "Changes to the language setting require a restart.",
-        "translation": "Los cambios en la configuración del idioma requieren reiniciar el juego."
+        "translation": "Thay đổi cài đặt ngôn ngữ yêu cầu khởi động lại."
     }, {
         "value": "We see that you are in financial difficulties. Since you've just released your latest game {0}, we are willing to offer you a mini-credit to get you over this months' payments.\n\nWe will give you {1} to cover your costs and expect to be paid back the full amount, plus a small adminstration fee of {2} in two months time.",
-        "translation": "Vemos que estan en unas dificultades financieras. Hasta que hayan acabado de publicar su último juego {0}, estamos dispuestos a ofrecerle un mini-crédito para que puedan pagar las facturas de estos meses.\n\nLe daremos {1} para cubrir sus gastos y esperar a que haya pagado sus deudas, mas un pequeña tarifa administrativa de {2} en un plazo de dos meses."
+        "translation": "Chúng tôi thấy bạn đang gặp khó khăn về tài chính. Vì bạn vừa phát hành trò chơi mới nhất của mình {0}, chúng tôi sẵn sàng cung cấp cho bạn một khoản tín dụng nhỏ để giúp bạn vượt qua các khoản thanh toán trong tháng này.\n\nChúng tôi sẽ cung cấp cho bạn {1} để trang trải chi phí và mong bạn hoàn trả toàn bộ số tiền, cộng với một khoản phí quản lý nhỏ là {2} trong vòng hai tháng."
     }, {
         "value": "Boss, our office could really do with some renovation work and our computer systems are also out of date. Investing a little bit in a more modern office and upgraded computers would be a great.\nDo you want to renovate the office?",
-        "translation": "Jefe, nuestra oficina debería ser renovada y nuestros sistemas informáticos también ya que están desfasados. Invertir en una oficina más moderna y con equipos mas actualizados sería fantástico.\n¿Quiere renovar la oficina?"
+        "translation": "Sếp ơi, văn phòng của chúng ta thực sự cần một số công việc cải tạo và hệ thống máy tính của chúng ta cũng đã lỗi thời. Đầu tư một chút vào một văn phòng hiện đại hơn và máy tính được nâng cấp sẽ rất tuyệt.\nSếp có muốn cải tạo văn phòng không?"
     }, {
         "value": "Dear {0}!\nSince G3 has become the biggest meetup of game developers every year we have decided to use our name for the greater good. Starting today we offer different game development challenges throughout the year where game devs from around the world can compete with each other.{n}This will be a great way for game developers to learn something new. You are welcome to join in at any time. There are no prizes but it should be a great way to increase everyone's skills.\nThe G3 committee.",
         "comment": "{0} company name",
-        "translation": "Querido {0}!\nDesde que G3 se ha convertido en la reunion de desarrolladores de juegos mas grande del año, hemos decidido usar nuestro nombre para un bien mayor. Desde hoy ofrecemos diferentes desafíos de desarrollo de videojuegos durante todo el año, donde los desarrolladores de todo el mundo pueden competir uno con el otro.{n}Esta es una buena manera de que los desarrolladores aprendan algo nuevo. Eres bienvenido a unirtenos en cualquier momento. No hay ningun precio pero debería ser una buena manera de aumentar la habilidad de todos.\nEl comité de G3."
+        "translation": "Kính gửi {0}!\nVì G3 đã trở thành cuộc gặp gỡ lớn nhất của các nhà phát triển game hàng năm, chúng tôi đã quyết định sử dụng tên của mình cho mục đích tốt đẹp hơn. Bắt đầu từ hôm nay, chúng tôi tổ chức các thử thách phát triển game khác nhau trong suốt cả năm, nơi các nhà phát triển game từ khắp nơi trên thế giới có thể cạnh tranh với nhau.{n}Đây sẽ là một cách tuyệt vời để các nhà phát triển game học hỏi những điều mới. Bạn luôn được chào đón tham gia bất cứ lúc nào. Không có giải thưởng nhưng đó sẽ là một cách tuyệt vời để nâng cao kỹ năng của mọi người.\nỦy ban G3."
     }, {
         "value": "Hi, this is {0} from {1}. I got word that {2} is working on a new game.\nWould you be willing to share some information on your current game project and do an interview about it?",
-        "translation": "Hola, soy {0} de {1}. Me han dicho que {2} está trabajando en un nuevo juego.\n¿Estarías dispuesto a compartir información sobre su proyecto actual y a hacer una entrevista sobre él?"
+        "translation": "Chào bạn, tôi là {0} từ {1}. Tôi nghe nói rằng {2} đang phát triển một trò chơi mới.\nBạn có sẵn lòng chia sẻ một số thông tin về dự án game hiện tại của mình và thực hiện một cuộc phỏng vấn về nó không?"
     }, {
         "value": "{0}:\nWhat is your expectation regarding the success of {1}? Do you think that the game will be well received?",
-        "translation": "{0}:\n¿Cual es tu expectativa con respecto al éxito de {1}? ¿Piensa que el juego será bien recibido?"
+        "translation": "{0}:\nKỳ vọng của bạn về sự thành công của {1} là gì? Bạn có nghĩ rằng trò chơi sẽ được đón nhận tốt không?"
     }, {
         "value": "{0}:\nMany of our readers are curious about what decisions go into making a video game and how companies prioritize development areas.\nYour new game is a {1}/{2} game, can you tell us whether such a game would usually receive more focus on {3} or on {4}?",
-        "translation": "{0}:\nMuchos de los lectores son curiosos acerca de qué decisiones van dentro de la creación del videojuego y que áreas de desarrollo priorizan que compañías.\nSu nuevo juego es de {1}-/-{2}, ¿Que nos puede decir como un juego por lo general recibe más atención en {3} o en {4}?"
+        "translation": "{0}:\nNhiều độc giả của chúng tôi tò mò về những quyết định đằng sau việc tạo ra một trò chơi điện tử và cách các công ty ưu tiên các lĩnh vực phát triển.\nTrò chơi mới của bạn là một trò chơi {1}/{2}, bạn có thể cho chúng tôi biết liệu một trò chơi như vậy thường sẽ tập trung nhiều hơn vào {3} hay {4} không?"
     }, {
         "value": "In a recent interview with {0} we discussed their upcoming {1} game and asked company founder {2} how different development areas are prioritized.\nIn the interview {2} said that {3} is of particular importance for such a game ",
         "comment": "continues with fragment",
-        "translation": "En una reciente entrevista con {0} hemos debatido su próximo {1} juego y preguntó el fundador de la compañía {2} que diferentes áreas de desarrollo se priorizan.\nEn la entrevista {2} dijo que {3} es una importancia particular para tal juego "
+        "translation": "Trong một cuộc phỏng vấn gần đây với {0}, chúng tôi đã thảo luận về trò chơi {1} sắp tới của họ và hỏi người sáng lập công ty {2} về cách các lĩnh vực phát triển khác nhau được ưu tiên.\nTrong cuộc phỏng vấn, {2} nói rằng {3} có tầm quan trọng đặc biệt đối với một trò chơi như vậy "
     }, {
         "value": "Boss, a small number of dedicated fans have asked that we release the source code to one of our older game engines '{0}'. Doing so would surely satisfy these fans but given that we worked hard on the engine, we could also sell licenses for it and make some money. Alternatively, we could simply refuse their request completely.\nWhat would you like to do?",
-        "translation": "Jefe, un pequeño numero de fans dedicados han pedido sacar un código fuente de unos de sus motores gráficos antiguos {0}. Si lo hace, seguramente satisfaga a estos fans, pero teniendo en cuenta que hemos trabajado duro en este motor gráfico, podríamos venderles también las licencias para hacerlo y hacer dinero. Alternativamente, podríamos simplemente rechazar completamente su solicitud.\n¿Que le gustaría hacer?"
+        "translation": "Sếp ơi, một số ít người hâm mộ tận tâm đã yêu cầu chúng ta phát hành mã nguồn của một trong những engine game cũ của chúng ta '{0}'. Làm như vậy chắc chắn sẽ làm hài lòng những người hâm mộ này nhưng vì chúng ta đã làm việc chăm chỉ với engine đó, chúng ta cũng có thể bán giấy phép cho nó và kiếm một ít tiền. Hoặc, chúng ta có thể từ chối hoàn toàn yêu cầu của họ.\nSếp muốn làm gì?"
     }, {
         "value": "We've just received a letter from a company called 'All Your IP Belongs To US' and they say that our engine {0} is infringing on one of their patents.{n}They 'graciously' offer a license to their patent for {1} and are willing to give us a 50% discount if we just pay them without fighting them in court. We could pay this and hope that they won't bother us again or we could refuse and try to resolve this in front of the courts. Alternatively we might be able to rally our fans and publicly fight them.\nHow would you like to proceed?",
-        "translation": "Acabamos de recibir una carta de la compañía llamada \"All Your IP Belongs To US\" y nos están diciendo que nuestro motor {0} esta infringiendo en una de sus patentes.{n} Ellos 'graciosamente' ofrecen una licencia por su patente de {1} y están dispuestos a dárnoslo al 50% de descuento si se lo pagamos sin luchar en los tribunales. Podríamos pagar esto y esperar a que no nos molestaran más o podríamos renunciar e intentar resolver esto en los tribunales.\nAlternativamente podríamos ser capaces de reunir a nuestros fans y luchar públicamente.\n¿Cómo le gustaría continuar?"
+        "translation": "Chúng ta vừa nhận được một lá thư từ một công ty có tên 'Tất Cả IP Của Bạn Thuộc Về Chúng Tôi' và họ nói rằng engine {0} của chúng ta đang vi phạm một trong những bằng sáng chế của họ.{n}Họ 'hào phóng' đề nghị cấp phép bằng sáng chế của họ với giá {1} và sẵn sàng giảm giá 50% nếu chúng ta trả tiền cho họ mà không cần kiện tụng. Chúng ta có thể trả tiền và hy vọng họ sẽ không làm phiền chúng ta nữa hoặc chúng ta có thể từ chối và cố gắng giải quyết vấn đề này trước tòa. Hoặc, chúng ta có thể kêu gọi người hâm mộ của mình và công khai chống lại họ.\nSếp muốn tiến hành như thế nào?"
     }, {
         "value": "Analysts have observed a strange trend lately where players around the world seem to have developed a curious taste for unusual games.{n}As one player put it: 'Sometimes you just want to play something unique. A game based on an idea that's not the usual Military/Action game or Fantasy/RPG just to name two examples.\nI really hope companies bring some unique games to market soon. I would definitely prefer them right now.'{n}This new trend promises to bring an interesting challenge to game developers as topic/genre combinations which used to work well will suddenly be less favorable while more outlandish ideas might flourish.",
-        "translation": "Los analistas han observado una extraña tendencia últimamente donde los jugadores de todo el mundo parecen haber desarrollado un curioso gusto por los juegos inusuales. {n} Uno de los jugadores puso:'a veces lo que deseas es jugar a algo totalmente único, Un juego basado en una idea que no es habitual en un juego de Militar/Acción o Fantasía/RPG solo por nombrar dos ejemplos.\nEspero realmente que las compañías traigan pronto algunos juegos únicos al mercado. sin duda preferiría  esto ahora mismo.' {n} Esta nueva tendencia promete traer un reto interesante a los desarrolladores de juegos como combinaciones de topico/genero que solían funcionar bien y de repente ser menos favorable mientras muchas ideas extravagantes podrian prosperar."
+        "translation": "Các nhà phân tích gần đây đã quan sát thấy một xu hướng kỳ lạ, nơi người chơi trên toàn thế giới dường như đã phát triển một sở thích tò mò đối với các trò chơi khác thường.{n}Như một người chơi đã nói: 'Đôi khi bạn chỉ muốn chơi một cái gì đó độc đáo. Một trò chơi dựa trên một ý tưởng không phải là trò chơi Quân sự/Hành động thông thường hay Giả tưởng/RPG chỉ để kể tên hai ví dụ.\nTôi thực sự hy vọng các công ty sẽ sớm đưa ra thị trường những trò chơi độc đáo. Tôi chắc chắn sẽ thích chúng hơn ngay bây giờ.'{n}Xu hướng mới này hứa hẹn sẽ mang đến một thách thức thú vị cho các nhà phát triển game vì các kết hợp chủ đề/thể loại từng hoạt động tốt sẽ đột nhiên kém thuận lợi hơn trong khi những ý tưởng kỳ lạ hơn có thể phát triển mạnh."
     }, {
         "value": "{0} is no longer supported.\nYou've released {1} game for the platform and earned a total of {2}!",
-        "translation": "{0} ya no esta apoyada.\n¡Ha lanzado {1} juego para la plataforma y ha ganado un total de {2}!"
+        "translation": "{0} không còn được hỗ trợ nữa.\nBạn đã phát hành {1} trò chơi cho nền tảng này và kiếm được tổng cộng {2}!"
     }, {
         "value": "Ninvento has revealed that their bid in the next generation of consoles will be called the Wuu. The new console features a controller with a integrated display.{n}This is said to make local multiplayer games much more interesting by giving each player a unique screen. Ninvento has always been at the forefront of innovation and this console seems, once again, to be a brave move.\nThe Wuu is said to be available {0}.",
         "comment": "{0} is date referral sentence fragment",
-        "translation": "Ninvento ha revelado que su entrada en la próxima generación de consolas se llamará Wuu. Esta nueva consola usa un controlador con un pantalla integrada.{n}Se dice que hará los juegos multijugador locales mucho mas interesantes al dar a cada jugador una única pantalla. Ninvento siempre ha estado en el frente de la innovación y esta consola parece, de nuevo, ser una jugada arriesgada.\nLa Wuu estará disponible el {0}."
+        "translation": "Ninvento đã tiết lộ rằng sự tham gia của họ vào thế hệ console tiếp theo sẽ được gọi là Wuu. Hệ máy mới này có một bộ điều khiển với màn hình tích hợp.{n}Điều này được cho là sẽ làm cho các trò chơi nhiều người chơi cục bộ trở nên thú vị hơn nhiều bằng cách cung cấp cho mỗi người chơi một màn hình độc đáo. Ninvento luôn đi đầu trong đổi mới và hệ máy này dường như, một lần nữa, là một bước đi táo bạo.\nWuu được cho là sẽ có mặt {0}."
     }, {
         "value": "Just as the industry seems to have silently accepted the slow demise of PC gaming as more and more games are primarily developed for consoles, there seems to be a resurgence of the PC market.{n}New powerful and affordable hardware, a growing indie-developer scene and the rise of crowd-funded financing has meant a slew of new exciting projects hitting the PC market.\nIt seems that the PC market will only grow stronger in the coming years.{n}For console lovers, this isn't bad news either as many PC games are also ported to the most successful consoles.",
-        "translation": "Cuando la industria parece haber aceptado la pérdida del mercado del PC como videojuegos al producir cada vez mas juegos para consolas, parece que hay un resurgimiento del mercado de PCs.{n}Hardware cada vez mas potente y barato, crecimiento del movimiento de desarrolladores indie y el nacimiento de la financiación por crowdfunding; todo ha llevado a la llegada de grandes proyectos de videojuegos en este mercado.\nParece que en los próximos años este mercado no dejará de crecer.{n}Para los amantes de las consolas, no son malas noticias: estos juegos suelen portarse a las consolas más importantes."
+        "translation": "Ngay khi ngành công nghiệp dường như đã âm thầm chấp nhận sự suy tàn chậm chạp của game PC khi ngày càng nhiều trò chơi chủ yếu được phát triển cho console, thì dường như thị trường PC đang hồi sinh.{n}Phần cứng mới mạnh mẽ và giá cả phải chăng, một cộng đồng nhà phát triển độc lập đang phát triển và sự gia tăng của tài trợ cộng đồng đã mang đến một loạt các dự án mới thú vị tấn công thị trường PC.\nCó vẻ như thị trường PC sẽ chỉ ngày càng mạnh mẽ hơn trong những năm tới.{n}Đối với những người yêu thích console, đây cũng không phải là tin xấu vì nhiều game PC cũng được chuyển thể sang các hệ máy console thành công nhất."
     }, {
         "value": "Welcome to Game Dev Tycoon!\nIn this business simulation you have been transported back in time to start your very own game development company right at the beginning of the PC revolution. In the next {0} years you can build your dream company, create best selling games, gain fans and become the leader of the market.{n}Before you can start your adventure you have to give your upcoming company a name.",
-        "translation": "¡Bienvenido al Game Dev Tycoon!\nEn este simulador de empresas has viajado en el tiempo para comenzar tu propia compañía desarrolladora de videojuegos, al comienzo del nacimiento de la revolución de los PCs. En los próximos {n} años podrás crear la empresa de tus sueños, vender los mejores juegos, ganar fans y convertirte en el líder del mercado.{n}Antes de empezar, deberás poner nombre a tu empresa."
+        "translation": "Chào mừng đến với Game Dev Tycoon!\nTrong trò chơi mô phỏng kinh doanh này, bạn đã được đưa trở lại quá khứ để thành lập công ty phát triển game của riêng mình ngay từ buổi đầu của cuộc cách mạng PC. Trong {0} năm tới, bạn có thể xây dựng công ty mơ ước của mình, tạo ra những trò chơi bán chạy nhất, thu hút người hâm mộ và trở thành người dẫn đầu thị trường.{n}Trước khi bạn có thể bắt đầu cuộc phiêu lưu của mình, bạn phải đặt tên cho công ty sắp tới của mình."
     }, {
         "value": "It seems that {0} has recently moved into an office in a well known technology park and is now searching for employees.{n}The company, which is known for games such as {1}, has reportedly operated out of a garage until now.{n}One of the many fans of {2} commented: 'I can't believe that they didn't even have a proper office until now and that those games were created by only one person!\nI am really looking forward to their future games!",
-        "translation": "Parece que {0} se ha trasladado a una oficina situada en un conocido parque tecnológico, y ahora busca empleados.{n}La compañía, conocida por juegos como {1}, funcionaba hasta ayer en un garaje.{n}Uno de los muchos fans de {2} comenta: \"No puedo creer que no tuvieran una buena oficina hasta ahora, ni que los juegos fueran creados por una sola persona...\n¡Estoy impaciente por ver sus futuros juegos!\""
+        "translation": "Có vẻ như {0} gần đây đã chuyển đến một văn phòng trong một khu công nghệ nổi tiếng và hiện đang tìm kiếm nhân viên.{n}Công ty, được biết đến với các trò chơi như {1}, được cho là đã hoạt động trong một nhà để xe cho đến nay.{n}Một trong nhiều người hâm mộ của {2} đã bình luận: 'Tôi không thể tin được rằng họ thậm chí còn không có một văn phòng tử tế cho đến bây giờ và những trò chơi đó được tạo ra bởi chỉ một người!\nTôi thực sự mong chờ những trò chơi trong tương lai của họ!"
     }, {
         "value": "Uncaught error. Please report this to {0}: \n{1}\n({2}:{3})\n\nPlease restart the game.",
-        "translation": "Error extraño. Envía una copia de esto a {0}:\n{1}\n({2}:{3})\n\nPor favor, reinicia el juego."
+        "translation": "Lỗi không xác định. Vui lòng báo cáo điều này cho {0}: \n{1}\n({2}:{3})\n\nVui lòng khởi động lại trò chơi."
     }, {
         "value": "Game development has now started.{n}While developing your game you will generate game points which you can see bubbling up.\nGame points are divided into design points and technology points. The more points you generate the better the game will be.{n}From time to time there will also be bug points generated. These points become less likely once you gain experience. Bugs should be fixed before the game is released and increase development time and cost.",
-        "translation": "El desarrollo del juego acaba de empezar.{n}Mientas desarrolles el juego generarás puntos de juego que podrás ver burbujeando.\nLos puntos de juego están divididos en puntos de diseño y puntos de tecnología. Cuantos más puntos generes mejor será el juego. {n} De vez en cuando generarás algunos puntos de error. Estos puntos probablemente te hagan ganar menos experiencia. Los errores deben ser arreglados antes de lanzar el juego e incrementa el coste y tiempo de desarrollo."
+        "translation": "Quá trình phát triển game đã bắt đầu.{n}Trong khi phát triển game, bạn sẽ tạo ra điểm game mà bạn có thể thấy chúng nổi lên.\nĐiểm game được chia thành điểm thiết kế và điểm công nghệ. Bạn càng tạo ra nhiều điểm thì game càng tốt.{n}Thỉnh thoảng cũng sẽ có điểm lỗi được tạo ra. Những điểm này sẽ ít xuất hiện hơn khi bạn có kinh nghiệm. Lỗi nên được sửa trước khi phát hành game và chúng làm tăng thời gian và chi phí phát triển."
     }, {
         "value": "Creating larger games is a significant task and, unlike in small games, one person cannot effectively be responsible for every aspect of a game.\nTo create a good game and to make best use of your team you will have to assign which of your team is responsible for which areas.{n}Pick team members whose skills match the area to get the best result.\nWhen you assign a team member responsibilities you will see their workload. Try not to overload them too much.",
-        "translation": "Crear mayores juegos es una tarea significativa y, a diferencia de los juegos pequeños, una persona no puede ser responsable de todos los aspectos del juego. Para crear un buen juego y hacer el mejor uso de tu equipo tendrás que asignar quien de tu equipo será responsable, y en que área ha de trabajar. {n} Escoja al miembro del equipo cuyas habilidades coincidan con el área para tener el mejor resultado.\nCuando asignas las responsabilidades del miembro del equipo podrás ver su carga del trabajo. Intenta no sobrecargarlo mucho."
+        "translation": "Tạo ra các trò chơi lớn hơn là một nhiệm vụ quan trọng và, không giống như các trò chơi nhỏ, một người không thể chịu trách nhiệm hiệu quả cho mọi khía cạnh của trò chơi.\nĐể tạo ra một trò chơi hay và tận dụng tốt nhất đội ngũ của bạn, bạn sẽ phải phân công ai trong đội của bạn chịu trách nhiệm cho lĩnh vực nào.{n}Chọn các thành viên trong đội có kỹ năng phù hợp với lĩnh vực đó để đạt được kết quả tốt nhất.\nKhi bạn giao trách nhiệm cho một thành viên trong đội, bạn sẽ thấy khối lượng công việc của họ. Cố gắng đừng giao quá nhiều việc cho họ."
     }, {
         "value": "While generating game reports you start to gain insights into the development process and learn about what works well and what doesn't work so well.\nThese insights are shown as hints on the development screen (unless you have turned this option off in the settings).{n}The hints range from '+++' to '--' and indicate how important an area is for this type of game. When hints have a question mark at the end (e.g. '+++?') it means that you have insights from a game in the same genre but that you are not yet sure whether this holds true for this particular genre/topic combination.",
-        "translation": "Mientras vayas generando informes de juegos empezarás a ganar ideas dentro del proceso de desarrollo y aprenderás acerca de que funciona mejor y que no funciona tan bien.\nEstas ideas enseñan consejos en la pantalla de desarrollo (a no ser que hayas desactivado esta opción en ajustes).{n},El rango de consejos va del '+++' al '---' e indica como es de importante esta área para este tipo de juego. Cuando los consejos tienen una marca de pregunta al final (ejemplo:'+++?') significa que tienes ideas de un juego en el mismo género pero que aun no estas seguro de si esto es válido para esta combinación genero/tema en particular."
+        "translation": "Trong khi tạo báo cáo game, bạn bắt đầu có được những hiểu biết sâu sắc về quy trình phát triển và tìm hiểu về những gì hoạt động tốt và những gì không hoạt động tốt.\nNhững hiểu biết này được hiển thị dưới dạng gợi ý trên màn hình phát triển (trừ khi bạn đã tắt tùy chọn này trong cài đặt).{n}Các gợi ý dao động từ '+++' đến '--' và cho biết tầm quan trọng của một lĩnh vực đối với loại trò chơi này. Khi các gợi ý có dấu chấm hỏi ở cuối (ví dụ: '+++?'), điều đó có nghĩa là bạn có thông tin chi tiết từ một trò chơi cùng thể loại nhưng bạn chưa chắc chắn liệu điều này có đúng với sự kết hợp thể loại/chủ đề cụ thể này hay không."
     }, {
         "value": "Game reports are a great way to gain more research points and new insights. It pays off to generate a report for each game you release.\nNow that you've completed your first game report it's a good idea to look at the research menu.\nTo open the research menu close this message and then {0} anywhere on the screen to bring up the action menu.",
         "comment": "{0} click/touch verb",
-        "translation": "Los informes de juegos son una gran manera de ganar más puntos de investigación y nuevas ideas.\nVale la pena generar un informe de cada juego que lances.\nAhora que has completado tu primer informe de juego es una gran idea echar un vistazo al menú de investigación.\nPara abrir el menú de investigación, cierra  este mensaje y luego haz {0} en cualquier parte de la pantalla para que aparezca el menú de acciones."
+        "translation": "Báo cáo game là một cách tuyệt vời để thu thập thêm điểm nghiên cứu và những hiểu biết mới. Việc tạo báo cáo cho mỗi trò chơi bạn phát hành sẽ mang lại lợi ích.\nBây giờ bạn đã hoàn thành báo cáo game đầu tiên của mình, đây là một ý tưởng hay để xem xét menu nghiên cứu.\nĐể mở menu nghiên cứu, hãy đóng thông báo này và sau đó {0} vào bất kỳ đâu trên màn hình để mở menu hành động."
     }, {
         "value": "To: {0}\nFrom: Patrick & Daniel Klug (Greenheart Games).\nHi {0}, we are the creators of Game Dev Tycoon and would like to thank you very much for purchasing the game and supporting us.{n}Game Dev Tycoon is our very first game and it means a lot to us that you are enjoying it. With your purchase you support our little start-up and this will hopefully make sure that we can bring you more games in the future.{n}Seriously, you rock! Thank you very much and have fun with Game Dev Tycoon.",
-        "translation": "Para: {0}\nde: Patrick & Daniel Klug (Greenheart Games).\nHola {0}, somos los creadores del juego Game Dev Tycoon y nos gustaría darte las gracias por comprar el juego y apoyarnos.{n}Game Dev Tycoon es nuestro primer juego y significa mucho para nosotros que lo estés disfrutando. Con su compra usted apoya nuestra pequeña puesta en marcha y espero que esto haga en un futuro que podamos traerle más juegos.{n}En serio, ¡eres el mejor! Muchas gracias y diviértete con Game Dev Tycoon."
+        "translation": "Gửi: {0}\nTừ: Patrick & Daniel Klug (Greenheart Games).\nChào {0}, chúng tôi là những người tạo ra Game Dev Tycoon và xin chân thành cảm ơn bạn đã mua trò chơi và ủng hộ chúng tôi.{n}Game Dev Tycoon là trò chơi đầu tiên của chúng tôi và điều đó có ý nghĩa rất lớn đối với chúng tôi khi bạn yêu thích nó. Với việc mua hàng của bạn, bạn đã hỗ trợ công ty khởi nghiệp nhỏ của chúng tôi và điều này hy vọng sẽ đảm bảo rằng chúng tôi có thể mang đến cho bạn nhiều trò chơi hơn trong tương lai.{n}Nghiêm túc mà nói, bạn thật tuyệt vời! Cảm ơn bạn rất nhiều và chúc bạn vui vẻ với Game Dev Tycoon."
     }, {
         "value": "We see that you are, again, in serious financial difficulties. We are willing to offer you a mini-credit to tie you over until your current game is on the market.\n\nWe will give you {1} to cover your costs and expect to be paid back the full amount, plus a fee of {2}, one month after the game is released.",
-        "translation": "Parece que estás, de nuevo, con problemas financieros. Estamos dispuestos a ofrecerte un minicredito para \"tapar tus agujeros\" mientras sale el juego en el que estás trabajando.\n\nTe ofrecemos {1} para cubrir tus costes y, un mes después de haber salido el juego, deberás devolverlo íntegro mas unos intereses de {2}."
+        "translation": "Chúng tôi thấy rằng bạn, một lần nữa, đang gặp khó khăn tài chính nghiêm trọng. Chúng tôi sẵn sàng cung cấp cho bạn một khoản tín dụng nhỏ để giúp bạn vượt qua cho đến khi trò chơi hiện tại của bạn được tung ra thị trường.\n\nChúng tôi sẽ cung cấp cho bạn {1} để trang trải chi phí và mong bạn hoàn trả toàn bộ số tiền, cộng với một khoản phí {2}, một tháng sau khi trò chơi được phát hành."
     }, {
         "value": "Loading ...",
-        "translation": "Cargando ..."
+        "translation": "Đang tải ..."
     }, {
         "value": "Unlock hints?",
-        "translation": "¿Desbloquear pistas?"
+        "translation": "Mở khóa gợi ý?"
     }, {
         "value": " fans",
-        "translation": " fans"
+        "translation": " người hâm mộ"
     }, {
         "value": "Credits",
-        "translation": "Créditos"
+        "translation": "Ghi công"
     }, {
         "value": "Hype game!",
-        "translation": "¡Publicitar juego!"
+        "translation": "Tạo Hype cho game!"
     }, {
         "value": "Be modest.",
-        "translation": "Ser precavido."
+        "translation": "Khiêm tốn thôi."
     }, {
         "value": "Mods",
-        "translation": "Mods"
+        "translation": "Mod"
     }, {
         "value": "Industry Report",
-        "translation": "Informe de la Industria"
+        "translation": "Báo cáo Ngành"
     }, {
         "value": "Platform genre-match ({0}/{1}): {2}.",
-        "translation": "Coincidencia plataforma/género ({0}/{1}): {2}."
+        "translation": "Độ hợp Nền tảng-Thể loại ({0}/{1}): {2}."
     }, {
         "value": "Platform audience-match ({0}/{1}): {2}.",
-        "translation": "Coincidencia plataforma/audiencia ({0}/{1}): {2}."
+        "translation": "Độ hợp Nền tảng-Đối tượng ({0}/{1}): {2}."
     }, {
         "value": "Topic audience-match ({0}/{1}): {2}.",
-        "translation": "Coincidencia tema/audiencia ({0}/{1}): {2}."
+        "translation": "Độ hợp Chủ đề-Đối tượng ({0}/{1}): {2}."
     }, {
         "value": "Enabling and disabling mods requires a restart.",
-        "translation": "Activar y desactivar mods requiere un reinicio."
+        "translation": "Bật và tắt mod yêu cầu khởi động lại."
     }, {
         "value": "Use mods at your own risk!",
-        "translation": "¡Usa mods bajo tu propio riesgo!"
+        "translation": "Sử dụng mod với rủi ro tự chịu!"
     }, {
         "value": "Greenheart Games is not responsible for the contents of mods. Mods may corrupt your save files or do other harm. Use them at your own risk! Since mods can introduce severe bugs or data corruption we cannot offer user support when mods are in use.",
-        "translation": "Greenheart Games no se hace responsable de los contenidos de los mods. Los Mods pueden dañar los datos del juego o pueden hacer cualquier otro daño. ¡Úselos bajo su propio riesgo! Algunos mods pueden provocar errores graves o daños en los datos, no podemos ofrecer soporte al usuario cuando usted usa mods."
+        "translation": "Greenheart Games không chịu trách nhiệm về nội dung của các mod. Mod có thể làm hỏng tệp lưu của bạn hoặc gây ra các tác hại khác. Hãy sử dụng chúng với rủi ro tự chịu! Vì mod có thể gây ra lỗi nghiêm trọng hoặc hỏng dữ liệu, chúng tôi không thể hỗ trợ người dùng khi đang sử dụng mod."
     }, {
         "value": "patch complete",
-        "translation": "parche completado"
+        "translation": "vá lỗi hoàn tất"
     }, {
         "value": "Give it away",
-        "translation": "Regarlarlo"
+        "translation": "Cho đi"
     }, {
         "value": "Sell it",
-        "translation": "Venderlo"
+        "translation": "Bán nó"
     }, {
         "value": "Refuse",
-        "translation": "Rechazar"
+        "translation": "Từ chối"
     }, {
         "value": "Out of nowhere, a new company called KickIT has kicked up a media storm by successfully crowd-funding the development of a new gaming console in just under eight hours.{n}The console, dubbed 'OYA', uses similar technology as modern phones and tablets and delivers games exclusively via its own online store.\nThe OYA is a cubed-shape console and much smaller than most gamepads but the shape isn't the only thing that is small as the developer states that the price tag of the OYA will be under 100cr.{n} KickIT also stated that every game on the OYA will offer a free DEMO. The OYA will be available {0}.",
-        "translation": "De la nada, una nueva compañía llamada KickIT ha levantado una tormenta mediática por el exitoso financiamiento de una nueva consola en poco menos de ocho horas.{n}La consola, apodada 'OYA', usa tecnología similar a las tabletas y teléfonos modernos y ofrece juegos exclusivos a través de su propia tienda en linea.\nLa OYA es una consola con forma cubica y mucho mas pequeña que la mayoría de los gamepads, pero la forma no es lo único pequeño como el desarrollador afirma, el precio inicial de la OYA estará por debajo de los 100cr.{n}KickIT también declaro que todos los juegos en la OYA ofrecerán una demo gratis. La OYA estará disponible {0}."
+        "translation": "Từ hư không, một công ty mới tên là KickIT đã gây bão truyền thông bằng cách huy động vốn cộng đồng thành công cho việc phát triển một hệ máy chơi game mới chỉ trong vòng chưa đầy tám giờ.{n}Hệ máy này, được mệnh danh là 'OYA', sử dụng công nghệ tương tự như điện thoại và máy tính bảng hiện đại và cung cấp game độc quyền qua cửa hàng trực tuyến của riêng mình.\nOYA là một hệ máy hình khối và nhỏ hơn nhiều so với hầu hết các tay cầm chơi game nhưng hình dạng không phải là thứ duy nhất nhỏ bé vì nhà phát triển tuyên bố rằng giá của OYA sẽ dưới 100cr.{n} KickIT cũng tuyên bố rằng mọi trò chơi trên OYA sẽ cung cấp bản DEMO miễn phí. OYA sẽ có mặt trên thị trường {0}."
     }, {
         "value": "Game dev gems",
-        "translation": "Gemas de desarrollo"
+        "translation": "Tinh hoa phát triển game"
     }, {
         "value": "Make me think!",
-        "translation": "¡Hazme pensar!"
+        "translation": "Hãy làm tôi suy nghĩ!"
     }, {
         "value": "Game design for pirates",
-        "translation": "Diseño de juego para piratas"
+        "translation": "Thiết kế game cho cướp biển"
     }, {
         "value": "Don't repeat yourself",
-        "translation": "No te repitas"
+        "translation": "Đừng lặp lại chính mình"
     }, {
         "value": "Code incomplete",
-        "translation": "Código incompleto"
+        "translation": "Mã nguồn chưa hoàn chỉnh"
     }, {
         "value": "If you ever want to review the tutorial messages then you can do so in the Help menu. To access the Help menu and other features such as saving, loading and creating a game simply press ESC to access the main menu.",
-        "translation": "Si alguna vez quieres revisar los mensajes del tutorial, puedes hacerlo en el menú de Ayuda. Para acceder al menú de ayuda y otras características como guardar, cargar y crear un juego, simplemente presiona la tecla ESC para acceder al menú principal"
+        "translation": "Nếu bạn muốn xem lại các thông báo hướng dẫn, bạn có thể làm điều đó trong menu Trợ giúp. Để truy cập menu Trợ giúp và các tính năng khác như lưu, tải và tạo trò chơi, chỉ cần nhấn ESC để truy cập menu chính."
     }, {
         "value": "Your local save game seems to be different from the one stored in the Steam Cloud. Which one would you like to load?",
-        "translation": "Tu partida guardada local parece ser diferente a la guardada en Steam Cloud. ¿Cual prefieres cargar?"
+        "translation": "Tệp lưu cục bộ của bạn có vẻ khác với tệp được lưu trữ trên Steam Cloud. Bạn muốn tải tệp nào?"
     }, {
         "value": "Cloud",
         "comment": "savegame",
-        "translation": "Cloud"
+        "translation": "Đám mây"
     }, {
         "value": "Local",
         "comment": "savegame",
-        "translation": "Local"
+        "translation": "Cục bộ"
     }, {
         "value": "Note: Once you save the game, the new save file will be stored both locally and on the Cloud unless you disable the Steam Cloud through Steam.",
-        "translation": "Nota: Una vez guardes la partida, el nuevo archivo será guardado a la vez en Steam Cloud y en local a menos que deshabilites la Steam Cloud desde Steam."
+        "translation": "Lưu ý: Sau khi bạn lưu trò chơi, tệp lưu mới sẽ được lưu trữ cả cục bộ và trên Đám mây trừ khi bạn tắt Steam Cloud thông qua Steam."
     }, {
         "value": "Moderators",
         "comment": "localization",
-        "translation": "Moderadores"
+        "translation": "Điều hành viên"
     }, {
         "value": "Top Contributors",
         "comment": "localization",
-        "translation": "Máximos Contribuidores"
+        "translation": "Người đóng góp hàng đầu"
     }, {
         "value": "Quality Assurance",
         "comment": "localization",
-        "translation": "Equipo de calidad"
+        "translation": "Đảm bảo Chất lượng"
     }, {
         "value": "Discuss translation",
-        "translation": "Opina sobre la traducción"
+        "translation": "Thảo luận bản dịch"
     }, {
         "value": "Thanks to the many unnamed contributors who greatly helped translating the game!",
-        "translation": "¡Gracias a todos los anónimos que ayudasteis a traducir este juego!"
+        "translation": "Cảm ơn rất nhiều những người đóng góp ẩn danh đã giúp đỡ rất nhiều trong việc dịch trò chơi!"
     }, {
         "value": "Any",
         "comment": "shown underneath the Any platform icon in publisher contracts",
-        "translation": "Cualquiera"
+        "translation": "Bất kỳ"
     }, {
         "value": "Right away!",
-        "translation": "¡En marcha!"
+        "translation": "Ngay lập tức!"
     }, {
         "value": "{0}K",
         "translation": "{0}K"
     }, {
         "value": "{0}M",
-        "translation": "{0}M"
+        "translation": "{0}Tr"
     }, {
         "value": "{0} %",
         "translation": "{0} %"
     }, {
         "value": "Show only new tutorials (recommended)",
-        "translation": "Mostrar solo los nuevos tutoriales (recomendado)"
+        "translation": "Chỉ hiển thị hướng dẫn mới (khuyên dùng)"
     }, {
         "value": "Show all tutorials",
-        "translation": "Mostrar todos los tutoriales"
+        "translation": "Hiển thị tất cả hướng dẫn"
     }, {
         "value": "Disable tutorials",
-        "translation": "Desactivar los tutoriales"
+        "translation": "Tắt hướng dẫn"
     }, {
         "value": "Quality",
-        "translation": "Calidad"
+        "translation": "Chất lượng"
     }, {
         "value": "Performance",
-        "translation": "Rendimiento"
+        "translation": "Hiệu năng"
     }, {
         "value": "Animations",
-        "translation": "Animaciones"
+        "translation": "Hoạt ảnh"
     }, {
         "value": "Sign up to our newsletter",
-        "translation": "Suscribirse al newsletter"
+        "translation": "Đăng ký nhận bản tin của chúng tôi"
     }, {
         "value": "Signing up...",
-        "translation": "Suscribiendose..."
+        "translation": "Đang đăng ký..."
     }, {
         "value": "Signup successful!",
-        "translation": "¡Suscripción confirmada!"
+        "translation": "Đăng ký thành công!"
     }, {
         "value": "Like this game? Stay informed about new games coming from us by signing up to our newsletter.",
-        "translation": "¿Te gusta el juego? Entérate de nuevos juegos nuestros suscribiéndote al newsletter."
+        "translation": "Thích trò chơi này? Hãy cập nhật thông tin về các trò chơi mới của chúng tôi bằng cách đăng ký nhận bản tin."
     }, {
         "value": "email address",
-        "translation": "correo electrónico"
+        "translation": "địa chỉ email"
     }, {
         "value": "Sign up",
-        "translation": "Suscribirse"
+        "translation": "Đăng ký"
     }, {
         "value": "Load Anyway",
-        "translation": "Cargar igualmente"
+        "translation": "Vẫn tải"
     }, {
         "value": "Abort Loading",
-        "translation": "Abortar carga"
+        "translation": "Hủy tải"
     }, {
         "value": "How would you like to proceed?",
-        "translation": "¿Que quieres hacer?"
+        "translation": "Bạn muốn tiếp tục như thế nào?"
     }, {
         "value": "To correct this, activate the same mod(s) that have been used with the save game and deactive any extra mods. If this is intentional however you may wish to continue loading the game.",
-        "translation": "Para arreglarlo, activa los mismos mods que estaban activos cuando se creó y desactiva el resto. Si es intencionado, entonces quizás quieras continuar cargando la partida."
+        "translation": "Để khắc phục điều này, hãy kích hoạt (các) mod giống như đã được sử dụng với tệp lưu trò chơi và tắt mọi mod bổ sung. Tuy nhiên, nếu đây là cố ý, bạn có thể muốn tiếp tục tải trò chơi."
     }, {
         "value": "This mismatch may cause unwanted issues such as save game corruption making your save unplayable.",
-        "translation": "Este desajuste puede causar fallos como corrupción de la partida, haciéndola injugable."
+        "translation": "Sự không khớp này có thể gây ra các sự cố không mong muốn như hỏng tệp lưu trò chơi khiến bạn không thể chơi được."
     }, {
         "value": "Additional Mod(s):",
-        "translation": "Mod(s) adicional(es):"
+        "translation": "(Các) Mod bổ sung:"
     }, {
         "value": "Missing Mod(s):",
-        "translation": "Mod(s) que faltan:"
+        "translation": "(Các) Mod bị thiếu:"
     }, {
         "value": "There is a mismatch between the mods used in this save game and the mods you currently have active:",
-        "translation": "No hay correspondencia entre los mods usados en esta partida y los mods que tienes activos ahora:"
+        "translation": "Có sự không khớp giữa các mod được sử dụng trong tệp lưu trò chơi này và các mod bạn hiện đang kích hoạt:"
     }, {
         "value": "This save slot is corrupt, this could be due to a failed cloud sync. Please resync your game with the Steam cloud and try again.",
-        "translation": "Esta partida está corrupta; quizás se deba a un fallo de sincronización. Sincroniza el juego de nuevo con Steam Cloud y vuelve a intentarlo."
+        "translation": "Ô lưu này bị hỏng, có thể do đồng bộ hóa đám mây không thành công. Vui lòng đồng bộ hóa lại trò chơi của bạn với đám mây Steam và thử lại."
     }, {
         "value": "This save slot is corrupt, this could be due to a failed cloud sync. Please report this issue to Microsoft Support this issue.",
-        "translation": "Esta partida está corrupta, quizás se deba a un fallo de sincronización. Reporta el fallo a Microsoft Support para intentar arreglarlo."
+        "translation": "Ô lưu này bị hỏng, có thể do đồng bộ hóa đám mây không thành công. Vui lòng báo cáo sự cố này cho bộ phận Hỗ trợ của Microsoft."
     }, {
         "value": "This save slot is corrupt, please try restarting your game.",
-        "translation": "Esta partida está corrupta, por favor, reinicie el juego."
+        "translation": "Ô lưu này bị hỏng, vui lòng thử khởi động lại trò chơi của bạn."
     }, {
         "value": "Mods:",
-        "translation": "Mods:"
+        "translation": "Mod:"
     }, {
         "value": "Tutorials",
-        "translation": "Tutoriales"
+        "translation": "Hướng dẫn"
     }, {
         "value": "Hardware",
-        "translation": "hardware"
+        "translation": "Phần cứng"
     }, {
         "value": "Messages",
         "comment": "not conflict with Notifications on phones, ideally.",
-        "translation": "Mensajes"
+        "translation": "Tin nhắn"
     }, {
         "value": "Customize which in-game messages will automatically open and which will be added to the message queue on the left-hand side of the screen.",
         "comment": "description appearingn on the message settings panel",
-        "translation": "Elige qué mensajes internos al juego se abrirán automáticamente y cuáles se añadirán a la cola de mensajes en el lado izquierdo de la pantalla."
+        "translation": "Tùy chỉnh tin nhắn nào trong trò chơi sẽ tự động mở và tin nhắn nào sẽ được thêm vào hàng đợi tin nhắn ở phía bên trái màn hình."
     }, {
         "value": "Auto-open: On",
         "comment": "This is the on state.",
-        "translation": "Abrir automáticamente: activado"
+        "translation": "Tự động mở: Bật"
     }, {
         "value": "Auto-open: Off",
         "comment": "This is the off state.",
-        "translation": "Abrir automáticamente: desactivado"
+        "translation": "Tự động mở: Tắt"
     }, {
         "value": "New Research Available",
         "comment": "used as a category for messages",
-        "translation": "Hay disponibles nuevos proyectos de investigación"
+        "translation": "Nghiên cứu mới có sẵn"
     }, {
         "value": "Company Milestones",
         "comment": "used as a category for messages",
-        "translation": "Objetivos de la empresa"
+        "translation": "Các cột mốc của Công ty"
     }, {
         "value": "Platform News",
         "comment": "used as a category for messages about gaming console releases",
-        "translation": "Noticias de la plataforma"
+        "translation": "Tin tức Nền tảng"
     }, {
         "value": "Events",
         "comment": "used as a category for messages, where players are asked to make a decision",
-        "translation": "Eventos"
+        "translation": "Sự kiện"
     }, {
         "value": "New Best!",
-        "translation": "¡Nueva mejor marca!"
+        "translation": "Kỷ lục mới!"
     }, {
         "value": "Additional Features",
-        "translation": "Funciones adicionales"
+        "translation": "Tính năng bổ sung"
     }, {
         "value": "Bonus Hype",
-        "translation": "Expectación extra"
+        "translation": "Hype thưởng"
     }, {
         "value": "New Fans",
-        "translation": "Nuevos seguidores"
+        "translation": "Fan mới"
     }, {
         "value": "Bonus Sales",
-        "translation": "Ventas extra"
+        "translation": "Doanh thu thưởng"
     }, {
         "value": "XP GAINED x {0}",
         "comment": "{0} is a number.",
-        "translation": "XP GANADA x{0}"
+        "translation": "XP NHẬN ĐƯỢC x {0}"
     }, {
         "value": "Tap to start game ...",
-        "translation": "Toca para empezar el juego."
+        "translation": "Chạm để bắt đầu trò chơi..."
     }, {
         "value": "Tap to continue ...",
-        "translation": "Toca para continuar."
+        "translation": "Chạm để tiếp tục..."
     }, {
         "value": "Recording Controls",
         "comment": "screen recording feature",
-        "translation": "Controles de grabación"
+        "translation": "Điều khiển Ghi hình"
     }, {
         "value": "Start Stream",
         "comment": "screen recording feature",
-        "translation": "Iniciar transmisión en tiempo real"
+        "translation": "Bắt đầu Phát trực tiếp"
     }, {
         "value": "Stop Stream",
         "comment": "screen recording feature",
-        "translation": "Parar transmisión en tiempo real"
+        "translation": "Dừng Phát trực tiếp"
     }, {
         "value": "Report Complete",
         "comment": "Report as in Game Report. It needs to be short in this case.",
-        "translation": "Informe finalizado"
+        "translation": "Báo cáo Hoàn thành"
     }, {
         "value": "Great Combo",
-        "translation": "Gran combo"
+        "translation": "Combo Tuyệt vời"
     }, {
         "value": "Good Combo",
-        "translation": "Buen combo"
+        "translation": "Combo Tốt"
     }, {
         "value": "Okay Combo",
-        "translation": "Combo aceptable"
+        "translation": "Combo Tạm được"
     }, {
         "value": "Bad Combo",
-        "translation": "Mal combo"
+        "translation": "Combo Tệ"
     }, {
         "value": "Terrible Combo",
-        "translation": "Combo desastroso"
+        "translation": "Combo Kinh khủng"
     }, {
         "value": "{0} and {1} is a great combination.",
-        "translation": "{0} y {1} es una gran combinación."
+        "translation": "{0} và {1} là một sự kết hợp tuyệt vời."
     }, {
         "value": "{0} and {1} is a good combination.",
-        "translation": "{0} y {1} es una buena combinación."
+        "translation": "{0} và {1} là một sự kết hợp tốt."
     }, {
         "value": "{0} and {1} is an okay combination.",
-        "translation": "{0} y {1} es una combinación aceptable."
+        "translation": "{0} và {1} là một sự kết hợp tạm được."
     }, {
         "value": "{0} and {1} is a bad combination.",
-        "translation": "{0} y {1} es una mala combinación."
+        "translation": "{0} và {1} là một sự kết hợp tệ."
     }, {
         "value": "{0} and {1} is a terrible combination.",
-        "translation": "{0} y {1} es una combinación desastrosa."
+        "translation": "{0} và {1} là một sự kết hợp kinh khủng."
     }, {
         "value": "Industry reports indicate that player feedback is an important tool for developers to better understand how players are enjoying their games. With that in mind we hope it is okay to ask you: Are you enjoying Game Dev Tycoon so far?",
-        "translation": "Los informes del sector indican que las opiniones de los jugadores son una herramienta importante para que los desarrolladores entiendan mejor si estos disfrutan de sus videojuegos. Con esto en mente, nos gustaría preguntarte lo siguiente: ¿Te gusta Game Dev Tycoon?"
+        "translation": "Các báo cáo trong ngành cho thấy phản hồi của người chơi là một công cụ quan trọng để các nhà phát triển hiểu rõ hơn về cách người chơi đang thưởng thức trò chơi của họ. Với ý nghĩ đó, chúng tôi hy vọng bạn không phiền khi chúng tôi hỏi: Bạn có thích Game Dev Tycoon cho đến nay không?"
     }, {
         "value": "Yes, love it!",
         "comment": "button",
-        "translation": "¡Sí, me encanta!"
+        "translation": "Có, rất thích!"
     }, {
         "value": "Not really.",
         "comment": "button",
-        "translation": "No mucho."
+        "translation": "Không hẳn."
     }, {
         "value": "Thanks for letting us know! If you want to share some specific feedback with us or if you think we can assist you, please feel free to contact us at {0}",
-        "translation": "¡Gracias por hacérnoslo saber! Si quieres dar una opinión más concreta o si crees que podemos ayudarte en algo, por favor, contacta con nosotros en {0}"
+        "translation": "Cảm ơn bạn đã cho chúng tôi biết! Nếu bạn muốn chia sẻ một số phản hồi cụ thể với chúng tôi hoặc nếu bạn nghĩ chúng tôi có thể hỗ trợ bạn, vui lòng liên hệ với chúng tôi tại {0}"
     }, {
         "value": "That's amazing! We are really happy to hear that you enjoy our little game! If you have the willpower to let go of running {0} for a moment, we would really appreciate if you could rate the game.",
         "comment": "{0} will be replaced by the player's ingame company name",
-        "translation": "¡Genial! Estamos encantados de que disfrutes de nuestro videojuego. Si tienes la fuerza de voluntad de dejar {0} por un momento, te agradeceríamos que calificaras el videojuego."
+        "translation": "Thật tuyệt vời! Chúng tôi thực sự rất vui khi biết bạn thích trò chơi nhỏ của chúng tôi! Nếu bạn có đủ ý chí để tạm dừng điều hành {0} một chút, chúng tôi sẽ rất biết ơn nếu bạn có thể đánh giá trò chơi."
     }, {
         "value": "If you have the willpower to let go of running {0} for a moment, we would really appreciate if you could rate the game.",
         "comment": "{0} will be replaced by the player's ingame company name",
-        "translation": "Si tienes la fuerza de voluntad de dejar {0} por un momento, te agradeceríamos que calificaras el videojuego."
+        "translation": "Nếu bạn có đủ ý chí để tạm dừng điều hành {0} một chút, chúng tôi sẽ rất biết ơn nếu bạn có thể đánh giá trò chơi."
     }, {
         "value": "Yes (rate now)",
         "comment": "button",
-        "translation": "Sí, calificar ahora."
+        "translation": "Có (đánh giá ngay)"
     }, {
         "value": "No, thanks.",
         "comment": "button",
-        "translation": "No, gracias."
+        "translation": "Không, cảm ơn."
     }, {
         "value": "Thanks for taking the time to give our little game a rating.\nWe very much appreciate it!",
-        "translation": "Gracias por tomarte el tiempo de calificar nuestro videojuego.\n¡Te lo agradecemos!"
+        "translation": "Cảm ơn bạn đã dành thời gian để đánh giá trò chơi nhỏ của chúng tôi.\nChúng tôi rất trân trọng điều đó!"
     }, {
         "value": "No worries! Happy gaming!",
-        "translation": "No te preocupes, ¡disfruta del juego!"
+        "translation": "Không sao cả! Chúc bạn chơi game vui vẻ!"
     }, {
         "value": "Sorry, I'm busy",
-        "translation": "Lo siento, estoy ocupado"
+        "translation": "Xin lỗi, tôi bận"
     }, {
         "value": "Sorry, we are all busy",
-        "translation": "Lo sentimos, estamos ocupados"
+        "translation": "Xin lỗi, chúng tôi đều bận"
     }, {
         "value": "Subscribe",
         "comment": "button. Context: User confirms to subscribe to an e-mail newsletter",
-        "translation": "Suscribirse"
+        "translation": "Đăng ký"
     }, {
         "value": "Greenheart Games Newsletter",
-        "translation": "Greenheart Games Newsletter"
+        "translation": "Bản tin Greenheart Games"
     }, {
         "value": "To visit the lab simply touch the screen and drag to the left. Alternatively, you can also click on the little R&D Lab information card at the bottom of the screen.",
-        "translation": "Para visitar el laboratorio, simplemente toca la pantalla y arrástrala hacia la izquierda. También puedes hacer clic en la tarjeta informativa \"Laboratorio de I+D\" en la parte inferior de la pantalla."
+        "translation": "Để đến phòng thí nghiệm, chỉ cần chạm vào màn hình và kéo sang trái. Ngoài ra, bạn cũng có thể nhấp vào thẻ thông tin Phòng R&D nhỏ ở cuối màn hình."
     }, {
         "value": "Your very own game console is now on the market. Game consoles are complex machines and when you sell a lot of them it is only natural that some of them need to be repaired.{n}While your console is on sale your hardware team will have to work off maintenance points. Depending on the quality of the console and how many you sell these points vary from week to week.{n}Try to give your hardware lab enough budget so that they stay on top of the maintenance, otherwise customers will become unhappy when they have to wait too long for their consoles to be repaired. You can see how well your team is doing in the console sales graph at the right side of the screen.",
-        "translation": "Tu consola ya está en el mercado. Las consolas de videojuegos son máquinas complejas y cuando vendes muchas es normal que algunas necesiten reparación.{n}Mientras que la consola esté a la venta, el equipo de hardware deberá ocuparse de los puntos de mantenimiento. Dependiendo de la calidad de la consola y de cuántas vendas, estos puntos cambiaran de una semana para otra.{n}Trata de proporcionarle al laboratorio de hardware el presupuesto necesario para que el mantenimiento sea óptimo, si no, los clientes podrían sentirse insatisfechos si tienen que esperar mucho tiempo para que arreglen sus consolas. Puedes ver el rendimiento de tu equipo en el gráfico de consolas en la parte derecha de la pantalla."
+        "translation": "Hệ máy chơi game của riêng bạn hiện đã có mặt trên thị trường. Máy chơi game là những cỗ máy phức tạp và khi bạn bán được nhiều, việc một số máy cần sửa chữa là điều tự nhiên.{n}Trong khi hệ máy của bạn đang được bán, đội ngũ phần cứng của bạn sẽ phải xử lý các điểm bảo trì. Tùy thuộc vào chất lượng của hệ máy và số lượng bạn bán được, các điểm này sẽ thay đổi theo tuần.{n}Hãy cố gắng cung cấp đủ ngân sách cho phòng thí nghiệm phần cứng của bạn để họ luôn kiểm soát được việc bảo trì, nếu không khách hàng sẽ không hài lòng khi phải chờ quá lâu để sửa chữa máy chơi game của họ. Bạn có thể xem đội ngũ của mình hoạt động tốt như thế nào trong biểu đồ doanh số bán máy chơi game ở phía bên phải màn hình."
     }, {
         "value": "Your local save game seems to be different from the one stored in the cloud. Which one would you like to load?",
-        "translation": "La partida guardada en el almacenamiento local difiere de la guardada en la nube. ¿Cuál te gustaría cargar?"
+        "translation": "Tệp lưu cục bộ của bạn có vẻ khác với tệp được lưu trữ trên đám mây. Bạn muốn tải tệp nào?"
     }, {
         "value": "Note: Once you save the game, the new save file will be stored both locally and on the cloud.",
-        "translation": "Nota: Una vez que guardes la partida, el archivo se guardará tanto en el almacenamiento local como en la nube."
+        "translation": "Lưu ý: Sau khi bạn lưu trò chơi, tệp lưu mới sẽ được lưu trữ cả cục bộ và trên đám mây."
     }, {
         "value": "Now that your game is on sale you will receive the income from the game every week.\nYou can see how well your game is doing by looking at the sales graph at the right hand side of the screen.",
-        "translation": "Ahora que tu videojuego está a la venta, recibirás los beneficios de forma semanal.\nPuedes ver la rentabilidad del videojuego en el gráfico de ventas en la parte derecha de la pantalla."
+        "translation": "Bây giờ trò chơi của bạn đã được bán, bạn sẽ nhận được thu nhập từ trò chơi mỗi tuần.\nBạn có thể xem trò chơi của mình hoạt động tốt như thế nào bằng cách xem biểu đồ doanh số ở phía bên phải màn hình."
     }, {
         "value": "To visit the hardware lab simply touch the screen and drag to the right. Alternatively, you can also click on the little Hardware Lab information card at the bottom of the screen.",
-        "translation": "Para visitar el laboratorio de hardware, simplemente toca la pantalla y arrástrala hacia la derecha. También puedes hacer clic en la tarjeta informativa \"Laboratorio de hardware\" en la parte inferior de la pantalla."
+        "translation": "Để đến phòng thí nghiệm phần cứng, chỉ cần chạm vào màn hình và kéo sang phải. Ngoài ra, bạn cũng có thể nhấp vào thẻ thông tin Phòng thí nghiệm Phần cứng nhỏ ở cuối màn hình."
     }, {
         "value": "Contract Work",
         "comment": "heading",
-        "translation": "Trabajo bajo contrato"
+        "translation": "Công việc Hợp đồng"
     }, {
         "value": "Sales Record",
         "comment": "heading",
-        "translation": "Récord de ventas"
+        "translation": "Kỷ lục Doanh thu"
     }, {
         "value": "Lab report",
         "comment": "heading",
-        "translation": "Informe del laboratorio"
+        "translation": "Báo cáo Phòng thí nghiệm"
     }, {
         "value": "Game Review",
         "comment": "heading",
-        "translation": "Análisis del videojuego"
+        "translation": "Đánh giá Game"
     }, {
         "value": "Sales Report",
         "comment": "heading",
-        "translation": "Informe de ventas"
+        "translation": "Báo cáo Doanh thu"
     }, {
         "value": "First Game Release",
         "comment": "heading",
-        "translation": "Lanzamiento del primer videojuego"
+        "translation": "Phát hành Game đầu tiên"
     }, {
         "value": "First Fans",
         "comment": "heading",
-        "translation": "Primeros seguidores"
+        "translation": "Những người hâm mộ đầu tiên"
     }, {
         "value": "Patch Release",
         "comment": "heading",
-        "translation": "Lanzamiento del parche"
+        "translation": "Phát hành Bản vá"
     }, {
         "value": "Goal Hint",
         "comment": "heading",
-        "translation": "Sugerencia sobre el objetivo"
+        "translation": "Gợi ý Mục tiêu"
     }, {
         "value": "Engine Reminder",
         "comment": "heading",
-        "translation": "Recordatorio sobre el motor de juego"
+        "translation": "Nhắc nhở về Engine"
     }, {
         "value": "Bad Sales",
         "comment": "heading",
-        "translation": "Malas ventas"
+        "translation": "Doanh thu Tệ"
     }, {
         "value": "New Opportunities",
         "comment": "heading",
-        "translation": "Nuevas oportunidades"
+        "translation": "Cơ hội Mới"
     }, {
         "value": "Industry News",
         "comment": "heading",
-        "translation": "Noticias del sector"
+        "translation": "Tin tức Ngành"
     }, {
         "value": "Hardware lab",
         "comment": "heading",
-        "translation": "Laboratorio de hardware"
+        "translation": "Phòng thí nghiệm Phần cứng"
     }, {
         "value": "Coding Contest",
         "comment": "heading",
-        "translation": "Concurso de programación"
+        "translation": "Cuộc thi Lập trình"
     }, {
         "value": "Developer Meetup",
         "comment": "heading",
-        "translation": "Encuentro con el desarrollador"
+        "translation": "Gặp gỡ Nhà phát triển"
     }, {
         "value": "Game Interview",
         "comment": "heading",
-        "translation": "Entrevista sobre el juego"
+        "translation": "Phỏng vấn về Game"
     }, {
         "value": "Local News",
         "comment": "heading",
-        "translation": "Noticias locales"
+        "translation": "Tin tức Địa phương"
     }, {
         "value": "Industry Rumours",
         "comment": "heading",
-        "translation": "Rumores del sector"
+        "translation": "Tin đồn trong Ngành"
     }, {
         "value": "Bailout",
         "comment": "heading",
-        "translation": "Rescate financiero"
+        "translation": "Cứu trợ Tài chính"
     }, {
         "value": "G3 training",
         "comment": "heading",
-        "translation": "Formación G3"
+        "translation": "Huấn luyện G3"
     }, {
         "value": "R&D lab",
         "comment": "heading",
-        "translation": "Laboratorio de I+D"
+        "translation": "Phòng R&D"
     }, {
         "value": "Security Upgrade",
         "comment": "heading",
-        "translation": "Mejorar la seguridad"
+        "translation": "Nâng cấp Bảo mật"
     }, {
         "value": "Investment",
         "comment": "heading",
-        "translation": "Inversión"
+        "translation": "Đầu tư"
     }, {
         "value": "Scam",
         "comment": "heading",
-        "translation": "Fraude"
+        "translation": "Lừa đảo"
     }, {
         "value": "Special Offer",
         "comment": "heading",
-        "translation": "Oferta especial"
+        "translation": "Ưu đãi Đặc biệt"
     }, {
         "value": "Police Investigation",
         "comment": "heading",
-        "translation": "Investigación policial"
+        "translation": "Điều tra của Cảnh sát"
     }, {
         "value": "Sponsorship Request",
         "comment": "heading",
-        "translation": "Solicitar patrocinio"
+        "translation": "Yêu cầu Tài trợ"
     }, {
         "value": "News Report",
         "comment": "heading",
-        "translation": "Informe de noticias"
+        "translation": "Báo cáo Tin tức"
     }, {
         "value": "Piracy Alert",
         "comment": "heading",
-        "translation": "Alerta de piratería"
+        "translation": "Cảnh báo Vi phạm Bản quyền"
     }, {
         "value": "Illegal Fan Game",
         "comment": "heading",
-        "translation": "Juego ilegal de seguidores"
+        "translation": "Game Fan Hâm mộ Bất hợp pháp"
     }, {
         "value": "Theft",
         "comment": "heading",
-        "translation": "Robo"
+        "translation": "Trộm cắp"
     }, {
         "value": "Solar Panels",
         "comment": "heading",
-        "translation": "Placas solares"
+        "translation": "Tấm pin Năng lượng Mặt trời"
     }, {
         "value": "Office Upgrade",
         "comment": "heading",
-        "translation": "Mejorar oficina"
+        "translation": "Nâng cấp Văn phòng"
     }, {
         "value": "Departure Science",
         "comment": "heading",
@@ -5199,452 +5199,449 @@ Languages.vi = {
     }, {
         "value": "Console Announcement",
         "comment": "heading",
-        "translation": "Anuncio de consola"
+        "translation": "Công bố Console"
     }, {
         "value": "Engine Source Code",
         "comment": "heading",
-        "translation": "Código fuente del motor"
+        "translation": "Mã nguồn Engine"
     }, {
         "value": "Patent Troll",
         "comment": "heading",
-        "translation": "Trol de patentes"
+        "translation": "Kẻ trục lợi bằng sáng chế"
     }, {
         "value": "Share Offer",
         "comment": "heading",
-        "translation": "Compartir oferta"
+        "translation": "Đề nghị Mua Cổ phần"
     }, {
         "value": "Dividends",
         "comment": "heading",
-        "translation": "Dividendos"
+        "translation": "Cổ tức"
     }, {
         "value": "Off (recommended)",
-        "translation": "Apagado (recomendado)"
+        "translation": "Tắt (khuyên dùng)"
     }, {
         "value": "Pirate Mode",
-        "translation": "Modo pirata"
+        "translation": "Chế độ Ăn cắp bản quyền"
     }, {
         "value": "The pirate mode causes severely reduced sales on all of your games. Bankruptcy is likely. You can develop copy protection but using it will upset fans. 'Fan mail' inspired by true events will reach your inbox from time to time.",
-        "translation": "El modo pirata produce una disminución importante de las ventas de todos tus videojuegos. Es probable que se produzca una quiebra. Puedes desarrollar una protección contra copias, pero puede que esto moleste a los seguidores. De vez en cuando te llegarán correos de tus seguidores motivados por sucesos reales."
+        "translation": "Chế độ ăn cắp bản quyền làm giảm nghiêm trọng doanh số bán hàng của tất cả các trò chơi của bạn. Khả năng phá sản là rất cao. Bạn có thể phát triển tính năng bảo vệ chống sao chép nhưng việc sử dụng nó sẽ khiến người hâm mộ khó chịu. Thỉnh thoảng, 'thư của người hâm mộ' lấy cảm hứng từ các sự kiện có thật sẽ được gửi đến hộp thư của bạn."
     }, {
         "value": "WE believe in your business portfolio and would like to aquire shares in {0}.\nWILL you consider this opportunity?\nOWN {1} in cash immediately, if you sign over 20% of your business.\n\nYOU can also take {2} in cash for 30% of your business.",
         "comment": "capitalized words should result in somethign similar to WE OWN YOU",
-        "translation": "QUEREMOS COMPRAR acciones en {0} porque creemos que tu cartera de negocios es buena.\n¿Podrías considerar esta oportunidad?\nTe daremos {1} en efectivo de forma inmediata si cedes el 20 % de tu negocio.\n\nTambién puedes obtener {2} en efectivo por el 30 % de TU NEGOCIO."
+        "translation": "CHÚNG TÔI tin tưởng vào danh mục kinh doanh của bạn và muốn mua cổ phần của {0}.\nBẠN CÓ cân nhắc cơ hội này không?\nSỞ HỮU ngay {1} tiền mặt, nếu bạn chuyển nhượng 20% doanh nghiệp của mình.\n\nBẠN cũng có thể nhận {2} tiền mặt để đổi lấy 30% doanh nghiệp CỦA BẠN."
     }, {
         "value": "WE believe in your business portfolio and would like to aquire shares in {0} of which we already own {1}%.\nWILL you consider this opportunity?\nOWN {2} in cash immediately, if you sign over 20% of your business.\n\nYOU can also take {3} in cash for 30% of your business.",
         "comment": "capitalized words should result in somethign similar to WE OWN YOU",
-        "translation": "QUEREMOS COMPRAR acciones en {0}, donde ya poseemos el {1} %., porque creemos que tu cartera de negocios es buena.\n¿Podrías considerar esta oportunidad?\nTe daremos {2} en efectivo de forma inmediata si cedes el 20 % de tu negocio.\n\nTambién puedes obtener {3} en efectivo por el 30 % de TU NEGOCIO."
+        "translation": "CHÚNG TÔI tin tưởng vào danh mục kinh doanh của bạn và muốn mua thêm cổ phần của {0} mà chúng tôi đã sở hữu {1}%.\nBẠN CÓ cân nhắc cơ hội này không?\nSỞ HỮU ngay {2} tiền mặt, nếu bạn chuyển nhượng 20% doanh nghiệp của mình.\n\nBẠN cũng có thể nhận {3} tiền mặt để đổi lấy 30% doanh nghiệp CỦA BẠN."
     }, {
         "value": "Share offer",
         "comment": "heading",
-        "translation": "Compartir oferta"
+        "translation": "Đề nghị Mua Cổ phần"
     }, {
         "value": "Sell 20% for {0}",
         "comment": "keep short",
-        "translation": "Vender el 20 % por {0}"
+        "translation": "Bán 20% lấy {0}"
     }, {
         "value": "Sell 30% for {0}",
         "comment": "keep short",
-        "translation": "Vender el 30 % por {0}"
+        "translation": "Bán 30% lấy {0}"
     }, {
         "value": "We are currently a {0}% share holder in {1}. We are willing to offer you a chance to buy back some shares.",
-        "translation": "Actualmente tenemos el {0} % de las acciones de {1}. Estamos dispuestos a darte la oportunidad de comprar algunas de las acciones."
+        "translation": "Chúng tôi hiện đang là cổ đông nắm giữ {0}% cổ phần của {1}. Chúng tôi sẵn sàng cho bạn cơ hội mua lại một số cổ phần."
     }, {
         "value": "Buy {0}% back for {1}",
         "comment": "keep short",
-        "translation": "Recuperar el {0} % por {1}"
+        "translation": "Mua lại {0}% với giá {1}"
     }, {
         "value": "Buy 30% back for {0}",
         "comment": "keep short",
-        "translation": "Recuperar el 30 % por {0}"
+        "translation": "Mua lại 30% với giá {0}"
     }, {
         "value": "Decline",
-        "translation": "Rechazar"
+        "translation": "Từ chối"
     }, {
         "value": "Buy back {0}% for {1}",
         "comment": "keep short",
-        "translation": "Recuperar el {0} % por {1}"
+        "translation": "Mua lại {0}% với giá {1}"
     }, {
         "value": "Buy back 30% for {0}",
         "comment": "keep short",
-        "translation": "Recuperar el 30 % por {0}"
+        "translation": "Mua lại 30% với giá {0}"
     }, {
         "value": "DRM",
         "translation": "DRM"
     }, {
         "value": "Copy Protection V{0}",
-        "translation": "Protección contra copias V{0}"
+        "translation": "Bảo vệ Chống Sao chép V{0}"
     }, {
         "value": "Statistical Anomaly",
-        "translation": "Anomalía estadística"
+        "translation": "Dị thường Thống kê"
     }, {
         "value": "Reach level 2 in pirate mode.",
         "comment": "achievement",
-        "translation": "Alcanza el nivel 2 en el modo pirata."
+        "translation": "Đạt cấp 2 trong chế độ ăn cắp bản quyền."
     }, {
         "value": "Against all odds",
         "comment": "achievement title",
-        "translation": "Contra toda probabilidad"
+        "translation": "Vượt qua mọi khó khăn"
     }, {
         "value": "Beat all odds and finish the game in pirate mode.",
         "comment": "achievement",
-        "translation": "Juega contra toda probabilidad y termina el videojuego en modo pirata."
+        "translation": "Vượt qua mọi khó khăn và hoàn thành trò chơi ở chế độ ăn cắp bản quyền."
     }, {
         "value": "Hey {0},",
         "comment": "email greeting, where {0} is company name",
-        "translation": "Hola, {0}:"
+        "translation": "Này {0},"
     }, {
         "value": "Hi there,",
         "comment": "email greeting",
-        "translation": "Hola:"
+        "translation": "Chào bạn,"
     }, {
         "value": "Greetings,",
         "comment": "email greeting",
-        "translation": "Saludos:"
+        "translation": "Xin chào,"
     }, {
         "value": "Dear developers,",
         "comment": "email greeting",
-        "translation": "Estimados desarrolladores:"
+        "translation": "Kính gửi các nhà phát triển,"
     }, {
         "value": "Hello {0},",
         "comment": "email greeting, where {0} is CEO name",
-        "translation": "Hola, {0}:"
+        "translation": "Chào {0},"
     }, {
         "value": "I quite liked {0}",
         "comment": "{0} is game name, continues with piracy fragment 2",
-        "translation": "{0} me gustó bastante"
+        "translation": "Tôi khá thích {0}"
     }, {
         "value": "I really enjoyed your game {0}",
         "comment": "{0} is game name, continues with piracy fragment 2",
-        "translation": "Disfruté mucho de tu videojuego {0}"
+        "translation": "Tôi thực sự rất thích trò chơi {0} của bạn"
     }, {
         "value": "{0} is really interesting",
         "comment": "{0} is game name, continues with piracy fragment 2",
-        "translation": "{0} es muy interesante"
+        "translation": "{0} thực sự rất thú vị"
     }, {
         "value": "{0} is awesome",
         "comment": "{0} is game name, continues with piracy fragment 2",
-        "translation": "{0} es increíble"
+        "translation": "{0} thật tuyệt vời"
     }, {
         "value": "but I've played more interesting {0} games before",
         "comment": "piracy fragment 2 - continue with piracy fragment 3, {0} is genre name",
-        "translation": "pero he jugado a videojuegos de {0} más interesantes con anterioridad"
+        "translation": "nhưng tôi đã chơi những trò chơi {0} thú vị hơn trước đây"
     }, {
         "value": "but other {0} are more innovative",
         "comment": "piracy fragment 2 - continue with piracy fragment 3, {0} is genre name",
-        "translation": "pero otros {0} son más innovadores"
+        "translation": "nhưng những trò {0} khác thì sáng tạo hơn"
     }, {
         "value": "but I think it's not really AAA quality",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero creo que en realidad no tiene calidad AAA"
+        "translation": "nhưng tôi nghĩ nó không thực sự đạt chất lượng AAA"
     }, {
         "value": "but I've only played {0} hours of it",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero tan solo he jugado {0} horas"
+        "translation": "nhưng tôi mới chỉ chơi {0} giờ"
     }, {
         "value": "but I hated the ending",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero no me gustó nada el final"
+        "translation": "nhưng tôi ghét cái kết"
     }, {
         "value": "but it really needs more features",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero de verdad necesita más características"
+        "translation": "nhưng nó thực sự cần thêm nhiều tính năng"
     }, {
         "value": "but it needs more depth",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero necesita más profundidad"
+        "translation": "nhưng nó cần có chiều sâu hơn"
     }, {
         "value": "but it could use more polish",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero podría estar más pulido"
+        "translation": "nhưng nó có thể được trau chuốt thêm"
     }, {
         "value": "but it isn't AAA quality",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero no tiene calidad AAA"
+        "translation": "nhưng nó không đạt chất lượng AAA"
     }, {
         "value": "but it's not as good as other games",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero no es tan bueno como otros videojuegos"
+        "translation": "nhưng nó không hay bằng những trò chơi khác"
     }, {
         "value": "but other games are better",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero otros videojuegos son mejores"
+        "translation": "nhưng những trò chơi khác hay hơn"
     }, {
         "value": "but I think it's too expensive",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero creo que es demasiado caro"
+        "translation": "nhưng tôi nghĩ nó quá đắt"
     }, {
         "value": "but I think it needs to be at least 30% cheaper",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero creo que debería ser al menos un 30 % más barato"
+        "translation": "nhưng tôi nghĩ nó cần phải rẻ hơn ít nhất 30%"
     }, {
         "value": "but I'm saving up for this new graphics card",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero estoy ahorrando para esta tarjeta gráfica nueva"
+        "translation": "nhưng tôi đang tiết kiệm tiền để mua card đồ họa mới này"
     }, {
         "value": "but I don't like you",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero no me caes bien"
+        "translation": "nhưng tôi không thích bạn"
     }, {
         "value": "but I don't like that {0} works for you",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero no me gusta que {0} trabaje para ti"
+        "translation": "nhưng tôi không thích {0} làm việc cho bạn"
     }, {
         "value": "but I think parts of it should work differently",
         "comment": "piracy fragment 2 - continue with piracy fragment 3",
-        "translation": "pero creo que algunas partes deberían funcionar de otra forma"
+        "translation": "nhưng tôi nghĩ một số phần của nó nên hoạt động khác đi"
     }, {
         "value": "so I stole it.",
         "comment": "piracy fragment 3",
-        "translation": "por lo que lo robé."
+        "translation": "nên tôi đã ăn cắp nó."
     }, {
         "value": "so I pirated it.",
         "comment": "piracy fragment 3",
-        "translation": "por lo que lo pirateé."
+        "translation": "nên tôi đã tải lậu nó."
     }, {
         "value": "so I downloaded your game from a gamez website.",
         "comment": "piracy fragment 3",
-        "translation": "por lo que descargué tu videojuego de una página web gamez."
+        "translation": "nên tôi đã tải trò chơi của bạn từ một trang web gamez."
     }, {
         "value": "so I used a torrent.",
         "comment": "piracy fragment 3",
-        "translation": "por lo que usé un torrent."
+        "translation": "nên tôi đã dùng torrent."
     }, {
         "value": "so I didn't want to buy it.",
         "comment": "piracy fragment 3",
-        "translation": "por lo que no quise comprarlo."
+        "translation": "nên tôi không muốn mua nó."
     }, {
         "value": "so I think you don't deserve my money.",
         "comment": "piracy fragment 3",
-        "translation": "por lo que no creo que merezcas mi dinero."
+        "translation": "nên tôi nghĩ bạn không xứng đáng với tiền của tôi."
     }, {
         "value": "Anyway, just make better games, okay?",
-        "translation": "De todas formas, tan solo crea mejores videojuegos, ¿vale?"
+        "translation": "Dù sao thì, cứ làm game hay hơn đi, được chứ?"
     }, {
         "value": "Anyway, you really should release more updates for it.",
-        "translation": "De todas formas, creo que deberías lanzar más actualizaciones."
+        "translation": "Dù sao thì, bạn thực sự nên phát hành thêm nhiều bản cập nhật cho nó."
     }, {
         "value": "Looking forward to the sequel.",
-        "translation": "Estoy deseando que llegue la continuación."
+        "translation": "Mong chờ phần tiếp theo."
     }, {
         "value": "You should give the game away for free.",
-        "translation": "Creo que deberías ofrecer el videojuego de forma gratuita."
+        "translation": "Bạn nên cho trò chơi này miễn phí đi."
     }, {
         "value": "But hey, I've told my friends of the game so that's free publicity for you!",
-        "translation": "pero, oye, he hablado del juego con mis amigos y ¡te he hecho algo de publicidad gratuita!"
+        "translation": "Nhưng này, tôi đã kể cho bạn bè về trò chơi này rồi, coi như quảng cáo miễn phí cho bạn đấy!"
     }, {
         "value": "- Sent from my grPhone.",
-        "translation": "- Enviado desde mi grPhone."
+        "translation": "- Gửi từ grPhone của tôi."
     }, {
         "value": "PS: I want to work in the games industry. Do you have a job for me?",
-        "translation": "P.D.: Me gustaría trabajar en el sector de los videojuegos. ¿Tienes algún trabajo para mí?"
+        "translation": "Tái bút: Tôi muốn làm việc trong ngành công nghiệp game. Bạn có việc gì cho tôi không?"
     }, {
         "value": "Mail",
         "comment": "header",
-        "translation": "Correo electrónico"
+        "translation": "Thư"
     }, {
         "value": "but your use of copy protection makes the game really slow.",
         "comment": "piracy fragment",
-        "translation": "pero el uso de protección contra copias hace que el videojuego sea demasiado lento."
+        "translation": "nhưng việc bạn sử dụng tính năng bảo vệ chống sao chép khiến trò chơi rất chậm."
     }, {
         "value": "but the included copy protection software is really inconvenient.",
         "comment": "piracy fragment",
-        "translation": "pero el software de protección contra copias incluido resulta bastante molesto."
+        "translation": "nhưng phần mềm bảo vệ chống sao chép đi kèm thực sự rất bất tiện."
     }, {
         "value": "but the game stopped working saying that it wasn't a genuine copy! I swear I bought it and I'm very unhappy about this.",
         "comment": "piracy fragment",
-        "translation": "pero el videojuego dejó de funcionar diciendo que ¡no se trataba de una copia auténtica! Prometo que lo compré y estoy muy decepcionado con esto."
+        "translation": "nhưng trò chơi ngừng hoạt động và báo rằng đó không phải là bản chính hãng! Tôi thề là tôi đã mua nó và tôi rất không vui về điều này."
     }, {
         "value": "but the copy protection in that game constantly crashes my system.",
         "comment": "piracy fragment",
-        "translation": "pero la protección contra copias del videojuego hace que mi sistema se cuelgue una y otra vez."
+        "translation": "nhưng tính năng bảo vệ chống sao chép trong trò chơi đó liên tục làm treo hệ thống của tôi."
     }, {
         "value": "but I hate how inconvenient the copy protection is.",
         "comment": "piracy fragment",
-        "translation": "pero odio lo molesta que es la protección contra copias."
+        "translation": "nhưng tôi ghét sự bất tiện của tính năng bảo vệ chống sao chép."
     }, {
         "value": "Can you please not use it in the future?",
-        "translation": "¿Podrías dejar de utilizarla en el futuro?"
+        "translation": "Làm ơn đừng sử dụng nó trong tương lai được không?"
     }, {
         "value": "A friend of mine pirated the game and he doesn't have any issues! This isn't fair!",
-        "translation": "Un amigo pirateó el juego y no ha tenido ningún problema. ¡Es injusto!"
+        "translation": "Một người bạn của tôi đã tải lậu trò chơi và anh ấy không gặp vấn đề gì cả! Điều này thật không công bằng!"
     }, {
         "value": "Thanks for your understanding.",
-        "translation": "Gracias por tu comprensión."
+        "translation": "Cảm ơn sự thông cảm của bạn."
     }, {
         "value": "Please don't punish your fans for piracy!",
-        "translation": "Por favor, no castigues a tus seguidores por piratería."
+        "translation": "Làm ơn đừng trừng phạt người hâm mộ của bạn vì vi phạm bản quyền!"
     }, {
         "value": "I will never buy anything from your company again!",
-        "translation": "¡No volveré a comprar nada de tu empresa en la vida!"
+        "translation": "Tôi sẽ không bao giờ mua bất cứ thứ gì từ công ty của bạn nữa!"
     }, {
         "value": "I will make sure to warn all of my friends about this.",
-        "translation": "Me encargaré personalmente de avisar de esto a todos mis amigos."
+        "translation": "Tôi chắc chắn sẽ cảnh báo tất cả bạn bè của mình về điều này."
     }, {
         "value": "Others",
-        "translation": "Aliaj"
+        "translation": "Khác"
     }, {
         "value": "To stay afloat in pirate mode you can sell part of your company to a third party to receive a much needed cash boost. Be mindful, however, that shareholders will automatically receive small dividend payments any time you make a profit from game sales.{n}These dividends grow larger the more shares you have sold and while they may seem insignificant, they can add up to a lot of lost profit over time.{n}You will be given the option to buy back shares regularly but share holders only offer buy-back options for a hefty profit.",
-        "translation": "Para mantenerte a flote en el modo pirata, puedes vender parte de tu empresa a terceros y recibir así un empujón económico. No obstante, ten en cuenta que los accionistas recibirán pagos en forma de dividendos de manera automática cuando obtengas beneficios por la venta de videojuegos.{n}Estos dividendos serán mayores cuantas más acciones vendas y, aunque ahora puedan parecer insignificantes, con el tiempo pueden acabar sumando una gran cantidad de dinero.{n}Tendrás la opción de recuperar acciones de forma regular, pero los accionistas solo ofrecen opciones de reventa de acciones a cambio de un beneficio importante."
+        "translation": "Để duy trì hoạt động trong chế độ ăn cắp bản quyền, bạn có thể bán một phần công ty của mình cho bên thứ ba để nhận được một khoản tiền mặt cần thiết. Tuy nhiên, hãy lưu ý rằng các cổ đông sẽ tự động nhận được các khoản thanh toán cổ tức nhỏ mỗi khi bạn thu được lợi nhuận từ việc bán game.{n}Những khoản cổ tức này sẽ tăng lên khi bạn bán nhiều cổ phần hơn và mặc dù chúng có vẻ không đáng kể, nhưng theo thời gian, chúng có thể cộng lại thành một khoản lợi nhuận bị mất rất lớn.{n}Bạn sẽ được trao cơ hội mua lại cổ phần thường xuyên nhưng các cổ đông chỉ đưa ra các lựa chọn mua lại với lợi nhuận khổng lồ."
     }, {
         "value": "Your game sales are severely reduced in pirate mode and survival is unlikely. Once you are able to create your own engines you can counteract the effects of piracy by researching copy protection and integrating it in your games.{n}While copy protection decreases the effect of piracy on sales, it will also upset some of your fans. Making matters worse, copy protection is fast moving technology and if you don't stay up to date with new innovations, it will become less effective over time.{n}You can see the effects of piracy and the state of your copy protection through your game reports.",
-        "translation": "Las ventas de tu videojuego se reducirían drásticamente en el modo pirata y sobrevivir a ello es poco probable. Cuando eres capaz de crear tus propios motores, puedes contrarrestar los efectos de la piratería mediante la investigación de la protección contra copias y su posterior integración en tus videojuegos.{n}La protección contra copias disminuye el efecto de la piratería en las ventas, pero no será del agrado de tus seguidores. Por si fuera poco, esta protección es un tipo de tecnología de rápida evolución y será menos efectiva con el paso del tiempo si no estás al día de las actualizaciones e innovaciones.{n}Puedes comprobar los efectos de la piratería y el estado de tu protección contra copias en los informes de tu videojuego."
+        "translation": "Doanh số bán game của bạn bị giảm nghiêm trọng trong chế độ ăn cắp bản quyền và khả năng tồn tại là rất thấp. Một khi bạn có thể tạo ra các engine của riêng mình, bạn có thể chống lại tác động của vi phạm bản quyền bằng cách nghiên cứu tính năng bảo vệ chống sao chép và tích hợp nó vào trò chơi của bạn.{n}Mặc dù bảo vệ chống sao chép làm giảm tác động của vi phạm bản quyền đối với doanh số bán hàng, nó cũng sẽ khiến một số người hâm mộ của bạn khó chịu. Tệ hơn nữa, bảo vệ chống sao chép là công nghệ phát triển nhanh và nếu bạn không cập nhật những đổi mới, nó sẽ trở nên kém hiệu quả theo thời gian.{n}Bạn có thể xem tác động của vi phạm bản quyền và trạng thái bảo vệ chống sao chép của mình thông qua các báo cáo trò chơi."
     }, {
         "value": "Cooking",
         "comment": "game topic",
-        "translation": "Cocina"
+        "translation": "Nấu ăn"
     }, {
         "value": "Farming",
         "comment": "game topic",
-        "translation": "Agricultura"
+        "translation": "Nông trại"
     }, {
         "value": "Crime",
         "comment": "game topic",
-        "translation": "Delito"
+        "translation": "Tội phạm"
     }, {
         "value": "Disasters",
         "comment": "game topic",
-        "translation": "Catástrofes"
+        "translation": "Thảm họa"
     }, {
         "value": "Assassin",
         "comment": "game topic",
-        "translation": "Asesino"
+        "translation": "Sát thủ"
     }, {
         "value": "Thief",
         "comment": "game topic",
-        "translation": "Ladrón"
+        "translation": "Trộm cắp"
     }, {
         "value": "Colonization",
         "comment": "game topic",
-        "translation": "Colonización"
+        "translation": "Thuộc địa hóa"
     }, {
         "value": "Construction",
         "comment": "game topic",
-        "translation": "Construcción"
+        "translation": "Xây dựng"
     }, {
         "value": "Mythology",
         "comment": "game topic",
-        "translation": "Mitología"
+        "translation": "Thần thoại"
     }, {
         "value": "Abstract",
         "comment": "game topic",
-        "translation": "Abstracto"
+        "translation": "Trừu tượng"
     }, {
         "value": "Mad Science",
         "comment": "game topic",
-        "translation": "Ciencia de locos"
+        "translation": "Khoa học Điên rồ"
     }, {
         "value": "Extreme Sports",
         "comment": "game topic",
-        "translation": "Deportes extremos"
+        "translation": "Thể thao Cực đoan"
     }, {
         "value": "Dystopian",
         "comment": "game topic",
-        "translation": "Distópico"
+        "translation": "Phản địa đàng"
     }, {
         "value": "Expedition",
         "comment": "game topic",
-        "translation": "Expedición"
+        "translation": "Thám hiểm"
     }, {
         "value": "Technology",
         "comment": "game topic",
-        "translation": "Tecnología"
+        "translation": "Công nghệ"
     }, {
         "value": "Ninvento has today revealed their upcoming game console: The Ninvento Swap. The device seems to function both as a portable console and as a home console. When the Swap is removed from its docking station, unique controller pads called 'Fun-Pads' are attached to the side of the screen and turn the console into a handheld device.{n}The reaction to the announcement was mixed as many voiced concerns that the device might not have a clear audience and might fail to appeal to both casual and core gamers. Others praised the unique nature of the device and pointed out that Ninvento has frequently managed to land successes with odd devices in the past. The Swap is said to hit markets {0}.",
         "comment": "{0} is date referral sentence fragment",
-        "translation": "Ninvento ha revelado hoy su próxima consola de videojuegos: la Ninvento Swap. Parece ser que el dispositivo funciona tanto como consola portátil como doméstica. Cuando se desconecta el Swap de su base, se fijan los controles de mando (llamados \"Fun-Pads\") a los lados de la pantalla, convirtiendo así la consola en un dispositivo portátil.{n}Las reacciones ante esta noticia han sido diversas. Por un lado, muchos temen que, al no estar dirigida a un público concreto, no consiga atraer ni a jugadores casuales ni a jugadores más experimentados; mientras que otros, por otro lado, han alabado la naturaleza única de este dispositivo y han destacado que Ninvento ha conseguido lanzar a menudo en el pasado ideas de éxito con dispositivos poco convencionales. Se cree que la Ninvento Swap saldrá a la venta {0}."
+        "translation": "Hôm nay, Ninvento đã tiết lộ hệ máy chơi game sắp ra mắt của họ: The Ninvento Swap. Thiết bị này dường như hoạt động như cả một hệ máy di động và một hệ máy gia đình. Khi Swap được tháo khỏi đế cắm, các tay cầm điều khiển độc đáo được gọi là 'Fun-Pads' sẽ được gắn vào cạnh màn hình và biến hệ máy thành một thiết bị cầm tay.{n}Phản ứng đối với thông báo này khá trái chiều khi nhiều người bày tỏ lo ngại rằng thiết bị có thể không có đối tượng rõ ràng và có thể không thu hút được cả người chơi thông thường lẫn người chơi chuyên nghiệp. Những người khác ca ngợi tính chất độc đáo của thiết bị và chỉ ra rằng Ninvento thường xuyên đạt được thành công với các thiết bị kỳ lạ trong quá khứ. Swap được cho là sẽ có mặt trên thị trường {0}."
     }, {
         "value": "The recently released Ninvento Swap console has caused an unusual social media storm. It all started when a consumer licked one of the game cartridges and reported that it tasted extremely bad. Thousands of consumers then repeated the experiment, tasting their cartridges and reporting the result on social media, further encouraging others to do the same.{n}Ninvento has now published an official statement to confirm that game cartridges for the Swap are coated with denatonium benzoate, a non-toxic bittering agent. This was apparently done to discourage children from biting on and swallowing the fairly small cartridges.{n}Initial reactions to the console itself have been more positive than to the taste of its cartridges as the Swap is turning out to be quite popular with gamers around the globe.",
-        "translation": "La consola Ninvento Swap, recién sacada a la venta, ha causado un revuelo social poco común. Todo empezó cuando un usuario lamió el cartucho de un juego y declaró que sabía bastante mal. Miles de usuarios repitieron el experimento, probando los cartuchos y comunicando los resultados en las redes sociales, y animaron a que otros hicieran lo mismo.{n}Ninvento ha publicado un comunicado oficial en el que confirma que los cartuchos para la Ninvento Swap están revestidos con benzoato de denatonio, un químico amargo no tóxico. Parece ser que el objetivo de esto es evitar que los niños muerdan o se traguen estos pequeños cartuchos.{n}Las primeras reacciones sobre la consola en sí han sido bastante más positivas que en lo que respecta al sabor de los cartuchos, ya que la Ninvento Swap se está volviendo muy popular entre los jugadores de todo el mundo."
+        "translation": "Hệ máy Ninvento Swap mới ra mắt gần đây đã gây ra một cơn bão truyền thông xã hội bất thường. Mọi chuyện bắt đầu khi một người tiêu dùng liếm một trong những băng game và báo cáo rằng nó có vị cực kỳ tệ. Hàng ngàn người tiêu dùng sau đó đã lặp lại thử nghiệm, nếm thử băng game của họ và báo cáo kết quả trên mạng xã hội, tiếp tục khuyến khích những người khác làm điều tương tự.{n}Ninvento hiện đã đưa ra một tuyên bố chính thức để xác nhận rằng các băng game cho Swap được phủ một lớp denatonium benzoate, một chất làm đắng không độc hại. Điều này rõ ràng được thực hiện để ngăn trẻ em cắn và nuốt những chiếc băng game khá nhỏ.{n}Phản ứng ban đầu đối với chính hệ máy này tích cực hơn so với vị của băng game của nó vì Swap đang tỏ ra khá phổ biến với các game thủ trên toàn cầu."
     }, {
         "value": "Approximately {0}% of players pirated {1}.",
         "comment": "{0} is a number, {1} is game title",
-        "translation": "Aproximadamente, el {0} % de los jugadores piratearon {1}."
+        "translation": "Khoảng {0}% người chơi đã sao chép lậu {1}."
     }, {
         "value": "The effectiveness of our copy protection technology was {0}.",
-        "translation": "La eficacia de nuestra tecnología de protección contra copias fue {0}."
+        "translation": "Hiệu quả của công nghệ bảo vệ chống sao chép của chúng tôi là {0}."
     }, {
         "value": "acceptable",
-        "translation": "aceptable"
+        "translation": "chấp nhận được"
     }, {
         "value": "excellent",
-        "translation": "excelente"
+        "translation": "xuất sắc"
     }, {
         "value": "inadequate",
-        "translation": "inadecuada"
+        "translation": "không đủ"
     }, {
         "value": "Share Offers",
         "comment": "heading",
-        "translation": "Ofertas de acciones"
+        "translation": "Đề nghị Mua Cổ phần"
     }, {
         "value": "Sales Reports",
-        "translation": "Informes de ventas"
+        "translation": "Báo cáo Doanh thu"
     }, {
         "value": "Auto-Popup",
-        "translation": "Ventanas emergentes automÃ¡ticas"
+        "translation": "Tự động Hiện lên"
     }, {
         "value": "Message Queue",
-        "translation": "Cola de mensajes"
+        "translation": "Hàng đợi Tin nhắn"
     }, {
         "value": "Upload",
         "comment": "menu item",
-        "translation": "Cargar"
+        "translation": "Tải lên"
     }, {
         "value": "Download",
         "comment": "menu item",
-        "translation": "Descargar"
+        "translation": "Tải xuống"
     }, {
         "value": "Delete",
         "comment": "menu item",
-        "translation": "Eliminar"
+        "translation": "Xóa"
     }, {
         "value": "Do you really want to delete this save slot?",
-        "translation": "¿Seguro que deseas eliminar este espacio para guardar partidas?"
+        "translation": "Bạn có thực sự muốn xóa ô lưu này không?"
     }, {
         "value": "Upload your game to our servers and receive a short save-code which you can then use to continue playing on a different device.",
-        "translation": "Carga tu partida en nuestros servidores y recibe un código de guardado corto que podrás utilizar para continuar jugando en un dispositivo diferente."
+        "translation": "Tải trò chơi của bạn lên máy chủ của chúng tôi và nhận một mã lưu ngắn mà bạn có thể sử dụng để tiếp tục chơi trên một thiết bị khác."
     }, {
         "value": "Hooray! The servers have generated this beautiful save-code for you.",
-        "translation": "¡Genial! Los servidores han generado este bonito código de guardado para ti."
+        "translation": "Tuyệt vời! Máy chủ đã tạo ra một mã lưu đẹp đẽ này cho bạn."
     }, {
         "value": "The save-code was copied to your clipboard.",
-        "translation": "El código de guardado se ha copiado en el portapapeles."
+        "translation": "Mã lưu đã được sao chép vào bộ nhớ tạm của bạn."
     }, {
         "value": "Please copy the save-code to your clipboard.",
-        "translation": "Copia el código de guardado en el portapapeles."
+        "translation": "Vui lòng sao chép mã lưu vào bộ nhớ tạm của bạn."
     }, {
         "value": "Enter a save-code to download the corresponding game into the selected save slot.",
-        "translation": "Introduce un código de guardado para descargar la partida correspondiente en el espacio para guardar seleccionado."
+        "translation": "Nhập mã lưu để tải xuống trò chơi tương ứng vào ô lưu đã chọn."
     }, {
         "value": "I agree to the {0}",
         "comment": "{0} refers to the Game Data Policy link",
-        "translation": "Acepto la {0}"
+        "translation": "Tôi đồng ý với {0}"
     }, {
         "value": "Existing",
         "comment": "description above an old save game that the user may overwrite",
-        "translation": "Existente"
+        "translation": "Hiện có"
     }, {
         "value": "Replace and load game",
         "comment": "confirmation button",
-        "translation": "Reemplazar y cargar partida"
+        "translation": "Thay thế và tải game"
     }, {
         "value": "Enable achievements on this save.",
-        "translation": "Activar logros en esta partida."
+        "translation": "Kích hoạt thành tích trên bản lưu này."
     }, {
         "value": "Invalid Savegame",
         "comment": "error message in a popup dialogue",
-        "translation": "Partida guardada no válida"
+        "translation": "Bản lưu không hợp lệ"
     }, {
         "value": "Network Error",
         "comment": "error message in a popup dialogue",
-        "translation": "Error de conexión"
+        "translation": "Lỗi Mạng"
     }, {
         "value": "Unable to authenticate your Nintendo Account.",
-        "translation": "No se ha podido autenticar tu cuenta de Nintendo."
+        "translation": "Không thể xác thực Tài khoản Nintendo của bạn."
     }, {
         "value": "Unable to authenticate your Nintendo Account. Please try again.",
-        "translation": "No se ha podido autenticar tu cuenta de Nintendo. Inténtalo de nuevo."
+        "translation": "Không thể xác thực Tài khoản Nintendo của bạn. Vui lòng thử lại."
     }]
 };
-Languages.vi_moderators = "Fernando Belaza, Julián Cárdenas";
-Languages.vi_topContributors = "Santiago Comesaña, Pau Cortés, Alberto Fernandez, Leonardo Flores, Angel Fuenmayor, Aritz Lacruz, larsaliknt, Jensen Mike Noble, Carlos Moreno, Yago Rosa, Vadin Villota";
-Languages.vi_qualityAssurance = "Antonio Bailén, Jaime A. Arenas";
