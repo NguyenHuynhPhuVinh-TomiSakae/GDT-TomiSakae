@@ -1,4 +1,4 @@
-Languages.es = {
+Languages.vi = {
     "values": [{
         "value": "Invitation",
         "comment": "heading",
@@ -593,7 +593,7 @@ Languages.es = {
         "translation": "Iniciando partida..."
     }, {
         "value": "Click to continue ...",
-        "translation": "Click para continuar..."
+        "translation": "Nhấn để tiếp tục..."
     }, {
         "value": "Starting ...",
         "translation": "Iniciando..."
@@ -5645,6 +5645,6 @@ Languages.es = {
         "translation": "No se ha podido autenticar tu cuenta de Nintendo. Inténtalo de nuevo."
     }]
 };
-Languages.es_moderators = "Fernando Belaza, Julián Cárdenas";
-Languages.es_topContributors = "Santiago Comesaña, Pau Cortés, Alberto Fernandez, Leonardo Flores, Angel Fuenmayor, Aritz Lacruz, larsaliknt, Jensen Mike Noble, Carlos Moreno, Yago Rosa, Vadin Villota";
-Languages.es_qualityAssurance = "Antonio Bailén, Jaime A. Arenas";
+Languages.vi_moderators = "Fernando Belaza, Julián Cárdenas";
+Languages.vi_topContributors = "Santiago Comesaña, Pau Cortés, Alberto Fernandez, Leonardo Flores, Angel Fuenmayor, Aritz Lacruz, larsaliknt, Jensen Mike Noble, Carlos Moreno, Yago Rosa, Vadin Villota";
+Languages.vi_qualityAssurance = "Antonio Bailén, Jaime A. Arenas";

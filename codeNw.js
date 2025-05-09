@@ -2287,7 +2287,8 @@ var LanguageMgr = {};
         tchinese: "zhcn",
         thai: "en",
         turkish: "tr",
-        ukrainian: "uk"
+        ukrainian: "uk",
+        vietnamese: "vi"
     };
     a.gameLanguage = GameManager.getPreferredLanguage();
     a.steamGameLanguage = "english";
