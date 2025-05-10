@@ -1,156 +1,207 @@
-var CustomAlert = {};
-(function (a) {
-    a.init = function () {
-        window.alert = function (b, c) {
+// --- START OF FILE CustomAlert.js ---
+
+var CustomAlert = {}; // Khởi tạo namespace CustomAlert
+(function (customAlertModule) { // Sử dụng IIFE để tạo scope riêng và truyền vào CustomAlert làm tham số
+    // Hàm khởi tạo, ghi đè hàm alert mặc định của trình duyệt
+    customAlertModule.init = function () {
+        window.alert = function (message, type) { // 'b' -> 'message', 'c' -> 'type'
+            // Ghi log thông tin alert ra console
             console.log("-- Alert Log --");
-            console.log("Type: " + c);
-            console.log("Message: " + b);
+            console.log("Type: " + type);
+            console.log("Message: " + message);
             console.log("-- --------- --");
-            a.show(b, c)
+            // Gọi hàm show của CustomAlert để hiển thị alert tùy chỉnh
+            customAlertModule.show(message, type);
         }
     };
-    a.stack = [];
-    a.info = function (b) {
-        a.show(b, "INFO")
+
+    // Mảng lưu trữ các alert đang được hiển thị (để có thể xếp chồng)
+    customAlertModule.stack = [];
+
+    // Các hàm tiện ích để hiển thị các loại alert cụ thể
+    customAlertModule.info = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "INFO");
     };
-    a.warn = function (b) {
-        a.show(b, "WARN")
+    customAlertModule.warn = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "WARN");
     };
-    a.error = function (b) {
-        a.show(b, "ERR")
+    customAlertModule.error = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "ERR");
     };
-    a.response = function (b) {
-        a.show(b, "RESP")
+    customAlertModule.response = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "RESP");
     };
-    a.success = function (b) {
-        a.show(b, "SUCC")
+    customAlertModule.success = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "SUCC");
     };
-    a.tutorial = function (b) {
-        a.show(b, "TUT")
+    customAlertModule.tutorial = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "TUT");
     };
-    a.hint = function (b) {
-        a.show(b, "HINT")
+    customAlertModule.hint = function (message) { // 'b' -> 'message'
+        customAlertModule.show(message, "HINT");
     };
-    a.show = function (b, c, f, d) {
-        b = ("" + b).replaceAll("\n",
-            "<br/>");
-        c = c ? c.toUpperCase() : "ERROR";
-        var k = $(window),
-            m = k.width();
-        k.height();
-        var l = 0.5 * m - 360,
-            g = $(document.createElement("div")),
-            k = $(document.createElement("div")),
-            m = $(document.createElement("div")),
-            n = "",
-            r = d ? d : "http://forum.greenheartgames.com";
-        g.addClass("errorMessage window");
-        g.addClass("ul-vt-textbox");
-        g.css({
-            left: l,
+
+    // Hàm chính để hiển thị alert tùy chỉnh
+    // message: Nội dung alert
+    // type: Loại alert (ERR, SUCC, INFO, etc.)
+    // urlTitle: Tiêu đề cho nút URL (nếu có)
+    // externalUrl: URL để mở khi click nút URL
+    customAlertModule.show = function (message, type, urlTitle, externalUrl) { // 'b' -> 'message', 'c' -> 'type', 'f' -> 'urlTitle', 'd' -> 'externalUrl'
+        // Thay thế ký tự xuống dòng bằng thẻ <br/>
+        message = ("" + message).replaceAll("\n", "<br/>");
+        // Chuẩn hóa loại alert, mặc định là ERROR nếu không có
+        type = type ? type.toUpperCase() : "ERROR";
+
+        // Lấy thông tin cửa sổ trình duyệt để tính toán vị trí
+        var $window = $(window); // 'k' -> '$window'
+        var windowWidth = $window.width(); // 'm' -> 'windowWidth'
+        // k.height(); // Dòng này có vẻ không sử dụng kết quả, có thể bỏ
+        var alertLeftPosition = 0.5 * windowWidth - 360; // 'l' -> 'alertLeftPosition'
+
+        // Tạo các element HTML cho alert
+        var $alertContainer = $(document.createElement("div")); // 'g' -> '$alertContainer'
+        var $closeButton = $(document.createElement("div")); // 'k' -> '$closeButton' (mới)
+        var $urlButton = $(document.createElement("div")); // 'm' -> '$urlButton' (mới)
+
+        var iconClass = ""; // 'n' -> 'iconClass'
+        var targetUrl = externalUrl ? externalUrl : "http://forum.greenheartgames.com"; // 'r' -> 'targetUrl'
+
+        // Thêm class và CSS cho container của alert
+        $alertContainer.addClass("errorMessage window");
+        $alertContainer.addClass("ul-vt-textbox");
+        $alertContainer.css({
+            left: alertLeftPosition,
             top: 20
         });
-        k.addClass("icon-remove-sign");
-        k.addClass("errorMessage button close");
-        k.attr("title", "Close this update notification");
-        m.addClass("icon-external-link");
-        m.addClass("errorMessage button url");
-        f ? m.attr("title", f) : m.attr("title", "Click here to head to the Greenheart Games Forums (http://forum.greenheartgames.com/)");
-        switch (c) {
+
+        // Thêm class và thuộc tính cho nút đóng
+        $closeButton.addClass("icon-remove-sign");
+        $closeButton.addClass("errorMessage button close");
+        $closeButton.attr("title", "Close this update notification"); // Nên được localize
+
+        // Thêm class và thuộc tính cho nút URL
+        $urlButton.addClass("icon-external-link");
+        $urlButton.addClass("errorMessage button url");
+        urlTitle ? $urlButton.attr("title", urlTitle) : $urlButton.attr("title", "Click here to head to the Greenheart Games Forums (http://forum.greenheartgames.com/)"); // Nên được localize
+
+        var headerTextValue; // Biến tạm để lưu headerText
+
+        // Xác định header text và icon class dựa trên loại alert
+        switch (type) {
             case "ERR":
-                headerText = "Error Alert";
-                g.addClass("msg-error");
-                n = "icon-warning-sign";
+                headerTextValue = "Error Alert"; // Nên được localize
+                $alertContainer.addClass("msg-error");
+                iconClass = "icon-warning-sign";
                 break;
             case "SUCC":
-                headerText = "Success Alert";
-                g.addClass("msg-success");
-                n = "icon-ok-circle";
+                headerTextValue = "Success Alert"; // Nên được localize
+                $alertContainer.addClass("msg-success");
+                iconClass = "icon-ok-circle";
                 break;
             case "HINT":
-                headerText = "Hint Alert";
-                g.addClass("msg-hint");
-                n = "icon-eye-open";
+                headerTextValue = "Hint Alert"; // Nên được localize
+                $alertContainer.addClass("msg-hint");
+                iconClass = "icon-eye-open";
                 break;
             case "WARN":
-                headerText = "Warning Alert";
-                g.addClass("msg-warning");
-                n = "icon-exclamation-sign";
+                headerTextValue = "Warning Alert"; // Nên được localize
+                $alertContainer.addClass("msg-warning");
+                iconClass = "icon-exclamation-sign";
                 break;
             case "INFO":
-                headerText =
-                    "Information Alert";
-                g.addClass("msg-info");
-                n = "icon-info-sign";
+                headerTextValue = "Information Alert"; // Nên được localize
+                $alertContainer.addClass("msg-info");
+                iconClass = "icon-info-sign";
                 break;
             case "RESP":
-                headerText = "Information Alert";
-                g.addClass("msg-response");
-                n = "icon-envelope";
+                headerTextValue = "Information Alert"; // Nên được localize
+                $alertContainer.addClass("msg-response");
+                iconClass = "icon-envelope";
                 break;
             case "TUT":
-                headerText = "Tutorial Alert";
-                g.addClass("msg-tutorial");
-                n = "icon-comment";
+                headerTextValue = "Tutorial Alert"; // Nên được localize
+                $alertContainer.addClass("msg-tutorial");
+                iconClass = "icon-comment";
                 break;
             default:
-                headerText = "Error Alert", g.addClass("msg-default"), n = "icon-exclamation-sign"
+                headerTextValue = "Error Alert"; // Nên được localize
+                $alertContainer.addClass("msg-default");
+                iconClass = "icon-exclamation-sign";
         }
-        $("body").append(g);
-        g.html('<h3><i class="' + n + ' icon-2x">&nbsp;&nbsp;<span class="errorMessage-header">' + headerText + '</span></i></h3><p class="errorMessage">' + b + "</p>");
-        if ("ERROR" === c || "ERR" === c) try {
-            var p = "";
-            c = "";
-            c = GameFlags.IS_STEAM ? c + "Steam" : PlatformShim.ISWIN8 ? c + "Metro" : c + "Standalone";
-            f = "";
-            switch (process.platform) {
+
+        // Thêm alert vào body của trang
+        $("body").append($alertContainer);
+        // Thiết lập nội dung HTML cho alert
+        $alertContainer.html('<h3><i class="' + iconClass + ' icon-2x">  <span class="errorMessage-header">' + headerTextValue + '</span></i></h3><p class="errorMessage">' + message + "</p>");
+
+        // Nếu là alert lỗi, thêm thông tin gỡ lỗi (phiên bản game, platform, mods)
+        if ("ERROR" === type || "ERR" === type) try {
+            var modsListHtml = ""; // 'p' -> 'modsListHtml'
+            var distributionInfo = ""; // 'c' -> 'distributionInfo' (ban đầu)
+            distributionInfo = GameFlags.IS_STEAM ? distributionInfo + "Steam" : PlatformShim.ISWIN8 ? distributionInfo + "Metro" : distributionInfo + "Standalone";
+            var platformInfo = ""; // 'f' -> 'platformInfo' (ban đầu)
+            switch (process.platform) { // `process` là đối tượng của Node.js, cho thấy game có thể chạy trên NW.js/Electron
                 case "darwin":
-                    f += "Mac";
+                    platformInfo += "Mac";
                     break;
                 case "freebsd":
-                    f += "FreeBSD";
+                    platformInfo += "FreeBSD";
                     break;
                 case "linux":
-                    f += "Linux";
+                    platformInfo += "Linux";
                     break;
                 case "sunos":
-                    f += "Sunos";
+                    platformInfo += "Sunos";
                     break;
                 case "win32":
-                    f += "Windows";
-                    PlatformShim.ISWIN8 && (f += " 8");
+                    platformInfo += "Windows";
+                    PlatformShim.ISWIN8 && (platformInfo += " 8");
                     break;
                 default:
-                    f += "unknown"
+                    platformInfo += "unknown";
             }
-            PlatformShim.ISWIN8 || ($.grep(ModSupport.currentMods, function (a, b) {
-                ModSupport.availableMods.forEach(function (b) {
-                    a == b.id && (p += "<li>" + b.name + " by " +
-                        b.author + "</li>")
+            // Kiểm tra nếu không phải Win8 (có thể là NW.js/Electron nơi ModSupport tồn tại)
+            // Và thêm thông tin về các mod đang kích hoạt
+            PlatformShim.ISWIN8 || ($.grep(ModSupport.currentMods, function (modId, index) { // 'a' -> 'modId', 'b' -> 'index'
+                ModSupport.availableMods.forEach(function (modDetails) { // 'b' -> 'modDetails'
+                    modId == modDetails.id && (modsListHtml += "<li>" + modDetails.name + " by " +
+                        modDetails.author + "</li>");
                 })
-            }), 1 > p.length && (p = "<li>No mods activated.</li>"), p = "<ul style='text-align:left;'>{0}</ul>".format(p), g.append("{0}Enabled Mods: {1}{2}".format("<p class='errorMessage left'><span>", "</span> </p>", p)));
-            g.append("{0}Game Version: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", PlatformShim.getVersion(), "</p>"));
-            g.append("{0}Platform: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", f, "</p>"));
-            g.append("{0}Distribution: {1}{2}{3}".format("<p class='errorMessage left'><span>",
-                "</span> ", c, "</p>"))
-        } catch (s) {
-            g.append("{0}Note: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", "Error occurred before the game finished intialising.", "</p>"))
+            }), 1 > modsListHtml.length && (modsListHtml = "<li>No mods activated.</li>"), modsListHtml = "<ul style='text-align:left;'>{0}</ul>".format(modsListHtml), $alertContainer.append("{0}Enabled Mods: {1}{2}".format("<p class='errorMessage left'><span>", "</span> </p>", modsListHtml))); // Các chuỗi này nên được localize
+
+            // Thêm thông tin phiên bản game, nền tảng, và kênh phân phối
+            $alertContainer.append("{0}Game Version: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", PlatformShim.getVersion(), "</p>"));
+            $alertContainer.append("{0}Platform: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", platformInfo, "</p>"));
+            $alertContainer.append("{0}Distribution: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", distributionInfo, "</p>"));
+        } catch (errorDetails) { // 's' -> 'errorDetails'
+            // Nếu có lỗi trong quá trình lấy thông tin gỡ lỗi
+            $alertContainer.append("{0}Note: {1}{2}{3}".format("<p class='errorMessage left'><span>", "</span> ", "Error occurred before the game finished intialising.", "</p>")); // Nên được localize
         }
-        k.prependTo(g);
-        m.prependTo(g);
-        k.clickExcl(function () {
-            var b = a.stack.indexOf(g); - 1 < b && a.stack.splice(b, 1);
-            g.remove()
+
+        // Thêm nút đóng và nút URL vào đầu container alert
+        $closeButton.prependTo($alertContainer);
+        $urlButton.prependTo($alertContainer);
+
+        // Gán sự kiện click cho nút đóng
+        $closeButton.clickExcl(function () {
+            var stackIndex = customAlertModule.stack.indexOf($alertContainer); // 'b' -> 'stackIndex'
+            -1 < stackIndex && customAlertModule.stack.splice(stackIndex, 1);
+            $alertContainer.remove();
         });
-        m.clickExcl(function () {
-            PlatformShim.openUrlExternal(r);
-            g.remove()
+
+        // Gán sự kiện click cho nút URL
+        $urlButton.clickExcl(function () {
+            PlatformShim.openUrlExternal(targetUrl);
+            $alertContainer.remove();
         });
-        a.stack.push(g);
-        a.stack && 0 < a.stack.length && g.css({
-            left: "+=" + -(5 * a.stack.length),
-            top: "+=" + 5 * a.stack.length
-        })
+
+        // Thêm alert hiện tại vào stack để quản lý việc xếp chồng
+        customAlertModule.stack.push($alertContainer);
+        // Nếu có nhiều alert, di chuyển alert mới một chút để tạo hiệu ứng xếp chồng
+        customAlertModule.stack && 0 < customAlertModule.stack.length && $alertContainer.css({
+            left: "+=" + -(5 * customAlertModule.stack.length),
+            top: "+=" + 5 * customAlertModule.stack.length
+        });
     };
-    return a
-})(CustomAlert || {});
+    return customAlertModule; // Trả về module đã được mở rộng
+})(CustomAlert || {}); // Nếu CustomAlert chưa tồn tại, khởi tạo nó là một object rỗng
