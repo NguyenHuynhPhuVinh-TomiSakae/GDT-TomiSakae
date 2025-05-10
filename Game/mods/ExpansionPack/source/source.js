@@ -1,403 +1,410 @@
 var ExpPack = {};
 (function () {
 	/* compatibility check */
-	var compatibilityCheck = function(data){
+	// Hàm kiểm tra tương thích mod
+	var compatibilityCheck = function (data) {
 		for (var i = 0; i < ModSupport.availableMods.length; i++) {
 			var mod = ModSupport.availableMods[i];
-			if(mod.url == "https://github.com/Turntablelover/Game-Dev-Tycoon-Mod" && mod.active){
+			// Kiểm tra nếu mod "VENOMOUS" (được xác định bằng URL) đang hoạt động
+			if (mod.url == "https://github.com/Turntablelover/Game-Dev-Tycoon-Mod" && mod.active) {
 				var div = $("body");
-				div.append('<div id="ErrorContainer" class="windowBorder smallWindow" style="overflow:auto;display:none;"> <div id="cheatmodtop" class="windowTitle smallerWindowTitle">Compatibility Problem</div>');
+				// Hiển thị thông báo lỗi tương thích
+				div.append('<div id="ErrorContainer" class="windowBorder smallWindow" style="overflow:auto;display:none;"> <div id="cheatmodtop" class="windowTitle smallerWindowTitle">Vấn đề Tương thích</div>');
 				div = $("#ErrorContainer");
-				div.append('<div id="error" style="margin-left:50px;width: 400px;" >Expansion Pack Mod is <span style="color:red;">NOT</span> compatible with VENOMOUS mod.</br></br> To continue using Expansion Pack Mod Please disable VENOMOUS mod in the mods menu and restart your Game Dev Tycoon</div>');
-				div.append('<div id="mainmenubutton" class="selectorButton whiteButton" onclick="UI.toggleMainMenu()" style="display:inline-block;position: relative;margin-left:50px;width: 350px;" >Main Menu</div>');
-				div.gdDialog({popout: !0,close: 0})
+				div.append('<div id="error" style="margin-left:50px;width: 400px;" >Expansion Pack Mod <span style="color:red;">KHÔNG</span> tương thích với VENOMOUS mod.</br></br> Để tiếp tục sử dụng Expansion Pack Mod, vui lòng tắt VENOMOUS mod trong menu mod và khởi động lại Game Dev Tycoon của bạn</div>');
+				div.append('<div id="mainmenubutton" class="selectorButton whiteButton" onclick="UI.toggleMainMenu()" style="display:inline-block;position: relative;margin-left:50px;width: 350px;" >Menu Chính</div>');
+				div.gdDialog({ popout: !0, close: 0 }) // Hiển thị dialog không thể đóng
 			}
 		}
 	};
 
-	ExpPack.initCompatibilityChecks = function(){
-		if(GDT.compatibilityCheckActive == 'undefined' || GDT.compatibilityCheckActive == null){
+	// Khởi tạo kiểm tra tương thích
+	ExpPack.initCompatibilityChecks = function () {
+		if (GDT.compatibilityCheckActive == 'undefined' || GDT.compatibilityCheckActive == null) {
+			// Gắn hàm kiểm tra vào sự kiện tải và lưu game
 			GDT.on(GDT.eventKeys.saves.loading, compatibilityCheck);
 			GDT.on(GDT.eventKeys.saves.saving, compatibilityCheck);
 			GDT.compatibilityCheckActive = true;
 		}
 	};
 	/*  */
-	
+
 	/* Topics */
+	// Thêm các chủ đề game mới
 	ExpPack.addTopic = function () {
 		GDT.addTopics([
-		{
-		    id: "Alternate World",
-		    name: "Alternate World".localize("game topic"),
-		    genreWeightings: [0.7, 1, 0.9, 1, 0.8, 0.8],
-			audienceWeightings: [0.7, 0.9, 1]
-		}, {
-		    id: "Archery",
-		    name: "Archery".localize("game topic"),
-		    genreWeightings: [1, 0.6, 0.9, 1, 1, 0.7],
-		    audienceWeightings: [0.8, 0.8, 1]
-		}, {
-		    id: "Assassin",
-		    name: "Assassin".localize("game topic"),
-		    genreWeightings: [1, 0.9, 0.8, 1, 1, 0.6],
-		    audienceWeightings: [0.6, 0.7, 1]
-		}, {
-		    id: "Astronaut",
-		    name: "Astronaut".localize("game topic"),
-		    genreWeightings: [0.8, 1, 0.6, 1, 1, 0.8],
-			audienceWeightings: [0.8, 1, 0.8]
-		}, {
-		    id: "Athletics",
-		    name: "Athletics".localize("game topic"),
-		    genreWeightings: [0.8, 0.6, 1, 0.8, 1, 0.9],
-			audienceWeightings: [0.8, 1, 0.8]
-		}, /* B */ {
-	    	id: "Baking",
-	    	name: "Baking".localize("game topic"),
-	    	genreWeightings: [0.6, 0.6, 0.6, 1, 0.9, 1],
-	    	audienceWeightings: [1, 0.9, 0.7]
-		}, {
-		    id: "Biathlon",
-		    name: "Biathlon".localize("game topic"),
-		    genreWeightings: [0.8, 1, 0.6, 1, 0.9, 1],
-		    audienceWeightings: [0.8, 1, 0.9]
-		}, {
-			id: "Beat-em-up",
-			name: "Beat-em-up".localize("game topic"),
-			genreWeightings: [1, 0.6, 0.9, 0.6, 0.8, 0.9],
-			audienceWeightings: [0.6, 0.8, 1]
-		}, {
-	    	id: "Board Game",
-	    	name: "Board Game".localize("game topic"),
-	    	genreWeightings: [0.8, 0.6, 0.7, 0.6, 0.9, 1],
-	    	audienceWeightings: [1, 1, 0.8]
-		}, {
-		    id: "Bobsleigh",
-		    name: "Bobsleigh".localize("game topic"),
-		    genreWeightings: [1, 0.6, 0.9, 0.8, 0.9, 0.7],
-		    audienceWeightings: [0.6, 0.8, 1]
-		}, /* C */ {
-		    id: "Canoeing",
-		    name: "Canoeing".localize("game topic"),
-		    genreWeightings: [0.8, 0.9, 1, 0.7, 1, 0.8],
-		    audienceWeightings: [0.8, 1, 0.9]
-		}, {
-		    id: "Card Game",
-		    name: "Card Game".localize("game topic"),
-		    genreWeightings: [0.6, 0.6, 1, 0.8, 0.9, 1],
-		    audienceWeightings: [1, 1, 0.9]
-		}, {
-		    id: "Cavemen",
-		    name: "Cavemen".localize("game topic"),
-		    genreWeightings: [0.9, 1, 1, 0.6, 0.6, 0.9],
-		    audienceWeightings: [1, 1, 0.9]
-		}, {
-		    id: "Chess",
-		    name: "Chess".localize("game topic"),
-		    genreWeightings: [0.6, 0.6, 0.6, 1, 1, 1],
-		    audienceWeightings: [0.6, 1, 0.9]
-		}, {
-		    id: "Construction",
-		    name: "Construction".localize("game topic"),
-		    genreWeightings: [0.6, 0.6, 0.7, 1, 0.9, 1],
-		    audienceWeightings: [1, 0.8, 0.7]
-		}, {
-		    id: "Crime",
-		    name: "Crime".localize("game topic"),
-		    genreWeightings: [1, 0.8, 0.7, 1, 0.7, 0.9],
-		    audienceWeightings: [0.6, 0.8, 1]
-		}, {
-		    id: "Cycling",
-		    name: "Cycling".localize("game topic"),
-		    genreWeightings: [0.9, 1, 0.8, 0.8, 1, 0.9],
-		    audienceWeightings: [0.8, 1, 0.9]
-		},  /* D */ {
-			id: "Dark Fantasy",
-			name: "Dark Fantasy".localize("game topic"),
-			genreWeightings: [1, 0.8, 1, 0.6, 1, 0.6],
-			audienceWeightings: [0.6, 0.6, 1]
-		}, {
-	    	id: "Demons",
-	    	name: "Demons".localize("game topic"),
-	    	genreWeightings: [1, 0.8, 1, 0.6, 0.6, 0.6],
-	    	audienceWeightings: [0.6, 0.7, 1]
-		}, {
-	    	id: "Dinosaurs",
-	    	name: "Dinosaurs".localize("game topic"),
-	    	genreWeightings: [1, 0.9, 0.6, 0.9, 0.7, 0.6],
-	    	audienceWeightings: [1, 0.9, 0.7]
-		}, {
-	    	id: "Doctor",
-	    	name: "Doctor".localize("game topic"),
-	    	genreWeightings: [0.6, 0.6, 0.9, 1, 1, 0.7],
-	    	audienceWeightings: [0.6, 0.8, 1]
-		}, {
-			id: "Doomsday",
-			name: "Doomsday".localize("game topic"),
-			genreWeightings: [1, 1, 0.8, 0.6, 0.7, 0.6],
-			audienceWeightings: [0.6, 0.7, 1]
-		}, /* E */ {
-		    id: "E-Sports",
-		    name: "E-Sports".localize("game topic"),
-		    genreWeightings: [1, 0.6, 1, 1, 1, 0.6],
-		    audienceWeightings: [1, 1, 1]
-		}, {
-		    id: "Educational",
-		    name: "Educational".localize("game topic"),
-		    genreWeightings: [0.6, 0.6, 0.6, 1, 0.8, 1],
-		    audienceWeightings: [1, 0.8, 0.6]
-		}, /* F */ {
-		    id: "Fairy Tale",
-		    name: "Fairy Tale".localize("game topic"),
-		    genreWeightings: [0.8, 1, 0.8, 0.8, 0.6, 1],
-		    audienceWeightings: [1, 0.8, 0.6]
-		}, {
-		    id: "Fishing",
-		    name: "Fishing".localize("game topic"),
-		    genreWeightings: [0.6, 0.7, 0.9, 1, 1, 0.8],
-		    audienceWeightings: [0.7, 1, 0.9]
-		}, {
-		    id: "Football",
-		    name: "Football".localize("game topic"),
-		    genreWeightings: [1, 0.7, 1, 0.8, 1, 0.9],
-		    audienceWeightings: [0.9, 1, 0.9]
-		}, {
-		    id: "Formula 1",
-		    name: "Formula 1".localize("game topic"),
-		    genreWeightings: [1, 0.8, 0.8, 0.8, 1, 1],
-		    audienceWeightings: [0.7, 1, 1]
-		}, /* G */ {
-		    id: "Game Pack",
-		    name: "Game Pack".localize("game topic"),
-		    genreWeightings: [0.8, 0.8, 0.8, 0.8, 0.8, 1],
-		    audienceWeightings: [0.8, 1, 0.7]
-		}, {
-		    id: "Ghosts",
-		    name: "Ghosts".localize("game topic"),
-		    genreWeightings: [0.8, 1, 0.9, 0.6, 0.6, 0.8],
-		    audienceWeightings: [1, 0.8, 0.9]
-		}, {
-		    id: "Goblin",
-		    name: "Goblin".localize("game topic"),
-		    genreWeightings: [0.9, 1, 1, 0.8, 0.6, 1],
-		    audienceWeightings: [0.9, 1, 0.9]
-		}, {
-		    id: "Gods",
-		    name: "Gods".localize("game topic"),
-		    genreWeightings: [1, 1, 1, 0.7, 0.8, 0.6],
-		    audienceWeightings: [0.7, 1, 0.9]
-		}, /* H */ {
-		    id: "Hide and Seek",
-		    name: "Hide and Seek".localize("game topic"),
-		    genreWeightings: [0.6, 1, 0.7, 0.8, 0.7, 1],
-		    audienceWeightings: [1, 0.9, 0.6]
-		}, {
-		    id: "Hockey",
-		    name: "Hockey".localize("game topic"),
-		    genreWeightings: [0.8, 0.6, 0.7, 1, 1, 0.7],
-		    audienceWeightings: [0.9, 1, 0.9]
-		}, {
-		    id: "Horse Racing",
-		    name: "Horse Racing".localize("game topic"),
-		    genreWeightings: [1, 0.7, 0.9, 0.8, 1, 0.7],
-		    audienceWeightings: [0.7, 0.8, 1]
-		}, /* I */ {
-		    id: "Ice Hockey",
-		    name: "Ice Hockey".localize("game topic"),
-		    genreWeightings: [1, 0.6, 0.9, 0.8, 1, 0.7],
-		    audienceWeightings: [0.8, 0.9, 1]
-		}, /* J */ {
-		    id: "Judo",
-		    name: "Judo".localize("game topic"),
-		    genreWeightings: [1, 0.6, 0.8, 1, 1, 0.7],
-		    audienceWeightings: [0.7, 1, 1]
-		}, /* K */ {
-		    id: "Karate",
-		    name: "Karate".localize("game topic"),
-		    genreWeightings: [1, 0.7, 1, 0.7, 1, 0.7],
-		    audienceWeightings: [0.7, 0.9, 1]
-		}, /* M */ {
-	    	id: "Maze",
-	    	name: "Maze".localize("game topic"),
-	    	genreWeightings: [0.8, 0.8, 0.9, 1, 0.9, 1],
-	    	audienceWeightings: [0.8, 1, 0.9]
-		}, {
-	    	id: "Mining",
-	    	name: "Mining".localize("game topic"),
-	    	genreWeightings: [0.8, 1, 0.9, 0.8, 0.7, 1],
-	    	audienceWeightings: [1, 0.9, 0.7]
-		}, {
-		    id: "Motorcross",
-		    name: "Motorcross".localize("game topic"),
-		    genreWeightings: [1, 1, 0.8, 0.6, 0.9, 0.7],
-		    audienceWeightings: [0.8, 0.9, 1]
-		}, {
-			id: "Modern",
-			name: "Modern".localize("game topic"),
-			genreWeightings: [1, 0.8, 0.6, 0.6, 0.8, 0.6],
-			audienceWeightings: [0.7, 0.9, 1]
-		}, {
-		    id: "Mummies",
-		    name: "Mummies".localize("game topic"),
-		    genreWeightings: [1, 1, 0.7, 0.7, 0.7, 1],
-		    audienceWeightings: [0.7, 1, 0.8]
-		}, /* P */ {
-	    	id: "Parkour",
-	    	name: "Parkour".localize("game topic"),
-	    	genreWeightings: [1, 1, 0.7, 1, 0.9, 0.6],
-	    	audienceWeightings: [0.7, 0.9, 1]
-		}, {
-	    	id: "Point & Click",
-	    	name: "Point & Click".localize("game topic"),
-	    	genreWeightings: [0.7, 1, 0.7, 1, 0.9, 1],
-	    	audienceWeightings: [0.9, 1, 0.7]
-		}, {
-	    	id: "Police",
-	    	name: "Police".localize("game topic"),
-	    	genreWeightings: [1, 0.9, 0.7, 0.9, 0.7, 0.6],
-	    	audienceWeightings: [0.9, 1, 0.7]
-		}, {
-	    	id: "Politics",
-	    	name: "Politics".localize("game topic"),
-	    	genreWeightings: [0.6, 0.6, 0.8, 1, 1, 0.7],
-	    	audienceWeightings: [0.6, 0.8, 1],
-	    	missionOverrides: [
-			[0, 0, 0, 1, 0.8, 0.9, 0, 0, 0],
-			[0, 0, 0, 0, 0, 0, 0, 0, 0],
-			[0, 0, 0, 0, 0, 0, 0, 0, 0],
-			[0.8, 0.9, 1, 1, 0.8, 0.9, 1, 0.9, 0.8],
-			[0, 0, 0, 0, 0, 0, 0, 0, 0],
-			[0, 0, 0, 1, 0.9, 0, 0, 0, 0]
-			]
-		}, {
-	    	id: "Puzzle",
-	    	name: "Puzzle".localize("game topic"),
-	    	genreWeightings: [0.8, 1, 0.6, 0.7, 1, 1],
-	    	audienceWeightings: [1, 1, 0.9]
-	    }, /* R */ {
-		    id: "Rage",
-		    name: "Rage".localize("game topic"),
-		    genreWeightings: [1, 0.6, 0.6, 0.6, 0.9, 1],
-		    audienceWeightings: [0.6, 0.9, 1]
-		}, {
-			id: "Robot",
-			name: "Robot".localize("game topic"),
-			genreWeightings: [1, 0.8, 0.8, 0.7, 1, 0.9],
-			audienceWeightings: [1, 0.9, 0.8]
-		}, {
-			id: "Rugby",
-			name: "Rugby".localize("game topic"),
-			genreWeightings: [1, 0.7, 1, 0.7, 1, 0.7],
-			audienceWeightings: [0.7, 0.9, 1]
-		}, /* S */ {
-		    id: "Sailing",
-		    name: "Sailing".localize("game topic"),
-		    genreWeightings: [0.8, 1, 0.9, 0.9, 1, 0.8],
-		    audienceWeightings: [0.7, 1, 0.8]
-		}, {
-			id: "Samurais",
-			name: "Samurais".localize("game topic"),
-			genreWeightings: [1, 0.7, 0.9, 0.7, 0.9, 0.6],
-			audienceWeightings: [0.7, 0.9, 1]
-		}, {
-			id: "Science",
-			name: "Science".localize("game topic"),
-			genreWeightings: [0.6, 0.6, 0.7, 1, 1, 0.8],
-			audienceWeightings: [0.8, 1, 0.9]
-		}, {
-		    id: "Steampunk",
-		    name: "Steampunk".localize("game topic"),
-		    genreWeightings: [1, 0.9, 1, 1, 0.7, 0.9],
-		    audienceWeightings: [0.7, 1, 0.9]
-		}, {
-		    id: "Skiing",
-		    name: "Skiing".localize("game topic"),
-		    genreWeightings: [1, 0.9, 0.9, 1, 0.8, 0.7],
-		    audienceWeightings: [0.8, 1, 0.8]
-		}, {
-		    id: "Super Villain",
-		    name: "Super Villain".localize("game topic"),
-		    genreWeightings: [1, 0.7, 0.9, 0.7, 1, 0.8],
-		    audienceWeightings: [1, 0.8, 0.7]
-		}, {
-		    id: "Surfing",
-		    name: "Surfing".localize("game topic"),
-		    genreWeightings: [1, 0.9, 0.9, 0.8, 1, 0.8],
-		    audienceWeightings: [0.8, 1, 0.7]
-		}, {
-		    id: "Survival",
-		    name: "Survival".localize("game topic"),
-		    genreWeightings: [0.9, 1, 1, 0.8, 1, 0.6],
-		    audienceWeightings: [0.8, 1, 0.9]
-		}, {
-		    id: "Swimming",
-		    name: "Swimming".localize("game topic"),
-		    genreWeightings: [0.8, 0.9, 1, 0.7, 1, 1],
-		    audienceWeightings: [0.8, 1, 0.9]
-		}, /* T */ {
-		    id: "Table Tennis",
-		    name: "Table Tennis".localize("game topic"),
-		    genreWeightings: [0.8, 0.9,0.8, 1, 1, 0.8],
-		    audienceWeightings: [0.8, 1, 0.9]
-		}, {
-		    id: "Tennis",
-		    name: "Tennis".localize("game topic"),
-		    genreWeightings: [1, 0.9, 0.8, 0.8, 1, 0.9],
-		    audienceWeightings: [0.8, 1, 0.9]
-		}, {
-  			id: "Tower Defense",
-   			name: "Tower Defense".localize("game topic"),
-   			genreWeightings: [1, 0.7, 0.6, 0.9, 1, 0.7],
-   			audienceWeightings: [0.6, 1, 0.8]
+			{
+				id: "Alternate World", // Giữ ID tiếng Anh cho logic game
+				name: "Thế Giới Song Song".localize("game topic"), // Dịch tên hiển thị
+				genreWeightings: [0.7, 1, 0.9, 1, 0.8, 0.8],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, {
+				id: "Archery",
+				name: "Bắn Cung".localize("game topic"),
+				genreWeightings: [1, 0.6, 0.9, 1, 1, 0.7],
+				audienceWeightings: [0.8, 0.8, 1]
+			}, {
+				id: "Assassin",
+				name: "Sát Thủ".localize("game topic"),
+				genreWeightings: [1, 0.9, 0.8, 1, 1, 0.6],
+				audienceWeightings: [0.6, 0.7, 1]
+			}, {
+				id: "Astronaut",
+				name: "Phi Hành Gia".localize("game topic"),
+				genreWeightings: [0.8, 1, 0.6, 1, 1, 0.8],
+				audienceWeightings: [0.8, 1, 0.8]
+			}, {
+				id: "Athletics",
+				name: "Điền Kinh".localize("game topic"),
+				genreWeightings: [0.8, 0.6, 1, 0.8, 1, 0.9],
+				audienceWeightings: [0.8, 1, 0.8]
+			}, /* B */ {
+				id: "Baking",
+				name: "Làm Bánh".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.6, 1, 0.9, 1],
+				audienceWeightings: [1, 0.9, 0.7]
+			}, {
+				id: "Biathlon",
+				name: "Hai Môn Phối Hợp".localize("game topic"), // (Trượt tuyết và bắn súng)
+				genreWeightings: [0.8, 1, 0.6, 1, 0.9, 1],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Beat-em-up",
+				name: "Đối Kháng Đường Phố".localize("game topic"),
+				genreWeightings: [1, 0.6, 0.9, 0.6, 0.8, 0.9],
+				audienceWeightings: [0.6, 0.8, 1]
+			}, {
+				id: "Board Game",
+				name: "Cờ Bàn".localize("game topic"),
+				genreWeightings: [0.8, 0.6, 0.7, 0.6, 0.9, 1],
+				audienceWeightings: [1, 1, 0.8]
+			}, {
+				id: "Bobsleigh",
+				name: "Trượt Xe Lòng Máng".localize("game topic"),
+				genreWeightings: [1, 0.6, 0.9, 0.8, 0.9, 0.7],
+				audienceWeightings: [0.6, 0.8, 1]
+			}, /* C */ {
+				id: "Canoeing",
+				name: "Chèo Thuyền Ca Nô".localize("game topic"),
+				genreWeightings: [0.8, 0.9, 1, 0.7, 1, 0.8],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Card Game",
+				name: "Bài Bạc".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 1, 0.8, 0.9, 1],
+				audienceWeightings: [1, 1, 0.9]
+			}, {
+				id: "Cavemen",
+				name: "Người Tiền Sử".localize("game topic"),
+				genreWeightings: [0.9, 1, 1, 0.6, 0.6, 0.9],
+				audienceWeightings: [1, 1, 0.9]
+			}, {
+				id: "Chess",
+				name: "Cờ Vua".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.6, 1, 1, 1],
+				audienceWeightings: [0.6, 1, 0.9]
+			}, {
+				id: "Construction",
+				name: "Xây Dựng".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.7, 1, 0.9, 1],
+				audienceWeightings: [1, 0.8, 0.7]
+			}, {
+				id: "Crime",
+				name: "Tội Phạm".localize("game topic"),
+				genreWeightings: [1, 0.8, 0.7, 1, 0.7, 0.9],
+				audienceWeightings: [0.6, 0.8, 1]
+			}, {
+				id: "Cycling",
+				name: "Đua Xe Đạp".localize("game topic"),
+				genreWeightings: [0.9, 1, 0.8, 0.8, 1, 0.9],
+				audienceWeightings: [0.8, 1, 0.9]
+			},  /* D */ {
+				id: "Dark Fantasy",
+				name: "Fantasy Hắc Ám".localize("game topic"),
+				genreWeightings: [1, 0.8, 1, 0.6, 1, 0.6],
+				audienceWeightings: [0.6, 0.6, 1]
+			}, {
+				id: "Demons",
+				name: "Quỷ Dữ".localize("game topic"),
+				genreWeightings: [1, 0.8, 1, 0.6, 0.6, 0.6],
+				audienceWeightings: [0.6, 0.7, 1]
+			}, {
+				id: "Dinosaurs",
+				name: "Khủng Long".localize("game topic"),
+				genreWeightings: [1, 0.9, 0.6, 0.9, 0.7, 0.6],
+				audienceWeightings: [1, 0.9, 0.7]
+			}, {
+				id: "Doctor",
+				name: "Bác Sĩ".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.9, 1, 1, 0.7],
+				audienceWeightings: [0.6, 0.8, 1]
+			}, {
+				id: "Doomsday",
+				name: "Ngày Tận Thế".localize("game topic"),
+				genreWeightings: [1, 1, 0.8, 0.6, 0.7, 0.6],
+				audienceWeightings: [0.6, 0.7, 1]
+			}, /* E */ {
+				id: "E-Sports",
+				name: "Thể Thao Điện Tử".localize("game topic"),
+				genreWeightings: [1, 0.6, 1, 1, 1, 0.6],
+				audienceWeightings: [1, 1, 1]
+			}, {
+				id: "Educational",
+				name: "Giáo Dục".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.6, 1, 0.8, 1],
+				audienceWeightings: [1, 0.8, 0.6]
+			}, /* F */ {
+				id: "Fairy Tale",
+				name: "Truyện Cổ Tích".localize("game topic"),
+				genreWeightings: [0.8, 1, 0.8, 0.8, 0.6, 1],
+				audienceWeightings: [1, 0.8, 0.6]
+			}, {
+				id: "Fishing",
+				name: "Câu Cá".localize("game topic"),
+				genreWeightings: [0.6, 0.7, 0.9, 1, 1, 0.8],
+				audienceWeightings: [0.7, 1, 0.9]
+			}, {
+				id: "Football",
+				name: "Bóng Đá".localize("game topic"),
+				genreWeightings: [1, 0.7, 1, 0.8, 1, 0.9],
+				audienceWeightings: [0.9, 1, 0.9]
+			}, {
+				id: "Formula 1",
+				name: "Đua Xe Công Thức 1".localize("game topic"),
+				genreWeightings: [1, 0.8, 0.8, 0.8, 1, 1],
+				audienceWeightings: [0.7, 1, 1]
+			}, /* G */ {
+				id: "Game Pack",
+				name: "Gói Game".localize("game topic"),
+				genreWeightings: [0.8, 0.8, 0.8, 0.8, 0.8, 1],
+				audienceWeightings: [0.8, 1, 0.7]
+			}, {
+				id: "Ghosts",
+				name: "Ma Quỷ".localize("game topic"),
+				genreWeightings: [0.8, 1, 0.9, 0.6, 0.6, 0.8],
+				audienceWeightings: [1, 0.8, 0.9]
+			}, {
+				id: "Goblin",
+				name: "Yêu Tinh".localize("game topic"), // (Goblin)
+				genreWeightings: [0.9, 1, 1, 0.8, 0.6, 1],
+				audienceWeightings: [0.9, 1, 0.9]
+			}, {
+				id: "Gods",
+				name: "Thần Thánh".localize("game topic"),
+				genreWeightings: [1, 1, 1, 0.7, 0.8, 0.6],
+				audienceWeightings: [0.7, 1, 0.9]
+			}, /* H */ {
+				id: "Hide and Seek",
+				name: "Trốn Tìm".localize("game topic"),
+				genreWeightings: [0.6, 1, 0.7, 0.8, 0.7, 1],
+				audienceWeightings: [1, 0.9, 0.6]
+			}, {
+				id: "Hockey",
+				name: "Khúc Côn Cầu".localize("game topic"),
+				genreWeightings: [0.8, 0.6, 0.7, 1, 1, 0.7],
+				audienceWeightings: [0.9, 1, 0.9]
+			}, {
+				id: "Horse Racing",
+				name: "Đua Ngựa".localize("game topic"),
+				genreWeightings: [1, 0.7, 0.9, 0.8, 1, 0.7],
+				audienceWeightings: [0.7, 0.8, 1]
+			}, /* I */ {
+				id: "Ice Hockey",
+				name: "Khúc Côn Cầu Trên Băng".localize("game topic"),
+				genreWeightings: [1, 0.6, 0.9, 0.8, 1, 0.7],
+				audienceWeightings: [0.8, 0.9, 1]
+			}, /* J */ {
+				id: "Judo",
+				name: "Võ Judo".localize("game topic"),
+				genreWeightings: [1, 0.6, 0.8, 1, 1, 0.7],
+				audienceWeightings: [0.7, 1, 1]
+			}, /* K */ {
+				id: "Karate",
+				name: "Võ Karate".localize("game topic"),
+				genreWeightings: [1, 0.7, 1, 0.7, 1, 0.7],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, /* M */ {
+				id: "Maze",
+				name: "Mê Cung".localize("game topic"),
+				genreWeightings: [0.8, 0.8, 0.9, 1, 0.9, 1],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Mining",
+				name: "Khai Mỏ".localize("game topic"),
+				genreWeightings: [0.8, 1, 0.9, 0.8, 0.7, 1],
+				audienceWeightings: [1, 0.9, 0.7]
+			}, {
+				id: "Motorcross",
+				name: "Đua Xe Địa Hình".localize("game topic"),
+				genreWeightings: [1, 1, 0.8, 0.6, 0.9, 0.7],
+				audienceWeightings: [0.8, 0.9, 1]
+			}, {
+				id: "Modern",
+				name: "Hiện Đại".localize("game topic"),
+				genreWeightings: [1, 0.8, 0.6, 0.6, 0.8, 0.6],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, {
+				id: "Mummies",
+				name: "Xác Ướp".localize("game topic"),
+				genreWeightings: [1, 1, 0.7, 0.7, 0.7, 1],
+				audienceWeightings: [0.7, 1, 0.8]
+			}, /* P */ {
+				id: "Parkour",
+				name: "Parkour".localize("game topic"), // Giữ nguyên tên riêng
+				genreWeightings: [1, 1, 0.7, 1, 0.9, 0.6],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, {
+				id: "Point & Click",
+				name: "Trỏ Và Nhấn".localize("game topic"),
+				genreWeightings: [0.7, 1, 0.7, 1, 0.9, 1],
+				audienceWeightings: [0.9, 1, 0.7]
+			}, {
+				id: "Police",
+				name: "Cảnh Sát".localize("game topic"),
+				genreWeightings: [1, 0.9, 0.7, 0.9, 0.7, 0.6],
+				audienceWeightings: [0.9, 1, 0.7]
+			}, {
+				id: "Politics",
+				name: "Chính Trị".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.8, 1, 1, 0.7],
+				audienceWeightings: [0.6, 0.8, 1],
+				missionOverrides: [
+					[0, 0, 0, 1, 0.8, 0.9, 0, 0, 0],
+					[0, 0, 0, 0, 0, 0, 0, 0, 0],
+					[0, 0, 0, 0, 0, 0, 0, 0, 0],
+					[0.8, 0.9, 1, 1, 0.8, 0.9, 1, 0.9, 0.8],
+					[0, 0, 0, 0, 0, 0, 0, 0, 0],
+					[0, 0, 0, 1, 0.9, 0, 0, 0, 0]
+				]
+			}, {
+				id: "Puzzle",
+				name: "Giải Đố".localize("game topic"),
+				genreWeightings: [0.8, 1, 0.6, 0.7, 1, 1],
+				audienceWeightings: [1, 1, 0.9]
+			}, /* R */ {
+				id: "Rage",
+				name: "Thịnh Nộ".localize("game topic"), // (Game gây ức chế)
+				genreWeightings: [1, 0.6, 0.6, 0.6, 0.9, 1],
+				audienceWeightings: [0.6, 0.9, 1]
+			}, {
+				id: "Robot",
+				name: "Người Máy".localize("game topic"),
+				genreWeightings: [1, 0.8, 0.8, 0.7, 1, 0.9],
+				audienceWeightings: [1, 0.9, 0.8]
+			}, {
+				id: "Rugby",
+				name: "Bóng Bầu Dục".localize("game topic"),
+				genreWeightings: [1, 0.7, 1, 0.7, 1, 0.7],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, /* S */ {
+				id: "Sailing",
+				name: "Đi Thuyền Buồm".localize("game topic"),
+				genreWeightings: [0.8, 1, 0.9, 0.9, 1, 0.8],
+				audienceWeightings: [0.7, 1, 0.8]
+			}, {
+				id: "Samurais",
+				name: "Võ Sĩ Samurai".localize("game topic"),
+				genreWeightings: [1, 0.7, 0.9, 0.7, 0.9, 0.6],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, {
+				id: "Science",
+				name: "Khoa Học".localize("game topic"),
+				genreWeightings: [0.6, 0.6, 0.7, 1, 1, 0.8],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Steampunk",
+				name: "Steampunk".localize("game topic"), // Giữ nguyên tên riêng
+				genreWeightings: [1, 0.9, 1, 1, 0.7, 0.9],
+				audienceWeightings: [0.7, 1, 0.9]
+			}, {
+				id: "Skiing",
+				name: "Trượt Tuyết".localize("game topic"),
+				genreWeightings: [1, 0.9, 0.9, 1, 0.8, 0.7],
+				audienceWeightings: [0.8, 1, 0.8]
+			}, {
+				id: "Super Villain",
+				name: "Siêu Ác Nhân".localize("game topic"),
+				genreWeightings: [1, 0.7, 0.9, 0.7, 1, 0.8],
+				audienceWeightings: [1, 0.8, 0.7]
+			}, {
+				id: "Surfing",
+				name: "Lướt Sóng".localize("game topic"),
+				genreWeightings: [1, 0.9, 0.9, 0.8, 1, 0.8],
+				audienceWeightings: [0.8, 1, 0.7]
+			}, {
+				id: "Survival",
+				name: "Sinh Tồn".localize("game topic"),
+				genreWeightings: [0.9, 1, 1, 0.8, 1, 0.6],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Swimming",
+				name: "Bơi Lội".localize("game topic"),
+				genreWeightings: [0.8, 0.9, 1, 0.7, 1, 1],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, /* T */ {
+				id: "Table Tennis",
+				name: "Bóng Bàn".localize("game topic"),
+				genreWeightings: [0.8, 0.9, 0.8, 1, 1, 0.8],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Tennis",
+				name: "Quần Vợt".localize("game topic"),
+				genreWeightings: [1, 0.9, 0.8, 0.8, 1, 0.9],
+				audienceWeightings: [0.8, 1, 0.9]
+			}, {
+				id: "Tower Defense",
+				name: "Thủ Thành".localize("game topic"),
+				genreWeightings: [1, 0.7, 0.6, 0.9, 1, 0.7],
+				audienceWeightings: [0.6, 1, 0.8]
 
-		}, /* V */ {
-			id: "Vikings",
-			name: "Vikings".localize("game topic"),
-			genreWeightings: [1, 0.8, 1, 0.7, 0.8, 0.6],
-			audienceWeightings: [0.7, 0.9, 1]
-		}, /* W */ {
-			id: "War",
-			name: "War".localize("game topic"),
-			genreWeightings: [1, 0.8, 0.9, 0.8, 0.6, 0.6],
-			audienceWeightings: [0.6, 0.9, 1]
-		}, {
-			id: "Warlocks",
-			name: "Warlocks".localize("game topic"),
-			genreWeightings: [1, 0.8, 0.8, 1, 0.7, 0.6],
-			audienceWeightings: [0.8, 0.9, 1]
-		}, {
-		    id: "Witches",
-		    name: "Witches".localize("game topic"),
-		    genreWeightings: [0.7, 1, 0.9, 0.6, 0.9, 1],
-		    audienceWeightings: [1, 0.9, 0.7]
-		}, {
-		    id: "Wizzards",
-		    name: "Wizzards".localize("game topic"),
-		    genreWeightings: [1, 1, 0.9, 0.7, 0.8, 0.9],
-		    audienceWeightings: [0.7, 1, 0.9]
-		}, {
-			id: "Wrestling",
-			name: "Wrestling".localize("game topic"),
-			genreWeightings: [1, 0.6, 0.9, 0.8, 1, 0.7],
-			audienceWeightings: [0.6, 0.9, 1]
-		}]);
+			}, /* V */ {
+				id: "Vikings",
+				name: "Người Viking".localize("game topic"),
+				genreWeightings: [1, 0.8, 1, 0.7, 0.8, 0.6],
+				audienceWeightings: [0.7, 0.9, 1]
+			}, /* W */ {
+				id: "War",
+				name: "Chiến Tranh".localize("game topic"),
+				genreWeightings: [1, 0.8, 0.9, 0.8, 0.6, 0.6],
+				audienceWeightings: [0.6, 0.9, 1]
+			}, {
+				id: "Warlocks",
+				name: "Pháp Sư Hắc Ám".localize("game topic"), // (Warlock)
+				genreWeightings: [1, 0.8, 0.8, 1, 0.7, 0.6],
+				audienceWeightings: [0.8, 0.9, 1]
+			}, {
+				id: "Witches",
+				name: "Phù Thủy".localize("game topic"),
+				genreWeightings: [0.7, 1, 0.9, 0.6, 0.9, 1],
+				audienceWeightings: [1, 0.9, 0.7]
+			}, {
+				id: "Wizzards", // Sai chính tả, nên là Wizards
+				name: "Pháp Sư".localize("game topic"), // (Wizard)
+				genreWeightings: [1, 1, 0.9, 0.7, 0.8, 0.9],
+				audienceWeightings: [0.7, 1, 0.9]
+			}, {
+				id: "Wrestling",
+				name: "Đấu Vật".localize("game topic"),
+				genreWeightings: [1, 0.6, 0.9, 0.8, 1, 0.7],
+				audienceWeightings: [0.6, 0.9, 1]
+			}]);
 	};
 	/*  */
 
 	/* Platforms */
 
 	/* Grapple */
+	// Thêm nền tảng Grapintosh
 	ExpPack.addPlatformGrapintosh = function () {
 		var icon = './mods/ExpansionPack/source/img/Grapple.png';
 		GDT.addPlatform(
 			{
-				id: 'Grapintosh',
-				name: 'Grapintosh',
-				company: 'Grapple',
+				id: 'Grapintosh', // Giữ ID tiếng Anh
+				name: 'Grapintosh', // Tên hiển thị (có thể dịch nếu muốn, nhưng tên riêng thường giữ nguyên)
+				company: 'Grapple', // Tên công ty (giữ nguyên)
 				startAmount: 0.351,
 				unitsSold: 0.534,
-				marketKeyPoints: [{date: "2/3/2",amount: 0.215}, {date: "5/7/4",amount: 0.478}, {date: "11/9/3",amount: 0.738}],
+				marketKeyPoints: [{ date: "2/3/2", amount: 0.215 }, { date: "5/7/4", amount: 0.478 }, { date: "11/9/3", amount: 0.738 }],
 				licencePrize: 20000,
 				published: '1/7/4',
 				platformRetireDate: '4/6/2',
@@ -412,8 +419,8 @@ var ExpPack = {};
 						date: '1/5/1',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Today, Grapple a new hardware manufacturer has announced a brand new computer called the Grapintosh. The Grapintosh comes with a new advanced operating system called Grap OS. Even though the new platform is a bit expensive, you get value for your money. Grapple said that the Grapintosh will become available {0}".localize().format(General.getETADescription('1/5/1', '1/7/4')),
+								header: "Tin Tức Ngành".localize(), // Dịch tiêu đề
+								text: "Hôm nay, Grapple, một nhà sản xuất phần cứng mới, đã công bố một máy tính hoàn toàn mới có tên là Grapintosh. Grapintosh đi kèm với một hệ điều hành tiên tiến mới gọi là Grap OS. Mặc dù nền tảng mới này hơi đắt tiền, nhưng bạn sẽ nhận được giá trị tương xứng với số tiền bỏ ra. Grapple cho biết Grapintosh sẽ có mặt trên thị trường {0}".localize().format(General.getETADescription('1/5/1', '1/7/4')),
 								image: icon
 							});
 						}
@@ -422,18 +429,19 @@ var ExpPack = {};
 			});
 	};
 
+	// Thêm nền tảng grMac
 	ExpPack.addPlatformGrMac = function () {
-		var icon = './mods/ExpansionPack/source/img/grMac.png';		
+		var icon = './mods/ExpansionPack/source/img/grMac.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0000-0001-DZJENGISKHAN',
-				name: 'grMac',
+				id: '12111996-0000-0000-0001-DZJENGISKHAN', // Giữ ID
+				name: 'grMac', // Tên hiển thị
 				company: 'Grapple',
 				startAmount: 2.6,
 				unitsSold: 5.434,
 				licencePrize: 40000,
 				published: '16/8/1',
-				platformRetireDate: '260/12/4',
+				platformRetireDate: '260/12/4', // Ngày rất xa trong tương lai -> không bao giờ ngừng hỗ trợ
 				developmentCosts: 25000,
 				genreWeightings: [1, 0.9, 1, 1, 1, 0.8],
 				audienceWeightings: [0.8, 0.9, 1],
@@ -445,8 +453,8 @@ var ExpPack = {};
 						date: '16/5/4',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Grapple, developer of the very successful Grapintosh, has announced a new platform called the grMac. Grapple implemented all the hardware in the screen and named it a 'All-In-One' computer.{n} The fact that the hardware is very compact, doesn't effect any of the power we know from Grapple. The grMac will be released {0}".localize().format(General.getETADescription('16/5/4', '16/8/1')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Grapple, nhà phát triển của Grapintosh rất thành công, đã công bố một nền tảng mới có tên là grMac. Grapple đã tích hợp tất cả phần cứng vào màn hình và đặt tên cho nó là máy tính 'All-In-One'.{n} Thực tế là phần cứng rất nhỏ gọn, không ảnh hưởng đến bất kỳ sức mạnh nào mà chúng ta biết từ Grapple. grMac sẽ được phát hành {0}".localize().format(General.getETADescription('16/5/4', '16/8/1')),
 								image: icon
 							});
 						}
@@ -457,12 +465,13 @@ var ExpPack = {};
 	/*  */
 
 	/* Itara */
+	// Thêm nền tảng Itara Backflash
 	ExpPack.addPlatformItaraBackflash = function () {
 		var icon = './mods/ExpansionPack/source/img/Itara.png';
 		GDT.addPlatform(
 			{
-				id: '31102000-2-1-4-1-LINELIAR',
-				name: 'Itara Backflash',
+				id: '31102000-2-1-4-1-LINELIAR', // Giữ ID
+				name: 'Itara Backflash', // Tên hiển thị
 				company: 'Itara',
 				startAmount: 1.3,
 				unitsSold: 4.2,
@@ -480,8 +489,8 @@ var ExpPack = {};
 						date: '12/7/3',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Today Itara, a company known for their consoles in the early consolemarket, have announced that they're gonna release a new console called the Itara Backflash.{n} This console will compete with consoles like the TES. Itara has announced that they are anticipating the console to be very successfull.{n} The Itara Backflash is getting released in {0}.".localize().format(General.getETADescription('12/7/3', '12/11/3')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Hôm nay Itara, một công ty nổi tiếng với các máy chơi game của họ trong thị trường máy chơi game thời kỳ đầu, đã thông báo rằng họ sẽ phát hành một máy chơi game mới có tên là Itara Backflash.{n} Máy chơi game này sẽ cạnh tranh với các máy chơi game như TES. Itara đã thông báo rằng họ dự đoán máy chơi game này sẽ rất thành công.{n} Itara Backflash sẽ được phát hành vào {0}.".localize().format(General.getETADescription('12/7/3', '12/11/3')),
 								image: icon
 							});
 						}
@@ -489,13 +498,14 @@ var ExpPack = {};
 				]
 			});
 	};
-	
+
+	// Thêm nền tảng Itara 5200
 	ExpPack.addPlatformItara5200 = function () {
 		var icon = './mods/ExpansionPack/source/img/itara5200.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0100-0001-DZJENGISKHAN',
-				name: 'Itara 5200',
+				id: '12111996-0000-0100-0001-DZJENGISKHAN', // Giữ ID
+				name: 'Itara 5200', // Tên hiển thị
 				company: 'Itara',
 				startAmount: 0.4,
 				unitsSold: 0.462,
@@ -513,8 +523,8 @@ var ExpPack = {};
 						date: '2/9/1',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Today Itara announced their first platform. They called it: Itara 5200.{n} The console uses a analog joystick and has to compete with the popular TES from Ninvento.\nThe Itara 5200 will be released in {0}.".localize().format(General.getETADescription('2/9/1', '2/11/2')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Hôm nay Itara đã công bố nền tảng đầu tiên của họ. Họ gọi nó là: Itara 5200.{n} Máy chơi game này sử dụng cần analog và phải cạnh tranh với TES nổi tiếng của Ninvento.\nItara 5200 sẽ được phát hành vào {0}.".localize().format(General.getETADescription('2/9/1', '2/11/2')),
 								image: icon
 							});
 						}
@@ -524,13 +534,14 @@ var ExpPack = {};
 	};
 	/*  */
 
-	/* Ninvento */	
+	/* Ninvento */
+	// Thêm nền tảng 3GS
 	ExpPack.addPlatform3GS = function () {
 		var icon = './mods/ExpansionPack/source/img/3GS.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0001-0000-DZJENGISKHAN',
-				name: '3GS',
+				id: '12111996-0000-0001-0000-DZJENGISKHAN', // Giữ ID
+				name: '3GS', // Tên hiển thị
 				company: 'Ninvento',
 				startAmount: 1.5,
 				unitsSold: 3.582,
@@ -548,8 +559,8 @@ var ExpPack = {};
 						date: '21/5/1',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Today Ninvento, known for the console GS, announced that they are going to release a new handheld console called the 3GS. This handheld console will have 3D animations and therefore will be the first in the handheld market.{n} Ninvento said the 3GS is will get released {0}.".localize().format(General.getETADescription('21/5/1', '21/9/3')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Hôm nay Ninvento, nổi tiếng với máy chơi game GS, đã thông báo rằng họ sẽ phát hành một máy chơi game cầm tay mới có tên là 3GS. Máy chơi game cầm tay này sẽ có đồ họa 3D và do đó sẽ là máy đầu tiên trên thị trường cầm tay.{n} Ninvento cho biết 3GS sẽ được phát hành {0}.".localize().format(General.getETADescription('21/5/1', '21/9/3')),
 								image: icon
 							});
 						}
@@ -558,12 +569,13 @@ var ExpPack = {};
 			});
 	};
 
+	// Thêm nền tảng 2GS
 	ExpPack.addPlatform2GS = function () {
 		var icon = './mods/ExpansionPack/source/img/2GS.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0001-0001-DZJENGISKHAN',
-				name: '2GS',
+				id: '12111996-0000-0001-0001-DZJENGISKHAN', // Giữ ID
+				name: '2GS', // Tên hiển thị
 				company: 'Ninvento',
 				startAmount: 2.125,
 				unitsSold: 3.634,
@@ -578,11 +590,11 @@ var ExpPack = {};
 				events: [
 					{
 						id: '12111996-1111-0001-0001-DZJENGISKHAN',
-						date: '21/1/4',
+						date: '21/1/4', // Lưu ý: Ngày này trước ngày phát hành dự kiến, có thể là thông báo sớm
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Today is the day that Ninvento has announced to make another handheld console following up the 3GS, the 2GS. However the 2GS has the same mechanics as the 3GS, it's featuring better graphics and therefore better gameplay also. The 2GS is said to be released {0}.".localize().format(General.getETADescription('21/1/4', '21/4/2')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Hôm nay là ngày Ninvento công bố sẽ tạo ra một máy chơi game cầm tay khác tiếp nối 3GS, đó là 2GS. Tuy nhiên, 2GS có cơ chế tương tự như 3GS, nhưng nó có đồ họa tốt hơn và do đó gameplay cũng tốt hơn. 2GS được cho là sẽ phát hành {0}.".localize().format(General.getETADescription('21/1/4', '21/4/2')), // Ngày phát hành là '21/4/2', không phải '23/4/2' như định nghĩa ở trên?
 								image: icon
 							});
 						}
@@ -591,17 +603,19 @@ var ExpPack = {};
 			});
 	};
 
+	// Thêm nền tảng Gameling Color
 	ExpPack.addPlatformGamelingColor = function () {
-		var gameling = Platforms.allPlatforms.first(function(p){return p.id == 'Gameling';});
-		if (gameling){
+		// Điều chỉnh ngày ngừng hỗ trợ của Gameling gốc
+		var gameling = Platforms.allPlatforms.first(function (p) { return p.id == 'Gameling'; });
+		if (gameling) {
 			gameling.platformRetireDate = '10/4/2';
 		}
-		
+
 		var icon = './mods/ExpansionPack/source/img/gamelingColor.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0001-0010-DZJENGISKHAN',
-				name: 'Gameling Color',
+				id: '12111996-0000-0001-0010-DZJENGISKHAN', // Giữ ID
+				name: 'Gameling Color', // Tên hiển thị
 				company: 'Ninvento',
 				startAmount: 0.7,
 				unitsSold: 0.854,
@@ -619,8 +633,8 @@ var ExpPack = {};
 						date: '9/8/4',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Ninvento just announced their next platform! The Gameling Color, as it is called, is another handheld console and features a 160x144 resolution with over 30k colors.{n} We are not sure if it will tip the suscess of the original Gameling but we can not wait!! Ninvento said the Gameling Color will be released {0}".localize().format(General.getETADescription('9/8/4', '9/11/2')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Ninvento vừa công bố nền tảng tiếp theo của họ! Gameling Color, như tên gọi của nó, là một máy chơi game cầm tay khác và có màn hình 160x144 với hơn 30k màu sắc.{n} Chúng tôi không chắc liệu nó có vượt qua thành công của Gameling gốc hay không nhưng chúng tôi không thể chờ đợi!! Ninvento cho biết Gameling Color sẽ được phát hành {0}".localize().format(General.getETADescription('9/8/4', '9/11/2')),
 								image: icon
 							});
 						}
@@ -629,14 +643,15 @@ var ExpPack = {};
 			});
 	};
 	/*  */
-	
+
 	/* Vonny */
-	ExpPack.addPlatformViva = function () {		
+	// Thêm nền tảng Viva Playsystem
+	ExpPack.addPlatformViva = function () {
 		var icon = './mods/ExpansionPack/source/img/vivaPlaysystem.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0010-0000-DZJENGISKHAN',
-				name: 'Viva Playsystem',
+				id: '12111996-0000-0010-0000-DZJENGISKHAN', // Giữ ID
+				name: 'Viva Playsystem', // Tên hiển thị
 				company: 'Vonny',
 				startAmount: 4.635,
 				unitsSold: 5.430,
@@ -654,8 +669,8 @@ var ExpPack = {};
 						date: '22/3/4',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Vonny, developer of the PPS platform, has been spreading rumors that they are working on a new platform called 'Viva Playsystem' or 'VPS' in short.{n} They haven't released much info about the VPS but they claim that the new handheld console will be released {0}".localize().format(General.getETADescription('22/3/4', '22/6/2')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Vonny, nhà phát triển nền tảng PPS, đã lan truyền tin đồn rằng họ đang phát triển một nền tảng mới có tên là 'Viva Playsystem' hay viết tắt là 'VPS'.{n} Họ chưa công bố nhiều thông tin về VPS nhưng họ khẳng định rằng máy chơi game cầm tay mới này sẽ được phát hành {0}".localize().format(General.getETADescription('22/3/4', '22/6/2')),
 								image: icon
 							});
 						}
@@ -663,13 +678,14 @@ var ExpPack = {};
 				]
 			});
 	};
-	
-	ExpPack.addPlatformPS2S = function () {		
+
+	// Thêm nền tảng Playsystem 2 Slim
+	ExpPack.addPlatformPS2S = function () {
 		var icon = './mods/ExpansionPack/source/img/playSystem2Slim.png';
 		GDT.addPlatform(
 			{
-				id: '12111996-0000-0010-0001-DZJENGISKHAN',
-				name: 'Playsystem 2 Slim',
+				id: '12111996-0000-0010-0001-DZJENGISKHAN', // Giữ ID
+				name: 'Playsystem 2 Slim', // Tên hiển thị
 				company: 'Vonny',
 				startAmount: 1.4,
 				unitsSold: 2.7,
@@ -687,8 +703,8 @@ var ExpPack = {};
 						date: '11/11/2',
 						getNotification: function (company) {
 							return new Notification({
-								header: "Industry News".localize(),
-								text: "Vonny just released info on an improved version of their successfully Playsystem 2. Vonny called the new platform the 'Playsystem 2 Slim'.{n} Maybe not the most original name ever, but they claim that the the ps2 slim does have better hardware then the original ps2.\nVonny was not very clear about the release date but we excpect it {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')),
+								header: "Tin Tức Ngành".localize(),
+								text: "Vonny vừa công bố thông tin về một phiên bản cải tiến của Playsystem 2 thành công của họ. Vonny gọi nền tảng mới này là 'Playsystem 2 Slim'.{n} Có lẽ không phải là cái tên độc đáo nhất, nhưng họ khẳng định rằng PS2 Slim có phần cứng tốt hơn PS2 gốc.\nVonny không rõ ràng về ngày phát hành nhưng chúng tôi dự kiến nó sẽ ra mắt {0}".localize().format(General.getETADescription('11/11/4', '12/2/2')), // Chú ý: Ngày trong mô tả khác với ngày phát hành thực tế
 								image: icon
 							});
 						}
@@ -697,146 +713,151 @@ var ExpPack = {};
 			});
 	};
 	/*  */
-	
+
 	/* Holo Corp */
+	// Thêm nền tảng HoloBox
 	ExpPack.addPlatformHoloBox = function () {
-    	var icon = './mods/ExpansionPack/source/img/HoloBox.png';
-        GDT.addPlatform(
-	        {
-	        	id: '12111996-0000-0011-0000-DZJENGISKHAN',
-	        	name: 'Holo Box',
-	        	company: 'Holo Corp',
-	         	startAmount: 1.7,
-	        	unitsSold: 5.3,
-	        	licencePrize: 250000,
-	            published: '20/1/1',
-	            platformRetireDate: '260/12/4',
-	            developmentCosts: 150000,
-	            genreWeightings: [0.9, 0.8, 0.7, 1, 0.7, 0.6],
-	            audienceWeightings: [0.7, 0.8, 1],
-	            techLevel: 7,
-	            iconUri: icon,
-	            events: [
-	            	{
-	                	id: '12111996-1111-0011-0001-DZJENGISKHAN',
-	                	date: '19/9/3',
-	                    getNotification: function (company) {
-	                    	return new Notification({
-	                        	header: "Industry News".localize(),
-	                        	text: "Today, Holo Corp, a new gaming company has just announced that they will be releasing their new console, the Holo Box. It will display games using holographic technology and eradicate the need for game disks.{n} The games will be loaded into a small flash drive which is then inserted into the console. This will reduce the cost of games. They are anticipating that the Holo Box will be a huge success. It will be released {0}".localize().format(General.getETADescription('19/9/3', '20/1/1')),
-	                        	image: icon
-	                        });
-	                    }
+		var icon = './mods/ExpansionPack/source/img/HoloBox.png';
+		GDT.addPlatform(
+			{
+				id: '12111996-0000-0011-0000-DZJENGISKHAN', // Giữ ID
+				name: 'Holo Box', // Tên hiển thị
+				company: 'Holo Corp',
+				startAmount: 1.7,
+				unitsSold: 5.3,
+				licencePrize: 250000,
+				published: '20/1/1',
+				platformRetireDate: '260/12/4',
+				developmentCosts: 150000,
+				genreWeightings: [0.9, 0.8, 0.7, 1, 0.7, 0.6],
+				audienceWeightings: [0.7, 0.8, 1],
+				techLevel: 7,
+				iconUri: icon,
+				events: [
+					{
+						id: '12111996-1111-0011-0001-DZJENGISKHAN',
+						date: '19/9/3',
+						getNotification: function (company) {
+							return new Notification({
+								header: "Tin Tức Ngành".localize(),
+								text: "Hôm nay, Holo Corp, một công ty game mới, vừa thông báo rằng họ sẽ phát hành máy chơi game mới của mình, Holo Box. Nó sẽ hiển thị trò chơi bằng công nghệ holographic và loại bỏ nhu cầu về đĩa game.{n} Các trò chơi sẽ được tải vào một ổ đĩa flash nhỏ sau đó được lắp vào máy chơi game. Điều này sẽ giảm chi phí của trò chơi. Họ dự đoán rằng Holo Box sẽ là một thành công lớn. Nó sẽ được phát hành {0}".localize().format(General.getETADescription('19/9/3', '20/1/1')),
+								image: icon
+							});
+						}
 					}
 				]
 			});
 	};
 	/*  */
-	
+
 	/* Mirconoft */
+	// Thêm nền tảng mBox 360 Slim
 	ExpPack.addPlatformMBox360S = function () {
-    	var icon = './mods/ExpansionPack/source/img/mBox360Slim.png';
-        GDT.addPlatform(
-	        {
-	        	id: '12111996-1111-0100-0000-DZJENGISKHAN',
-	        	name: 'mBox 360 Slim',
-	        	company: 'Mirconoft',
-	         	startAmount: 2,
-	        	unitsSold: 3.2,
-	        	licencePrize: 500000,
-	            published: '17/4/4',
-	            platformRetireDate: '24/9/3',
-	            developmentCosts: 80000,
-	            genreWeightings: [1, 0.9, 1, 0.9, 0.7, 0.9],
-	            audienceWeightings: [0.8, 0.9, 1],
-	            techLevel: 5,
-	            iconUri: icon,
-	            events: [
-	            	{
-	                	id: '12111996-1111-0100-0001-DZJENGISKHAN',
-	                	date: '17/1/1',
-	                    getNotification: function (company) {
-	                    	return new Notification({
-	                        	header: "Industry News".localize(),
-	                        	text: "Mirconoft announced their improvement on their mBox 360, called: mBox 360 Slim.\nAccording to the critics, Mirconoft didn't make huge improvements and thus they are curious to see how the market will respond. {n} The mBox 360 Slim will be released {0}".localize().format(General.getETADescription('17/1/1', '17/4/4')),
-	                        	image: icon
-	                        });
-	                    }
+		var icon = './mods/ExpansionPack/source/img/mBox360Slim.png';
+		GDT.addPlatform(
+			{
+				id: '12111996-1111-0100-0000-DZJENGISKHAN', // Giữ ID
+				name: 'mBox 360 Slim', // Tên hiển thị
+				company: 'Mirconoft',
+				startAmount: 2,
+				unitsSold: 3.2,
+				licencePrize: 500000,
+				published: '17/4/4',
+				platformRetireDate: '24/9/3',
+				developmentCosts: 80000,
+				genreWeightings: [1, 0.9, 1, 0.9, 0.7, 0.9],
+				audienceWeightings: [0.8, 0.9, 1],
+				techLevel: 5,
+				iconUri: icon,
+				events: [
+					{
+						id: '12111996-1111-0100-0001-DZJENGISKHAN',
+						date: '17/1/1',
+						getNotification: function (company) {
+							return new Notification({
+								header: "Tin Tức Ngành".localize(),
+								text: "Mirconoft đã công bố cải tiến của họ trên mBox 360, được gọi là: mBox 360 Slim.\nTheo các nhà phê bình, Mirconoft không thực hiện những cải tiến lớn và do đó họ tò mò muốn xem thị trường sẽ phản ứng như thế nào. {n} mBox 360 Slim sẽ được phát hành {0}".localize().format(General.getETADescription('17/1/1', '17/4/4')),
+								image: icon
+							});
+						}
 					}
 				]
 			});
 	};
 	/*  */
-	
+
 	/* Events */
+	// Thêm sự kiện "Celebration"
 	ExpPack.addEventCelebration = function () {
 		var eventId = "12111996-0001-0000-0000-DZJENGISKHAN";
-		
+
 		var Celebration = {
 			id: eventId,
-			isRandom: true,
-			maxTriggers: 1,
+			isRandom: true, // Sự kiện ngẫu nhiên
+			maxTriggers: 1, // Chỉ xảy ra 1 lần
 			trigger: function (company) {
-				
+				// Điều kiện kích hoạt: level 1, game đang phát triển gần xong
 				return company.currentLevel == 1 && company.isGameProgressBetween(0.8, 0.9);
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "You have almost finished {0}! Maybe you should give a party for the neighborhood to celebrate it? But it will cost some money ofcourse.".localize().format(game.title);
+				var msg = "Bạn gần như đã hoàn thành {0}! Có lẽ bạn nên tổ chức một bữa tiệc cho hàng xóm để ăn mừng? Nhưng tất nhiên là sẽ tốn một ít tiền.".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
-					header: "Celebration party?".localize(),
+					header: "Tiệc ăn mừng?".localize("heading"), // Tiêu đề thông báo
 					text: msg,
-					options: ["Party time!", "Do nothing"]
+					options: ["Quẩy thôi!", "Không có thời gian"] // Các lựa chọn
 				});
 			},
-			complete: function (decision) {
+			complete: function (decision) { // Xử lý khi người chơi đưa ra quyết định
 				var company = GameManager.company;
 
-				if (decision === 0) {
+				if (decision === 0) { // Nếu chọn "Quẩy thôi!"
 					var n = new Notification({
-						header: "Party time!!".localize(),
-						text: "The party was a massive succes. Everybody was really impressed by your work."
+						header: "Quẩy thôi!!".localize("heading"),
+						text: "Bữa tiệc là một thành công lớn. Mọi người thực sự ấn tượng với công việc của bạn."
 					});
-					n.adjustCash(-500, "Party");
-					n.adjustHype(5 + 10 * company.getRandom());
+					n.adjustCash(-500, "Tiệc"); // Trừ tiền
+					n.adjustHype(5 + 10 * company.getRandom()); // Tăng hype
 
 					company.activeNotifications.addRange(n.split());
 					return;
 				}
-				if (decision === 1) {
+				if (decision === 1) { // Nếu chọn "Không có thời gian"
 					var n = new Notification({
-						header: "No party".localize(),
-						text: "Looks like things will be quite tonight."
+						header: "Không tiệc tùng".localize("heading"),
+						text: "Có vẻ như tối nay sẽ khá yên tĩnh."
 					});
+					// Không có tác động gì thêm
 					return;
 				}
 			}
 		};
-		GDT.addEvent(Celebration);
+		GDT.addEvent(Celebration); // Thêm sự kiện vào game
 	};
-	
+
+	// Thêm sự kiện "Fan Curiosity"
 	ExpPack.addEventCuriosity = function () {
 		var eventId = "12111996-0001-0000-0001-DZJENGISKHAN";
-		
+
 		var fanCuriosity = {
 			id: eventId,
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				
+				// Điều kiện: level 3, game đang phát triển
 				return company.currentLevel == 3 && company.isGameProgressBetween(0.2, 0.9);
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Boss, the fans have discovered that were're developing {0}, and wondering what it's about. We could tell them, and get much needed hype. But we could go all out in telling them the details, or vaguely give them out. We could just ignore them, hoping this doesn't hurt the fan base too much.".localize().format(game.title);
+				var msg = "Sếp ơi, người hâm mộ đã phát hiện ra chúng ta đang phát triển {0}, và họ tò mò về nó. Chúng ta có thể nói cho họ biết để tạo thêm hype cần thiết. Nhưng chúng ta có thể tiết lộ chi tiết, hoặc chỉ úp mở. Hoặc chúng ta có thể phớt lờ họ, hy vọng điều này không làm tổn thương lượng fan hâm mộ quá nhiều.".localize().format(game.title);
 				return new Notification({
 					sourceId: eventId,
-					header: "Give information?".localize(),
+					header: "Cung cấp thông tin?".localize("heading"),
 					text: msg,
-					options: ["Give them what they want!", "Vaguely tell them", "Don't tell them!"]
+					options: ["Cho họ biết những gì họ muốn!", "Nói úp mở", "Đừng nói cho họ!"]
 				});
 			},
 			complete: function (decision) {
@@ -844,8 +865,8 @@ var ExpPack = {};
 
 				if (decision === 0) {
 					var n = new Notification({
-						header: "Give them what they want!".localize(),
-						text: "The fans are excited about what you have told them and they are spreading your word across the world!."
+						header: "Cho họ biết những gì họ muốn!".localize("heading"),
+						text: "Người hâm mộ rất phấn khích về những gì bạn đã nói và họ đang lan truyền lời của bạn khắp thế giới!."
 					});
 					n.adjustHype(5 + 6 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -853,73 +874,75 @@ var ExpPack = {};
 				}
 				if (decision === 1) {
 					var n = new Notification({
-						header: "Vaguely tell them".localize(),
-						text: "The fans are excited about your information, but they also think you could have said a bit more."
+						header: "Nói úp mở".localize("heading"),
+						text: "Người hâm mộ phấn khích về thông tin của bạn, nhưng họ cũng nghĩ rằng bạn có thể nói nhiều hơn một chút."
 					});
 					n.adjustHype(5 + 3 * company.getRandom());
-					return;
+					return; // Chú ý: thông báo này không được thêm vào activeNotifications, có thể là một thiếu sót
 				}
 				if (decision === 2) {
 					var n = new Notification({
-						header: "Don't tell them!".localize(),
-						text: "The fans are a bit dissapointed in you :("
+						header: "Đừng nói cho họ!".localize("heading"),
+						text: "Người hâm mộ hơi thất vọng về bạn :("
 					});
+					// Tương tự, thông báo này không được thêm, có thể là ý đồ hoặc thiếu sót
 					return;
 				}
 			}
 		};
 		GDT.addEvent(fanCuriosity);
 	};
-	
+
+	// Thêm sự kiện "The Vacuum Cleaner"
 	ExpPack.addEventVac = function () {
 		var eventId = "12111996-0001-0000-0010-DZJENGISKHAN";
-			
+
 		var vacuumCleaner = {
 			id: eventId,
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				
+				// Điều kiện: level 1, game đang phát triển, đã phát hành > 4 game
 				return company.currentLevel == 1 && company.isGameProgressBetween(0.6, 0.9) && company.gameLog.length > 4;
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
-	
-				var msg = "While you were working on your game someone knocked on the door of the garage. It was a man who wanted to sell you a vacuum cleaner. Do you want to buy the vacuum cleaner for 4K?".localize().format(game.title);
+
+				var msg = "Khi bạn đang làm việc với trò chơi của mình, có người gõ cửa nhà để xe. Đó là một người đàn ông muốn bán cho bạn một cái máy hút bụi. Bạn có muốn mua máy hút bụi với giá 4K không?".localize().format(game.title); // game.title ở đây không được sử dụng trong msg?
 				return new Notification({
 					sourceId: eventId,
-					header: "The Vacuum Cleaner".localize(),
+					header: "Máy Hút Bụi".localize("heading"),
 					text: msg,
-					options: ["Buy it!", "Ask to leave", "Denounce him"]
+					options: ["Mua nó!", "Yêu cầu rời đi", "Tố cáo anh ta"]
 				});
 			},
 			complete: function (decision) {
 				var company = GameManager.company;
-	
+
 				if (decision === 0) {
 					var n = new Notification({
-						header: "The Vacuum Cleaner".localize(),
-						text: "You buy the vacuum cleaner. After doing a garage clenup you win the prize for most clean gaming industry garage! This will most likely increase the hype for your game!"
+						header: "Máy Hút Bụi".localize("heading"),
+						text: "Bạn mua máy hút bụi. Sau khi dọn dẹp nhà để xe, bạn đã giành được giải thưởng nhà để xe sạch nhất trong ngành công nghiệp game! Điều này rất có thể sẽ làm tăng sự cường điệu cho trò chơi của bạn!"
 					});
 					n.adjustHype(5 + 10 * company.getRandom());
-					n.adjustCash(-4000, "Vacuum cleaner");
-					
+					n.adjustCash(-4000, "Máy hút bụi");
+
 					company.activeNotifications.addRange(n.split());
 					return;
 				}
 				if (decision === 1) {
 					var n = new Notification({
-						header: "It's me again!".localize(),
-						text: "'Hey! I'm back!' is what the guy said. This time he convinces you to buy a vacuum cleaner. Bye bye, 4000 dollars."
+						header: "Lại là tôi đây!".localize("heading"),
+						text: "'Này! Tôi trở lại rồi!' là những gì anh chàng đó nói. Lần này anh ta thuyết phục bạn mua một cái máy hút bụi. Tạm biệt, 4000 đô la."
 					});
-					n.adjustCash(-4000, "Vacuum Cleaner");
-					company.notifications.push(n);
+					n.adjustCash(-4000, "Máy Hút Bụi"); // Chi phí
+					company.notifications.push(n); // Thông báo này được đẩy vào hàng đợi thông báo
 					return;
 				}
 				if (decision === 2) {
 					var n = new Notification({
-						header: "The Vacuum Cleaner".localize(),
-						text: "'After you denounced me I thought it was a good idea to give you a bad reputation with the media! This didn't work out well for me, though... You even got more hype for it!' was the last thing he said before walking away in an angry mood."
+						header: "Máy Hút Bụi".localize("heading"),
+						text: "'Sau khi bạn tố cáo tôi, tôi nghĩ rằng việc tạo cho bạn một tiếng xấu với giới truyền thông là một ý tưởng hay! Tuy nhiên, điều này không hiệu quả với tôi... Bạn thậm chí còn nhận được nhiều sự cường điệu hơn cho nó!' là điều cuối cùng anh ta nói trước khi tức giận bỏ đi."
 					});
 					n.adjustHype(15 + 25 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -929,7 +952,8 @@ var ExpPack = {};
 		};
 		GDT.addEvent(vacuumCleaner);
 	};
-	
+
+	// Thêm sự kiện "Billy, the kid"
 	ExpPack.addEventBilly = function () {
 		var eventId = "12111996-0001-0000-0011-DZJENGISKHAN";
 
@@ -938,50 +962,51 @@ var ExpPack = {};
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				return company.currenLevel == 2 && company.isGameProgressBetween(0.2, 0.9);
+				// Điều kiện: level 2, game đang phát triển
+				return company.currenLevel == 2 && company.isGameProgressBetween(0.2, 0.9); // currenLevel -> currentLevel?
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "It seems that kids in the neighbourhood have started chatting about your upcoming game {0}. Rumour has it, that Billy, your neighbours kid, snuck into the garage and spied on some of the design papers.{n}How he managed to do this is a mystery. You could swear you were sitting in the garage the entire time!\nHow do you want to react?\n\nYou could talk to the parents to get him punished, ignore the incident or maybe invite some of the neighbours over to show them more of the game."
+				var msg = "Có vẻ như những đứa trẻ trong khu phố đã bắt đầu bàn tán về trò chơi sắp ra mắt của bạn {0}. Có tin đồn rằng Billy, con của hàng xóm bạn, đã lẻn vào nhà để xe và xem trộm một số tài liệu thiết kế.{n}Làm thế nào cậu bé làm được điều đó vẫn là một bí ẩn. Bạn có thể thề rằng bạn đã ở trong nhà để xe suốt thời gian đó!\nBạn muốn phản ứng thế nào?\n\nBạn có thể nói chuyện với cha mẹ để cậu bé bị phạt, phớt lờ vụ việc hoặc có thể mời một vài người hàng xóm đến để cho họ xem thêm về trò chơi."
 					.localize().format(game.title);
-				
-				company.adjustHype(5 + 10 * company.getRandom());
+
+				company.adjustHype(5 + 10 * company.getRandom()); // Tăng hype ngay khi sự kiện xuất hiện
 
 				return new Notification({
 					sourceId: eventId,
-					header: "Billy, the kid".localize(),
+					header: "Billy, cậu bé".localize("heading"),
 					text: msg,
-					options: ["Talk to parents", "Ignore incident", "Invite over"]
+					options: ["Nói chuyện với cha mẹ", "Phớt lờ vụ việc", "Mời đến xem"]
 				});
 			},
 			complete: function (decision) {
 				var company = GameManager.company;
 
-				if (decision === 0) {
+				if (decision === 0) { // Nói chuyện với cha mẹ
 					var n = new Notification({
-						header: "Billy, the kid".localize(),
-						text: "You talk to the parents about Billy's actions and they promise it won't happen again."
+						header: "Billy, cậu bé".localize("heading"),
+						text: "Bạn nói chuyện với cha mẹ về hành động của Billy và họ hứa điều đó sẽ không xảy ra nữa."
 					});
 					n.adjustHype(5 + 10 * company.getRandom());
 
 					company.activeNotifications.addRange(n.split());
 					return;
 				}
-				if (decision === 1) {
+				if (decision === 1) { // Phớt lờ
 					var n = new Notification({
-						header: "Vanished documents".localize(),
-						text: "You were working on some intricate design documents the other day but now you can't find them anymore. Small foot prints on the floor suggest that someone might have taken them.\nUnfortunately you have to recreate the documents (-500 cr.) - This might have been Billy's work",
-						weeksUntilFired: 1 + 2 * company.getRandom()
+						header: "Tài liệu biến mất".localize("heading"),
+						text: "Bạn đang làm việc với một số tài liệu thiết kế phức tạp vào ngày hôm trước nhưng bây giờ bạn không thể tìm thấy chúng nữa. Những dấu chân nhỏ trên sàn cho thấy ai đó có thể đã lấy chúng.\nThật không may, bạn phải tạo lại các tài liệu (-500 cr.) - Đây có thể là tác phẩm của Billy",
+						weeksUntilFired: 1 + 2 * company.getRandom() // Thông báo này sẽ xuất hiện sau
 					});
-					n.adjustCash(-500, "restoring documents");
+					n.adjustCash(-500, "khôi phục tài liệu");
 					company.notifications.push(n);
 					return;
 				}
-				if (decision === 2) {
+				if (decision === 2) { // Mời đến xem
 					var n = new Notification({
-						header: "Billy, the kid".localize(),
-						text: "You invite Billy, his parents and a couple of other interested neighbours over and show them the game in-progress. The kids are super-excited and for weeks you hear them talk about it afterwards."
+						header: "Billy, cậu bé".localize("heading"),
+						text: "Bạn mời Billy, cha mẹ cậu bé và một vài người hàng xóm quan tâm khác đến và cho họ xem trò chơi đang trong quá trình phát triển. Những đứa trẻ vô cùng phấn khích và trong nhiều tuần sau đó bạn nghe chúng nói về nó."
 					});
 					n.adjustHype(15 + 25 * company.getRandom());
 					company.activeNotifications.addRange(n.split());
@@ -992,7 +1017,8 @@ var ExpPack = {};
 
 		GDT.addEvent(billyBrakeIn);
 	};
-	
+
+	// Thêm sự kiện "Movie Game"
 	ExpPack.addEventMovieGame = function () {
 		var eventId = "12111996-0001-0000-0100-DZJENGISKHAN";
 
@@ -1001,27 +1027,28 @@ var ExpPack = {};
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
-				return company.currenLevel == 3 && company.isGameProgressBetween(0.5, 0.9);
+				// Điều kiện: level 3, game đang phát triển
+				return company.currenLevel == 3 && company.isGameProgressBetween(0.5, 0.9); // currenLevel -> currentLevel?
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Boss, a movie director approached us with the option of making a movie from {0}. If we agree with this, it will generate a lot of hype for us. But it will cost some money to set everything up and make the final deals.".localize().format(game.title);
+				var msg = "Sếp ơi, một đạo diễn phim đã tiếp cận chúng ta với lựa chọn làm một bộ phim từ {0}. Nếu chúng ta đồng ý, điều này sẽ tạo ra rất nhiều sự cường điệu cho chúng ta. Nhưng sẽ tốn một ít tiền để thiết lập mọi thứ và hoàn tất các giao dịch cuối cùng.".localize().format(game.title);
 
 				return new Notification({
 					sourceId: eventId,
-					header: "Make a movie".localize(),
+					header: "Làm một bộ phim".localize("heading"),
 					text: msg,
-					options: ["Sign the contract", "Don't make a movie"]
+					options: ["Ký hợp đồng", "Không làm phim"]
 				});
 			},
 			complete: function (decision) {
 				var company = GameManager.company;
 
-				if (decision === 0) {
+				if (decision === 0) { // Ký hợp đồng
 					var n = new Notification({
-						header: "A movie there shall be!".localize(),
-						text: "The movie was met with great response and we even gained some more fans!"
+						header: "Sẽ có một bộ phim!".localize("heading"),
+						text: "Bộ phim đã nhận được phản hồi tuyệt vời và chúng ta thậm chí còn có thêm một số người hâm mộ!"
 					});
 					n.adjustHype(10 + 15 * company.getRandom());
 					n.adjustFans(250);
@@ -1029,11 +1056,12 @@ var ExpPack = {};
 					company.activeNotifications.addRange(n.split());
 					return;
 				}
-				if (decision === 1) {
+				if (decision === 1) { // Không làm phim
 					var n = new Notification({
-						header: "No movie".localize(),
-						text: "You refused the offer and everything went back to normal."
+						header: "Không có phim".localize("heading"),
+						text: "Bạn đã từ chối lời đề nghị và mọi thứ trở lại bình thường."
 					});
+					// Thông báo này không được thêm vào hàng đợi, có thể là ý đồ
 					return;
 				}
 			}
@@ -1041,7 +1069,8 @@ var ExpPack = {};
 
 		GDT.addEvent(movieGame);
 	};
-	
+
+	// Thêm sự kiện "Fire in the office"
 	ExpPack.addEventFire = function () {
 		var eventId = "12111996-0001-0000-0101-DZJENGISKHAN";
 
@@ -1050,18 +1079,19 @@ var ExpPack = {};
 			isRandom: true,
 			maxTriggers: 1,
 			trigger: function (company) {
+				// Điều kiện: level 4, game đang phát triển
 				return company.currentLevel == 4 && company.isGameProgressBetween(0.5, 0.9);
 			},
 			getNotification: function (company) {
 				var game = company.currentGame;
 
-				var msg = "Oh my god! A fire just broke out we all need to leave now!{n} .... After the fire has been extinguished you take a look inside and sees that there is alot of damage.".localize().format(game.title);
+				var msg = "Ôi chúa ơi! Một đám cháy vừa bùng phát, tất cả chúng ta cần phải rời đi ngay bây giờ!{n} .... Sau khi đám cháy được dập tắt, bạn vào xem và thấy có rất nhiều thiệt hại.".localize().format(game.title); // game.title không được sử dụng?
 
 				return new Notification({
 					sourceId: eventId,
-					header: "Fire in the office!!".localize(),
+					header: "Cháy văn phòng!!".localize("heading"),
 					text: msg,
-					options: ["Repair all....."]
+					options: ["Sửa chữa tất cả....."] // Chỉ có 1 lựa chọn?
 				});
 			},
 			complete: function (decision) {
@@ -1069,10 +1099,10 @@ var ExpPack = {};
 
 				if (decision === 0) {
 					var n = new Notification({
-						header: "Repairing".localize(),
-						text: "You were able to save your current project but the repair was expensive. This game better be worth it's money."
+						header: "Đang sửa chữa".localize("heading"),
+						text: "Bạn đã có thể cứu dự án hiện tại của mình nhưng việc sửa chữa rất tốn kém. Trò chơi này tốt hơn hết là đáng tiền."
 					});
-					n.adjustCash(-15000, "Fire damage");
+					n.adjustCash(-15000, "Thiệt hại do cháy"); // Chi phí sửa chữa
 
 					company.activeNotifications.addRange(n.split());
 					return;
@@ -1082,489 +1112,500 @@ var ExpPack = {};
 
 		GDT.addEvent(fire);
 	};
-	
+
+	// Thêm sự kiện "First Magazine Interview"
 	ExpPack.addEventFirstMagazine = function () {
 		var eventId = "12111996-0001-0000-0110-DZJENGISKHAN";
-		
+
 		var WelcomeToIndustry = {
 			id: eventId,
-			isRandom: false,
-			date: '4/8/3',
+			isRandom: false, // Sự kiện theo kịch bản
+			date: '4/8/3', // Ngày kích hoạt
 			ignoreGameLengthModifier: false,
 			getNotification: function (company) {
-            	var msg = "Gamer Pride magazine would like you to give an interview as a part of  'New Stars in the Game Industry' action to promote the game industry and upcoming game developers.{n}This is a big part of their project to promote gaming and help developers to get better attention.\n\n Do you accept this offer? If yes, decide what topic you would like to discuss.".localize();
+				var msg = "Tạp chí Gamer Pride muốn bạn tham gia một cuộc phỏng vấn như một phần của chương trình 'Những Ngôi Sao Mới Trong Ngành Công Nghiệp Game' nhằm quảng bá ngành công nghiệp game và các nhà phát triển game sắp tới.{n}Đây là một phần quan trọng trong dự án của họ nhằm quảng bá game và giúp các nhà phát triển được chú ý hơn.\n\n Bạn có chấp nhận lời đề nghị này không? Nếu có, hãy quyết định chủ đề bạn muốn thảo luận.".localize();
 				return new Notification({
 					sourceId: eventId,
-					header: "Magazine Interview".localize(),
+					header: "Phỏng Vấn Tạp Chí".localize("heading"),
 					text: msg,
-					options: ["No, thank You.", "Current game industry", "My dreams"]
+					options: ["Không, cảm ơn.", "Ngành công nghiệp game hiện tại", "Ước mơ của tôi"]
 				});
 			},
-                       
+
 			complete: function (decision) {
-                       
+
 				var company = GameManager.company;
-                               
-				if (decision === 0) {
+
+				if (decision === 0) { // Từ chối
 					var n = new Notification({
-						header: "Magazine Interview".localize(),
-						text: "You resigned, Gamer Pride magazine is disappointed."
-					});    
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Bạn đã từ chối, tạp chí Gamer Pride rất thất vọng."
+					});
 					company.activeNotifications.addRange(n.split());
-					return;                                                                                        
+					return;
 				}
-				if (decision === 1) {
-                	var n = new Notification({
-                    header: "Magazine Interview".localize(),
-                    text: "You tell the magazine that nowadays game industry is relatively small and it is a great opportunity for people like you to find their place and grow.{n} The interviewer asked if you can predict the future of game industry.\n\n You answered that a dynamic progress in electornic industry will probably catalyze the production of new platforms and that will give a great chance for game industry to progress in many ways."
-               	});
-                   	n.adjustFans(200);
-                    company.notifications.push(n);
-                                       
-                    var m = new Notification ({
-                    	header: "Sponsorship".localize(),
-                    	text: "Some electronic companies appreciated that you mentioned them in your recent interview. A company called RBM contacted to you and gave you some money as a gift for your current project. They hope that cooperation between them and game developers will boost both industries."
-                    });
-                	if(company.isGameProgressBetween(0.2, 0.9)) {
-                    	m.adjustCash(40000, "RBM Sponsorship");
-                    	m.adjustHype(5 + 15 * company.getRandom());
-                    	company.notifications.push(m);
-                    }
-                    return;                        
-                }
-                if (decision === 2) {
-                	var n = new Notification({
-                    	header: "Magazine Interview".localize(),
-                        text: "Your dream is to find a 'golden solution' that will push your company and maybe the whole gaming industry into next level. \nYou say that right now this is a great time to grow since the game business is relatively new. You hope that in 4, 5 years the company will grow and you will be able to work on more ambitious projects.{n} The interviewer asked if you can predict the future of game industry.\n\n You answered that only god knows what future might bring."
-                    });
-                	n.adjustFans(100);
-                	if (company.isGameProgressBetween(0.2, 0.9)) {
-                    	n.adjustHype(5 + 15 * company.getRandom());
-                    }
-                    company.notifications.push(n);
-                    return;             
-               	}
+				if (decision === 1) { // Thảo luận về ngành game
+					var n = new Notification({
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Bạn nói với tạp chí rằng ngày nay ngành công nghiệp game tương đối nhỏ và đó là một cơ hội tuyệt vời cho những người như bạn tìm thấy vị trí của mình và phát triển.{n} Người phỏng vấn hỏi liệu bạn có thể dự đoán tương lai của ngành công nghiệp game không.\n\n Bạn trả lời rằng sự tiến bộ năng động trong ngành công nghiệp điện tử có thể sẽ xúc tác cho việc sản xuất các nền tảng mới và điều đó sẽ mang lại cơ hội tuyệt vời cho ngành công nghiệp game tiến bộ theo nhiều cách."
+					});
+					n.adjustFans(200); // Tăng fan
+					company.notifications.push(n);
+
+					var m = new Notification({
+						header: "Tài Trợ".localize("heading"),
+						text: "Một số công ty điện tử đánh giá cao việc bạn đã đề cập đến họ trong cuộc phỏng vấn gần đây. Một công ty tên là RBM đã liên hệ với bạn và tặng bạn một số tiền như một món quà cho dự án hiện tại của bạn. Họ hy vọng rằng sự hợp tác giữa họ và các nhà phát triển game sẽ thúc đẩy cả hai ngành công nghiệp."
+					});
+					if (company.isGameProgressBetween(0.2, 0.9)) { // Nếu đang phát triển game
+						m.adjustCash(40000, "Tài trợ từ RBM"); // Nhận tiền
+						m.adjustHype(5 + 15 * company.getRandom()); // Tăng hype
+						company.notifications.push(m);
+					}
+					return;
+				}
+				if (decision === 2) { // Thảo luận về ước mơ
+					var n = new Notification({
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Ước mơ của bạn là tìm ra một 'giải pháp vàng' sẽ đưa công ty của bạn và có thể là toàn bộ ngành công nghiệp game lên một tầm cao mới. \nBạn nói rằng hiện tại đây là thời điểm tuyệt vời để phát triển vì ngành kinh doanh game tương đối mới. Bạn hy vọng rằng trong 4, 5 năm tới công ty sẽ phát triển và bạn sẽ có thể làm việc với những dự án tham vọng hơn.{n} Người phỏng vấn hỏi liệu bạn có thể dự đoán tương lai của ngành công nghiệp game không.\n\n Bạn trả lời rằng chỉ có Chúa mới biết tương lai sẽ mang lại điều gì."
+					});
+					n.adjustFans(100);
+					if (company.isGameProgressBetween(0.2, 0.9)) {
+						n.adjustHype(5 + 15 * company.getRandom());
+					}
+					company.notifications.push(n);
+					return;
+				}
 			}
-        };
-        
-        GDT.addEvent(WelcomeToIndustry);
+		};
+
+		GDT.addEvent(WelcomeToIndustry);
 	};
-	
+
+	// Thêm sự kiện "Second Magazine Interview"
 	ExpPack.addEventSecMagazine = function () {
 		var eventId = "12111996-0001-0000-0111-DZJENGISKHAN";
-		
-		var LateThoughts = {	                       
-	        id: eventId,
-	        isRandom: false,
-	        maxTriggers: 1,
-	        trigger: function (company) {
-	        	return company.fans >= 1500000;
-	        },
-	        getNotification: function (company) {
-		    	var msg = "Gamer Pride magazine contacted you for an interview. Recently you reached 1.5 mln fans, they want to know what the secret is behind this success.".localize();
-	            return new Notification({
-	            	sourceId: eventId,
-	                header: "Magazine Interview".localize(),
-	            	text: msg,
-	            	options: ["Providing the best games", "The fans", "We are pro"]
-	             });
-	        },
-	        complete: function (decision) {            
-	        	var company = GameManager.company;
-	            if (decision === 0) {
-	            	var n = new Notification({
-	                	header: "Magazine Interview".localize(),
-	                	text: "You said that only by providing the best games possible you were able to build such big fan base. You learned by this time that gamers only seek for great games and if some game developers are not able to produce some innovative and great games, it is unlikely that they will reach such fan base and most likely they will go bankrupt sooner or later."
-	                });
-	                n.adjustFans(5000);
-	                if(company.isGameProgressBetween(0.2, 0.9)) {
-	                	n.adjustHype(20 + 40 * company.getRandom());
-	                }
-	                company.notifications.push(n);
-	                return;
-	            }
-	            if (decision === 1) {
-	            	var n = new Notification({
-	                	header: "Magazine Interview".localize(),
-	                	text: "In your opinion, based on the years of experience your recipe for success is to build good relationship between a game developer and customer. It does mean that gamers need to see that it is a good idea to invest their money in your products. \n They can see it when a company provides good value for the money that gamers spent on the game.{n} You say that customers need to be treated properly. For instance, they can't be punished with DRM, because it is not fair. \nPirates have no problem with breaking DRM. It is broken the next day the game is released.\n That way pirates can experience games without any problems, when honest customers have to deal with DRM policy.{n}Instead of punishing customers, companies should reward them with additional content for free, great customer service and so on.\n Third and the most important thing is to treat gamers same as you would like to be treated, because at the end of the day, we are all gamers!"
-	                });
-	                company.notifications.push(n);
-	                var m = new Notification({
-	                	header: "Magazine Interview".localize(),
-	                	text: "Your words warmed people. The company's e-mail was swarmed by tons of supportive messages from your fans! Isn't that a great feeling?"
-	                });
-					m.adjustFans(20000);
-					if(company.isGameProgressBetween(0.2, 0.9)) {
-	               		m.adjustHype(50 + 60 * company.getRandom());
-	           		}
-	            	company.notifications.push(m);
-	           		return;
+
+		var LateThoughts = {
+			id: eventId,
+			isRandom: false, // Sự kiện theo kịch bản
+			maxTriggers: 1,
+			trigger: function (company) {
+				// Điều kiện: có 1.5 triệu fan
+				return company.fans >= 1500000;
+			},
+			getNotification: function (company) {
+				var msg = "Tạp chí Gamer Pride đã liên hệ với bạn để phỏng vấn. Gần đây bạn đã đạt được 1,5 triệu người hâm mộ, họ muốn biết bí mật đằng sau thành công này là gì.".localize();
+				return new Notification({
+					sourceId: eventId,
+					header: "Phỏng Vấn Tạp Chí".localize("heading"),
+					text: msg,
+					options: ["Cung cấp những trò chơi tốt nhất", "Người hâm mộ", "Chúng tôi là dân chuyên nghiệp"]
+				});
+			},
+			complete: function (decision) {
+				var company = GameManager.company;
+				if (decision === 0) { // Cung cấp game tốt nhất
+					var n = new Notification({
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Bạn nói rằng chỉ bằng cách cung cấp những trò chơi tốt nhất có thể, bạn mới có thể xây dựng được một lượng fan hâm mộ lớn như vậy. Đến lúc này bạn đã học được rằng game thủ chỉ tìm kiếm những trò chơi tuyệt vời và nếu một số nhà phát triển game không thể sản xuất ra những trò chơi sáng tạo và tuyệt vời, thì rất khó có khả năng họ sẽ đạt được lượng fan hâm mộ như vậy và rất có thể họ sẽ phá sản sớm hay muộn."
+					});
+					n.adjustFans(5000);
+					if (company.isGameProgressBetween(0.2, 0.9)) {
+						n.adjustHype(20 + 40 * company.getRandom());
+					}
+					company.notifications.push(n);
+					return;
 				}
-	            if (decision === 2) {
-	            	var n = new Notification({
-	                	header: "Magazine Interview".localize(),
-	                	text: "What can you say? You and your company are just pro developers and gamers love pro!"
-	                });
-	                 n.adjustFans(1000);
-	                 if(company.isGameProgressBetween(0.2, 0.9)) {
-	                 	n.adjustHype(10 + 20 * company.getRandom());
-	                 }
-	                 company.notifications.push(n);
-	                               
+				if (decision === 1) { // Người hâm mộ
+					var n = new Notification({
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Theo ý kiến của bạn, dựa trên nhiều năm kinh nghiệm, công thức thành công của bạn là xây dựng mối quan hệ tốt giữa nhà phát triển game và khách hàng. Điều đó có nghĩa là game thủ cần thấy rằng việc đầu tư tiền của họ vào sản phẩm của bạn là một ý tưởng tốt. \n Họ có thể thấy điều đó khi một công ty cung cấp giá trị tốt cho số tiền mà game thủ đã chi cho trò chơi.{n} Bạn nói rằng khách hàng cần được đối xử đúng mực. Ví dụ, họ không thể bị trừng phạt bằng DRM, bởi vì điều đó không công bằng. \nNhững kẻ vi phạm bản quyền không gặp vấn đề gì trong việc bẻ khóa DRM. Nó bị bẻ khóa ngay ngày hôm sau khi trò chơi được phát hành.\n Bằng cách đó, những kẻ vi phạm bản quyền có thể trải nghiệm trò chơi mà không gặp bất kỳ vấn đề gì, trong khi những khách hàng trung thực phải đối phó với chính sách DRM.{n}Thay vì trừng phạt khách hàng, các công ty nên thưởng cho họ bằng nội dung bổ sung miễn phí, dịch vụ khách hàng tuyệt vời, v.v.\n Điều thứ ba và quan trọng nhất là đối xử với game thủ giống như cách bạn muốn được đối xử, bởi vì cuối cùng, tất cả chúng ta đều là game thủ!"
+					});
+					company.notifications.push(n);
+					var m = new Notification({
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Lời nói của bạn đã sưởi ấm lòng người. E-mail của công ty đã bị tràn ngập bởi hàng tấn tin nhắn ủng hộ từ người hâm mộ của bạn! Đó không phải là một cảm giác tuyệt vời sao?"
+					});
+					m.adjustFans(20000);
+					if (company.isGameProgressBetween(0.2, 0.9)) {
+						m.adjustHype(50 + 60 * company.getRandom());
+					}
+					company.notifications.push(m);
+					return;
+				}
+				if (decision === 2) { // Chúng tôi là dân chuyên nghiệp
+					var n = new Notification({
+						header: "Phỏng Vấn Tạp Chí".localize("heading"),
+						text: "Bạn có thể nói gì đây? Bạn và công ty của bạn chỉ đơn giản là những nhà phát triển chuyên nghiệp và game thủ yêu thích sự chuyên nghiệp!"
+					});
+					n.adjustFans(1000);
+					if (company.isGameProgressBetween(0.2, 0.9)) {
+						n.adjustHype(10 + 20 * company.getRandom());
+					}
+					company.notifications.push(n);
+
 				}
 			}
-	 	};
-	    
-	    GDT.addEvent(LateThoughts);
+		};
+
+		GDT.addEvent(LateThoughts);
 	};
 	/*  */
-	
+
 	/* Researches */
+	// Thêm các mục nghiên cứu mới
 	ExpPack.addResearch = function () {
 		/* Graphic items */
 		GDT.addResearchItem(
-		{
-			id: "Realistic Particles",
-			name: "Realistic particles".localize(),
-			v: 6,
-			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Graphic') > 7
-			},
-			category: "Graphic",
-			categoryDisplayName: "Graphic"
-		});
+			{
+				id: "Realistic Particles", // Giữ ID tiếng Anh
+				name: "Hạt thực tế".localize(), // Dịch tên hiển thị
+				v: 6,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Graphic') > 7
+				},
+				category: "Graphic",
+				categoryDisplayName: "Đồ Họa".localize() // Dịch tên danh mục
+			});
 		GDT.addResearchItem(
-		{
-			id: "Advanced Shaders",
-			name: "Advanced shaders".localize(),
-			v: 6,
-			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Graphic') > 5
-			},
-			category: "Graphic",
-			categoryDisplayName: "Graphic"
-		});
+			{
+				id: "Advanced Shaders",
+				name: "Shader nâng cao".localize(),
+				v: 6,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Graphic') > 5
+				},
+				category: "Graphic",
+				categoryDisplayName: "Đồ Họa".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Animated Textures",
-			name: "Animated Textures".localize(),
-			v: 2,
-			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Graphic') > 3
-			},
-			category: "Graphic",
-			categoryDisplayName: "Graphic"
-		});
+			{
+				id: "Animated Textures",
+				name: "Kết Cấu Động".localize(),
+				v: 2,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Graphic') > 3
+				},
+				category: "Graphic",
+				categoryDisplayName: "Đồ Họa".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Basic Holograms",
-            name: "Basic Holograms".localize(),
-            v: 4,
-            canResearch: function (company) {
-            	return LevelCalculator.getMissionLevel('Graphic') > 4
-			},
-            category: "Graphic",
-            categoryDisplayName: "Graphic"
-		});
+			{
+				id: "Basic Holograms",
+				name: "Hình Chiếu 3 Chiều Cơ Bản".localize(),
+				v: 4,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Graphic') > 4
+				},
+				category: "Graphic",
+				categoryDisplayName: "Đồ Họa".localize()
+			});
 		GDT.addResearchItem(
-		{
-        	id: "Advanced Holograms",
-            name: "Advanced Holograms".localize(),
-            v: 8,
-            canResearch: function (company) {
-            	return LevelCalculator.getMissionLevel('Graphic') > 6
-            },
-            category: "Graphic",
-            categoryDisplayName: "Graphic"
-        });
+			{
+				id: "Advanced Holograms",
+				name: "Hình Chiếu 3 Chiều Nâng Cao".localize(),
+				v: 8,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Graphic') > 6
+				},
+				category: "Graphic",
+				categoryDisplayName: "Đồ Họa".localize()
+			});
 		GDT.addResearchItem(
-        {
-        	id: "Interactive Holograms",
-            name: "Interactive Holograms".localize(),
-            v: 10,
-            canResearch: function (company) {
-            	return LevelCalculator.getMissionLevel('Graphic') > 8
-            },
-            category: "Graphic",
-            categoryDisplayName: "Graphic"
-        });
+			{
+				id: "Interactive Holograms",
+				name: "Hình Chiếu 3 Chiều Tương Tác".localize(),
+				v: 10,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Graphic') > 8
+				},
+				category: "Graphic",
+				categoryDisplayName: "Đồ Họa".localize()
+			});
 		/*  */
-		
+
 		/* Sound items */
 		GDT.addResearchItem(
-		{
-			id: "Realistic Sound",
-			name: "Realistic sound".localize(),
-			v: 6,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Sound') > 6
-			},
-			category: "Sound",
-			categoryDisplayName: "Sound"
-		});
+			{
+				id: "Realistic Sound",
+				name: "Âm thanh thực tế".localize(),
+				v: 6,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Sound') > 6
+				},
+				category: "Sound",
+				categoryDisplayName: "Âm Thanh".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Copywritten Music",
-			name: "Copywritten sound".localize(),
-			v: 8,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Sound') > 7
-			},
-			category: "Sound",
-			categoryDisplayName: "Sound"
-		});
+			{
+				id: "Copywritten Music", // Nên là "Copyrighted Music"
+				name: "Âm nhạc có bản quyền".localize(),
+				v: 8,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Sound') > 7
+				},
+				category: "Sound",
+				categoryDisplayName: "Âm Thanh".localize()
+			});
 		/*  */
-		
+
 		/* A.I. items */
 		GDT.addResearchItem(
-		{
-			id: "Superior AI",
-			name: "Superior A.I.".localize(),
-			v: 8,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('AI') > 7
-			},
-			category: "AI",
-			categoryDisplayName: "A.I."
-		});
+			{
+				id: "Superior AI",
+				name: "A.I. vượt trội".localize(),
+				v: 8,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('AI') > 7
+				},
+				category: "AI",
+				categoryDisplayName: "A.I.".localize() // Giữ nguyên A.I.
+			});
 		GDT.addResearchItem(
-		{
-			id: "AI Difficulty",
-			name: "A.I. difficulty".localize(),
-			v: 4,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('AI') > 4
-			},
-			category: "AI",
-			categoryDisplayName: "A.I."
-		});
+			{
+				id: "AI Difficulty",
+				name: "Độ khó A.I.".localize(),
+				v: 4,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('AI') > 4
+				},
+				category: "AI",
+				categoryDisplayName: "A.I.".localize()
+			});
 		/*  */
-		
+
 		/* Gameplay */
 		GDT.addResearchItem(
-		{
-			id: "Cheat Codes",
-			name: "Cheat Codes".localize(),
-			v: 4,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Gameplay') > 3
-			},
-			category: "Gameplay",
-			categoryDisplayName: "Gameplay"
-		});
+			{
+				id: "Cheat Codes",
+				name: "Mã Ăn Gian".localize(),
+				v: 4,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Gameplay') > 3
+				},
+				category: "Gameplay",
+				categoryDisplayName: "Lối Chơi".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Premium Content",
-			name: "Premium content".localize(),
-			v: 8,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Gameplay') > 6
-			},
-			category: "Gameplay",
-			categoryDisplayName: "Gameplay"
-		});
+			{
+				id: "Premium Content",
+				name: "Nội dung cao cấp".localize(),
+				v: 8,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Gameplay') > 6
+				},
+				category: "Gameplay",
+				categoryDisplayName: "Lối Chơi".localize()
+			});
 		/*  */
-		
+
 		/* Engine items */
 		GDT.addResearchItem(
-		{
-			id: "Quick Saving",
-			name: "Quick Saving".localize(),
-			v: 2,
-			canResearch: function (company) {
-				return LevelCalculator.getMissionLevel('Engine') > 3;
-			},
-			category: "Engine",
-			categoryDisplayName: "Engine".localize()
-		});
+			{
+				id: "Quick Saving",
+				name: "Lưu Nhanh".localize(),
+				v: 2,
+				canResearch: function (company) {
+					return LevelCalculator.getMissionLevel('Engine') > 3;
+				},
+				category: "Engine",
+				categoryDisplayName: "Engine".localize() // Giữ nguyên Engine
+			});
 		GDT.addResearchItem(
-		{
-			id: "Seasons",
-			name: "Seasons".localize(),
-			v: 6,
-			canResearch: function (e) {
-				return LevelCalculator.getMissionLevel('Engine') > 6
-			},
-			category: "Engine",
-			categoryDisplayName: "Engine"
-		});
+			{
+				id: "Seasons",
+				name: "Các Mùa".localize(),
+				v: 6,
+				canResearch: function (e) { // 'e' nên là 'company' cho nhất quán
+					return LevelCalculator.getMissionLevel('Engine') > 6
+				},
+				category: "Engine",
+				categoryDisplayName: "Engine".localize()
+			});
 		/*  */
-		
+
 		/* Story/Quests */
 		GDT.addResearchItem(
-		{
-			id: "Collectables",
-			name: "Collectables".localize(),
-			v: 2,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Story/Quests') > 2
-			},
-			category: "Story/Quests",
-			categoryDisplayName: "Story/Quests"
-		});
+			{
+				id: "Collectables",
+				name: "Vật Phẩm Sưu Tầm".localize(),
+				v: 2,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Story/Quests') > 2
+				},
+				category: "Story/Quests",
+				categoryDisplayName: "Cốt Truyện/Nhiệm Vụ".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Simple quests",
-			name: "Simple quests".localize(),
-			v: 2,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Story/Quests') > 3
-			},
-			category: "Story/Quests",
-			categoryDisplayName: "Story/Quests"
-		});
+			{
+				id: "Simple quests",
+				name: "Nhiệm vụ đơn giản".localize(),
+				v: 2,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Story/Quests') > 3
+				},
+				category: "Story/Quests",
+				categoryDisplayName: "Cốt Truyện/Nhiệm Vụ".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Advanced quests",
-			name: "Advanced quests".localize(),
-			v: 6,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Story/Quests') > 6
-			},
-			category: "Story/Quests",
-			categoryDisplayName: "Story/Quests"
-		});
+			{
+				id: "Advanced quests",
+				name: "Nhiệm vụ nâng cao".localize(),
+				v: 6,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Story/Quests') > 6
+				},
+				category: "Story/Quests",
+				categoryDisplayName: "Cốt Truyện/Nhiệm Vụ".localize()
+			});
 		/*  */
-		
+
 		/* Dialogues items */
 		GDT.addResearchItem(
-		{
-			id: "Language Settings",
-			name: "Language settings".localize(),
-			v: 4,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Dialogs') > 4
-			},
-			category: "Dialogs",
-			categoryDisplayName: "Dialogues",
-		});
+			{
+				id: "Language Settings",
+				name: "Cài đặt ngôn ngữ".localize(),
+				v: 4,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Dialogs') > 4
+				},
+				category: "Dialogs",
+				categoryDisplayName: "Hội Thoại".localize(),
+			});
 		/*  */
-		
+
 		/* World Design items */
 		GDT.addResearchItem(
-		{
-			id: "Realistic Water",
-			name: "Realstic water".localize(),
-			v: 4,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('World Design') > 3
-			},
-			category: "World Design",
-			categoryDisplayName: "World Design"
-		});
+			{
+				id: "Realistic Water",
+				name: "Nước thực tế".localize(),
+				v: 4,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('World Design') > 3
+				},
+				category: "World Design",
+				categoryDisplayName: "Thiết Kế Thế Giới".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Realistic Plant Life",
-			name: "Realistic plant life".localize(),
-			v: 6,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('World Design') > 6
-			},
-			category: "World Design",
-			categoryDisplayName: "World Design"
-		});
+			{
+				id: "Realistic Plant Life",
+				name: "Thực vật thực tế".localize(),
+				v: 6,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('World Design') > 6
+				},
+				category: "World Design",
+				categoryDisplayName: "Thiết Kế Thế Giới".localize()
+			});
 		/*  */
-		
+
 		/* Level Design items */
 		GDT.addResearchItem(
-		{
-			id: "Bosses",
-			name: "Bosses".localize(),
-			v: 2,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Level Design') > 2
-			},
-			category: "Level Design",
-			categoryDisplayName: "Level Design"
-		});
+			{
+				id: "Bosses",
+				name: "Trùm (Boss)".localize(),
+				v: 2,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Level Design') > 2
+				},
+				category: "Level Design",
+				categoryDisplayName: "Thiết Kế Màn Chơi".localize()
+			});
 		GDT.addResearchItem(
-		{
-			id: "Swift Loading",
-			name: "Swift loading".localize(),
-			v: 4,
-			canResearch: function () {
-				return LevelCalculator.getMissionLevel('Level Design') > 5
-			},
-			category: "Level Design",
-			categoryDisplayName: "Level Design"
-		});
+			{
+				id: "Swift Loading",
+				name: "Tải nhanh".localize(),
+				v: 4,
+				canResearch: function () {
+					return LevelCalculator.getMissionLevel('Level Design') > 5
+				},
+				category: "Level Design",
+				categoryDisplayName: "Thiết Kế Màn Chơi".localize()
+			});
 		/*  */
 	};
 	/*  */
-	
+
 	/*  */
-	ExpPack.addLabResearch = function () {		
+	// Thêm nghiên cứu trong phòng Lab
+	ExpPack.addLabResearch = function () {
 		GDT.addLabResearchItem(
-		{
-			id: "4D Graphics Project",
-			name: "4D Graphics".localize(),
-			pointsCost: 200,
-			canResearch: function (company) {
-				return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
-			},
-			iconUri: "./images/projectIcons/superb/graphics-v6.png",
-			description: "Cows....".localize(),
-			targetZone: 2,
-			complete: function (company) {
-				company.flags.graphics4D = true;
-				//GDT.fire(GameManager, GDT.eventKeys.gameplay.researchCompleted, ForDGraphics);
-				GDT.addResearchItem({
-					id : "4D Graphics",
-					name : "4D Graphics".localize(),
-					v : 14,
-					canResearch : function (company) {
-						return false
-					},
-					category: "Graphic",
-					categoryDisplayName: "Graphic".localize(),
-					group : "graphic-type",
-					consolePart : true,
-					techLevel : 7,
-					showXPGain : true
-				});
-				company.notifications.push(new Notification({
-					header: "Lab report".localize(),
-					text: "Cows....".localize(),
-					image: "./images/projectIcons/superb/graphics-v6.png"
-				}))
-			}
-		});
+			{
+				id: "4D Graphics Project", // Giữ ID
+				name: "Đồ Họa 4D".localize(), // Dịch tên
+				pointsCost: 200,
+				canResearch: function (company) {
+					// Điều kiện: chưa có cờ 'graphics4D', level của 'Level Design' > 1 (nên là 'Graphic'?)
+					return !company.flags.graphics4D && LevelCalculator.getMissionLevel(/*company, "3D Graphics V7"*/'Level Design') > 1;
+				},
+				iconUri: "./images/projectIcons/superb/graphics-v6.png", // Giữ nguyên đường dẫn icon
+				description: "Bò....".localize(), // Mô tả
+				targetZone: 2, // Khu vực R&D Lab
+				complete: function (company) { // Hàm khi hoàn thành nghiên cứu
+					company.flags.graphics4D = true;
+					//GDT.fire(GameManager, GDT.eventKeys.gameplay.researchCompleted, ForDGraphics); // Dòng này bị comment
+					GDT.addResearchItem({ // Thêm một mục nghiên cứu mới sau khi hoàn thành cái này
+						id: "4D Graphics",
+						name: "Đồ Họa 4D".localize(),
+						v: 14,
+						canResearch: function (company) {
+							return false // Không thể nghiên cứu trực tiếp
+						},
+						category: "Graphic",
+						categoryDisplayName: "Đồ Họa".localize(),
+						group: "graphic-type",
+						consolePart: true,
+						techLevel: 7,
+						showXPGain: true
+					});
+					company.notifications.push(new Notification({
+						header: "Báo cáo phòng Lab".localize("heading"),
+						text: "Bò....".localize(), // Thông báo
+						image: "./images/projectIcons/superb/graphics-v6.png"
+					}))
+				}
+			});
 	};
 	/*  */
-	
+
 	/* Custom prices for games */
+	// Thêm tính năng tùy chỉnh giá game
 	ExpPack.addCustomPrice = function () {
-		var company = GameManager.company;
-		var gamePrice;
-		var newPrice;
-		var dataStore = GDT.getDataStore("MasExpPack")
-		
+		var company = GameManager.company; // Biến này không được sử dụng ở đây, có thể gây lỗi nếu truy cập sớm
+		var gamePrice; // Giá game hiện tại hoặc được đặt
+		var newPrice; // Giá mới được chọn từ slider
+		var dataStore = GDT.getDataStore("MasExpPack") // Lấy data store của mod
+
+		// Ghi đè hoặc thêm hàm xử lý click cho việc chọn giá
 		UI.selectPriceClick = function (a) {
-		Sound.click();
+			Sound.click();
 			switch (a.id) {
 				case "applyPrice":
-				applyPrice();
+					applyPrice(); // Áp dụng giá đã chọn
 					break;
 				default:
 					return;
 			}
 		};
-		
+
+		// Tạo UI cho việc chọn giá
 		var div = $("body");
-		div.append('<div id="PriceContainer" class="windowBorder tallWindow" style="overflow:auto;display:none;"> <div id="priceSelector" class="windowTitle smallerWindowTitle">Custom Price</div>');
+		div.append('<div id="PriceContainer" class="windowBorder tallWindow" style="overflow:auto;display:none;"> <div id="priceSelector" class="windowTitle smallerWindowTitle">Giá Tùy Chỉnh</div>');
 		div = $("#PriceContainer");
-	
-		div.append('<div id="exppack_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
-		div.append('<div id="exppack_current_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
-		div.append('<div id="exppack_select_price" style="text-align:center;margin-left:50px;width: 450px"></div>');
-		div.append('<div class="priceSlider"></div>');
-		div.append('<div id="applyPrice" class="selectorButton whiteButton" onclick="UI.selectPriceClick(this)" style="margin-left:50px;width: 450px">Set Price</div>');
-		
+
+		div.append('<div id="exppack_price" style="text-align:center;margin-left:50px;width: 450px"></div>'); // Hiển thị giá đang chọn
+		div.append('<div id="exppack_current_price" style="text-align:center;margin-left:50px;width: 450px"></div>'); // Hiển thị giá hiện tại của game
+		div.append('<div id="exppack_select_price" style="text-align:center;margin-left:50px;width: 450px"></div>'); // Có thể là một label
+		div.append('<div class="priceSlider"></div>'); // Thanh trượt chọn giá
+		div.append('<div id="applyPrice" class="selectorButton whiteButton" onclick="UI.selectPriceClick(this)" style="margin-left:50px;width: 450px">Đặt Giá</div>');
+
+		// Hàm áp dụng giá mới
 		function applyPrice() {
-			if(GameManager.company.isCurrentlyDevelopingGame())
+			if (GameManager.company.isCurrentlyDevelopingGame()) // Chỉ áp dụng nếu đang phát triển game
 			{
 				game = GameManager.company.currentGame;
-				
+
+				// Cập nhật giá mặc định của Sales module dựa trên kích thước game
 				if (game.gameSize === "medium") {
 					Sales.mediumUnitPrice = newPrice;
 				}
@@ -1574,104 +1615,111 @@ var ExpPack = {};
 				else if (game.gameSize === "aaa") {
 					Sales.aaaUnitPrice = newPrice;
 				}
-				else {
+				else { // small
 					Sales.smallUnitPrice = newPrice;
 				}
-				
-				gamePrice = newPrice;
-				div.find("#exppack_current_price").html("Current price: " + gamePrice);
+
+				gamePrice = newPrice; // Cập nhật biến gamePrice cục bộ
+				div.find("#exppack_current_price").html("Giá hiện tại: " + gamePrice); // Cập nhật UI
 			}
-			dataStore.data.gamePrice = gamePrice;
+			dataStore.data.gamePrice = gamePrice; // Lưu giá vào data store của mod
 		};
-		
+
+		// Hàm cập nhật UI khi người dùng kéo slider
 		function setPrice(e) {
-			if(GameManager.company.isCurrentlyDevelopingGame())
-			{
+			if (GameManager.company.isCurrentlyDevelopingGame()) {
 				var game = GameManager.company.currentGame;
-				newPrice = e
-				
+				newPrice = e // Giá trị từ slider
+
 				var div = $("#PriceContainer");
-				
-				if(newPrice == 7 && game.gameSize === "small")
-					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-				else if(newPrice == 11 && game.gameSize === "medium")
-					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-				else if(newPrice == 14 && game.gameSize === "large")
-					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
-				else if(newPrice == 18 && game.gameSize === "aaa")
-					div.find("#exppack_price").html(newPrice + " Cr. (Default)");
+
+				// Hiển thị "(Mặc định)" nếu giá bằng giá gốc
+				if (newPrice == 7 && game.gameSize === "small")
+					div.find("#exppack_price").html(newPrice + " Cr. (Mặc định)");
+				else if (newPrice == 11 && game.gameSize === "medium")
+					div.find("#exppack_price").html(newPrice + " Cr. (Mặc định)");
+				else if (newPrice == 14 && game.gameSize === "large")
+					div.find("#exppack_price").html(newPrice + " Cr. (Mặc định)");
+				else if (newPrice == 18 && game.gameSize === "aaa")
+					div.find("#exppack_price").html(newPrice + " Cr. (Mặc định)");
 				else
 					div.find("#exppack_price").html(newPrice + " Cr.");
 			}
 		};
-		
-		/* calculateSales algorithm */
-		var salesCalculated = function (company, unused_var) {
-				var price = dataStore.data.gamePrice;
-				var currentGame = company.game
-	
-				var priceRatio = function (price, game) {
-					var a;
-	
-					if(game.gameSize === "small")
-						a = 2 - (price / 10);
-					else if(game.gameSize === "medium")
-						a = 2 - (price / 20);
-					else if(game.gameSize === "large")
-						a = 2 - (price / 40);
-					else if(game.gameSize === "aaa")
-						a = 2 - (price / 60);
-	
-					return a;
-				};
-	
-				var score = currentGame.score.clamp(1, 10);
-	
-				var scoreRatio = function (score) {
-					var b;
-	
-					if(score >= 9)
-						b = 1.3;
-					else if (score >= 7)
-						b = 1.1;
-					else if (score >= 5)
-						b = 0.8;
-					else if (score >= 3)
-						b = 0.5;
-					else
-						b = 0.1;
-	
-					return b;
-				};
-	
-				currentGame.totalSalesCash *= 1 * priceRatio(price, currentGame) * scoreRatio(score);
+
+		/* salesCalculated algorithm */
+		// Hàm này được gọi sau khi doanh số gốc được tính toán, để điều chỉnh dựa trên giá tùy chỉnh
+		var salesCalculated = function (company, unused_var) { // company ở đây là đối tượng game, không phải GameManager.company
+			var price = dataStore.data.gamePrice; // Lấy giá từ data store
+			var currentGame = company.game // game hiện tại được truyền vào
+
+			// Tính tỷ lệ ảnh hưởng của giá đến doanh số
+			var priceRatio = function (price, game) {
+				var a; // Biến tạm
+
+				if (game.gameSize === "small")
+					a = 2 - (price / 10);
+				else if (game.gameSize === "medium")
+					a = 2 - (price / 20);
+				else if (game.gameSize === "large")
+					a = 2 - (price / 40);
+				else if (game.gameSize === "aaa")
+					a = 2 - (price / 60);
+
+				return a;
+			};
+
+			var score = currentGame.score.clamp(1, 10); // Lấy điểm game, giới hạn từ 1-10
+
+			// Tính tỷ lệ ảnh hưởng của điểm đến doanh số
+			var scoreRatio = function (score) {
+				var b;
+
+				if (score >= 9)
+					b = 1.3;
+				else if (score >= 7)
+					b = 1.1;
+				else if (score >= 5)
+					b = 0.8;
+				else if (score >= 3)
+					b = 0.5;
+				else
+					b = 0.1;
+
+				return b;
+			};
+
+			// Điều chỉnh tổng doanh thu dựa trên giá và điểm
+			currentGame.totalSalesCash *= 1 * priceRatio(price, currentGame) * scoreRatio(score);
 		};
-	
-		GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated);
+
+		GDT.on(GDT.eventKeys.gameplay.salesCalculated, salesCalculated); // Gắn hàm điều chỉnh vào sự kiện tính toán doanh số
 		/*  */
-		
+
+		// Ghi đè hàm _showContextMenu của UI để thêm lựa chọn "Game Price..."
 		var original_showContextMenu = UI._showContextMenu;
-		var new_showContextMenu = function (b, c, d, h) {
-			GameManager.company.isCurrentlyDevelopingGame() && c.push({
-					label: "Game Price...",
-					action: function () {
-						Sound.click();
-						GameManager.resume(true);
-						
-						var div = $("#PriceContainer");
-							 
-						div.scrollTop()
-							 
-						div.gdDialog({
-							popout: !0,
-							close: !0
-						})
-					}
-				})
-				
+		var new_showContextMenu = function (b, c, d, h) { // b: type, c: menuItems, d: x, h: y (tên biến gốc là items, x, y, options)
+			GameManager.company.isCurrentlyDevelopingGame() && c.push({ // Chỉ thêm nếu đang phát triển game
+				label: "Giá Game...".localize("menu item"), // Tên menu item
+				action: function () { // Hành động khi click
+					Sound.click();
+					GameManager.resume(true); // Tiếp tục game (nếu đang pause)
+
+					var div = $("#PriceContainer"); // Lấy dialog chọn giá
+
+					div.scrollTop() // Cuộn lên đầu (có thể không cần thiết)
+
+					div.gdDialog({ // Hiển thị dialog
+						popout: !0,
+						close: !0
+					})
+				}
+			})
+
 			var game = GameManager.company.currentGame;
-			var max_price;
-			
+			var max_price; // Giá tối đa cho slider
+
+			// Xác định giá tối đa và giá hiện tại dựa trên kích thước game
 			if (GameManager.company.isCurrentlyDevelopingGame() && game.gameSize === "medium") {
 				max_price = 20;
 				gamePrice = Sales.mediumUnitPrice;
@@ -1684,77 +1732,82 @@ var ExpPack = {};
 				max_price = 60;
 				gamePrice = Sales.aaaUnitPrice;
 			}
-			else if (GameManager.company.isCurrentlyDevelopingGame()) {
+			else if (GameManager.company.isCurrentlyDevelopingGame()) { // small
 				max_price = 10;
 				gamePrice = Sales.smallUnitPrice;
 			}
-			
+
+			// Khởi tạo slider giá
 			div.find(".priceSlider").slider({
 				min: 1,
 				max: max_price,
 				range: "min",
-				value: Math.floor(gamePrice),
+				value: Math.floor(gamePrice), // Giá trị ban đầu của slider
 				animate: !1,
-				slide: function (a, b) {
+				slide: function (a, b) { // Hàm được gọi khi kéo slider
 					var c = b.value;
-					setPrice(c);
+					setPrice(c); // Cập nhật UI hiển thị giá
 				}
 			});
-			setPrice(gamePrice);
-		
-			original_showContextMenu(b, c, d, h);
+			setPrice(gamePrice); // Cập nhật UI lần đầu
+
+			original_showContextMenu(b, c, d, h); // Gọi lại hàm context menu gốc
 		};
-		UI._showContextMenu = new_showContextMenu;
+		UI._showContextMenu = new_showContextMenu; // Gán hàm mới
 	};
 	/*  */
-	
+
 	/* Black Bull */
+	// Thêm tính năng "Black Bull" (có vẻ là một loại nước tăng lực)
 	ExpPack.addBlackBull = function () {
-		var menuItems = [];
-		var div = $("body");
-		div = $("#BlackBull");
-		
-		var original_PopupMenu = UI._showContextMenu;
-		var new_initPopupMenu = function (type, menuItems, x, y) {
-			var company = GameManager.company
+		var menuItems = []; // Biến này không được sử dụng trực tiếp ở đây
+		var div = $("body"); // Lấy thẻ body (không dùng)
+		div = $("#BlackBull"); // Lấy một element tên BlackBull (có thể là một dialog ẩn)
+
+		var original_PopupMenu = UI._showContextMenu; // Lưu lại hàm context menu gốc
+		var new_initPopupMenu = function (type, menuItems, x, y) { // Ghi đè hàm context menu
+			var company = GameManager.company;
+			// Lấy nhân vật đang được chọn hoặc nhân vật chính
 			var targetChar = company.currentLevel > 1 ? UI.getCharUnderCursor() : company.staff[0];
-			
-			if(targetChar) {
+
+			if (targetChar) {
+				// Nếu nhân vật không bận (nghiên cứu, đào tạo, nghỉ phép)
 				if (targetChar.state != CharacterState.Researching &&
 					(targetChar.state != CharacterState.Training && targetChar.state != CharacterState.Vacation)) {
-					if(company.currentLevel > 1 && targetChar.flags.needsVacation)
-					{
+					// Nếu level > 1 và nhân vật cần nghỉ phép
+					if (company.currentLevel > 1 && targetChar.flags.needsVacation) {
 						menuItems.push({
-							label : "Buy a Black Bull".localize("menu item"),
-							action : function () {
+							label: "Mua một lon Black Bull".localize("menu item"),
+							action: function () {
 								Sound.click();
 								GameManager.resume(true);
-								var div = $("#BlackBull");
-								company.adjustCash(-500, "Black Bull");
-								
-								targetChar.relaxDelta = 0;
+								var div = $("#BlackBull"); // Element này dùng để làm gì?
+								company.adjustCash(-500, "Black Bull"); // Trừ tiền mua
+
+								targetChar.relaxDelta = 0; // Reset delta nghỉ ngơi
 								var vacationInterval;
-								var canRecharge;
-								var timeLastUsed = GameManager.gameTime * GameManager.SECONDS_PER_WEEK * 1E3;
+								var canRecharge; // Biến này không được gán giá trị
+								var timeLastUsed = GameManager.gameTime * GameManager.SECONDS_PER_WEEK * 1E3; // Tính thời gian game hiện tại (có vẻ thừa * 1E3)
+								// Logic này có vẻ không đúng, vì timeLastUsed sẽ luôn bằng timeLastUsed
 								if (timeLastUsed < timeLastUsed + 8)
 									vacationInterval = 2;
 								if (timeLastUsed >= timeLastUsed + 8)
 									vacationInterval = 4;
-								targetChar.flags.nextVacation = GameManager.gameTime + vacationInterval * GameManager.SECONDS_PER_WEEK * 1E3;
+								targetChar.flags.nextVacation = GameManager.gameTime + vacationInterval * GameManager.SECONDS_PER_WEEK * 1E3; // Đặt lại thời gian nghỉ phép tiếp theo
 								targetChar.flags.relaxGained = 0;
-								targetChar.flags.needsVacation = false;
-								canRecharge = true;
-								
+								targetChar.flags.needsVacation = false; // Nhân vật không còn cần nghỉ phép nữa
+								canRecharge = true; // Biến này được gán nhưng không sử dụng
+
 							}
 						})
 					}
 				}
 			}
-			original_PopupMenu(type, menuItems, x, y);
+			original_PopupMenu(type, menuItems, x, y); // Gọi hàm context menu gốc
 		};
-		
-		UI._showContextMenu = new_initPopupMenu;
+
+		UI._showContextMenu = new_initPopupMenu; // Gán hàm mới
 	};
 	/*  */
-	
+
 })();
