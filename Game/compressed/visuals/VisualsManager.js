@@ -4,764 +4,771 @@ var DESIGN_POINTS_COLOR = "orange",
     BUGS_COLOR = "#FF6A00",
     VisualsManager = {};
 (function () {
-    var a = VisualsManager,
-        b = CanvasManager;
-    a.Divisor = 1;
-    a.globalOffsetX = 0;
-    PlatformShim.ISLOWRES && (a.Divisor = 1.874084919472914);
-    a.toScreenCoordinates = function (b, c) {
-        var d = isNaN(c) ? 1 : c;
-        return Math.round(b / a.Divisor * d)
+    var visualsModule = VisualsManager, // a -> visualsModule
+        canvasModule = CanvasManager; // b -> canvasModule
+    visualsModule.Divisor = 1;
+    visualsModule.globalOffsetX = 0;
+    PlatformShim.ISLOWRES && (visualsModule.Divisor = 1.874084919472914);
+    visualsModule.toScreenCoordinates = function (value, scale) { // b -> value, c -> scale
+        var effectiveScale = isNaN(scale) ? 1 : scale; // d -> effectiveScale
+        return Math.round(value / visualsModule.Divisor * effectiveScale)
     };
-    var c = createjs.Tween.get;
+    var originalCreatejsTweenGet = createjs.Tween.get; // c -> originalCreatejsTweenGet
     createjs.Tween.get = function () {
-        var a = c.apply(this, arguments);
-        a && (a.gameId = GameManager.gameId);
-        return a
+        var tweenInstance = originalCreatejsTweenGet.apply(this, arguments); // a -> tweenInstance
+        tweenInstance && (tweenInstance.gameId = GameManager.gameId);
+        return tweenInstance
     };
-    a.stopOldTweens = function () {
-        for (var a = createjs.Tween._tweens.filter(function (a) {
-            return a.gameId && a.gameId != GameManager.gameId
-        }).slice(), b = 0; b < a.length; b++) a[b].setPaused(!0)
+    visualsModule.stopOldTweens = function () {
+        for (var oldTweens = createjs.Tween._tweens.filter(function (tween) { // a -> tween, then oldTweens
+            return tween.gameId && tween.gameId != GameManager.gameId
+        }).slice(), i = 0; i < oldTweens.length; i++) oldTweens[i].setPaused(!0) // b -> i
     };
-    a.gameStatusBar = void 0;
-    a.researchPoints = void 0;
-    a.reset = function () {
+    visualsModule.gameStatusBar = void 0;
+    visualsModule.researchPoints = void 0;
+    visualsModule.reset = function () {
         Sound.pauseAllLoopingFx();
         this.stopOldTweens();
         if (GameManager.company.hwCrew)
-            for (var c = 0; c < GameManager.company.hwCrew.length; c++) GameManager.company.hwCrew[c].load();
+            for (var staffIndex = 0; staffIndex < GameManager.company.hwCrew.length; staffIndex++) GameManager.company.hwCrew[staffIndex].load(); // c -> staffIndex
         if (GameManager.company.rndCrew)
-            for (c = 0; c < GameManager.company.rndCrew.length; c++) GameManager.company.rndCrew[c].load();
-        a.computerImages = [void 0, void 0, void 0, void 0, void 0];
-        a.loadStage(!0);
-        a.gameStatusBar || (a.gameStatusBar = new GameStatusBar, b.foregroundStage.addChild(a.gameStatusBar));
-        a.gameStatusBar.x = b.foregroundStage.canvas.width / 2 - a.gameStatusBar.width / 2;
-        a.gameStatusBar.y = 15;
-        a.gameStatusBar.reset();
-        a.researchPoints || (a.researchPoints = new PointsDisplayVisual(RESEARCH_POINTS_COLOR, "white", "Research".localize()), b.foregroundStage.addChild(a.researchPoints));
-        a.researchPoints.y = 15;
-        a.researchPoints.size = 100;
-        a.researchPoints.x = a.gameStatusBar.x + a.gameStatusBar.width + 70;
-        a.resetAllCharacters();
-        a.refreshLabCrew();
-        a.updatePoints();
-        a.gameStatusBar.updateGameName();
+            for (var staffIndex = 0; staffIndex < GameManager.company.rndCrew.length; staffIndex++) GameManager.company.rndCrew[staffIndex].load(); // c -> staffIndex
+        visualsModule.computerImages = [void 0, void 0, void 0, void 0, void 0];
+        visualsModule.loadStage(!0);
+        visualsModule.gameStatusBar || (visualsModule.gameStatusBar = new GameStatusBar, canvasModule.foregroundStage.addChild(visualsModule.gameStatusBar));
+        visualsModule.gameStatusBar.x = canvasModule.foregroundStage.canvas.width / 2 - visualsModule.gameStatusBar.width / 2;
+        visualsModule.gameStatusBar.y = 15;
+        visualsModule.gameStatusBar.reset();
+        visualsModule.researchPoints || (visualsModule.researchPoints = new PointsDisplayVisual(RESEARCH_POINTS_COLOR, "white", "Research".localize()), canvasModule.foregroundStage.addChild(visualsModule.researchPoints));
+        visualsModule.researchPoints.y = 15;
+        visualsModule.researchPoints.size = 100;
+        visualsModule.researchPoints.x = visualsModule.gameStatusBar.x + visualsModule.gameStatusBar.width + 70;
+        visualsModule.resetAllCharacters();
+        visualsModule.refreshLabCrew();
+        visualsModule.updatePoints();
+        visualsModule.gameStatusBar.updateGameName();
         UI.clearSalesCards();
         UI.clearMaintenanceCards();
-        GameManager.company.licencedPlatforms.forEach(function (a) {
-            !0 === a.isCustom && (0 < a.nextSalesCash || 0 === a.currentSalesCash) && (UI.addSalesCard(a.id, a.name, a.currentSalesCash, a.unitsSold, a.currentUnitsSold, -1, a.salesCashLog, a.nextSalesCash, Sales.consoleUnitPrice), 0 < a.currentSalesCash && UI.updateMaintenanceCard(a))
+        GameManager.company.licencedPlatforms.forEach(function (platform) { // a -> platform
+            !0 === platform.isCustom && (0 < platform.nextSalesCash || 0 === platform.currentSalesCash) && (UI.addSalesCard(platform.id, platform.name, platform.currentSalesCash, platform.unitsSold, platform.currentUnitsSold, -1, platform.salesCashLog, platform.nextSalesCash, Sales.consoleUnitPrice), 0 < platform.currentSalesCash && UI.updateMaintenanceCard(platform))
         });
-        GameManager.company.gameLog.forEach(function (a) {
-            a.currentSalesCash < a.totalSalesCash && UI.addSalesCard(a.id, a.title, a.currentSalesCash, a.totalSalesCash, a.unitsSold, a.currentSalesRank,
-                a.salesCashLog, a.nextSalesCash, a.unitPrice, a.nextMaintenance, a.maintenanceLog)
+        GameManager.company.gameLog.forEach(function (game) { // a -> game
+            game.currentSalesCash < game.totalSalesCash && UI.addSalesCard(game.id, game.title, game.currentSalesCash, game.totalSalesCash, game.unitsSold, game.currentSalesRank,
+                game.salesCashLog, game.nextSalesCash, game.unitPrice, game.nextMaintenance, game.maintenanceLog)
         });
         CanvasManager.update(!0, !0);
-        a.updateReleaseReadyButton();
+        visualsModule.updateReleaseReadyButton();
         UI.reset()
     };
-    a.resetAllCharacters = function () {
-        for (var c = b.characterStage.children.slice(), d = 0; d < c.length; d++) b.characterStage.children.remove(c[d]);
-        a.characterOverlays = [];
-        a.reloadAllCharacters();
-        a.refreshTrainingOverlays();
-        a.refreshHiringButtons()
+    visualsModule.resetAllCharacters = function () {
+        for (var characterChildren = canvasModule.characterStage.children.slice(), i = 0; i < characterChildren.length; i++) canvasModule.characterStage.children.remove(characterChildren[i]); // c -> characterChildren, d -> i
+        visualsModule.characterOverlays = [];
+        visualsModule.reloadAllCharacters();
+        visualsModule.refreshTrainingOverlays();
+        visualsModule.refreshHiringButtons()
     };
-    a.removeStaff = function (c) {
-        var d = a.characterOverlays.first(function (a) {
-            return a.character === c
+    visualsModule.removeStaff = function (characterToRemove) { // c -> characterToRemove
+        var characterOverlay = visualsModule.characterOverlays.first(function (overlay) { // a -> overlay, d -> characterOverlay
+            return overlay.character === characterToRemove
         });
-        a.characterOverlays.remove(d);
-        b.characterStage.removeChild(d);
-        a.removeComputer(c);
-        a.refreshTrainingOverlays();
-        a.refreshHiringButtons();
+        visualsModule.characterOverlays.remove(characterOverlay);
+        canvasModule.characterStage.removeChild(characterOverlay);
+        visualsModule.removeComputer(characterToRemove);
+        visualsModule.refreshTrainingOverlays();
+        visualsModule.refreshHiringButtons();
         UI._resetBoostUI()
     };
-    a.backgroundImage = void 0;
-    a.computerImages = [void 0, void 0, void 0, void 0, void 0];
-    a.nextLevel = function () {
-        var b = GameManager.company.currentLevel;
+    visualsModule.backgroundImage = void 0;
+    visualsModule.computerImages = [void 0, void 0, void 0, void 0, void 0];
+    visualsModule.nextLevel = function () {
+        var currentLevel = GameManager.company.currentLevel; // b -> currentLevel
         GameManager.pause(!0);
-        var c = ResourceKeys.getLevelResources.apply(ResourceKeys, [1, 2, 3, 4].except([b]));
-        GameDev.ResourceManager.removeResources(c);
+        var resourcesToUnload = ResourceKeys.getLevelResources.apply(ResourceKeys, [1, 2, 3, 4].except([currentLevel])); // c -> resourcesToUnload
+        GameDev.ResourceManager.removeResources(resourcesToUnload);
         UI.fadeInTransitionOverlay();
-        var d = Date.now(),
-            f = function () {
-                a.loadStage(!0);
-                for (var b = 0; b < a.characterOverlays.length; b++) {
-                    var c =
-                        a.characterOverlays[b];
-                    c.character.visualData = c.saveState();
-                    c.parent.removeChild(c)
+        var startTime = Date.now(), // d -> startTime
+            loadNewLevelAssets = function () { // f -> loadNewLevelAssets
+                visualsModule.loadStage(!0);
+                for (var overlayIndex = 0; overlayIndex < visualsModule.characterOverlays.length; overlayIndex++) { // b -> overlayIndex
+                    var characterOverlay =
+                        visualsModule.characterOverlays[overlayIndex]; // c -> characterOverlay
+                    characterOverlay.character.visualData = characterOverlay.saveState();
+                    characterOverlay.parent.removeChild(characterOverlay)
                 }
-                a.characterOverlays = [];
-                a.reloadAllCharacters();
-                a.refreshTrainingOverlays();
-                a.refreshHiringButtons();
+                visualsModule.characterOverlays = [];
+                visualsModule.reloadAllCharacters();
+                visualsModule.refreshTrainingOverlays();
+                visualsModule.refreshHiringButtons();
                 if (0 < GameManager.currentResearches.length)
-                    for (b = 0; b < GameManager.company.staff.length; b++) GameManager.company.staff[b].state === CharacterState.Researching && VisualsManager.getCharacterOverlay(GameManager.company.staff[b]).startResearching();
+                    for (overlayIndex = 0; overlayIndex < GameManager.company.staff.length; overlayIndex++) GameManager.company.staff[overlayIndex].state === CharacterState.Researching && VisualsManager.getCharacterOverlay(GameManager.company.staff[overlayIndex]).startResearching();
                 UI._resetBoostUI();
                 CanvasManager.update();
                 UI.fadeOutTransitionOverlay();
                 GameManager.resume(!0)
             };
         FlippingCounter.init();
-        GameDev.ResourceManager.ensureResources(ResourceKeys.getLevelResources(b), function () {
-            var a = Date.now() - d;
-            2E3 > a ? setTimeout(function () {
-                f()
-            }, 2E3 - a) : f()
+        GameDev.ResourceManager.ensureResources(ResourceKeys.getLevelResources(currentLevel), function () {
+            var elapsedTime = Date.now() - startTime; // a -> elapsedTime
+            2E3 > elapsedTime ? setTimeout(function () {
+                loadNewLevelAssets()
+            }, 2E3 - elapsedTime) : loadNewLevelAssets()
         })
     };
-    a.addComputer = function (b) {
-        if (0 < b.slot) {
-            b = b.slot;
-            var c = void 0,
-                d = 1,
-                f = GameManager.company.currentLevel,
-                k = 0,
-                m = 0,
-                u = CanvasManager.globalScale;
-            2 === f ? 1 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level2C1], k = 1005, m = 707, d = 4) : 2 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level2C2], k = 880, m = 698) : 3 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level2C3],
-                k = 1164, m = 576) : 4 === b && (c = GameDev.ResourceManager.resources[ResourceKeys.Level2C4], k = 1114, m = 511) : 3 === f ? 1 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level3C1], k = 1005, m = 723, d = 4) : 2 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level3C2], k = 878, m = 703) : 3 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level3C3], k = 1159, m = 593) : 4 === b && (c = GameDev.ResourceManager.resources[ResourceKeys.Level3C4], k = 1109, m = 511) : 4 === f && (1 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level4C1], k =
-                    463, m = 978, d = 4) : 2 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level4C2], k = 428, m = 756) : 3 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level4C1], k = 745, m = 812) : 4 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level4C2], k = 711, m = 591) : 5 === b ? (c = GameDev.ResourceManager.resources[ResourceKeys.Level4C1], k = 1014, m = 649) : 6 === b && (c = GameDev.ResourceManager.resources[ResourceKeys.Level4C2], k = 981, m = 426));
-            k = a.toScreenCoordinates(k, u);
-            m = a.toScreenCoordinates(m, u);
-            if (c) {
-                var f = CanvasManager.backgroundStage,
-                    t = f.canvas.width,
-                    q = f.canvas.height,
-                    v = 1366 / 768,
-                    A = 0;
-                0.1 < Math.abs(t / q - v) && (v *= q, A = -(v - t) / 2, t = v);
-                a.currentXOffset = A;
-                v = document.createElement("canvas");
-                v.width = t;
-                v.height = q;
-                v.getContext("2d").drawImage(c, 0, 0, c.width, c.height, A + k, m, Math.floor(c.width * u), Math.floor(c.height * u));
-                c = new createjs.Bitmap(v);
-                c.width = t;
-                c.height = q;
-                a.computerImages[b] = c;
-                f.children.length >= d - 1 ? f.addChildAt(c, d) : f.addChild(c);
+    visualsModule.addComputer = function (staffMember) { // b -> staffMember
+        if (0 < staffMember.slot) {
+            var slotIndex = staffMember.slot; // b -> slotIndex
+            var computerImageResource = void 0, // c -> computerImageResource
+                addChildIndex = 1, // d -> addChildIndex
+                currentLevel = GameManager.company.currentLevel, // f -> currentLevel
+                coordX = 0, // k -> coordX
+                coordY = 0, // m -> coordY
+                globalCanvasScale = CanvasManager.globalScale; // u -> globalCanvasScale
+            2 === currentLevel ? 1 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C1], coordX = 1005, coordY = 707, addChildIndex = 4) : 2 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C2], coordX = 880, coordY = 698) : 3 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C3],
+                coordX = 1164, coordY = 576) : 4 === slotIndex && (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C4], coordX = 1114, coordY = 511) : 3 === currentLevel ? 1 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C1], coordX = 1005, coordY = 723, addChildIndex = 4) : 2 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C2], coordX = 878, coordY = 703) : 3 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C3], coordX = 1159, coordY = 593) : 4 === slotIndex && (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C4], coordX = 1109, coordY = 511) : 4 === currentLevel && (1 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C1], coordX =
+                    463, coordY = 978, addChildIndex = 4) : 2 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C2], coordX = 428, coordY = 756) : 3 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C1], coordX = 745, coordY = 812) : 4 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C2], coordX = 711, coordY = 591) : 5 === slotIndex ? (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C1], coordX = 1014, coordY = 649) : 6 === slotIndex && (computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C2], coordX = 981, coordY = 426));
+            coordX = visualsModule.toScreenCoordinates(coordX, globalCanvasScale);
+            coordY = visualsModule.toScreenCoordinates(coordY, globalCanvasScale);
+            if (computerImageResource) {
+                var backgroundStage = CanvasManager.backgroundStage, // f -> backgroundStage
+                    stageWidth = backgroundStage.canvas.width, // t -> stageWidth
+                    stageHeight = backgroundStage.canvas.height, // q -> stageHeight
+                    targetAspectRatio = 1366 / 768, // v -> targetAspectRatio
+                    offsetX = 0; // A -> offsetX
+                0.1 < Math.abs(stageWidth / stageHeight - targetAspectRatio) && (targetAspectRatio *= stageHeight, offsetX = -(targetAspectRatio - stageWidth) / 2, stageWidth = targetAspectRatio);
+                visualsModule.currentXOffset = offsetX;
+                var tempCanvas = document.createElement("canvas"); // v -> tempCanvas
+                tempCanvas.width = stageWidth;
+                tempCanvas.height = stageHeight;
+                tempCanvas.getContext("2d").drawImage(computerImageResource, 0, 0, computerImageResource.width, computerImageResource.height, offsetX + coordX, coordY, Math.floor(computerImageResource.width * globalCanvasScale), Math.floor(computerImageResource.height * globalCanvasScale));
+                computerImageResource = new createjs.Bitmap(tempCanvas);
+                computerImageResource.width = stageWidth;
+                computerImageResource.height = stageHeight;
+                visualsModule.computerImages[slotIndex] = computerImageResource;
+                backgroundStage.children.length >= addChildIndex - 1 ? backgroundStage.addChildAt(computerImageResource, addChildIndex) : backgroundStage.addChild(computerImageResource);
                 CanvasManager.invalidateBackground()
             }
         }
     };
-    a.removeComputer = function (b) {
-        var c = CanvasManager.backgroundStage;
-        a.computerImages[b.slot] &&
-            (c.removeChild(a.computerImages[b.slot]), a.computerImages[b.slot] = void 0, CanvasManager.invalidateBackground())
+    visualsModule.removeComputer = function (staffMember) { // b -> staffMember
+        var backgroundStage = CanvasManager.backgroundStage; // c -> backgroundStage
+        visualsModule.computerImages[staffMember.slot] &&
+            (backgroundStage.removeChild(visualsModule.computerImages[staffMember.slot]), visualsModule.computerImages[staffMember.slot] = void 0, CanvasManager.invalidateBackground())
     };
-    a.getLabSign = function (a, b, c, d, f) {
-        var k = new createjs.Container;
-        k.x = d;
-        k.y = f;
-        d = UI.IS_SEGOE_UI_INSTALLED ? "Segoe UI" : "Open Sans";
-        f = 32;
+    visualsModule.getLabSign = function (labelText, maxWidth, maxHeight, posX, posY) { // a -> labelText, b -> maxWidth, c -> maxHeight, d -> posX, f -> posY
+        var signContainer = new createjs.Container; // k -> signContainer
+        signContainer.x = posX;
+        signContainer.y = posY;
+        posX = UI.IS_SEGOE_UI_INSTALLED ? "Segoe UI" : "Open Sans";
+        posY = 32;
         do {
-            var m = "bold {0}pt {1}".format(f, d),
-                m = new createjs.Text(a, m, "black");
-            f -= 1
-        } while ((m.getMeasuredWidth() > b || m.getMeasuredLineHeight() > c) && 1 < f);
-        b = f / 32;
-        c = createjs.Graphics.getHSL(0, 0, 24);
-        m = new createjs.Text(a, "bold 32pt {0}".format(d), c);
-        m.textAlign = "center";
-        m.textBaseline =
+            var textObj = "bold {0}pt {1}".format(posY, posX), // m -> textObj
+                textObj = new createjs.Text(labelText, textObj, "black");
+            posY -= 1
+        } while ((textObj.getMeasuredWidth() > maxWidth || textObj.getMeasuredLineHeight() > maxHeight) && 1 < posY);
+        maxWidth = posY / 32;
+        maxHeight = createjs.Graphics.getHSL(0, 0, 24);
+        textObj = new createjs.Text(labelText, "bold 32pt {0}".format(posX), maxHeight);
+        textObj.textAlign = "center";
+        textObj.textBaseline =
             "middle";
-        k.scaleX = b;
-        k.scaleY = b;
-        k.addChild(m);
-        return k
+        signContainer.scaleX = maxWidth;
+        signContainer.scaleY = maxWidth;
+        signContainer.addChild(textObj);
+        return signContainer
     };
-    a.loadStage = function (b) {
-        var c = GameManager.company,
-            f = CanvasManager.backgroundStage,
-            m = CanvasManager.backgroundOverlayStage,
-            p = CanvasManager.globalScale,
-            s = f.canvas.width,
-            u = f.canvas.height,
-            t = 1366 / 768,
-            q = 0;
-        0.1 < Math.abs(s / u - t) && (t *= u, q = -(t - s) / 2, s = t);
-        var v = c.currentLevel,
-            A;
-        a.toScreenCoordinates(2921);
-        var z = a.toScreenCoordinates(39),
-            B;
-        a.toScreenCoordinates(4156);
-        var t = a.toScreenCoordinates(47),
-            D = GameDev.ResourceManager.resources[ResourceKeys.Level1],
-            E =
-                a.toScreenCoordinates(563),
-            w = a.toScreenCoordinates(217);
-        2 === v ? (D = GameDev.ResourceManager.resources[ResourceKeys.Level2], E = a.toScreenCoordinates(83), w = a.toScreenCoordinates(54)) : 3 === v ? (D = GameDev.ResourceManager.resources[ResourceKeys.Level3], E = a.toScreenCoordinates(83), w = a.toScreenCoordinates(54)) : 4 === v && (D = GameDev.ResourceManager.resources[ResourceKeys.Level4], E = a.toScreenCoordinates(367), w = a.toScreenCoordinates(39), GameManager.company.flags.rndLabUnlocked || (B = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedRight]),
-            GameManager.company.flags.hwLabUnlocked || (A = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedLeft]), a.toScreenCoordinates(2560));
-        if (!a.backgroundImage || a.backgroundImage.width != s || a.backgroundImage.height != u || a.currentXOffset != q || b) {
-            f.removeAllChildren();
-            m.removeAllChildren();
-            k = void 0;
-            a.currentXOffset = q;
-            b = document.createElement("canvas");
-            b.width = s;
-            b.height = u;
-            var F = b.getContext("2d");
-            4 === v ? F.drawImage(D, a.toScreenCoordinates(2193), 0, a.toScreenCoordinates(2560), a.toScreenCoordinates(1384),
-                0, Math.floor(w * p), Math.floor(a.toScreenCoordinates(2560) * p), Math.floor(a.toScreenCoordinates(1384) * p)) : F.drawImage(D, 0, 0, D.width, D.height, Math.floor(E * p), Math.floor(w * p), Math.floor(D.width * p), Math.floor(D.height * p));
-            A && (F.clearRect(q, z * p, (A.width - 5) * p, A.height * p), F.drawImage(A, 0, 0, A.width, A.height, q, z * p, (A.width - 4) * p, A.height * p));
-            B && (F.clearRect(Math.floor((a.toScreenCoordinates(2590) - B.width) * p), Math.floor((t - 1) * p), Math.floor(B.width * p), Math.floor(B.height * p)), F.drawImage(B, 0, 0, B.width, B.height,
-                Math.floor((a.toScreenCoordinates(2588) - B.width) * p), Math.floor(t * p), Math.floor(B.width * p), Math.floor(B.height * p)));
-            q = new createjs.Bitmap(b);
-            q.width = s;
-            q.height = u;
-            a.backgroundImage = q;
-            f.addChildAt(q, 0);
-            a.updateComputers();
+    visualsModule.loadStage = function (forceReload) { // b -> forceReload
+        var companyData = GameManager.company, // c -> companyData
+            backgroundStage = CanvasManager.backgroundStage, // f -> backgroundStage
+            backgroundOverlayStage = CanvasManager.backgroundOverlayStage, // m -> backgroundOverlayStage
+            globalScale = CanvasManager.globalScale, // p -> globalScale
+            canvasWidth = backgroundStage.canvas.width, // s -> canvasWidth
+            canvasHeight = backgroundStage.canvas.height, // u -> canvasHeight
+            targetAspectRatio = 1366 / 768, // t -> targetAspectRatio
+            currentOffsetX = 0; // q -> currentOffsetX
+        0.1 < Math.abs(canvasWidth / canvasHeight - targetAspectRatio) && (targetAspectRatio *= canvasHeight, currentOffsetX = -(targetAspectRatio - canvasWidth) / 2, canvasWidth = targetAspectRatio);
+        var currentLevel = companyData.currentLevel, // v -> currentLevel
+            level4LockedLeftImage, // A -> level4LockedLeftImage
+            level4YCoord = visualsModule.toScreenCoordinates(39), // z -> level4YCoord
+            level4LockedRightImage, // B -> level4LockedRightImage
+            level4XCoord = visualsModule.toScreenCoordinates(47), // t -> level4XCoord (reused, but context is different)
+            levelImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level1], // D -> levelImageResource
+            levelImageX =
+                visualsModule.toScreenCoordinates(563), // E -> levelImageX
+            levelImageY = visualsModule.toScreenCoordinates(217); // w -> levelImageY
+        2 === currentLevel ? (levelImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2], levelImageX = visualsModule.toScreenCoordinates(83), levelImageY = visualsModule.toScreenCoordinates(54)) : 3 === currentLevel ? (levelImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3], levelImageX = visualsModule.toScreenCoordinates(83), levelImageY = visualsModule.toScreenCoordinates(54)) : 4 === currentLevel && (levelImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4], levelImageX = visualsModule.toScreenCoordinates(367), levelImageY = visualsModule.toScreenCoordinates(39), GameManager.company.flags.rndLabUnlocked || (level4LockedRightImage = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedRight]),
+            GameManager.company.flags.hwLabUnlocked || (level4LockedLeftImage = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedLeft]));
+        if (!visualsModule.backgroundImage || visualsModule.backgroundImage.width != canvasWidth || visualsModule.backgroundImage.height != canvasHeight || visualsModule.currentXOffset != currentOffsetX || forceReload) {
+            backgroundStage.removeAllChildren();
+            backgroundOverlayStage.removeAllChildren();
+            companyNameVisual = void 0; // k -> companyNameVisual (reassigned later)
+            visualsModule.currentXOffset = currentOffsetX;
+            var tempCanvas = document.createElement("canvas"); // b -> tempCanvas (reused)
+            tempCanvas.width = canvasWidth;
+            tempCanvas.height = canvasHeight;
+            var tempContext = tempCanvas.getContext("2d"); // F -> tempContext
+            4 === currentLevel ? tempContext.drawImage(levelImageResource, visualsModule.toScreenCoordinates(2193), 0, visualsModule.toScreenCoordinates(2560), visualsModule.toScreenCoordinates(1384),
+                0, Math.floor(levelImageY * globalScale), Math.floor(visualsModule.toScreenCoordinates(2560) * globalScale), Math.floor(visualsModule.toScreenCoordinates(1384) * globalScale)) : tempContext.drawImage(levelImageResource, 0, 0, levelImageResource.width, levelImageResource.height, Math.floor(levelImageX * globalScale), Math.floor(levelImageY * globalScale), Math.floor(levelImageResource.width * globalScale), Math.floor(levelImageResource.height * globalScale));
+            level4LockedLeftImage && (tempContext.clearRect(currentOffsetX, level4YCoord * globalScale, (level4LockedLeftImage.width - 5) * globalScale, level4LockedLeftImage.height * globalScale), tempContext.drawImage(level4LockedLeftImage, 0, 0, level4LockedLeftImage.width, level4LockedLeftImage.height, currentOffsetX, level4YCoord * globalScale, (level4LockedLeftImage.width - 4) * globalScale, level4LockedLeftImage.height * globalScale));
+            level4LockedRightImage && (tempContext.clearRect(Math.floor((visualsModule.toScreenCoordinates(2590) - level4LockedRightImage.width) * globalScale), Math.floor((level4XCoord - 1) * globalScale), Math.floor(level4LockedRightImage.width * globalScale), Math.floor(level4LockedRightImage.height * globalScale)), tempContext.drawImage(level4LockedRightImage, 0, 0, level4LockedRightImage.width, level4LockedRightImage.height,
+                Math.floor((visualsModule.toScreenCoordinates(2588) - level4LockedRightImage.width) * globalScale), Math.floor(level4XCoord * globalScale), Math.floor(level4LockedRightImage.width * globalScale), Math.floor(level4LockedRightImage.height * globalScale)));
+            currentOffsetX = new createjs.Bitmap(tempCanvas); // q -> currentOffsetX (reassigned)
+            currentOffsetX.width = canvasWidth;
+            currentOffsetX.height = canvasHeight;
+            visualsModule.backgroundImage = currentOffsetX;
+            backgroundStage.addChildAt(currentOffsetX, 0);
+            visualsModule.updateComputers();
             CanvasManager.leftScreen.backgroundStage.removeAllChildren();
             CanvasManager.leftScreen.backgroundOverlayStage.removeAllChildren();
             CanvasManager.leftScreen.invalidateBackground();
             CanvasManager.rightScreen.backgroundStage.removeAllChildren();
             CanvasManager.rightScreen.backgroundOverlayStage.removeAllChildren();
             CanvasManager.rightScreen.invalidateBackground();
-            a.levelOverlay = new LevelOverlay(c);
-            if (4 === v) {
-                c = document.createElement("canvas");
-                c.width = s;
-                c.height = u;
-                var f = c.getContext("2d"),
-                    C;
-                A || (f.drawImage(D, 0, 0, 2560 / a.Divisor - E, 1384 / a.Divisor, E * p, w * p, (2560 / a.Divisor - E) * p, 1384 / a.Divisor * p), C = a.getLabSign("Hardware lab".localize(), a.toScreenCoordinates(264, p), a.toScreenCoordinates(54, p), a.toScreenCoordinates(1878, p), a.toScreenCoordinates(145, p)));
-                A = new createjs.Bitmap(c);
-                A.width = s;
-                A.heigth = u;
-                CanvasManager.leftScreen.backgroundStage.addChildAt(A,
+            visualsModule.levelOverlay = new LevelOverlay(companyData);
+            if (4 === currentLevel) {
+                companyData = document.createElement("canvas"); // c -> companyData (reused)
+                companyData.width = canvasWidth;
+                companyData.height = canvasHeight;
+                var leftScreenContext = companyData.getContext("2d"), // f -> leftScreenContext (reused)
+                    hwLabSign; // C -> hwLabSign
+                level4LockedLeftImage || (leftScreenContext.drawImage(levelImageResource, 0, 0, 2560 / visualsModule.Divisor - levelImageX, 1384 / visualsModule.Divisor, levelImageX * globalScale, levelImageY * globalScale, (2560 / visualsModule.Divisor - levelImageX) * globalScale, 1384 / visualsModule.Divisor * globalScale), hwLabSign = visualsModule.getLabSign("Hardware lab".localize(), visualsModule.toScreenCoordinates(264, globalScale), visualsModule.toScreenCoordinates(54, globalScale), visualsModule.toScreenCoordinates(1878, globalScale), visualsModule.toScreenCoordinates(145, globalScale)));
+                level4LockedLeftImage = new createjs.Bitmap(companyData); // A -> level4LockedLeftImage (reassigned)
+                level4LockedLeftImage.width = canvasWidth;
+                level4LockedLeftImage.heigth = canvasHeight;
+                CanvasManager.leftScreen.backgroundStage.addChildAt(level4LockedLeftImage,
                     0);
-                CanvasManager.leftScreen.backgroundOverlayStage.addChild(a.levelOverlay.leftOverlay);
-                C && CanvasManager.leftScreen.backgroundOverlayStage.addChild(C);
-                C = document.createElement("canvas");
-                C.width = s;
-                C.height = u;
-                A = C.getContext("2d");
-                var J;
-                B ? A.drawImage(B, a.toScreenCoordinates(596), 0, a.toScreenCoordinates(29), B.height, 0, t * p, a.toScreenCoordinates(29, p), B.height * p) : (A.drawImage(D, a.toScreenCoordinates(2560, 2) - E, 0, D.width - (a.toScreenCoordinates(2560, 2) - E), D.height, 0, w * p, (D.width - (2560 / a.Divisor * 2 - E)) * p, D.height *
-                    p), J = a.getLabSign("R&D lab".localize(), a.toScreenCoordinates(264, p), a.toScreenCoordinates(54, p), a.toScreenCoordinates(690, p), a.toScreenCoordinates(138, p)));
-                p = new createjs.Bitmap(C);
-                p.width = s;
-                p.heigth = u;
-                CanvasManager.rightScreen.backgroundStage.addChildAt(p, 0);
-                CanvasManager.rightScreen.backgroundOverlayStage.addChild(a.levelOverlay.rightOverlay);
-                J && CanvasManager.rightScreen.backgroundOverlayStage.addChild(J)
+                CanvasManager.leftScreen.backgroundOverlayStage.addChild(visualsModule.levelOverlay.leftOverlay);
+                hwLabSign && CanvasManager.leftScreen.backgroundOverlayStage.addChild(hwLabSign);
+                hwLabSign = document.createElement("canvas"); // C -> hwLabSign (reassigned)
+                hwLabSign.width = canvasWidth;
+                hwLabSign.height = canvasHeight;
+                level4LockedLeftImage = hwLabSign.getContext("2d"); // A -> level4LockedLeftImage (reassigned)
+                var rndLabSign; // J -> rndLabSign
+                level4LockedRightImage ? level4LockedLeftImage.drawImage(level4LockedRightImage, visualsModule.toScreenCoordinates(596), 0, visualsModule.toScreenCoordinates(29), level4LockedRightImage.height, 0, level4XCoord * globalScale, visualsModule.toScreenCoordinates(29, globalScale), level4LockedRightImage.height * globalScale) : (level4LockedLeftImage.drawImage(levelImageResource, visualsModule.toScreenCoordinates(2560, 2) - levelImageX, 0, levelImageResource.width - (visualsModule.toScreenCoordinates(2560, 2) - levelImageX), levelImageResource.height, 0, levelImageY * globalScale, (levelImageResource.width - (2560 / visualsModule.Divisor * 2 - levelImageX)) * globalScale, levelImageResource.height *
+                    globalScale), rndLabSign = visualsModule.getLabSign("R&D lab".localize(), visualsModule.toScreenCoordinates(264, globalScale), visualsModule.toScreenCoordinates(54, globalScale), visualsModule.toScreenCoordinates(690, globalScale), visualsModule.toScreenCoordinates(138, globalScale)));
+                globalScale = new createjs.Bitmap(hwLabSign); // p -> globalScale (reassigned)
+                globalScale.width = canvasWidth;
+                globalScale.heigth = canvasHeight;
+                CanvasManager.rightScreen.backgroundStage.addChildAt(globalScale, 0);
+                CanvasManager.rightScreen.backgroundOverlayStage.addChild(visualsModule.levelOverlay.rightOverlay);
+                rndLabSign && CanvasManager.rightScreen.backgroundOverlayStage.addChild(rndLabSign)
             }
-            m.addChild(a.levelOverlay.centerOverlay)
+            backgroundOverlayStage.addChild(visualsModule.levelOverlay.centerOverlay)
         }
-        a.updateCompanyNameInOffice();
+        visualsModule.updateCompanyNameInOffice();
         CanvasManager.invalidateBackground();
-        a.scrollToZone(GameManager.company.flags.currentZone);
-        d()
+        visualsModule.scrollToZone(GameManager.company.flags.currentZone);
+        initializeWipeTouch() // d -> initializeWipeTouch
     };
-    a.installAirCon = function () {
-        a.levelOverlay.startAirCon1();
-        a.levelOverlay.startAirCon2()
+    visualsModule.installAirCon = function () {
+        visualsModule.levelOverlay.startAirCon1();
+        visualsModule.levelOverlay.startAirCon2()
     };
-    var f = !1,
-        d = function () {
-            f || (f = !0, $("#gameContainerWrapper").wipetouch({
+    var isWipeTouchInitialized = !1, // f -> isWipeTouchInitialized
+        initializeWipeTouch = function () { // d -> initializeWipeTouch
+            isWipeTouchInitialized || (isWipeTouchInitialized = !0, $("#gameContainerWrapper").wipetouch({
                 tapToClick: !1,
-                wipeLeft: function (a) {
+                wipeLeft: function (eventArgs) { // a -> eventArgs
                     VisualsManager.scrollToNextZone(1)
                 },
-                wipeRight: function (a) {
+                wipeRight: function (eventArgs) { // a -> eventArgs
                     VisualsManager.scrollToNextZone(-1)
                 },
-                wipeMove: function (b) {
-                    if ((!document.activeElement || !$(document.activeElement).hasClass("ui-slider-handle")) && b.dX) {
-                        a.lastMove = Date.now();
-                        var c = $("#canvasScrollContainer").width(),
-                            d = CanvasManager.backgroundStage.canvas.width,
-                            f = GameManager.company;
-                        if (f && 4 == f.currentLevel || c < d) diff = c - d, c = $("#innerCanvasContainer").offset().left - a.globalOffsetX, c += b.dX, CanvasManager.zone0Activ = c > -d, CanvasManager.zone1Activ = c > -2 * d && c <= diff, CanvasManager.zone2Activ = c > -3 * d && c <= diff - d, $("#innerCanvasContainer").css("left", c + "px")
+                wipeMove: function (moveData) { // b -> moveData
+                    if ((!document.activeElement || !$(document.activeElement).hasClass("ui-slider-handle")) && moveData.dX) {
+                        visualsModule.lastMove = Date.now();
+                        var scrollContainerWidth = $("#canvasScrollContainer").width(), // c -> scrollContainerWidth
+                            backgroundCanvasWidth = CanvasManager.backgroundStage.canvas.width, // d -> backgroundCanvasWidth
+                            companyData = GameManager.company; // f -> companyData
+                        if (companyData && 4 == companyData.currentLevel || scrollContainerWidth < backgroundCanvasWidth) diff = scrollContainerWidth - backgroundCanvasWidth, scrollContainerWidth = $("#innerCanvasContainer").offset().left - visualsModule.globalOffsetX, scrollContainerWidth += moveData.dX, CanvasManager.zone0Activ = scrollContainerWidth > -backgroundCanvasWidth, CanvasManager.zone1Activ = scrollContainerWidth > -2 * backgroundCanvasWidth && scrollContainerWidth <= diff, CanvasManager.zone2Activ = scrollContainerWidth > -3 * backgroundCanvasWidth && scrollContainerWidth <= diff - backgroundCanvasWidth, $("#innerCanvasContainer").css("left", scrollContainerWidth + "px")
                     }
                 }
-            }), $("a").live("touchend", function (a) {
+            }), $("a").live("touchend", function (eventArgs) { // a -> eventArgs
                 location.href = $(this).attr("href")
             }))
         };
-    a.scrollToNextZone = function (b) {
+    visualsModule.scrollToNextZone = function (direction) { // b -> direction
         if (GameManager.company) {
-            var c = GameManager.company.flags.currentZone;
-            void 0 === c && (c = 1);
-            c = (c + b).clamp(0, 2);
-            4 != GameManager.company.currentLevel ? c = 1 : (GameManager.company.flags.hwLabUnlocked || (c = c.clamp(1, 2)), GameManager.company.flags.rndLabUnlocked || (c = c.clamp(0, 1)));
-            a.scrollToZone(c, !0)
+            var currentZone = GameManager.company.flags.currentZone; // c -> currentZone
+            void 0 === currentZone && (currentZone = 1);
+            currentZone = (currentZone + direction).clamp(0, 2);
+            4 != GameManager.company.currentLevel ? currentZone = 1 : (GameManager.company.flags.hwLabUnlocked || (currentZone = currentZone.clamp(1, 2)), GameManager.company.flags.rndLabUnlocked || (currentZone = currentZone.clamp(0, 1)));
+            visualsModule.scrollToZone(currentZone, !0)
         }
     };
-    a.scrollToZone = function (b, c) {
-        var d = CanvasManager.backgroundStage.canvas.width;
-        void 0 === b && (b = 1);
-        var f = 0 == b ? a.toScreenCoordinates(270) : 1 == b ? a.toScreenCoordinates(2560) : a.toScreenCoordinates(4760),
-            f = f * CanvasManager.globalScale,
-            k = $("#canvasScrollContainer").width(),
-            d = Math.abs(k - d) / 2,
-            d =
-                f + d * b;
-        $("#innerCanvasContainer").offset().left != d && (f = c ? a.toScreenCoordinates(600) : 0, a.isAnimatingScroll = !0, $("#innerCanvasContainer").transition({
-            left: -d
-        }, f), setTimeout(function () {
-            a.isAnimatingScroll = !1
-        }, f));
-        a._zoneChanged(b, c);
-        GameManager.company.flags.currentZone = b
+    visualsModule.scrollToZone = function (zoneIndex, animate) { // b -> zoneIndex, c -> animate
+        var backgroundCanvasWidth = CanvasManager.backgroundStage.canvas.width; // d -> backgroundCanvasWidth
+        void 0 === zoneIndex && (zoneIndex = 1);
+        var targetX = 0 == zoneIndex ? visualsModule.toScreenCoordinates(270) : 1 == zoneIndex ? visualsModule.toScreenCoordinates(2560) : visualsModule.toScreenCoordinates(4760), // f -> targetX
+            targetX = targetX * CanvasManager.globalScale,
+            scrollContainerWidth = $("#canvasScrollContainer").width(), // k -> scrollContainerWidth
+            backgroundCanvasWidth = Math.abs(scrollContainerWidth - backgroundCanvasWidth) / 2, // d -> backgroundCanvasWidth (reused)
+            backgroundCanvasWidth =
+                targetX + backgroundCanvasWidth * zoneIndex;
+        $("#innerCanvasContainer").offset().left != backgroundCanvasWidth && (targetX = animate ? visualsModule.toScreenCoordinates(600) : 0, visualsModule.isAnimatingScroll = !0, $("#innerCanvasContainer").transition({ // f -> targetX (reused)
+            left: -backgroundCanvasWidth
+        }, targetX), setTimeout(function () {
+            visualsModule.isAnimatingScroll = !1
+        }, targetX));
+        visualsModule._zoneChanged(zoneIndex, animate);
+        GameManager.company.flags.currentZone = zoneIndex
     };
-    a.updateComputers = function () {
-        GameManager.company.staff.slice().sort(function (a, b) {
-            return a.slot - b.slot
-        }).forEach(function (b) {
-            a.addComputer(b)
+    visualsModule.updateComputers = function () {
+        GameManager.company.staff.slice().sort(function (staffA, staffB) { // a -> staffA, b -> staffB
+            return staffA.slot - staffB.slot
+        }).forEach(function (staffMember) { // b -> staffMember
+            visualsModule.addComputer(staffMember)
         })
     };
-    var k;
-    a.updateCompanyNameInOffice = function () {
-        var b = GameManager.company.currentLevel;
+    var companyNameVisual; // k -> companyNameVisual
+    visualsModule.updateCompanyNameInOffice = function () {
+        var currentLevel = GameManager.company.currentLevel; // b -> currentLevel
         1 !=
-            b && (k || (k = new IsometricCompanyNameVisual, CanvasManager.backgroundStage.addChild(k)), k.updateVisual(2 == b), 2 === b || 3 == b ? (k.x = a.toScreenCoordinates(690, CanvasManager.globalScale), k.y = a.toScreenCoordinates(1100, CanvasManager.globalScale)) : 4 == b && (k.x = a.toScreenCoordinates(1410, CanvasManager.globalScale), k.y = a.toScreenCoordinates(300, CanvasManager.globalScale), k.scaleX *= 0.8, k.scaleY *= 0.8), k.x += a.currentXOffset)
+            currentLevel && (companyNameVisual || (companyNameVisual = new IsometricCompanyNameVisual, CanvasManager.backgroundStage.addChild(companyNameVisual)), companyNameVisual.updateVisual(2 == currentLevel), 2 === currentLevel || 3 == currentLevel ? (companyNameVisual.x = visualsModule.toScreenCoordinates(690, CanvasManager.globalScale), companyNameVisual.y = visualsModule.toScreenCoordinates(1100, CanvasManager.globalScale)) : 4 == currentLevel && (companyNameVisual.x = visualsModule.toScreenCoordinates(1410, CanvasManager.globalScale), companyNameVisual.y = visualsModule.toScreenCoordinates(300, CanvasManager.globalScale), companyNameVisual.scaleX *= 0.8, companyNameVisual.scaleY *= 0.8), companyNameVisual.x += visualsModule.currentXOffset)
     };
-    a.startCreateEngine = function () {
-        a.gameStatusBar.startEngine();
-        a.updatePoints()
+    visualsModule.startCreateEngine = function () {
+        visualsModule.gameStatusBar.startEngine();
+        visualsModule.updatePoints()
     };
-    a.startContract =
+    visualsModule.startContract =
         function () {
-            a.gameStatusBar.startContract();
-            a.updatePoints()
+            visualsModule.gameStatusBar.startContract();
+            visualsModule.updatePoints()
         };
-    a.updateEngineStatus = function () {
-        var b = GameManager.currentEngineDev;
-        a.gameStatusBar.updateProgress(b.progress, !0, 100);
-        a.gameStatusBar.updateStatusMessage(b.currentPart.name)
+    visualsModule.updateEngineStatus = function () {
+        var currentEngineDev = GameManager.currentEngineDev; // b -> currentEngineDev
+        visualsModule.gameStatusBar.updateProgress(currentEngineDev.progress, !0, 100);
+        visualsModule.gameStatusBar.updateStatusMessage(currentEngineDev.currentPart.name)
     };
-    a.finishEngine = function () {
-        a.gameStatusBar.finishEngine();
+    visualsModule.finishEngine = function () {
+        visualsModule.gameStatusBar.finishEngine();
         GameManager.spawnedPoints = 0
     };
-    a.updatePoints = function () {
-        a.gameStatusBar.updatePoints();
-        a.researchPoints.updatePoints(GameManager.company.researchPoints)
+    visualsModule.updatePoints = function () {
+        visualsModule.gameStatusBar.updatePoints();
+        visualsModule.researchPoints.updatePoints(GameManager.company.researchPoints)
     };
-    a.pulsePointsDisplay = function (b, c) {
-        "r" === b ? a.researchPoints.pulse(c) :
-            a.gameStatusBar.pulsePointsDisplay(b, c)
+    visualsModule.pulsePointsDisplay = function (pointType, callback) { // b -> pointType, c -> callback
+        "r" === pointType ? visualsModule.researchPoints.pulse(callback) :
+            visualsModule.gameStatusBar.pulsePointsDisplay(pointType, callback)
     };
-    a.getGlobalLocationOfPointsDisplay = function (b) {
-        return "r" === b ? {
-            x: a.researchPoints.x + a.researchPoints.size / 2,
-            y: a.researchPoints.y + a.researchPoints.size / 2
-        } : a.gameStatusBar.getGlobalLocationOfPointsDisplay(b)
+    visualsModule.getGlobalLocationOfPointsDisplay = function (pointType) { // b -> pointType
+        return "r" === pointType ? {
+            x: visualsModule.researchPoints.x + visualsModule.researchPoints.size / 2,
+            y: visualsModule.researchPoints.y + visualsModule.researchPoints.size / 2
+        } : visualsModule.gameStatusBar.getGlobalLocationOfPointsDisplay(pointType)
     };
-    a.reloadAllCharacters = function () {
+    visualsModule.reloadAllCharacters = function () {
         if (GameManager.company && GameManager.company.staff)
-            for (var b = GameManager.company.staff, c = 0; c < b.length; c++) {
-                var d = b[c];
-                a.getCharacterOverlay(d);
-                d.refreshPoints()
+            for (var staffList = GameManager.company.staff, i = 0; i < staffList.length; i++) { // b -> staffList, c -> i
+                var character = staffList[i]; // d -> character
+                visualsModule.getCharacterOverlay(character);
+                character.refreshPoints()
             }
     };
-    a.characterOverlays = [];
-    a.getCharacterOverlay = function (b, c) {
-        var d =
-            a.characterOverlays.first(function (a) {
-                return a.character === b
+    visualsModule.characterOverlays = [];
+    visualsModule.getCharacterOverlay = function (character, noCreate) { // b -> character, c -> noCreate
+        var existingOverlay =
+            visualsModule.characterOverlays.first(function (overlay) { // a -> overlay, d -> existingOverlay
+                return overlay.character === character
             });
-        return d || c ? d : a.createCharacterOverlay(b)
+        return existingOverlay || noCreate ? existingOverlay : visualsModule.createCharacterOverlay(character)
     };
-    a.getCurrentPosition = function (b, c) {
-        var d = {};
-        1 === b && (d.x = 998 * CanvasManager.globalScale, d.y = 599 * CanvasManager.globalScale);
-        2 === b || 3 === b ? 0 === c ? (d.x = 1515 * CanvasManager.globalScale, d.y = 995 * CanvasManager.globalScale) : 1 === c ? (d.x = 1055 * CanvasManager.globalScale, d.y = 790 * CanvasManager.globalScale) : 2 === c ? (d.x = 803 * CanvasManager.globalScale, d.y = 589 * CanvasManager.globalScale) : 3 === c ? (d.x = 1283 * CanvasManager.globalScale,
-            d.y = 658 * CanvasManager.globalScale) : 4 === c && (d.x = 1036 * CanvasManager.globalScale, d.y = 451 * CanvasManager.globalScale) : 4 === b && (0 === c ? (d.x = 1565 * CanvasManager.globalScale, d.y = 915 * CanvasManager.globalScale) : 1 === c ? (d.x = 516 * CanvasManager.globalScale, d.y = 1023 * CanvasManager.globalScale) : 2 === c ? (d.x = 436 * CanvasManager.globalScale, d.y = 711 * CanvasManager.globalScale) : 3 === c ? (d.x = 798 * CanvasManager.globalScale, d.y = 857 * CanvasManager.globalScale) : 4 === c ? (d.x = 719 * CanvasManager.globalScale, d.y = 547 * CanvasManager.globalScale) :
-                5 === c ? (d.x = 1067 * CanvasManager.globalScale, d.y = 694 * CanvasManager.globalScale) : 6 === c && (d.x = 989 * CanvasManager.globalScale, d.y = 382 * CanvasManager.globalScale));
-        d.x = a.toScreenCoordinates(d.x);
-        d.y = a.toScreenCoordinates(d.y);
-        d.x += a.currentXOffset;
-        return d
+    visualsModule.getCurrentPosition = function (level, slot) { // b -> level, c -> slot
+        var position = {}; // d -> position
+        1 === level && (position.x = 998 * CanvasManager.globalScale, position.y = 599 * CanvasManager.globalScale);
+        2 === level || 3 === level ? 0 === slot ? (position.x = 1515 * CanvasManager.globalScale, position.y = 995 * CanvasManager.globalScale) : 1 === slot ? (position.x = 1055 * CanvasManager.globalScale, position.y = 790 * CanvasManager.globalScale) : 2 === slot ? (position.x = 803 * CanvasManager.globalScale, position.y = 589 * CanvasManager.globalScale) : 3 === slot ? (position.x = 1283 * CanvasManager.globalScale,
+            position.y = 658 * CanvasManager.globalScale) : 4 === slot && (position.x = 1036 * CanvasManager.globalScale, position.y = 451 * CanvasManager.globalScale) : 4 === level && (0 === slot ? (position.x = 1565 * CanvasManager.globalScale, position.y = 915 * CanvasManager.globalScale) : 1 === slot ? (position.x = 516 * CanvasManager.globalScale, position.y = 1023 * CanvasManager.globalScale) : 2 === slot ? (position.x = 436 * CanvasManager.globalScale, position.y = 711 * CanvasManager.globalScale) : 3 === slot ? (position.x = 798 * CanvasManager.globalScale, position.y = 857 * CanvasManager.globalScale) : 4 === slot ? (position.x = 719 * CanvasManager.globalScale, position.y = 547 * CanvasManager.globalScale) :
+                5 === slot ? (position.x = 1067 * CanvasManager.globalScale, position.y = 694 * CanvasManager.globalScale) : 6 === slot && (position.x = 989 * CanvasManager.globalScale, position.y = 382 * CanvasManager.globalScale));
+        position.x = visualsModule.toScreenCoordinates(position.x);
+        position.y = visualsModule.toScreenCoordinates(position.y);
+        position.x += visualsModule.currentXOffset;
+        return position
     };
-    a.positionCharacterOverlay = function (b, c, d) {
-        var f = a.getCurrentPosition(c, d);
-        b.x = f.x;
-        b.y = f.y;
-        a.updateImages(b, c, d)
+    visualsModule.positionCharacterOverlay = function (characterOverlay, level, slot) { // b -> characterOverlay, c -> level, d -> slot
+        var position = visualsModule.getCurrentPosition(level, slot); // f -> position
+        characterOverlay.x = position.x;
+        characterOverlay.y = position.y;
+        visualsModule.updateImages(characterOverlay, level, slot)
     };
-    a.updateImages = function (b, c, d) {
-        var f = 200;
-        PlatformShim.ISLOWRES && (f = 107);
-        var k = CanvasManager.globalScale;
-        if (2 === d || 4 === d || 6 == d) 2 === c ? (b.deskImage =
-            a.getSubImage(b.x - 807 / a.Divisor * k, b.y - 527 / a.Divisor * k, f, f, ResourceKeys.Level2Desk), 2 === d ? (b.keyBoardImage = a.getSubImage(b.x - 889 / a.Divisor * k, b.y - 716 / a.Divisor * k, f, f, ResourceKeys.Level2C2Keyboard), b.pcImage = a.getSubImage(b.x - 880 / a.Divisor * k, b.y - 698 / a.Divisor * k, f, f, ResourceKeys.Level2C2)) : (b.keyBoardImage = a.getSubImage(b.x - 1117 / a.Divisor * k, b.y - 582 / a.Divisor * k, f, f, ResourceKeys.Level2C2Keyboard), b.pcImage = a.getSubImage(b.x - 1114 / a.Divisor * k, b.y - 511 / a.Divisor * k, f, f, ResourceKeys.Level2C4))) : 3 === c ? (b.deskImage =
-                a.getSubImage(b.x - 807 / a.Divisor * k, b.y - 527 / a.Divisor * k, f, f, ResourceKeys.Level3Desk), 2 === d ? (b.keyBoardImage = a.getSubImage(b.x - 893 / a.Divisor * k, b.y - 713 / a.Divisor * k, f, f, ResourceKeys.Level3C2Keyboard), b.pcImage = a.getSubImage(b.x - 878 / a.Divisor * k, b.y - 703 / a.Divisor * k, f, f, ResourceKeys.Level3C2)) : (b.keyBoardImage = a.getSubImage(b.x - 1130 / a.Divisor * k, b.y - 578 / a.Divisor * k, f, f, ResourceKeys.Level3C2Keyboard), b.pcImage = a.getSubImage(b.x - 1109 / a.Divisor * k, b.y - 511 / a.Divisor * k, f, f, ResourceKeys.Level3C4))) : 4 === c && (b.deskImage =
-                    a.getSubImage(b.x - 427 / a.Divisor * k, b.y - 460 / a.Divisor * k, f, f, ResourceKeys.Level4Desk), 2 === d ? (b.keyBoardImage = a.getSubImage(b.x - 541 / a.Divisor * k, b.y - 840 / a.Divisor * k, f, f, ResourceKeys.Level4C2Keyboard), b.pcImage = a.getSubImage(b.x - 428 / a.Divisor * k, b.y - 756 / a.Divisor * k, f, f, ResourceKeys.Level4C2)) : 4 === d ? (b.keyBoardImage = a.getSubImage(b.x - 824 / a.Divisor * k, b.y - 676 / a.Divisor * k, f, f, ResourceKeys.Level4C2Keyboard), b.pcImage = a.getSubImage(b.x - 711 / a.Divisor * k, b.y - 591 / a.Divisor * k, f, f, ResourceKeys.Level4C2)) : 6 === d && (b.keyBoardImage =
-                        a.getSubImage(b.x - 1094 / a.Divisor * k, b.y - 511 / a.Divisor * k, f, f, ResourceKeys.Level4C2Keyboard), b.pcImage = a.getSubImage(b.x - 981 / a.Divisor * k, b.y - 426 / a.Divisor * k, f, f, ResourceKeys.Level4C2)))
+    visualsModule.updateImages = function (characterOverlay, level, slot) { // b -> characterOverlay, c -> level, d -> slot
+        var imageSize = 200; // f -> imageSize
+        PlatformShim.ISLOWRES && (imageSize = 107);
+        var globalCanvasScale = CanvasManager.globalScale; // k -> globalCanvasScale
+        if (2 === slot || 4 === slot || 6 == slot) 2 === level ? (characterOverlay.deskImage =
+            visualsModule.getSubImage(characterOverlay.x - 807 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 527 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level2Desk), 2 === slot ? (characterOverlay.keyBoardImage = visualsModule.getSubImage(characterOverlay.x - 889 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 716 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level2C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 880 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 698 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level2C2)) : (characterOverlay.keyBoardImage = visualsModule.getSubImage(characterOverlay.x - 1117 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 582 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level2C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 1114 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 511 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level2C4))) : 3 === level ? (characterOverlay.deskImage =
+                visualsModule.getSubImage(characterOverlay.x - 807 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 527 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level3Desk), 2 === slot ? (characterOverlay.keyBoardImage = visualsModule.getSubImage(characterOverlay.x - 893 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 713 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level3C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 878 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 703 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level3C2)) : (characterOverlay.keyBoardImage = visualsModule.getSubImage(characterOverlay.x - 1130 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 578 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level3C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 1109 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 511 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level3C4))) : 4 === level && (characterOverlay.deskImage =
+                    visualsModule.getSubImage(characterOverlay.x - 427 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 460 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4Desk), 2 === slot ? (characterOverlay.keyBoardImage = visualsModule.getSubImage(characterOverlay.x - 541 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 840 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 428 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 756 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4C2)) : 4 === slot ? (characterOverlay.keyBoardImage = visualsModule.getSubImage(characterOverlay.x - 824 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 676 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 711 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 591 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4C2)) : 6 === slot && (characterOverlay.keyBoardImage =
+                        visualsModule.getSubImage(characterOverlay.x - 1094 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 511 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard), characterOverlay.pcImage = visualsModule.getSubImage(characterOverlay.x - 981 / visualsModule.Divisor * globalCanvasScale, characterOverlay.y - 426 / visualsModule.Divisor * globalCanvasScale, imageSize, imageSize, ResourceKeys.Level4C2)))
     };
-    a.getSubImage = function (b, c, d, f, k) {
-        var m = document.createElement("canvas");
-        m.width = d;
-        m.height = f;
-        m.getContext("2d").drawImage(GameDev.ResourceManager.resources[k], -((b - a.currentXOffset) / CanvasManager.globalScale), -c / CanvasManager.globalScale);
-        b = new Image;
-        b.src = m.toDataURL("image/png");
-        return b
+    visualsModule.getSubImage = function (screenX, screenY, width, height, resourceKey) { // b -> screenX, c -> screenY, d -> width, f -> height, k -> resourceKey
+        var tempCanvas = document.createElement("canvas"); // m -> tempCanvas
+        tempCanvas.width = width;
+        tempCanvas.height = height;
+        tempCanvas.getContext("2d").drawImage(GameDev.ResourceManager.resources[resourceKey], -((screenX - visualsModule.currentXOffset) / CanvasManager.globalScale), -screenY / CanvasManager.globalScale);
+        screenX = new Image;
+        screenX.src = tempCanvas.toDataURL("image/png");
+        return screenX
     };
-    a.refreshHiringButtons = function () {
-        var b =
-            $("#canvasContainer");
-        b.find(".hireStaffButtonBase").remove();
-        var c = GameManager.company.currentLevel,
-            d = GameManager.company.staff;
-        if (1 < c && (2 != c && 3 != c || 5 != d.length) && !(3 < c && 7 == d.length)) {
-            var f = [1, 2, 3, 4, 5, 6].first(function (a) {
-                return !d.some(function (b) {
-                    return b.slot == a
+    visualsModule.refreshHiringButtons = function () {
+        var canvasContainer =
+            $("#canvasContainer"); // b -> canvasContainer
+        canvasContainer.find(".hireStaffButtonBase").remove();
+        var currentLevel = GameManager.company.currentLevel, // c -> currentLevel
+            staffList = GameManager.company.staff; // d -> staffList
+        if (1 < currentLevel && (2 != currentLevel && 3 != currentLevel || 5 != staffList.length) && !(3 < currentLevel && 7 == staffList.length)) {
+            var availableSlot = [1, 2, 3, 4, 5, 6].first(function (slot) { // a -> slot, f -> availableSlot
+                return !staffList.some(function (staffMember) { // b -> staffMember
+                    return staffMember.slot == slot
                 })
             }),
-                c = a.createHireButton(c, f);
-            b.append(c);
-            UI.maxFont("bold", b.find(".hireButtonLabel"), 12)
+                hireButton = visualsModule.createHireButton(currentLevel, availableSlot); // c -> hireButton (reused)
+            canvasContainer.append(hireButton);
+            UI.maxFont("bold", canvasContainer.find(".hireButtonLabel"), 12)
         }
     };
-    var m;
-    a.updateReleaseReadyButton = function () {
-        m || (m = $('<div id="releaseButton" class="selectorButton greenButton windowStyleHideState" style="position:absolute; opacity=0;">' +
-            "Finish".localize("button") + "</div>"), m.gdIsActive = !1, $("#canvasContainer").append(m));
-        var a = m.parent().width();
-        m.css({
-            left: a / 2 - m.width() / 2 + "px"
+    var releaseButtonElement; // m -> releaseButtonElement
+    visualsModule.updateReleaseReadyButton = function () {
+        releaseButtonElement || (releaseButtonElement = $('<div id="releaseButton" class="selectorButton greenButton windowStyleHideState" style="position:absolute; opacity=0;">' +
+            "Finish".localize("button") + "</div>"), releaseButtonElement.gdIsActive = !1, $("#canvasContainer").append(releaseButtonElement));
+        var parentWidth = releaseButtonElement.parent().width(); // a -> parentWidth
+        releaseButtonElement.css({
+            left: parentWidth / 2 - releaseButtonElement.width() / 2 + "px"
         });
-        a = GameManager.company && GameManager.company.currentGame && !GameManager.company.currentGame.flags.devCompleted && GameManager.company.currentGame.flags.releaseReady;
-        if (a != m.gdIsActive) {
-            m.gdIsActive = a;
-            var b = function () {
-                m.transition({
+        parentWidth = GameManager.company && GameManager.company.currentGame && !GameManager.company.currentGame.flags.devCompleted && GameManager.company.currentGame.flags.releaseReady;
+        if (parentWidth != releaseButtonElement.gdIsActive) {
+            releaseButtonElement.gdIsActive = parentWidth;
+            var hideReleaseButton = function () { // b -> hideReleaseButton
+                releaseButtonElement.transition({
                     opacity: 0
                 }, 200);
-                m.removeClass("windowStyleShowState").addClass("windowStyleHideState");
-                m.gdIsActive = !1
+                releaseButtonElement.removeClass("windowStyleShowState").addClass("windowStyleHideState");
+                releaseButtonElement.gdIsActive = !1
             };
-            a ? (m.transition({
+            parentWidth ? (releaseButtonElement.transition({
                 opacity: 1
             },
-                200), m.removeClass("windowStyleHideState"), Sound.playSoundOnce("gameReady", 0.2), m.clickExclOnce(function (a) {
+                200), releaseButtonElement.removeClass("windowStyleHideState"), Sound.playSoundOnce("gameReady", 0.2), releaseButtonElement.clickExclOnce(function (eventArgs) { // a -> eventArgs
                     Sound.click();
-                    b();
+                    hideReleaseButton();
                     GameManager.currentFeature && (GameManager.currentFeature.progress = 1);
                     GameManager.company.currentGame && (GameManager.company.currentGame.flags.finished = !0);
                     return !1
-                })) : b()
+                })) : hideReleaseButton()
         }
     };
-    a.createHireButton = function (b, c) {
-        var d = $(PlatformShim.toStaticHtml('<div class="hireStaffButtonBase hireStaffButton"><div class="hireButtonLabel">' + "Fill Position".localize() + '</div><div class="hireStaffProgress"></div></div>')),
-            f = 0,
-            k = 0;
-        if (2 === b || 3 === b) switch (c) {
+    visualsModule.createHireButton = function (level, slot) { // b -> level, c -> slot
+        var hireButtonDiv = $(PlatformShim.toStaticHtml('<div class="hireStaffButtonBase hireStaffButton"><div class="hireButtonLabel">' + "Fill Position".localize() + '</div><div class="hireStaffProgress"></div></div>')), // d -> hireButtonDiv
+            coordX = 0, // f -> coordX
+            coordY = 0; // k -> coordY
+        if (2 === level || 3 === level) switch (slot) {
             case 1:
-                f = 1060;
-                k = 840;
+                coordX = 1060;
+                coordY = 840;
                 break;
             case 2:
-                f = 880;
-                k = 720;
+                coordX = 880;
+                coordY = 720;
                 break;
             case 3:
-                f = 1290;
-                k = 720;
+                coordX = 1290;
+                coordY = 720;
                 break;
             case 4:
-                f = 1130, k = 580
+                coordX = 1130, coordY = 580
         }
-        if (4 === b) switch (c) {
+        if (4 === level) switch (slot) {
             case 1:
-                f = 480;
-                k = 1040;
+                coordX = 480;
+                coordY = 1040;
                 break;
             case 2:
-                f = 480;
-                k = 850;
+                coordX = 480;
+                coordY = 850;
                 break;
             case 3:
-                f = 750;
-                k = 920;
+                coordX = 750;
+                coordY = 920;
                 break;
             case 4:
-                f = 780;
-                k = 680;
+                coordX = 780;
+                coordY = 680;
                 break;
             case 5:
-                f = 1050;
-                k = 730;
+                coordX = 1050;
+                coordY = 730;
                 break;
             case 6:
-                f = 1E3, k = 500
+                coordX = 1E3, coordY = 500
         }
-        f = a.toScreenCoordinates(f, CanvasManager.globalScale);
-        k = a.toScreenCoordinates(k, CanvasManager.globalScale);
-        f += a.currentXOffset;
-        d.css({
+        coordX = visualsModule.toScreenCoordinates(coordX, CanvasManager.globalScale);
+        coordY = visualsModule.toScreenCoordinates(coordY, CanvasManager.globalScale);
+        coordX += visualsModule.currentXOffset;
+        hireButtonDiv.css({
             position: "absolute",
-            top: k + "px",
-            left: f + "px"
+            top: coordY + "px",
+            left: coordX + "px"
         });
-        d.clickExcl(function () {
+        hireButtonDiv.clickExcl(function () {
             Sound.click();
-            1 == GameManager.company.maxStaff ? (GameManager.company.activeNotifications.insertAt(0, new Notification("Hint".localize(), "You have to complete the Staff Management training before you can hire someone. Simply {0} on your player character to access the training menu.".localize().format(Tutorial.getClickVerb()))), GameManager.showPendingNotifications()) : UI.isStaffSearchInProgress() || (1 < GameManager.company.staff.length ? Tutorial.hireMoreStaff() : Tutorial.findStaff(), UI.showFindStaffWindow(c));
+            1 == GameManager.company.maxStaff ? (GameManager.company.activeNotifications.insertAt(0, new Notification("Hint".localize(), "You have to complete the Staff Management training before you can hire someone. Simply {0} on your player character to access the training menu.".localize().format(Tutorial.getClickVerb()))), GameManager.showPendingNotifications()) : UI.isStaffSearchInProgress() || (1 < GameManager.company.staff.length ? Tutorial.hireMoreStaff() : Tutorial.findStaff(), UI.showFindStaffWindow(slot));
             window.event.cancelBubble = !0
         });
-        return d
+        return hireButtonDiv
     };
-    a.createCharacterOverlay = function (c) {
-        var d = b.characterStage,
-            f = new CharacterOverlay(c);
-        a.positionCharacterOverlay(f, GameManager.company.currentLevel, c.slot);
-        a.characterOverlays.push(f);
-        a.addCharacterOverlayToStage(d, f);
-        return f
+    visualsModule.createCharacterOverlay = function (character) { // c -> character
+        var characterStage = canvasModule.characterStage, // d -> characterStage
+            newOverlay = new CharacterOverlay(character); // f -> newOverlay
+        visualsModule.positionCharacterOverlay(newOverlay, GameManager.company.currentLevel, character.slot);
+        visualsModule.characterOverlays.push(newOverlay);
+        visualsModule.addCharacterOverlayToStage(characterStage, newOverlay);
+        return newOverlay
     };
-    a.addCharacterOverlayToStage = function (a, b) {
-        var c = b.character.slot;
-        if (0 === c) a.addChild(b);
+    visualsModule.addCharacterOverlayToStage = function (stage, overlayToAdd) { // a -> stage, b -> overlayToAdd
+        var slot = overlayToAdd.character.slot; // c -> slot
+        if (0 === slot) stage.addChild(overlayToAdd);
         else
-            for (var d = 0; d < a.children.length; d++)
-                if (a.children[d].character)
-                    if (4 === c || 6 === c || 3 === c || 5 === c) {
-                        a.addChildAt(b, 0);
+            for (var i = 0; i < stage.children.length; i++) // d -> i
+                if (stage.children[i].character)
+                    if (4 === slot || 6 === slot || 3 === slot || 5 === slot) {
+                        stage.addChildAt(overlayToAdd, 0);
                         break
-                    } else if (1 === c && 1 > a.children[d].character.slot ||
-                        2 === c && 4 > a.children[d].character.slot || 3 === c && 2 > a.children[d].character.slot) {
-                        a.addChildAt(b, d);
+                    } else if (1 === slot && 1 > stage.children[i].character.slot ||
+                        2 === slot && 4 > stage.children[i].character.slot || 3 === slot && 2 > stage.children[i].character.slot) {
+                        stage.addChildAt(overlayToAdd, i);
                         break
-                    } else if (4 < c) {
-                        a.addChild(b);
+                    } else if (4 < slot) {
+                        stage.addChild(overlayToAdd);
                         break
                     }
     };
-    a.refreshTrainingOverlays = function () {
-        var b = $("#canvasContainer");
-        b.find(".trainingOverlayTemplate").remove();
-        for (var c = 0; c < a.characterOverlays.length; c++) {
-            var d = a.characterOverlays[c],
-                f = $("#trainingOverlayTemplate").clone();
-            f.removeAttr("id");
-            var k = GameFlags.IS_LOW_RES ? -30 : 0;
-            f.css({
+    visualsModule.refreshTrainingOverlays = function () {
+        var canvasContainer = $("#canvasContainer"); // b -> canvasContainer
+        canvasContainer.find(".trainingOverlayTemplate").remove();
+        for (var i = 0; i < visualsModule.characterOverlays.length; i++) { // c -> i
+            var characterOverlay = visualsModule.characterOverlays[i], // d -> characterOverlay
+                trainingOverlayElement = $("#trainingOverlayTemplate").clone(); // f -> trainingOverlayElement
+            trainingOverlayElement.removeAttr("id");
+            var offsetLowRes = GameFlags.IS_LOW_RES ? -30 : 0; // k -> offsetLowRes
+            trainingOverlayElement.css({
                 position: "absolute",
-                top: d.y - VisualsManager.toScreenCoordinates(120, CanvasManager.globalScale) +
+                top: characterOverlay.y - VisualsManager.toScreenCoordinates(120, CanvasManager.globalScale) +
                     "px",
-                left: d.x - VisualsManager.toScreenCoordinates(60, CanvasManager.globalScale) + k + "px",
+                left: characterOverlay.x - VisualsManager.toScreenCoordinates(60, CanvasManager.globalScale) + offsetLowRes + "px",
                 transform: "scale({0},{0})".format(CanvasManager.globalScaleIgnoringLowResBackground)
             });
-            d.trainingOverlay = f;
-            b.append(f);
-            f.hide();
-            d.resumeTraining()
+            characterOverlay.trainingOverlay = trainingOverlayElement;
+            canvasContainer.append(trainingOverlayElement);
+            trainingOverlayElement.hide();
+            characterOverlay.resumeTraining()
         }
     };
-    a.handleUltraWideMonitors = function (b, c) {
-        if (b / c > 16 / 9) {
-            var d = b / (b / c) * (b / c - 16 / 9);
+    visualsModule.handleUltraWideMonitors = function (screenWidth, screenHeight) { // b -> screenWidth, c -> screenHeight
+        if (screenWidth / screenHeight > 16 / 9) {
+            var extraWidth = screenWidth / (screenWidth / screenHeight) * (screenWidth / screenHeight - 16 / 9); // d -> extraWidth
             $("#gameContainerWrapper").css({
-                left: d / 2 + "px",
-                width: b - d + "px"
+                left: extraWidth / 2 + "px",
+                width: screenWidth - extraWidth + "px"
             });
-            a.globalOffsetX = d / 2
+            visualsModule.globalOffsetX = extraWidth / 2
         } else $("#gameContainerWrapper").css({
             left: "0px",
             width: "100%"
-        }), a.globalOffsetX = 0
+        }), visualsModule.globalOffsetX = 0
     }
 })();
 (function () {
-    var a = VisualsManager,
-        b = [];
-    a.refreshLabCrew = function () {
-        b && (b.forEach(function (a) {
-            a.parent.removeChild(a)
-        }), b = []);
-        d();
-        l();
-        4 == GameManager.company.currentLevel && a._zoneChanged(GameManager.company.flags.currentZone, !1)
+    var visualsManager = VisualsManager, // a -> visualsManager
+        labCrews = []; // b -> labCrews
+    visualsManager.refreshLabCrew = function () {
+        labCrews && (labCrews.forEach(function (crewMember) { // a -> crewMember
+            crewMember.parent.removeChild(crewMember)
+        }), labCrews = []);
+        initializeHwLabCrew(); // d -> initializeHwLabCrew
+        initializeRndLabCrew(); // l -> initializeRndLabCrew
+        4 == GameManager.company.currentLevel && visualsManager._zoneChanged(GameManager.company.flags.currentZone, !1)
     };
-    var c = function (a) {
-        var b = $("#projectStatusCardTemplate").clone();
-        b[0].id = void 0;
-        b.find(".projectBudgetSlider").slider({
+    var createProjectStatusCard = function (initialBudget) { // a -> initialBudget, c -> createProjectStatusCard
+        var cardElement = $("#projectStatusCardTemplate").clone(); // b -> cardElement
+        cardElement[0].id = void 0;
+        cardElement.find(".projectBudgetSlider").slider({
             orientation: "horizontal",
             range: "min",
             min: 0,
             max: 100,
-            value: a,
+            value: initialBudget,
             animate: "fast",
-            slide: function (a, c) {
-                var d = $(c.handle).closest(".projectBudgetSlider");
-                if (!d.hasClass("projectBudgetSlider")) throw "couldn't find target slider";
-                b._gd_sliderValue = c.value;
-                d.slider("value", c.value);
-                d = c.value;
-                b.hasClass("rndCard") ? GameManager.company.flags.rndBudget = d / 100 : GameManager.company.flags.hwBudget = d / 100;
-                n(b)
+            slide: function (event, ui) { // a -> event, c -> ui
+                var sliderElement = $(ui.handle).closest(".projectBudgetSlider"); // d -> sliderElement
+                if (!sliderElement.hasClass("projectBudgetSlider")) throw "couldn't find target slider";
+                cardElement._gd_sliderValue = ui.value;
+                sliderElement.slider("value", ui.value);
+                var budgetPercentage = ui.value; // d -> budgetPercentage (reused)
+                cardElement.hasClass("rndCard") ? GameManager.company.flags.rndBudget = budgetPercentage / 100 : GameManager.company.flags.hwBudget = budgetPercentage / 100;
+                updateCardDisplay(cardElement) // n -> updateCardDisplay
             }
         });
-        return b
+        return cardElement
     },
-        f, d = function () {
-            var d = GameManager.company;
-            if (!f) {
-                var g = d.flags.hwBudget;
-                void 0 == g && (g = 0);
-                f = c(100 * g);
-                f.addClass("projectCardLeft").addClass("hwCard");
-                f.find(".projectCardLabel").text("Hardware lab".localize());
-                f.clickExcl(function () {
-                    a.scrollToZone(0, !0)
+        hwLabCard, // f -> hwLabCard
+        initializeHwLabCrew = function () { // d -> initializeHwLabCrew
+            var companyData = GameManager.company; // d -> companyData (reused)
+            if (!hwLabCard) {
+                var initialHwBudget = companyData.flags.hwBudget; // g -> initialHwBudget
+                void 0 == initialHwBudget && (initialHwBudget = 0);
+                hwLabCard = createProjectStatusCard(100 * initialHwBudget);
+                hwLabCard.addClass("projectCardLeft").addClass("hwCard");
+                hwLabCard.find(".projectCardLabel").text("Hardware lab".localize());
+                hwLabCard.clickExcl(function () {
+                    visualsManager.scrollToZone(0, !0)
                 });
-                f.insertBefore("#consoleMaintenanceContainer");
-                f._gd_projectVisible = !0
+                hwLabCard.insertBefore("#consoleMaintenanceContainer");
+                hwLabCard._gd_projectVisible = !0
             }
-            if (4 > d.currentLevel || !d.flags.hwLabUnlocked) f.hide();
+            if (4 > companyData.currentLevel || !companyData.flags.hwLabUnlocked) hwLabCard.hide();
             else {
-                f.show();
-                n(f, GameManager.currentHwProject);
-                d.hwCrew || (d.hwCrew = []);
-                for (var l = d.hwCrew, m = GameManager.getMaxHwBudget(), g = CanvasManager.leftScreen.characterStage, t = [], q = 0; 12 >= q; q++) {
-                    l.length < q + 1 && (l.push(new ProjectWorkerVisual), l[q].zone = 0, l[q].setPosition(q), l[q].loadAnimations());
-                    var v = l[q];
-                    v.getCurrentProject = function () {
+                hwLabCard.show();
+                updateCardDisplay(hwLabCard, GameManager.currentHwProject); // n -> updateCardDisplay
+                companyData.hwCrew || (companyData.hwCrew = []);
+                for (var hwCrewList = companyData.hwCrew, // l -> hwCrewList
+                    maxHwBudget = GameManager.getMaxHwBudget(), // m -> maxHwBudget (reused)
+                    leftScreenCharStage = CanvasManager.leftScreen.characterStage, // g -> leftScreenCharStage (reused)
+                    frontRowCrew = [], // t -> frontRowCrew
+                    crewIndex = 0; 12 >= crewIndex; crewIndex++) { // q -> crewIndex
+                    hwCrewList.length < crewIndex + 1 && (hwCrewList.push(new ProjectWorkerVisual), hwCrewList[crewIndex].zone = 0, hwCrewList[crewIndex].setPosition(crewIndex), hwCrewList[crewIndex].loadAnimations());
+                    var crewMember = hwCrewList[crewIndex]; // v -> crewMember
+                    crewMember.getCurrentProject = function () {
                         return GameManager.currentHwProject
                     };
-                    (function (a, b) {
-                        a.getAffordanceFactor = function () {
-                            return k(m * d.flags.hwBudget, b)
+                    (function (worker, budget) { // a -> worker, b -> budget
+                        worker.getAffordanceFactor = function () {
+                            return calculateAffordanceFactor(maxHwBudget * companyData.flags.hwBudget, budget) // k -> calculateAffordanceFactor
                         }
-                    })(v,
-                        m / 12 * (q + 1));
-                    3 == q || 7 == q ? t.push(v) : (g.addChild(v), b.push(v))
+                    })(crewMember,
+                        maxHwBudget / 12 * (crewIndex + 1));
+                    3 == crewIndex || 7 == crewIndex ? frontRowCrew.push(crewMember) : (leftScreenCharStage.addChild(crewMember), labCrews.push(crewMember))
                 }
-                q = 0;
-                for (l = t.length; q < l; q++) g.addChild(t[q]), b.push(t[q]);
-                a.putConsoleToPedestal()
+                crewIndex = 0;
+                for (hwCrewList = frontRowCrew.length; crewIndex < hwCrewList; crewIndex++) leftScreenCharStage.addChild(frontRowCrew[crewIndex]), labCrews.push(frontRowCrew[crewIndex]);
+                visualsManager.putConsoleToPedestal()
             }
         };
-    a.putConsoleToPedestal = function () {
-        var b = GameManager.company;
-        if (4 === b.currentLevel && b.flags.hwLabUnlocked) {
-            a.consoleContainer && CanvasManager.leftScreen.backgroundOverlayStage.contains(a.consoleContainer) && CanvasManager.leftScreen.backgroundOverlayStage.removeChild(a.consoleContainer);
-            var c = void 0,
-                d = void 0;
+    visualsManager.putConsoleToPedestal = function () {
+        var companyData = GameManager.company; // b -> companyData
+        if (4 === companyData.currentLevel && companyData.flags.hwLabUnlocked) {
+            visualsManager.consoleContainer && CanvasManager.leftScreen.backgroundOverlayStage.contains(visualsManager.consoleContainer) && CanvasManager.leftScreen.backgroundOverlayStage.removeChild(visualsManager.consoleContainer);
+            var consoleToShow = void 0, // c -> consoleToShow
+                platformList = void 0; // d -> platformList
             if (GameManager.currentHwProject && "custom console" ===
-                GameManager.currentHwProject.id) c = {
+                GameManager.currentHwProject.id) consoleToShow = {
                     iconUri: GameManager.currentHwProject.iconUri
                 };
-            else if (d = b.licencedPlatforms.filter(function (a) {
-                return a.isCustom
-            }), d.length) c = d.last();
-            else if ((d = b.currentGame) && 0 < d.platforms.length && "PC" != d.platforms[0].id && "G64" != d.platforms[0].id && "Gameling" != d.platforms[0].id && "Vena Gear" != d.platforms[0].id && "PPS" != d.platforms[0].id && "GS" != d.platforms[0].id && "grPhone" != d.platforms[0].id) c = b.currentGame.platforms[0];
+            else if (platformList = companyData.licencedPlatforms.filter(function (platform) { // a -> platform
+                return platform.isCustom
+            }), platformList.length) consoleToShow = platformList.last();
+            else if ((platformList = companyData.currentGame) && 0 < platformList.platforms.length && "PC" != platformList.platforms[0].id && "G64" != platformList.platforms[0].id && "Gameling" != platformList.platforms[0].id && "Vena Gear" != platformList.platforms[0].id && "PPS" != platformList.platforms[0].id && "GS" != platformList.platforms[0].id && "grPhone" != platformList.platforms[0].id) consoleToShow = companyData.currentGame.platforms[0];
             else
-                for (d = b.gameLog.length - 1; 0 < d; d--) {
-                    var f = b.gameLog[d].platforms;
-                    if ("PC" != f[0].id && "G64" != f[0].id && "Gameling" != f[0].id && "Vena Gear" != f[0].id && "PPS" != f[0].id && "GS" != f[0].id && "grPhone" != f[0].id) {
-                        c = f[0];
+                for (platformList = companyData.gameLog.length - 1; 0 < platformList; platformList--) {
+                    var gamePlatforms = companyData.gameLog[platformList].platforms; // f -> gamePlatforms
+                    if ("PC" != gamePlatforms[0].id && "G64" != gamePlatforms[0].id && "Gameling" != gamePlatforms[0].id && "Vena Gear" != gamePlatforms[0].id && "PPS" != gamePlatforms[0].id && "GS" != gamePlatforms[0].id && "grPhone" != gamePlatforms[0].id) {
+                        consoleToShow = gamePlatforms[0];
                         break
                     }
                 }
-            c && (d = Platforms.getPlatformImage(c, b.currentWeek), b = new createjs.Bitmap(d), c = new createjs.Container, d = CanvasManager.globalScale, c.scaleX = 0.45 * d, c.scaleY = 0.45 * d, c.x = 2230 * d, c.y = 1104 * d, c.addChild(b), a.consoleContainer = c, CanvasManager.leftScreen.backgroundOverlayStage.addChild(a.consoleContainer))
+            consoleToShow && (platformList = Platforms.getPlatformImage(consoleToShow, companyData.currentWeek), companyData = new createjs.Bitmap(platformList), consoleToShow = new createjs.Container, platformList = CanvasManager.globalScale, consoleToShow.scaleX = 0.45 * platformList, consoleToShow.scaleY = 0.45 * platformList, consoleToShow.x = 2230 * platformList, consoleToShow.y = 1104 * platformList, consoleToShow.addChild(companyData), visualsManager.consoleContainer = consoleToShow, CanvasManager.leftScreen.backgroundOverlayStage.addChild(visualsManager.consoleContainer))
         }
     };
-    var k = function (a, b) {
-        if (0 === a) return -4;
-        var c = a / b;
-        1 > c && (c = -1 + c);
-        return c
+    var calculateAffordanceFactor = function (totalBudget, budgetThreshold) { // a -> totalBudget, b -> budgetThreshold, k -> calculateAffordanceFactor
+        if (0 === totalBudget) return -4;
+        var affordance = totalBudget / budgetThreshold; // c -> affordance
+        1 > affordance && (affordance = -1 + affordance);
+        return affordance
     },
-        m, l = function () {
-            var d = GameManager.company;
-            if (!m) {
-                var f = d.flags.rndBudget;
-                void 0 == f && (f = 0);
-                m = c(100 * f);
-                m.addClass("projectCardRight").addClass("rndCard");
-                m.find(".projectCardLabel").text("R&D lab".localize());
-                m.clickExcl(function () {
-                    a.scrollToZone(2, !0)
+        rndLabCard, // m -> rndLabCard
+        initializeRndLabCrew = function () { // l -> initializeRndLabCrew
+            var companyData = GameManager.company; // d -> companyData (reused)
+            if (!rndLabCard) {
+                var initialRndBudget = companyData.flags.rndBudget; // f -> initialRndBudget
+                void 0 == initialRndBudget && (initialRndBudget = 0);
+                rndLabCard = createProjectStatusCard(100 * initialRndBudget);
+                rndLabCard.addClass("projectCardRight").addClass("rndCard");
+                rndLabCard.find(".projectCardLabel").text("R&D lab".localize());
+                rndLabCard.clickExcl(function () {
+                    visualsManager.scrollToZone(2, !0)
                 });
-                $("#gameUIContainer").append(m);
-                m._gd_projectVisible = !0
+                $("#gameUIContainer").append(rndLabCard);
+                rndLabCard._gd_projectVisible = !0
             }
-            if (4 > GameManager.company.currentLevel || !d.flags.rndLabUnlocked) m.hide();
+            if (4 > GameManager.company.currentLevel || !companyData.flags.rndLabUnlocked) rndLabCard.hide();
             else {
-                m.show();
-                n(m, GameManager.currentRnDProject);
-                d.rndCrew || (d.rndCrew = []);
-                for (var g = d.rndCrew, l = GameManager.getMaxRndBudget(),
-                    f = CanvasManager.rightScreen.characterStage, t = [], q = 0; 12 >= q; q++) {
-                    g.length < q + 1 && (g.push(new ProjectWorkerVisual), g[q].zone = 2, g[q].setPosition(q), g[q].loadAnimations());
-                    var v = g[q];
-                    v.getCurrentProject = function () {
+                rndLabCard.show();
+                updateCardDisplay(rndLabCard, GameManager.currentRnDProject); // n -> updateCardDisplay
+                companyData.rndCrew || (companyData.rndCrew = []);
+                for (var rndCrewList = companyData.rndCrew, // g -> rndCrewList
+                    maxRndBudget = GameManager.getMaxRndBudget(), // l -> maxRndBudget (reused)
+                    rightScreenCharStage = CanvasManager.rightScreen.characterStage, // f -> rightScreenCharStage (reused)
+                    frontRowCrew = [], // t -> frontRowCrew
+                    crewIndex = 0; 12 >= crewIndex; crewIndex++) { // q -> crewIndex
+                    rndCrewList.length < crewIndex + 1 && (rndCrewList.push(new ProjectWorkerVisual), rndCrewList[crewIndex].zone = 2, rndCrewList[crewIndex].setPosition(crewIndex), rndCrewList[crewIndex].loadAnimations());
+                    var crewMember = rndCrewList[crewIndex]; // v -> crewMember
+                    crewMember.getCurrentProject = function () {
                         return GameManager.currentRnDProject
                     };
-                    (function (a, b) {
-                        a.getAffordanceFactor = function () {
-                            return k(l * d.flags.rndBudget, b)
+                    (function (worker, budget) { // a -> worker, b -> budget
+                        worker.getAffordanceFactor = function () {
+                            return calculateAffordanceFactor(maxRndBudget * companyData.flags.rndBudget, budget) // k -> calculateAffordanceFactor
                         }
-                    })(v, l / 12 * (q + 1));
-                    5 === q || 7 === q ? t.push(v) : (f.addChild(v), b.push(v))
+                    })(crewMember, maxRndBudget / 12 * (crewIndex + 1));
+                    5 === crewIndex || 7 === crewIndex ? frontRowCrew.push(crewMember) : (rightScreenCharStage.addChild(crewMember), labCrews.push(crewMember))
                 }
-                q = 0;
-                for (g = t.length; q < g; q++) f.addChild(t[q]), b.push(t[q])
+                crewIndex = 0;
+                for (rndCrewList = frontRowCrew.length; crewIndex < rndCrewList; crewIndex++) rightScreenCharStage.addChild(frontRowCrew[crewIndex]), labCrews.push(frontRowCrew[crewIndex])
             }
         };
-    a._zoneChanged = function (a, b) {
-        var c = b ? "normal" : 0;
+    visualsManager._zoneChanged = function (currentZone, animate) { // a -> currentZone, b -> animate
+        var transitionSpeed = animate ? "normal" : 0; // c -> transitionSpeed
         CanvasManager.zone0Activ =
-            0 === a;
-        CanvasManager.zone1Activ = 1 === a;
-        CanvasManager.zone2Activ = 2 === a;
-        2 != a && m && (m.find(".projectBudgetSlider").slideUp(c), m.find(".projectCardLabel").slideDown(c));
-        2 == a && m && (m.find(".projectBudgetSlider").slideDown(c), m.find(".projectCardLabel").slideUp(c));
-        0 != a && f && (f.find(".projectBudgetSlider").slideUp(c), f.find(".projectCardLabel").slideDown(c));
-        0 == a && f && (f.find(".projectBudgetSlider").slideDown(c), f.find(".projectCardLabel").slideUp(c));
-        g();
-        2 == a ? Media.enterRndLab(GameManager.company) : 0 == a && Media.enterHwLab(GameManager.company)
+            0 === currentZone;
+        CanvasManager.zone1Activ = 1 === currentZone;
+        CanvasManager.zone2Activ = 2 === currentZone;
+        2 != currentZone && rndLabCard && (rndLabCard.find(".projectBudgetSlider").slideUp(transitionSpeed), rndLabCard.find(".projectCardLabel").slideDown(transitionSpeed));
+        2 == currentZone && rndLabCard && (rndLabCard.find(".projectBudgetSlider").slideDown(transitionSpeed), rndLabCard.find(".projectCardLabel").slideUp(transitionSpeed));
+        0 != currentZone && hwLabCard && (hwLabCard.find(".projectBudgetSlider").slideUp(transitionSpeed), hwLabCard.find(".projectCardLabel").slideDown(transitionSpeed));
+        0 == currentZone && hwLabCard && (hwLabCard.find(".projectBudgetSlider").slideDown(transitionSpeed), hwLabCard.find(".projectCardLabel").slideUp(transitionSpeed));
+        updateCardLayoutForScreenSize(); // g -> updateCardLayoutForScreenSize
+        2 == currentZone ? Media.enterRndLab(GameManager.company) : 0 == currentZone && Media.enterHwLab(GameManager.company)
     };
-    var g = function () {
-        var a = CanvasManager.isSmallScreen;
-        if (m) {
-            var b = a && GameManager.currentRnDProject;
-            b && !m.hasClass("small") ? m.addClass("small") : !b && m.hasClass("small") && m.removeClass("small")
+    var updateCardLayoutForScreenSize = function () { // g -> updateCardLayoutForScreenSize
+        var isSmallScreen = CanvasManager.isSmallScreen; // a -> isSmallScreen
+        if (rndLabCard) {
+            var isRndProjectActive = isSmallScreen && GameManager.currentRnDProject; // b -> isRndProjectActive
+            isRndProjectActive && !rndLabCard.hasClass("small") ? rndLabCard.addClass("small") : !isRndProjectActive && rndLabCard.hasClass("small") && rndLabCard.removeClass("small")
         }
-        f && ((b = a && GameManager.currentHwProject) && !f.hasClass("small") ? f.addClass("small") : !b && f.hasClass("small") && f.removeClass("small"))
+        hwLabCard && ((isRndProjectActive = isSmallScreen && GameManager.currentHwProject) && !hwLabCard.hasClass("small") ? hwLabCard.addClass("small") : !isRndProjectActive && hwLabCard.hasClass("small") && hwLabCard.removeClass("small"))
     },
-        n = function (a) {
-            if (a) {
-                var b = GameManager.company;
-                if (b) {
-                    var c = 100 * b.flags.hwBudget,
-                        d = GameManager.getLabCostPerMonth(0),
-                        f = GameManager.currentHwProject;
-                    a.hasClass("rndCard") && (f = GameManager.currentRnDProject,
-                        d = GameManager.getLabCostPerMonth(2), c = 100 * b.flags.rndBudget);
-                    !f && a._gd_projectVisible ? (a.find(".projectStatusContainer").slideUp(), a._gd_projectVisible = !1) : f && (a._gd_projectVisible || (a.find(".projectStatusContainer").slideDown(), a._gd_projectVisible = !0), a._gd_iconUrl != f.iconUri && (a.find(".projectIcon").attr("src", f.iconUri), a._gd_iconUrl = f.iconUri), a._gd_title != f.name && (b = a.find(".projectTitle"), UI.maxFont("bold", b, 20, f.name), a._gd_title = f.name), a._gd_progress != f.progress && (a.find(".projectProgress").stop().transit({
+        updateCardDisplay = function (cardElement, project) { // a -> cardElement, n -> updateCardDisplay (takes project as second arg now)
+            if (cardElement) {
+                var companyData = GameManager.company; // b -> companyData (reused)
+                if (companyData) {
+                    var currentBudgetPercentage = 100 * companyData.flags.hwBudget, // c -> currentBudgetPercentage
+                        monthlyCost = GameManager.getLabCostPerMonth(0); // d -> monthlyCost
+                    // project variable already exists
+                    cardElement.hasClass("rndCard") && (project = GameManager.currentRnDProject, // f -> project (reused)
+                        monthlyCost = GameManager.getLabCostPerMonth(2), currentBudgetPercentage = 100 * companyData.flags.rndBudget);
+                    !project && cardElement._gd_projectVisible ? (cardElement.find(".projectStatusContainer").slideUp(), cardElement._gd_projectVisible = !1) : project && (cardElement._gd_projectVisible || (cardElement.find(".projectStatusContainer").slideDown(), cardElement._gd_projectVisible = !0), cardElement._gd_iconUrl != project.iconUri && (cardElement.find(".projectIcon").attr("src", project.iconUri), cardElement._gd_iconUrl = project.iconUri), cardElement._gd_title != project.name && (companyData = cardElement.find(".projectTitle"), UI.maxFont("bold", companyData, 20, project.name), cardElement._gd_title = project.name), cardElement._gd_progress != project.progress && (cardElement.find(".projectProgress").stop().transit({
                         width: 100 *
-                            f.progress + "%"
-                    }), a._gd_progress = f.progress), a._gd_pointsRemaining != f.remainingPoints && (a.find(".projectPointsRemaining").text(f.startPoints - f.remainingPoints), a._gd_pointsRemaining = f.remainingPoints));
-                    a._gd_budget !== d && (a.find(".projectBudgetValue").text("{0} per month".localize().format(UI.getShortNumberString(d))), a._gd_budget = d);
-                    Math.round(a._gd_sliderValue) != Math.round(c) && (a.find(".projectBudgetSlider").slider({
-                        value: c
-                    }), a._gd_sliderValue = c);
-                    g()
+                            project.progress + "%"
+                    }), cardElement._gd_progress = project.progress), cardElement._gd_pointsRemaining != project.remainingPoints && (cardElement.find(".projectPointsRemaining").text(project.startPoints - project.remainingPoints), cardElement._gd_pointsRemaining = project.remainingPoints));
+                    cardElement._gd_budget !== monthlyCost && (cardElement.find(".projectBudgetValue").text("{0} per month".localize().format(UI.getShortNumberString(monthlyCost))), cardElement._gd_budget = monthlyCost);
+                    Math.round(cardElement._gd_sliderValue) != Math.round(currentBudgetPercentage) && (cardElement.find(".projectBudgetSlider").slider({
+                        value: currentBudgetPercentage
+                    }), cardElement._gd_sliderValue = currentBudgetPercentage);
+                    updateCardLayoutForScreenSize() // g -> updateCardLayoutForScreenSize
                 }
             }
         };
-    a.updateProjectStatusCards = function () {
+    visualsManager.updateProjectStatusCards = function () {
         GameManager.company.flags.hwLabUnlocked &&
-            n(f);
-        GameManager.company.flags.rndLabUnlocked && n(m)
+            updateCardDisplay(hwLabCard); // n -> updateCardDisplay
+        GameManager.company.flags.rndLabUnlocked && updateCardDisplay(rndLabCard) // n -> updateCardDisplay
     }
 })();
