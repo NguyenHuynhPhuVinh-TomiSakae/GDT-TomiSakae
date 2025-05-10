@@ -48,32 +48,117 @@
 
     <link rel="stylesheet" href="./css/greenworks.css" />
     <script src="./i18n/languages.js"></script>
-    <!-- Tách file codeNw.js -->
-    <script src="./compressed/GameFlags.js"></script>
-    <script src="./compressed/CoreExtensions.js"></script>
-    <script src="./compressed/Logger.js"></script>
-    <script src="./compressed/PlatformShim.js"></script>
-    <script src="./compressed/ErrorReportingAndLocalization.js"></script>
-    <script src="./compressed/GameManager_Main.js"></script>
-    <script src="./compressed/SteamAPI.js"></script>
-    <script src="./compressed/DataStore.js"></script>
-    <script src="./compressed/LanguageManager.js"></script>
-    <script src="./compressed/ResourceKeys.js"></script>
-    <script src="./compressed/CustomAlert.js"></script>
-    <script src="./compressed/StartupAndSplash.js"></script>
-    <script src="./compressed/SoundManager.js"></script>
-    <script src="./compressed/CanvasManager.js"></script>
-    <script src="./compressed/GameResourceManager.js"></script>
-    <script src="./compressed/GameClasses.js"></script>
-    <script src="./compressed/GameLogicUtils.js"></script>
-    <script src="./compressed/ContentData.js"></script>
-    <script src="./compressed/GameMechanics.js"></script>
-    <script src="./compressed/UI_Elements.js"></script>
-    <script src="./compressed/UIManager.js"></script>
-    <script src="./compressed/VisualsAndAnimations.js"></script>
-    <script src="./compressed/SerializersAndCalculator.js"></script>
-    <script src="./compressed/SystemUtils.js"></script>
-    <script src="./compressed/SteamGreenworks.js"></script>
+    <!-- Core -->
+    <script src="./compressed/core/GameFlags.js"></script>
+    <script src="./compressed/core/CoreExtensions.js"></script>
+    <script src="./compressed/core/Logger.js"></script>
+    <script src="./compressed/core/PlatformShim.js"></script>
+
+    <!-- Reporting -->
+    <script src="./compressed/reporting/ErrorReporting.js"></script>
+
+    <!-- Localization -->
+    <script src="./compressed/localization/Localization.js"></script>
+
+    <!-- Game Manager Core and States -->
+    <script src="./compressed/game/GameManagerStates.js"></script> <!-- Định nghĩa 'State' -->
+    <script src="./compressed/game/GameManager.js"></script> <!-- Sử dụng 'State' -->
+
+    <!-- Platform Specific (SteamAPI cần thiết sớm nếu các module khác dùng) -->
+    <script src="./compressed/platform/SteamAPI.js"></script>
+
+    <!-- System Utilities (DataStore, LanguageMgr, ResourceKeys cần sớm) -->
+    <script src="./compressed/system/DataStore.js"></script>
+    <script src="./compressed/system/LanguageManager.js"></script>
+    <script src="./compressed/system/ResourceKeys.js"></script>
+
+    <!-- UI Manager and Custom Alert (CustomAlert cần trước Startup) -->
+    <script src="./compressed/ui/CustomAlert.js"></script>
+
+    <!-- System Utilities (StartupAndSplash, SoundManager cần trước khi game bắt đầu) -->
+    <script src="./compressed/system/StartupAndSplash.js"></script>
+    <script src="./compressed/system/SoundManager.js"></script>
+
+    <!-- Visuals and Game Resources (CanvasManager là nền tảng cho visuals) -->
+    <script src="./compressed/visuals/CanvasManager.js"></script>
+    <script src="./compressed/visuals/GameResourceManager.js"></script>
+
+    <!-- Game Classes (Các lớp cơ bản của game) -->
+    <script src="./compressed/game/classes/Booth.js"></script>
+    <script src="./compressed/game/classes/Company.js"></script>
+    <script src="./compressed/game/classes/Game.js"></script>
+    <script src="./compressed/game/classes/GameState.js"></script>
+    <script src="./compressed/game/classes/GameGenre.js"></script>
+    <script src="./compressed/game/classes/Genre.js"></script>
+
+    <!-- Game Logic -->
+    <script src="./compressed/game/logic/GameTrends.js"></script>
+    <script src="./compressed/game/logic/Notification.js"></script>
+    <script src="./compressed/game/logic/SaveGameData.js"></script>
+    <script src="./compressed/game/logic/Character.js"></script>
+    <script src="./compressed/game/logic/General.js"></script>
+
+    <!-- Game Content Data -->
+    <script src="./compressed/game/content/Media.js"></script>
+    <script src="./compressed/game/content/Missions.js"></script>
+    <script src="./compressed/game/content/Platforms.js"></script>
+    <script src="./compressed/game/content/Topics.js"></script>
+
+    <!-- Game Mechanics -->
+    <script src="./compressed/game/mechanics/Reviews.js"></script>
+    <!-- UI Elements (SettingsGameplay được dùng bởi Sales và các phần UI khác) -->
+    <script src="./compressed/ui/elements/SettingsGameplay.js"></script>
+    <script src="./compressed/game/mechanics/Sales.js"></script>
+    <script src="./compressed/game/mechanics/SalesEvents.js"></script>
+    <script src="./compressed/game/mechanics/DecisionNotifications.js"></script>
+    <script src="./compressed/game/mechanics/ProjectContracts.js"></script>
+
+    <!-- UI Elements (FlippingCounter, Knowledge) -->
+    <script src="./compressed/ui/elements/FlippingCounter.js"></script>
+    <script src="./compressed/ui/elements/Knowledge.js"></script>
+
+    <!-- Visuals and Game Resources (Các thành phần animation và visual) -->
+    <script src="./compressed/visuals/animations/SpriteSheetX.js"></script>
+    <script src="./compressed/visuals/animations/AnimationSpriteSheets.js"></script>
+    <script src="./compressed/visuals/animations/BitmapAnimationFactory.js"></script>
+    <script src="./compressed/visuals/animations/CharacterNameVisual.js"></script>
+    <script src="./compressed/visuals/animations/CompositeBitmapAnimation.js"></script>
+    <script src="./compressed/visuals/animations/GameStatusBar.js"></script>
+    <script src="./compressed/visuals/animations/LevelOverlay.js"></script>
+    <script src="./compressed/visuals/animations/PointsDisplayVisual.js"></script>
+    <script src="./compressed/visuals/animations/ProgressBarVisual.js"></script>
+    <script src="./compressed/visuals/animations/HypePointsVisual.js"></script>
+    <script src="./compressed/visuals/animations/CircularProgressVisual.js"></script>
+    <script src="./compressed/visuals/animations/CharacterOverlay.js"></script>
+    <script src="./compressed/visuals/ProjectWorkerVisual.js"></script>
+    <script src="./compressed/visuals/IsometricCompanyNameVisual.js"></script>
+    <script src="./compressed/visuals/VisualsManager.js"></script>
+
+    <!-- UI Manager -->
+    <script src="./compressed/ui/UIManager.js"></script>
+
+    <!-- Game Utilities -->
+    <script src="./compressed/game/utils/LevelCalculator.js"></script>
+    <script src="./compressed/system/UpdateNotifications.js"></script> <!-- Phụ thuộc vào UI -->
+    <script src="./compressed/game/utils/SavegameMigrator.js"></script>
+    <script src="./compressed/game/utils/SavegameConverter.js"></script>
+
+    <!-- System Utilities (Các tiện ích hệ thống cuối cùng) -->
+    <script src="./compressed/system/SupportPacks.js"></script>
+    <script src="./compressed/system/ghg4.js"></script>
+    <script src="./compressed/system/UpdateChecker.js"></script>
+
+    <!-- Platform Specific (Greenworks phụ thuộc SteamAPI và GameFlags) -->
+    <script src="./compressed/platform/SteamGreenworks.js"></script>
+
+    <!-- Serializers (Thường là các file cuối cùng) -->
+    <script src="./compressed/serializers/TopicsSerializer.js"></script>
+    <script src="./compressed/serializers/EnginePartsSerializer.js"></script>
+    <script src="./compressed/serializers/EngineSerializer.js"></script>
+    <script src="./compressed/serializers/FeatureSerializer.js"></script>
+    <script src="./compressed/serializers/PlatformsSerializer.js"></script>
+    <script src="./compressed/serializers/CompanyFeatureSerializer.js"></script>
+    <script src="./compressed/serializers/SpawnedPointsSerializer.js"></script>
     <!-- <script src="./compressed/codeNw.js"></script> XÓA HOẶC COMMENT DÒNG NÀY -->
     <script src="./js/GDT.js"></script>
     <script src="./js/modSupport.js"></script>
