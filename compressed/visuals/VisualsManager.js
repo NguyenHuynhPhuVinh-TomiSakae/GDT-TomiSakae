@@ -1,124 +1,124 @@
-// --- START OF FILE VisualsManager.js ---
+// Các hằng số màu sắc cho các loại điểm trong game
+var DESIGN_POINTS_COLOR = "orange";
+var TECHNOLOGY_POINTS_COLOR = "#00BFFF";
+var RESEARCH_POINTS_COLOR = "#006AFF";
+var BUGS_COLOR = "#FF6A00";
 
-// Định nghĩa màu sắc cho các loại điểm trong game
-var DESIGN_POINTS_COLOR = "orange";            // Màu cho điểm thiết kế
-var TECHNOLOGY_POINTS_COLOR = "#00BFFF";       // Màu cho điểm công nghệ
-var RESEARCH_POINTS_COLOR = "#006AFF";         // Màu cho điểm nghiên cứu
-var BUGS_COLOR = "#FF6A00";                    // Màu cho lỗi (bugs)
-
-// Namespace chính cho quản lý hình ảnh và hiệu ứng
+// Namespace chính cho việc quản lý hiển thị và đồ họa
 var VisualsManager = {};
 
 (function () {
-    // 'visualsModule' là alias cho VisualsManager trong scope của IIFE này
-    var visualsModule = VisualsManager;
-    // 'canvasModule' là alias cho CanvasManager
-    var canvasModule = CanvasManager;
+    // 'visualsManager' là một alias cho VisualsManager để sử dụng trong scope này
+    var visualsManager = VisualsManager;
+    // 'canvasManagerInstance' là một alias cho CanvasManager
+    var canvasManagerInstance = CanvasManager;
 
-    // Hệ số chia để tính toán tọa độ trên màn hình, có thể thay đổi dựa trên độ phân giải
-    visualsModule.Divisor = 1;
-    // Độ lệch toàn cục theo trục X, hữu ích cho việc cuộn màn hình hoặc xử lý màn hình rộng
-    visualsModule.globalOffsetX = 0;
+    // Hệ số chia để điều chỉnh tọa độ, có thể liên quan đến tỷ lệ hiển thị hoặc độ phân giải
+    visualsManager.Divisor = 1;
+    // Độ lệch toàn cục theo trục X, có thể dùng để căn giữa hoặc xử lý màn hình rộng
+    visualsManager.globalOffsetX = 0;
 
-    // Nếu game đang chạy ở độ phân giải thấp (ISLOWRES là cờ toàn cục)
-    // thì cập nhật Divisor để điều chỉnh tỷ lệ hiển thị
-    if (PlatformShim.ISLOWRES) {
-        visualsModule.Divisor = 1.874084919472914;
-    }
+    // Nếu đang ở chế độ độ phân giải thấp, cập nhật Divisor
+    PlatformShim.ISLOWRES && (visualsManager.Divisor = 1.874084919472914);
 
-    // Hàm chuyển đổi tọa độ logic của game thành tọa độ màn hình
-    // 'coordinate' là tọa độ logic, 'scale' là tỷ lệ (mặc định là 1)
-    visualsModule.toScreenCoordinates = function (coordinate, scale) {
-        var currentScale = isNaN(scale) ? 1 : scale; // Nếu scale không phải số thì mặc định là 1
-        // Chia tọa độ logic cho Divisor, nhân với scale và làm tròn
-        return Math.round(coordinate / visualsModule.Divisor * currentScale);
+    // Chuyển đổi tọa độ logic sang tọa độ màn hình, có tính đến globalScale
+    visualsManager.toScreenCoordinates = function (coordinateValue, globalScale) {
+        var currentGlobalScale = isNaN(globalScale) ? 1 : globalScale;
+        return Math.round(coordinateValue / visualsManager.Divisor * currentGlobalScale);
     };
 
-    // Lưu lại hàm createjs.Tween.get gốc
+    // Lưu lại hàm gốc của createjs.Tween.get
     var originalCreatejsTweenGet = createjs.Tween.get;
-    // Ghi đè hàm createjs.Tween.get để thêm gameId vào mỗi tween
-    // Điều này giúp quản lý và dừng các tween cũ khi game được load lại
+    // Ghi đè hàm createjs.Tween.get để tự động gán gameId cho mỗi tween
     createjs.Tween.get = function () {
         var tweenInstance = originalCreatejsTweenGet.apply(this, arguments);
-        if (tweenInstance) {
-            tweenInstance.gameId = GameManager.gameId; // Gán ID game hiện tại cho tween
-        }
+        // Gán ID game hiện tại cho tween để quản lý vòng đời của tween theo game
+        tweenInstance && (tweenInstance.gameId = GameManager.gameId);
         return tweenInstance;
     };
 
-    // Hàm dừng tất cả các tween không thuộc về gameId hiện tại
-    visualsModule.stopOldTweens = function () {
-        // Lọc ra các tween có gameId và gameId đó khác với ID game hiện tại
+    // Dừng tất cả các tween cũ không thuộc về game hiện tại
+    visualsManager.stopOldTweens = function () {
+        // Lọc ra các tween có gameId và gameId đó khác với gameId hiện tại
         var oldTweens = createjs.Tween._tweens.filter(function (tween) {
             return tween.gameId && tween.gameId != GameManager.gameId;
-        }).slice(); // Tạo một bản sao của mảng để tránh lỗi khi thay đổi mảng gốc
-        // Dừng (pause) tất cả các tween cũ
+        }).slice(); // slice() để tạo bản sao, tránh thay đổi mảng gốc khi duyệt
+        // Dừng (pause) các tween cũ
         for (var i = 0; i < oldTweens.length; i++) {
-            oldTweens[i].setPaused(true);
+            oldTweens[i].setPaused(!0); // !0 tương đương true
         }
     };
 
-    // Các đối tượng UI quan trọng được quản lý bởi VisualsManager
-    visualsModule.gameStatusBar = undefined;    // Thanh trạng thái game (hiển thị điểm, tên game, ...)
-    visualsModule.researchPoints = undefined; // Đối tượng hiển thị điểm nghiên cứu
+    // Các đối tượng UI chính
+    visualsManager.gameStatusBar = void 0; // Thanh trạng thái game (điểm, tên game,...)
+    visualsManager.researchPoints = void 0; // Đối tượng hiển thị điểm nghiên cứu
 
-    // Hàm reset toàn bộ trạng thái hình ảnh, thường gọi khi tải game hoặc bắt đầu level mới
-    visualsModule.reset = function () {
+    // Hàm reset toàn bộ VisualsManager, thường gọi khi tải game hoặc bắt đầu level mới
+    visualsManager.reset = function () {
         Sound.pauseAllLoopingFx(); // Dừng tất cả hiệu ứng âm thanh đang lặp
-        this.stopOldTweens();      // Dừng các animation cũ
+        this.stopOldTweens(); // Dừng các tween cũ
 
-        // Load lại trạng thái hình ảnh cho các nhân viên phòng Hardware và R&D (nếu có)
+        // Tải lại trạng thái cho các nhân viên trong phòng Hardware (nếu có)
         if (GameManager.company.hwCrew) {
             for (var i = 0; i < GameManager.company.hwCrew.length; i++) {
                 GameManager.company.hwCrew[i].load();
             }
         }
+        // Tải lại trạng thái cho các nhân viên trong phòng R&D (nếu có)
         if (GameManager.company.rndCrew) {
             for (var i = 0; i < GameManager.company.rndCrew.length; i++) {
                 GameManager.company.rndCrew[i].load();
             }
         }
 
-        // Reset mảng hình ảnh máy tính
-        visualsModule.computerImages = [undefined, undefined, undefined, undefined, undefined];
-        // Load lại stage chính (background, các đối tượng tĩnh)
-        visualsModule.loadStage(true);
+        // Reset mảng chứa hình ảnh máy tính của nhân viên
+        visualsManager.computerImages = [void 0, void 0, void 0, void 0, void 0];
+        // Tải lại stage đồ họa (true nghĩa là có thể là lần tải lại)
+        visualsManager.loadStage(!0);
 
         // Khởi tạo hoặc reset thanh trạng thái game
-        if (!visualsModule.gameStatusBar) {
-            visualsModule.gameStatusBar = new GameStatusBar();
-            canvasModule.foregroundStage.addChild(visualsModule.gameStatusBar);
+        if (!visualsManager.gameStatusBar) {
+            visualsManager.gameStatusBar = new GameStatusBar();
+            canvasManagerInstance.foregroundStage.addChild(visualsManager.gameStatusBar);
         }
-        visualsModule.gameStatusBar.x = canvasModule.foregroundStage.canvas.width / 2 - visualsModule.gameStatusBar.width / 2;
-        visualsModule.gameStatusBar.y = 15;
-        visualsModule.gameStatusBar.reset();
+        visualsManager.gameStatusBar.x = canvasManagerInstance.foregroundStage.canvas.width / 2 - visualsManager.gameStatusBar.width / 2;
+        visualsManager.gameStatusBar.y = 15;
+        visualsManager.gameStatusBar.reset();
 
         // Khởi tạo hoặc reset hiển thị điểm nghiên cứu
-        if (!visualsModule.researchPoints) {
-            visualsModule.researchPoints = new PointsDisplayVisual(RESEARCH_POINTS_COLOR, "white", "Research".localize());
-            canvasModule.foregroundStage.addChild(visualsModule.researchPoints);
+        if (!visualsManager.researchPoints) {
+            visualsManager.researchPoints = new PointsDisplayVisual(RESEARCH_POINTS_COLOR, "white", "Research".localize());
+            canvasManagerInstance.foregroundStage.addChild(visualsManager.researchPoints);
         }
-        visualsModule.researchPoints.y = 15;
-        visualsModule.researchPoints.size = 100;
-        visualsModule.researchPoints.x = visualsModule.gameStatusBar.x + visualsModule.gameStatusBar.width + 70;
+        visualsManager.researchPoints.y = 15;
+        visualsManager.researchPoints.size = 100;
+        visualsManager.researchPoints.x = visualsManager.gameStatusBar.x + visualsManager.gameStatusBar.width + 70;
 
-        // Reset và làm mới tất cả các nhân vật, phòng lab, điểm số, UI liên quan
-        visualsModule.resetAllCharacters();
-        visualsModule.refreshLabCrew();
-        visualsModule.updatePoints();
-        visualsModule.gameStatusBar.updateGameName();
+        // Reset tất cả hiển thị nhân vật
+        visualsManager.resetAllCharacters();
+        // Làm mới hiển thị của các nhân viên trong phòng lab
+        visualsManager.refreshLabCrew();
+        // Cập nhật hiển thị điểm
+        visualsManager.updatePoints();
+        // Cập nhật tên game trên thanh trạng thái
+        visualsManager.gameStatusBar.updateGameName();
+
+        // Xóa các card hiển thị doanh số và bảo trì cũ
         UI.clearSalesCards();
         UI.clearMaintenanceCards();
 
-        // Hiển thị lại các card bán hàng và bảo trì cho các game/console đang hoạt động
+        // Hiển thị lại card doanh số cho các console tự tạo đang bán hoặc chưa bán được
         GameManager.company.licencedPlatforms.forEach(function (platform) {
             if (platform.isCustom === true && (platform.nextSalesCash > 0 || platform.currentSalesCash === 0)) {
                 UI.addSalesCard(platform.id, platform.name, platform.currentSalesCash, platform.unitsSold, platform.currentUnitsSold, -1, platform.salesCashLog, platform.nextSalesCash, Sales.consoleUnitPrice);
+                // Nếu đã có doanh thu thì cập nhật card bảo trì
                 if (platform.currentSalesCash > 0) {
                     UI.updateMaintenanceCard(platform);
                 }
             }
         });
+
+        // Hiển thị lại card doanh số cho các game đang được bán
         GameManager.company.gameLog.forEach(function (game) {
             if (game.currentSalesCash < game.totalSalesCash) {
                 UI.addSalesCard(game.id, game.title, game.currentSalesCash, game.totalSalesCash, game.unitsSold, game.currentSalesRank,
@@ -126,72 +126,83 @@ var VisualsManager = {};
             }
         });
 
-        CanvasManager.update(true, true); // Cập nhật tất cả canvas
-        visualsModule.updateReleaseReadyButton(); // Cập nhật nút "Hoàn thành game"
-        UI.reset(); // Reset các thành phần UI khác
+        // Cập nhật toàn bộ canvas (true, true có thể nghĩa là bắt buộc vẽ lại và cập nhật tất cả)
+        CanvasManager.update(!0, !0);
+        // Cập nhật nút "Release Ready" (nếu game đã hoàn thành bug fixing)
+        visualsManager.updateReleaseReadyButton();
+        // Reset các thành phần UI khác
+        UI.reset();
     };
 
-    // Hàm reset tất cả hình ảnh nhân vật
-    visualsModule.resetAllCharacters = function () {
-        // Xóa tất cả children khỏi characterStage
-        var characterStageChildren = canvasModule.characterStage.children.slice();
-        for (var i = 0; i < characterStageChildren.length; i++) {
-            canvasModule.characterStage.children.remove(characterStageChildren[i]);
+    // Reset tất cả hiển thị của nhân vật trên characterStage
+    visualsManager.resetAllCharacters = function () {
+        // Lấy danh sách các đối tượng con hiện tại của characterStage và xóa chúng
+        var childrenOnStage = canvasManagerInstance.characterStage.children.slice();
+        for (var i = 0; i < childrenOnStage.length; i++) {
+            canvasManagerInstance.characterStage.children.remove(childrenOnStage[i]);
         }
-        visualsModule.characterOverlays = []; // Mảng chứa các đối tượng overlay của nhân vật
-        visualsModule.reloadAllCharacters(); // Load lại hình ảnh nhân vật
-        visualsModule.refreshTrainingOverlays(); // Làm mới overlay huấn luyện
-        visualsModule.refreshHiringButtons(); // Làm mới nút thuê nhân viên
+        // Reset mảng chứa các overlay của nhân vật
+        visualsManager.characterOverlays = [];
+        // Tải lại tất cả hiển thị nhân vật
+        visualsManager.reloadAllCharacters();
+        // Làm mới các overlay liên quan đến training
+        visualsManager.refreshTrainingOverlays();
+        // Làm mới các nút thuê nhân viên
+        visualsManager.refreshHiringButtons();
     };
 
-    // Hàm xóa một nhân viên khỏi màn hình
-    visualsModule.removeStaff = function (characterToRemove) {
-        // Tìm và xóa overlay của nhân viên
-        var characterOverlay = visualsModule.characterOverlays.first(function (overlay) {
+    // Xóa hiển thị của một nhân viên cụ thể khỏi game
+    visualsManager.removeStaff = function (characterToRemove) {
+        // Tìm overlay của nhân viên cần xóa
+        var characterOverlay = visualsManager.characterOverlays.first(function (overlay) {
             return overlay.character === characterToRemove;
         });
-        visualsModule.characterOverlays.remove(characterOverlay);
-        canvasModule.characterStage.removeChild(characterOverlay);
+        // Xóa overlay khỏi mảng quản lý và khỏi stage
+        visualsManager.characterOverlays.remove(characterOverlay);
+        canvasManagerInstance.characterStage.removeChild(characterOverlay);
         // Xóa hình ảnh máy tính của nhân viên đó
-        visualsModule.removeComputer(characterToRemove);
+        visualsManager.removeComputer(characterToRemove);
         // Làm mới các UI liên quan
-        visualsModule.refreshTrainingOverlays();
-        visualsModule.refreshHiringButtons();
-        UI._resetBoostUI(); // Reset UI của boost
+        visualsManager.refreshTrainingOverlays();
+        visualsManager.refreshHiringButtons();
+        UI._resetBoostUI(); // Reset UI của boost (nếu có)
     };
 
-    // Hình ảnh background và máy tính của các nhân viên
-    visualsModule.backgroundImage = undefined;
-    visualsModule.computerImages = [undefined, undefined, undefined, undefined, undefined];
+    // Hình nền hiện tại của stage
+    visualsManager.backgroundImage = void 0;
+    // Mảng chứa hình ảnh máy tính cho từng slot nhân viên
+    visualsManager.computerImages = [void 0, void 0, void 0, void 0, void 0];
 
-    // Hàm xử lý khi công ty chuyển sang level mới
-    visualsModule.nextLevel = function () {
-        var currentCompanyLevel = GameManager.company.currentLevel;
-        GameManager.pause(true); // Tạm dừng game
+    // Hàm xử lý khi công ty lên level mới (thay đổi văn phòng)
+    visualsManager.nextLevel = function () {
+        var currentLevel = GameManager.company.currentLevel;
+        GameManager.pause(!0); // Tạm dừng game
 
         // Xác định và xóa các tài nguyên không cần thiết của level cũ
-        var resourcesToExclude = [1, 2, 3, 4].except([currentCompanyLevel]);
-        var oldLevelResources = ResourceKeys.getLevelResources.apply(ResourceKeys, resourcesToExclude);
-        GameDev.ResourceManager.removeResources(oldLevelResources);
+        var resourcesToUnload = ResourceKeys.getLevelResources.apply(ResourceKeys, [1, 2, 3, 4].except([currentLevel]));
+        GameDev.ResourceManager.removeResources(resourcesToUnload);
 
         UI.fadeInTransitionOverlay(); // Hiển thị overlay chuyển cảnh
+
         var startTime = Date.now();
+        // Hàm thực hiện sau khi tài nguyên level mới đã tải xong
+        var onResourcesReady = function () {
+            visualsManager.loadStage(!0); // Tải lại stage với hình ảnh của level mới
 
-        var onResourcesLoaded = function () {
-            visualsModule.loadStage(true); // Load lại stage với tài nguyên mới
-
-            // Lưu trạng thái visual của nhân vật và xóa khỏi stage cũ
-            for (var i = 0; i < visualsModule.characterOverlays.length; i++) {
-                var overlay = visualsModule.characterOverlays[i];
-                overlay.character.visualData = overlay.saveState();
+            // Lưu trạng thái visual của các nhân vật cũ và xóa chúng khỏi stage
+            for (var i = 0; i < visualsManager.characterOverlays.length; i++) {
+                var overlay = visualsManager.characterOverlays[i];
+                overlay.character.visualData = overlay.saveState(); // Lưu trạng thái animation,...
                 overlay.parent.removeChild(overlay);
             }
-            visualsModule.characterOverlays = [];
-            visualsModule.reloadAllCharacters(); // Load lại nhân vật
-            visualsModule.refreshTrainingOverlays();
-            visualsModule.refreshHiringButtons();
+            visualsManager.characterOverlays = []; // Reset mảng overlay
 
-            // Nếu có nghiên cứu đang diễn ra, tiếp tục hiển thị animation
+            // Tải lại hiển thị nhân vật cho level mới
+            visualsManager.reloadAllCharacters();
+            visualsManager.refreshTrainingOverlays();
+            visualsManager.refreshHiringButtons();
+
+            // Nếu có nhân viên đang nghiên cứu, bắt đầu lại animation nghiên cứu
             if (GameManager.currentResearches.length > 0) {
                 for (var i = 0; i < GameManager.company.staff.length; i++) {
                     if (GameManager.company.staff[i].state === CharacterState.Researching) {
@@ -199,244 +210,242 @@ var VisualsManager = {};
                     }
                 }
             }
-            UI._resetBoostUI();
-            CanvasManager.update();
+            UI._resetBoostUI(); // Reset UI boost
+            CanvasManager.update(); // Cập nhật canvas
             UI.fadeOutTransitionOverlay(); // Ẩn overlay chuyển cảnh
-            GameManager.resume(true);      // Tiếp tục game
+            GameManager.resume(!0); // Tiếp tục game
         };
 
         FlippingCounter.init(); // Khởi tạo lại bộ đếm lật số (nếu có)
         // Đảm bảo tài nguyên của level mới đã được tải
-        GameDev.ResourceManager.ensureResources(ResourceKeys.getLevelResources(currentCompanyLevel), function () {
+        GameDev.ResourceManager.ensureResources(ResourceKeys.getLevelResources(currentLevel), function () {
+            // Đảm bảo có một khoảng thời gian tối thiểu cho transition
             var elapsedTime = Date.now() - startTime;
-            // Đảm bảo có một khoảng trễ tối thiểu cho hiệu ứng chuyển cảnh
             if (elapsedTime < 2000) {
                 setTimeout(function () {
-                    onResourcesLoaded();
+                    onResourcesReady();
                 }, 2000 - elapsedTime);
             } else {
-                onResourcesLoaded();
+                onResourcesReady();
             }
         });
     };
 
-    // Hàm thêm hình ảnh máy tính cho một nhân viên tại slot cụ thể
-    visualsModule.addComputer = function (characterData) {
-        if (characterData.slot > 0) { // Slot 0 thường là người chơi chính, không có máy tính riêng lẻ theo cách này
-            var characterSlot = characterData.slot;
-            var computerImageResource = undefined;
-            var computerImageIndexInStage = 1; // Mặc định vị trí chèn
+    // Thêm hình ảnh máy tính cho một nhân viên tại slot cụ thể
+    visualsManager.addComputer = function (character) {
+        if (character.slot > 0) { // Slot 0 thường là của người chơi chính, không có máy tính riêng
+            var staffSlot = character.slot;
+            var computerResourceKey = void 0;
+            var computerStageIndex = 1; // Vị trí layer để vẽ máy tính
             var currentLevel = GameManager.company.currentLevel;
-            var xPos = 0, yPos = 0;
+            var coordX = 0, coordY = 0;
             var globalScale = CanvasManager.globalScale;
 
-            // Xác định hình ảnh máy tính và vị trí dựa trên level và slot
+            // Xác định hình ảnh máy tính và tọa độ dựa trên level và slot
+            // Đoạn này có rất nhiều hardcode tọa độ, điển hình cho game 2D isometric
             if (currentLevel === 2) {
-                if (characterSlot === 1) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C1]; xPos = 1005; yPos = 707; computerImageIndexInStage = 4; }
-                else if (characterSlot === 2) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C2]; xPos = 880; yPos = 698; }
-                else if (characterSlot === 3) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C3]; xPos = 1164; yPos = 576; }
-                else if (characterSlot === 4) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2C4]; xPos = 1114; yPos = 511; }
+                if (staffSlot === 1) { computerResourceKey = ResourceKeys.Level2C1; coordX = 1005; coordY = 707; computerStageIndex = 4; }
+                else if (staffSlot === 2) { computerResourceKey = ResourceKeys.Level2C2; coordX = 880; coordY = 698; }
+                else if (staffSlot === 3) { computerResourceKey = ResourceKeys.Level2C3; coordX = 1164; coordY = 576; }
+                else if (staffSlot === 4) { computerResourceKey = ResourceKeys.Level2C4; coordX = 1114; coordY = 511; }
             } else if (currentLevel === 3) {
-                if (characterSlot === 1) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C1]; xPos = 1005; yPos = 723; computerImageIndexInStage = 4; }
-                else if (characterSlot === 2) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C2]; xPos = 878; yPos = 703; }
-                else if (characterSlot === 3) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C3]; xPos = 1159; yPos = 593; }
-                else if (characterSlot === 4) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3C4]; xPos = 1109; yPos = 511; }
+                if (staffSlot === 1) { computerResourceKey = ResourceKeys.Level3C1; coordX = 1005; coordY = 723; computerStageIndex = 4; }
+                else if (staffSlot === 2) { computerResourceKey = ResourceKeys.Level3C2; coordX = 878; coordY = 703; }
+                else if (staffSlot === 3) { computerResourceKey = ResourceKeys.Level3C3; coordX = 1159; coordY = 593; }
+                else if (staffSlot === 4) { computerResourceKey = ResourceKeys.Level3C4; coordX = 1109; coordY = 511; }
             } else if (currentLevel === 4) {
-                if (characterSlot === 1) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C1]; xPos = 463; yPos = 978; computerImageIndexInStage = 4; }
-                else if (characterSlot === 2) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C2]; xPos = 428; yPos = 756; }
-                else if (characterSlot === 3) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C1]; xPos = 745; yPos = 812; }
-                else if (characterSlot === 4) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C2]; xPos = 711; yPos = 591; }
-                else if (characterSlot === 5) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C1]; xPos = 1014; yPos = 649; }
-                else if (characterSlot === 6) { computerImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4C2]; xPos = 981; yPos = 426; }
+                if (staffSlot === 1) { computerResourceKey = ResourceKeys.Level4C1; coordX = 463; coordY = 978; computerStageIndex = 4; }
+                else if (staffSlot === 2) { computerResourceKey = ResourceKeys.Level4C2; coordX = 428; coordY = 756; }
+                else if (staffSlot === 3) { computerResourceKey = ResourceKeys.Level4C1; coordX = 745; coordY = 812; }
+                else if (staffSlot === 4) { computerResourceKey = ResourceKeys.Level4C2; coordX = 711; coordY = 591; }
+                else if (staffSlot === 5) { computerResourceKey = ResourceKeys.Level4C1; coordX = 1014; coordY = 649; }
+                else if (staffSlot === 6) { computerResourceKey = ResourceKeys.Level4C2; coordX = 981; coordY = 426; }
             }
 
-            xPos = visualsModule.toScreenCoordinates(xPos, globalScale);
-            yPos = visualsModule.toScreenCoordinates(yPos, globalScale);
+            coordX = visualsManager.toScreenCoordinates(coordX, globalScale);
+            coordY = visualsManager.toScreenCoordinates(coordY, globalScale);
 
-            if (computerImageResource) {
+            if (computerResourceKey) {
                 var backgroundStage = CanvasManager.backgroundStage;
-                var canvasWidth = backgroundStage.canvas.width;
-                var canvasHeight = backgroundStage.canvas.height;
-                var targetAspectRatio = 1366 / 768;
-                var currentOffsetX = 0;
+                var stageWidth = backgroundStage.canvas.width;
+                var stageHeight = backgroundStage.canvas.height;
+                var aspectRatio = 1366 / 768; // Tỷ lệ màn hình chuẩn
+                var xOffset = 0;
 
-                // Điều chỉnh offset nếu tỷ lệ màn hình không chuẩn
-                if (Math.abs(canvasWidth / canvasHeight - targetAspectRatio) > 0.1) {
-                    var scaledWidth = targetAspectRatio * canvasHeight;
-                    currentOffsetX = -(scaledWidth - canvasWidth) / 2;
-                    canvasWidth = scaledWidth;
+                // Xử lý nếu tỷ lệ màn hình hiện tại khác chuẩn (cho màn hình siêu rộng)
+                if (Math.abs(stageWidth / stageHeight - aspectRatio) > 0.1) {
+                    var newStageWidth = aspectRatio * stageHeight;
+                    xOffset = -(newStageWidth - stageWidth) / 2;
+                    stageWidth = newStageWidth;
                 }
-                visualsModule.currentXOffset = currentOffsetX;
+                visualsManager.currentXOffset = xOffset; // Lưu lại độ lệch X hiện tại
 
-                // Tạo một canvas tạm để vẽ máy tính (có thể để tối ưu hoặc xử lý alpha)
+                // Tạo một canvas tạm để vẽ máy tính (có thể là để cache hoặc xử lý alpha)
                 var tempCanvas = document.createElement("canvas");
-                tempCanvas.width = canvasWidth;
-                tempCanvas.height = canvasHeight;
-                tempCanvas.getContext("2d").drawImage(
-                    computerImageResource, 0, 0, computerImageResource.width, computerImageResource.height,
-                    currentOffsetX + xPos, yPos,
-                    Math.floor(computerImageResource.width * globalScale), Math.floor(computerImageResource.height * globalScale)
-                );
+                tempCanvas.width = stageWidth;
+                tempCanvas.height = stageHeight;
+                var computerImageResource = GameDev.ResourceManager.resources[computerResourceKey];
+                tempCanvas.getContext("2d").drawImage(computerImageResource, 0, 0, computerImageResource.width, computerImageResource.height, xOffset + coordX, coordY, Math.floor(computerImageResource.width * globalScale), Math.floor(computerImageResource.height * globalScale));
 
                 var computerBitmap = new createjs.Bitmap(tempCanvas);
-                computerBitmap.width = canvasWidth;
-                computerBitmap.height = canvasHeight;
+                computerBitmap.width = stageWidth;
+                computerBitmap.height = stageHeight;
+                visualsManager.computerImages[staffSlot] = computerBitmap;
 
-                visualsModule.computerImages[characterSlot] = computerBitmap;
-                // Chèn vào stage ở vị trí phù hợp để đảm bảo thứ tự vẽ đúng
-                if (backgroundStage.children.length >= computerImageIndexInStage - 1) {
-                    backgroundStage.addChildAt(computerBitmap, computerImageIndexInStage);
+                // Thêm bitmap máy tính vào stage tại đúng layer
+                if (backgroundStage.children.length >= computerStageIndex - 1) {
+                    backgroundStage.addChildAt(computerBitmap, computerStageIndex);
                 } else {
                     backgroundStage.addChild(computerBitmap);
                 }
-                CanvasManager.invalidateBackground(); // Đánh dấu background cần vẽ lại
+                CanvasManager.invalidateBackground(); // Đánh dấu cần vẽ lại background
             }
         }
     };
 
-    // Hàm xóa hình ảnh máy tính của một nhân viên
-    visualsModule.removeComputer = function (characterData) {
+    // Xóa hình ảnh máy tính của một nhân viên
+    visualsManager.removeComputer = function (character) {
         var backgroundStage = CanvasManager.backgroundStage;
-        if (visualsModule.computerImages[characterData.slot]) {
-            backgroundStage.removeChild(visualsModule.computerImages[characterData.slot]);
-            visualsModule.computerImages[characterData.slot] = undefined;
+        if (visualsManager.computerImages[character.slot]) {
+            backgroundStage.removeChild(visualsManager.computerImages[character.slot]);
+            visualsManager.computerImages[character.slot] = void 0;
             CanvasManager.invalidateBackground();
         }
     };
 
-    // Hàm tạo một đối tượng Text cho biển hiệu trong phòng lab
-    visualsModule.getLabSign = function (text, maxWidth, maxHeight, x, y) {
+    // Tạo text cho biển hiệu phòng lab
+    visualsManager.getLabSign = function (text, maxWidth, maxHeight, xPos, yPos) {
         var container = new createjs.Container();
-        container.x = x;
-        container.y = y;
+        container.x = xPos;
+        container.y = yPos;
 
         var fontName = UI.IS_SEGOE_UI_INSTALLED ? "Segoe UI" : "Open Sans";
         var fontSize = 32; // Kích thước font ban đầu
-        var textObject;
 
-        // Giảm kích thước font cho đến khi vừa với maxWidth và maxHeight
+        // Giảm kích thước font cho đến khi vừa với kích thước cho phép
         do {
             var fontStyle = "bold {0}pt {1}".format(fontSize, fontName);
-            textObject = new createjs.Text(text, fontStyle, "black");
+            var textMetrics = new createjs.Text(text, fontStyle, "black");
             fontSize -= 1;
-        } while ((textObject.getMeasuredWidth() > maxWidth || textObject.getMeasuredLineHeight() > maxHeight) && fontSize > 1);
+        } while ((textMetrics.getMeasuredWidth() > maxWidth || textMetrics.getMeasuredLineHeight() > maxHeight) && fontSize > 1);
 
-        var scale = fontSize / 32; // Tính tỷ lệ scale dựa trên fontSize cuối cùng
-        var textColor = createjs.Graphics.getHSL(0, 0, 24); // Màu chữ
+        var scaleFactor = fontSize / 32; // Tỷ lệ scale dựa trên font gốc 32pt
+        var textColor = createjs.Graphics.getHSL(0, 0, 24); // Màu chữ tối
 
-        textObject = new createjs.Text(text, "bold 32pt {0}".format(fontName), textColor);
+        var textObject = new createjs.Text(text, "bold 32pt {0}".format(fontName), textColor);
         textObject.textAlign = "center";
         textObject.textBaseline = "middle";
 
-        container.scaleX = scale;
-        container.scaleY = scale;
+        container.scaleX = scaleFactor;
+        container.scaleY = scaleFactor;
         container.addChild(textObject);
         return container;
     };
 
-    // Hàm load/reload stage chính của game (background và các đối tượng tĩnh)
-    visualsModule.loadStage = function (forceReload) {
+    // Tải/Vẽ lại toàn bộ stage đồ họa (background, overlay,...)
+    visualsManager.loadStage = function (forceRedraw) {
         var company = GameManager.company;
         var backgroundStage = CanvasManager.backgroundStage;
         var backgroundOverlayStage = CanvasManager.backgroundOverlayStage;
         var globalScale = CanvasManager.globalScale;
 
-        var canvasWidth = backgroundStage.canvas.width;
-        var canvasHeight = backgroundStage.canvas.height;
-        var targetAspectRatio = 1366 / 768; // Tỷ lệ màn hình mục tiêu
-        var currentOffsetX = 0;
+        var stageWidth = backgroundStage.canvas.width;
+        var stageHeight = backgroundStage.canvas.height;
+        var targetAspectRatio = 1366 / 768; // Tỷ lệ màn hình cơ sở
+        var currentXOffset = 0; // Độ lệch X cho màn hình rộng
 
-        // Điều chỉnh offset nếu tỷ lệ màn hình không chuẩn (ví dụ màn hình siêu rộng)
-        if (Math.abs(canvasWidth / canvasHeight - targetAspectRatio) > 0.1) {
-            var scaledWidth = targetAspectRatio * canvasHeight;
-            currentOffsetX = -(scaledWidth - canvasWidth) / 2;
-            canvasWidth = scaledWidth;
+        // Điều chỉnh kích thước và độ lệch nếu là màn hình siêu rộng
+        if (Math.abs(stageWidth / stageHeight - targetAspectRatio) > 0.1) {
+            var newVisibleWidth = targetAspectRatio * stageHeight;
+            currentXOffset = -(newVisibleWidth - stageWidth) / 2;
+            stageWidth = newVisibleWidth;
         }
 
         var currentLevel = company.currentLevel;
-        var lockedRightImageResource, lockedLeftImageResource;
-        var garageDoorY = visualsModule.toScreenCoordinates(39); // Tọa độ Y của cửa garage (level 4)
-        var rndLabDoorY = visualsModule.toScreenCoordinates(47); // Tọa độ Y của cửa phòng R&D (level 4)
+        var level4LockedRightResource, level4LockedLeftResource;
+        var levelSpecificX = visualsManager.toScreenCoordinates(2921); // Có thể là một tọa độ cơ sở
+        var level4LockedRightY = visualsManager.toScreenCoordinates(39);
+        var levelSpecificY;
+        visualsManager.toScreenCoordinates(4156); // Không gán giá trị, có thể là tính toán trước
+        var level4LockedLeftY = visualsManager.toScreenCoordinates(47);
 
-        // Xác định tài nguyên background và các thành phần khác dựa trên level
-        var levelBackgroundResource = GameDev.ResourceManager.resources[ResourceKeys.Level1];
-        var backgroundXOffset = visualsModule.toScreenCoordinates(563);
-        var backgroundYOffset = visualsModule.toScreenCoordinates(217);
+        var baseImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level1];
+        var officeImageX = visualsManager.toScreenCoordinates(563);
+        var officeImageY = visualsManager.toScreenCoordinates(217);
 
+        // Chọn tài nguyên và tọa độ dựa trên level hiện tại
         if (currentLevel === 2) {
-            levelBackgroundResource = GameDev.ResourceManager.resources[ResourceKeys.Level2];
-            backgroundXOffset = visualsModule.toScreenCoordinates(83);
-            backgroundYOffset = visualsModule.toScreenCoordinates(54);
+            baseImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level2];
+            officeImageX = visualsManager.toScreenCoordinates(83);
+            officeImageY = visualsManager.toScreenCoordinates(54);
         } else if (currentLevel === 3) {
-            levelBackgroundResource = GameDev.ResourceManager.resources[ResourceKeys.Level3];
-            backgroundXOffset = visualsModule.toScreenCoordinates(83);
-            backgroundYOffset = visualsModule.toScreenCoordinates(54);
+            baseImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level3];
+            officeImageX = visualsManager.toScreenCoordinates(83);
+            officeImageY = visualsManager.toScreenCoordinates(54);
         } else if (currentLevel === 4) {
-            levelBackgroundResource = GameDev.ResourceManager.resources[ResourceKeys.Level4];
-            backgroundXOffset = visualsModule.toScreenCoordinates(367);
-            backgroundYOffset = visualsModule.toScreenCoordinates(39);
+            baseImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4];
+            officeImageX = visualsManager.toScreenCoordinates(367);
+            officeImageY = visualsManager.toScreenCoordinates(39);
             if (!GameManager.company.flags.rndLabUnlocked) {
-                lockedRightImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedRight];
+                level4LockedRightResource = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedRight];
             }
             if (!GameManager.company.flags.hwLabUnlocked) {
-                lockedLeftImageResource = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedLeft];
+                level4LockedLeftResource = GameDev.ResourceManager.resources[ResourceKeys.Level4LockedLeft];
             }
+            visualsManager.toScreenCoordinates(2560); // Tính toán trước?
         }
 
-        // Chỉ vẽ lại background nếu cần (forceReload, thay đổi kích thước, hoặc offset)
-        if (!visualsModule.backgroundImage || visualsModule.backgroundImage.width != canvasWidth || visualsModule.backgroundImage.height != canvasHeight || visualsModule.currentXOffset != currentOffsetX || forceReload) {
+        // Chỉ vẽ lại nếu hình nền chưa có, kích thước thay đổi, hoặc bị bắt buộc
+        if (!visualsManager.backgroundImage || visualsManager.backgroundImage.width != stageWidth || visualsManager.backgroundImage.height != stageHeight || visualsManager.currentXOffset != currentXOffset || forceRedraw) {
             backgroundStage.removeAllChildren();
             backgroundOverlayStage.removeAllChildren();
-            companyNameVisual = undefined; // Reset biển tên công ty
-            visualsModule.currentXOffset = currentOffsetX;
+            companyNameVisual = void 0; // Biến `k` ở ngoài scope này, có thể là lỗi hoặc một biến toàn cục khác
+            visualsManager.currentXOffset = currentXOffset;
 
+            // Tạo canvas tạm để vẽ hình nền chính
             var tempCanvas = document.createElement("canvas");
-            tempCanvas.width = canvasWidth;
-            tempCanvas.height = canvasHeight;
+            tempCanvas.width = stageWidth;
+            tempCanvas.height = stageHeight;
             var tempCtx = tempCanvas.getContext("2d");
 
-            // Vẽ background chính
             if (currentLevel === 4) {
-                // Level 4 có cách vẽ background phức tạp hơn do chia thành nhiều phần
-                tempCtx.drawImage(levelBackgroundResource,
-                    visualsModule.toScreenCoordinates(2193), 0, // sourceX, sourceY
-                    visualsModule.toScreenCoordinates(2560), visualsModule.toScreenCoordinates(1384), // sourceWidth, sourceHeight
-                    0, Math.floor(backgroundYOffset * globalScale), // destX, destY
-                    Math.floor(visualsModule.toScreenCoordinates(2560) * globalScale), Math.floor(visualsModule.toScreenCoordinates(1384) * globalScale) // destWidth, destHeight
+                // Vẽ phần chính của level 4 (có thể là phần trung tâm)
+                tempCtx.drawImage(baseImageResource,
+                    visualsManager.toScreenCoordinates(2193), 0, visualsManager.toScreenCoordinates(2560), visualsManager.toScreenCoordinates(1384), // src rect
+                    0, Math.floor(officeImageY * globalScale), Math.floor(visualsManager.toScreenCoordinates(2560) * globalScale), Math.floor(visualsManager.toScreenCoordinates(1384) * globalScale) // dest rect
                 );
             } else {
-                tempCtx.drawImage(levelBackgroundResource, 0, 0, levelBackgroundResource.width, levelBackgroundResource.height,
-                    Math.floor(backgroundXOffset * globalScale), Math.floor(backgroundYOffset * globalScale),
-                    Math.floor(levelBackgroundResource.width * globalScale), Math.floor(levelBackgroundResource.height * globalScale)
+                tempCtx.drawImage(baseImageResource,
+                    0, 0, baseImageResource.width, baseImageResource.height, // src rect
+                    Math.floor(officeImageX * globalScale), Math.floor(officeImageY * globalScale), Math.floor(baseImageResource.width * globalScale), Math.floor(baseImageResource.height * globalScale) // dest rect
                 );
             }
 
-            // Vẽ các phần bị khóa của văn phòng (nếu có ở level 4)
-            if (lockedLeftImageResource) {
-                tempCtx.clearRect(currentOffsetX, garageDoorY * globalScale, (lockedLeftImageResource.width - 5) * globalScale, lockedLeftImageResource.height * globalScale);
-                tempCtx.drawImage(lockedLeftImageResource, 0, 0, lockedLeftImageResource.width, lockedLeftImageResource.height,
-                    currentOffsetX, garageDoorY * globalScale,
-                    (lockedLeftImageResource.width - 4) * globalScale, lockedLeftImageResource.height * globalScale
+            // Vẽ các phần bị khóa của level 4 (nếu có)
+            if (level4LockedLeftResource) {
+                tempCtx.clearRect(currentXOffset, level4LockedRightY * globalScale, (level4LockedLeftResource.width - 5) * globalScale, level4LockedLeftResource.height * globalScale);
+                tempCtx.drawImage(level4LockedLeftResource,
+                    0, 0, level4LockedLeftResource.width, level4LockedLeftResource.height,
+                    currentXOffset, level4LockedRightY * globalScale, (level4LockedLeftResource.width - 4) * globalScale, level4LockedLeftResource.height * globalScale
                 );
             }
-            if (lockedRightImageResource) {
-                tempCtx.clearRect(Math.floor((visualsModule.toScreenCoordinates(2590) - lockedRightImageResource.width) * globalScale), Math.floor((rndLabDoorY - 1) * globalScale),
-                    Math.floor(lockedRightImageResource.width * globalScale), Math.floor(lockedRightImageResource.height * globalScale));
-                tempCtx.drawImage(lockedRightImageResource, 0, 0, lockedRightImageResource.width, lockedRightImageResource.height,
-                    Math.floor((visualsModule.toScreenCoordinates(2588) - lockedRightImageResource.width) * globalScale), Math.floor(rndLabDoorY * globalScale),
-                    Math.floor(lockedRightImageResource.width * globalScale), Math.floor(lockedRightImageResource.height * globalScale)
+            if (level4LockedRightResource) {
+                tempCtx.clearRect(Math.floor((visualsManager.toScreenCoordinates(2590) - level4LockedRightResource.width) * globalScale), Math.floor((level4LockedLeftY - 1) * globalScale), Math.floor(level4LockedRightResource.width * globalScale), Math.floor(level4LockedRightResource.height * globalScale));
+                tempCtx.drawImage(level4LockedRightResource,
+                    0, 0, level4LockedRightResource.width, level4LockedRightResource.height,
+                    Math.floor((visualsManager.toScreenCoordinates(2588) - level4LockedRightResource.width) * globalScale), Math.floor(level4LockedLeftY * globalScale), Math.floor(level4LockedRightResource.width * globalScale), Math.floor(level4LockedRightResource.height * globalScale)
                 );
             }
 
-            var backgroundImageBitmap = new createjs.Bitmap(tempCanvas);
-            backgroundImageBitmap.width = canvasWidth;
-            backgroundImageBitmap.height = canvasHeight;
-            visualsModule.backgroundImage = backgroundImageBitmap;
-            backgroundStage.addChildAt(backgroundImageBitmap, 0);
+            var backgroundBitmap = new createjs.Bitmap(tempCanvas);
+            backgroundBitmap.width = stageWidth;
+            backgroundBitmap.height = stageHeight;
+            visualsManager.backgroundImage = backgroundBitmap;
+            backgroundStage.addChildAt(backgroundBitmap, 0);
 
-            visualsModule.updateComputers(); // Cập nhật lại vị trí máy tính
+            visualsManager.updateComputers(); // Vẽ lại máy tính của nhân viên
 
-            // Xóa và vẽ lại background cho các màn hình phụ (trái/phải cho level 4)
+            // Xóa và chuẩn bị các stage cho màn hình phụ (trái/phải)
             CanvasManager.leftScreen.backgroundStage.removeAllChildren();
             CanvasManager.leftScreen.backgroundOverlayStage.removeAllChildren();
             CanvasManager.leftScreen.invalidateBackground();
@@ -444,292 +453,293 @@ var VisualsManager = {};
             CanvasManager.rightScreen.backgroundOverlayStage.removeAllChildren();
             CanvasManager.rightScreen.invalidateBackground();
 
-            visualsModule.levelOverlay = new LevelOverlay(company); // Tạo overlay cho level (ví dụ: điều hòa)
+            visualsManager.levelOverlay = new LevelOverlay(company); // Tạo overlay cho level (máy lạnh, máy in,...)
 
-            // Xử lý riêng cho level 4 với các phòng lab
+            // Nếu là level 4, vẽ các phần riêng cho màn hình trái/phải (phòng lab)
             if (currentLevel === 4) {
                 var leftScreenCanvas = document.createElement("canvas");
-                leftScreenCanvas.width = canvasWidth;
-                leftScreenCanvas.height = canvasHeight;
+                leftScreenCanvas.width = stageWidth;
+                leftScreenCanvas.height = stageHeight;
                 var leftScreenCtx = leftScreenCanvas.getContext("2d");
                 var hardwareLabSign;
-
-                if (!lockedLeftImageResource) { // Nếu phòng Hardware đã mở
-                    leftScreenCtx.drawImage(levelBackgroundResource,
-                        0, 0, // sourceX, sourceY
-                        visualsModule.toScreenCoordinates(2560) - backgroundXOffset, visualsModule.toScreenCoordinates(1384), // sourceWidth, sourceHeight
-                        backgroundXOffset * globalScale, backgroundYOffset * globalScale, // destX, destY
-                        (visualsModule.toScreenCoordinates(2560) - backgroundXOffset) * globalScale, visualsModule.toScreenCoordinates(1384) * globalScale // destWidth, destHeight
+                if (!level4LockedLeftResource) { // Nếu phòng Hardware lab không bị khóa
+                    leftScreenCtx.drawImage(baseImageResource,
+                        0, 0, 2560 / visualsManager.Divisor - officeImageX, 1384 / visualsManager.Divisor, // src rect
+                        officeImageX * globalScale, officeImageY * globalScale, (2560 / visualsManager.Divisor - officeImageX) * globalScale, 1384 / visualsManager.Divisor * globalScale // dest rect
                     );
-                    hardwareLabSign = visualsModule.getLabSign("Hardware lab".localize(),
-                        visualsModule.toScreenCoordinates(264, globalScale), visualsModule.toScreenCoordinates(54, globalScale),
-                        visualsModule.toScreenCoordinates(1878, globalScale), visualsModule.toScreenCoordinates(145, globalScale));
+                    hardwareLabSign = visualsManager.getLabSign("Hardware lab".localize(), visualsManager.toScreenCoordinates(264, globalScale), visualsManager.toScreenCoordinates(54, globalScale), visualsManager.toScreenCoordinates(1878, globalScale), visualsManager.toScreenCoordinates(145, globalScale));
                 }
                 var leftScreenBitmap = new createjs.Bitmap(leftScreenCanvas);
-                leftScreenBitmap.width = canvasWidth;
-                leftScreenBitmap.heigth = canvasHeight; // Lỗi chính tả: height
+                leftScreenBitmap.width = stageWidth;
+                leftScreenBitmap.heigth = stageHeight; // Sai chính tả: height
                 CanvasManager.leftScreen.backgroundStage.addChildAt(leftScreenBitmap, 0);
-                CanvasManager.leftScreen.backgroundOverlayStage.addChild(visualsModule.levelOverlay.leftOverlay);
-                if (hardwareLabSign) {
-                    CanvasManager.leftScreen.backgroundOverlayStage.addChild(hardwareLabSign);
-                }
+                CanvasManager.leftScreen.backgroundOverlayStage.addChild(visualsManager.levelOverlay.leftOverlay);
+                if (hardwareLabSign) CanvasManager.leftScreen.backgroundOverlayStage.addChild(hardwareLabSign);
 
                 var rightScreenCanvas = document.createElement("canvas");
-                rightScreenCanvas.width = canvasWidth;
-                rightScreenCanvas.height = canvasHeight;
+                rightScreenCanvas.width = stageWidth;
+                rightScreenCanvas.height = stageHeight;
                 var rightScreenCtx = rightScreenCanvas.getContext("2d");
-                var rndLabSign;
-
-                if (!lockedRightImageResource) { // Nếu phòng R&D đã mở
-                    rightScreenCtx.drawImage(lockedRightImageResource, // Lỗi: đáng lẽ là levelBackgroundResource
-                        visualsModule.toScreenCoordinates(596), 0, // sourceX, sourceY
-                        visualsModule.toScreenCoordinates(29), lockedRightImageResource.height, // sourceWidth, sourceHeight // Lỗi: kích thước sai
-                        0, rndLabDoorY * globalScale, // destX, destY
-                        visualsModule.toScreenCoordinates(29, globalScale), lockedRightImageResource.height * globalScale // destWidth, destHeight
+                var researchAndDevelopmentLabSign;
+                if (level4LockedRightResource) { // Nếu phòng R&D bị khóa (vẽ phần khóa)
+                    rightScreenCtx.drawImage(level4LockedRightResource,
+                        visualsManager.toScreenCoordinates(596), 0, visualsManager.toScreenCoordinates(29), level4LockedRightResource.height, // srcX, srcY, srcW, srcH
+                        0, level4LockedLeftY * globalScale, visualsManager.toScreenCoordinates(29, globalScale), level4LockedRightResource.height * globalScale // destX, destY, destW, destH
                     );
-                    rndLabSign = visualsModule.getLabSign("R&D lab".localize(),
-                        visualsModule.toScreenCoordinates(264, globalScale), visualsModule.toScreenCoordinates(54, globalScale),
-                        visualsModule.toScreenCoordinates(690, globalScale), visualsModule.toScreenCoordinates(138, globalScale));
+                } else { // Nếu phòng R&D không bị khóa
+                    rightScreenCtx.drawImage(baseImageResource,
+                        visualsManager.toScreenCoordinates(2560, 2) - officeImageX, 0, baseImageResource.width - (visualsManager.toScreenCoordinates(2560, 2) - officeImageX), baseImageResource.height, // src rect
+                        0, officeImageY * globalScale, (baseImageResource.width - (2560 / visualsManager.Divisor * 2 - officeImageX)) * globalScale, baseImageResource.height * globalScale // dest rect
+                    );
+                    researchAndDevelopmentLabSign = visualsManager.getLabSign("R&D lab".localize(), visualsManager.toScreenCoordinates(264, globalScale), visualsManager.toScreenCoordinates(54, globalScale), visualsManager.toScreenCoordinates(690, globalScale), visualsManager.toScreenCoordinates(138, globalScale));
                 }
                 var rightScreenBitmap = new createjs.Bitmap(rightScreenCanvas);
-                rightScreenBitmap.width = canvasWidth;
-                rightScreenBitmap.heigth = canvasHeight; // Lỗi chính tả: height
+                rightScreenBitmap.width = stageWidth;
+                rightScreenBitmap.heigth = stageHeight; // Sai chính tả
                 CanvasManager.rightScreen.backgroundStage.addChildAt(rightScreenBitmap, 0);
-                CanvasManager.rightScreen.backgroundOverlayStage.addChild(visualsModule.levelOverlay.rightOverlay);
-                if (rndLabSign) {
-                    CanvasManager.rightScreen.backgroundOverlayStage.addChild(rndLabSign);
-                }
+                CanvasManager.rightScreen.backgroundOverlayStage.addChild(visualsManager.levelOverlay.rightOverlay);
+                if (researchAndDevelopmentLabSign) CanvasManager.rightScreen.backgroundOverlayStage.addChild(researchAndDevelopmentLabSign);
             }
-            backgroundOverlayStage.addChild(visualsModule.levelOverlay.centerOverlay);
+            backgroundOverlayStage.addChild(visualsManager.levelOverlay.centerOverlay);
         }
-        visualsModule.updateCompanyNameInOffice(); // Cập nhật tên công ty trên biển hiệu (nếu có)
-        CanvasManager.invalidateBackground();
-        visualsModule.scrollToZone(GameManager.company.flags.currentZone); // Cuộn đến zone hiện tại
-        initializeWipeTouch(); // Khởi tạo sự kiện vuốt màn hình
+        visualsManager.updateCompanyNameInOffice(); // Vẽ tên công ty lên văn phòng
+        CanvasManager.invalidateBackground(); // Đánh dấu cần vẽ lại
+        visualsManager.scrollToZone(GameManager.company.flags.currentZone); // Cuộn đến zone hiện tại
+        initializeTouchControls(); // Khởi tạo điều khiển cảm ứng (nếu chưa)
     };
 
-    // Hàm bật/tắt điều hòa (animation)
-    visualsModule.installAirCon = function () {
-        if (visualsModule.levelOverlay) {
-            visualsModule.levelOverlay.startAirCon1();
-            visualsModule.levelOverlay.startAirCon2();
-        }
+    // Bật máy lạnh
+    visualsManager.installAirCon = function () {
+        visualsManager.levelOverlay.startAirCon1();
+        visualsManager.levelOverlay.startAirCon2();
     };
 
-    // Biến cờ để đảm bảo wipeTouch chỉ được khởi tạo một lần
-    var wipeTouchInitialized = false;
-    // Hàm khởi tạo sự kiện vuốt màn hình
-    var initializeWipeTouch = function () {
-        if (!wipeTouchInitialized) {
-            wipeTouchInitialized = true;
+    var touchControlsInitialized = !1;
+    // Khởi tạo điều khiển cảm ứng (vuốt để chuyển zone)
+    var initializeTouchControls = function () {
+        if (!touchControlsInitialized) {
+            touchControlsInitialized = !0;
             $("#gameContainerWrapper").wipetouch({
-                tapToClick: false, // Không coi tap là click
-                wipeLeft: function (event) { // Xử lý khi vuốt sang trái
-                    VisualsManager.scrollToNextZone(1);
+                tapToClick: !1, // Không coi tap là click
+                wipeLeft: function (event) {
+                    VisualsManager.scrollToNextZone(1); // Vuốt trái -> sang zone phải
                 },
-                wipeRight: function (event) { // Xử lý khi vuốt sang phải
-                    VisualsManager.scrollToNextZone(-1);
+                wipeRight: function (event) {
+                    VisualsManager.scrollToNextZone(-1); // Vuốt phải -> sang zone trái
                 },
-                wipeMove: function (event) { // Xử lý khi đang vuốt
-                    // Bỏ qua nếu đang thao tác với slider hoặc không có thay đổi theo trục X
-                    if ((!document.activeElement || !$(document.activeElement).hasClass("ui-slider-handle")) && event.dX) {
-                        visualsModule.lastMove = Date.now(); // Ghi lại thời điểm vuốt cuối cùng
-                        var scrollContainerWidth = $("#canvasScrollContainer").width();
-                        var backgroundCanvasWidth = CanvasManager.backgroundStage.canvas.width;
+                wipeMove: function (eventData) {
+                    // Xử lý khi đang vuốt (kéo màn hình)
+                    // Kiểm tra xem có đang kéo slider không, nếu có thì không xử lý
+                    if ((!document.activeElement || !$(document.activeElement).hasClass("ui-slider-handle")) && eventData.dX) {
+                        visualsManager.lastMove = Date.now(); // Ghi lại thời gian vuốt cuối
+                        var containerWidth = $("#canvasScrollContainer").width();
+                        var stageWidth = CanvasManager.backgroundStage.canvas.width;
                         var company = GameManager.company;
 
-                        // Chỉ cho phép cuộn nếu ở level 4 hoặc canvas rộng hơn container
-                        if ((company && company.currentLevel == 4) || scrollContainerWidth < backgroundCanvasWidth) {
-                            var maxScroll = scrollContainerWidth - backgroundCanvasWidth;
-                            var currentLeft = $("#innerCanvasContainer").offset().left - visualsModule.globalOffsetX;
-                            currentLeft += event.dX; // Cập nhật vị trí dựa trên khoảng cách vuốt
+                        // Chỉ cho phép kéo nếu level là 4 hoặc stage rộng hơn container
+                        if ((company && company.currentLevel == 4) || containerWidth < stageWidth) {
+                            var maxScrollOffset = containerWidth - stageWidth;
+                            var currentLeft = $("#innerCanvasContainer").offset().left - visualsManager.globalOffsetX;
+                            currentLeft += eventData.dX; // Cập nhật vị trí dựa trên độ dịch chuyển của thao tác vuốt
 
-                            // Kích hoạt/hủy kích hoạt các zone dựa trên vị trí cuộn
-                            CanvasManager.zone0Activ = currentLeft > -backgroundCanvasWidth;
-                            CanvasManager.zone1Activ = currentLeft > -2 * backgroundCanvasWidth && currentLeft <= maxScroll;
-                            CanvasManager.zone2Activ = currentLeft > -3 * backgroundCanvasWidth && currentLeft <= maxScroll - backgroundCanvasWidth;
+                            // Kích hoạt/Hủy kích hoạt các zone dựa trên vị trí hiện tại
+                            CanvasManager.zone0Activ = currentLeft > -stageWidth;
+                            CanvasManager.zone1Activ = currentLeft > -2 * stageWidth && currentLeft <= maxScrollOffset;
+                            CanvasManager.zone2Activ = currentLeft > -3 * stageWidth && currentLeft <= maxScrollOffset - stageWidth;
 
-                            $("#innerCanvasContainer").css("left", currentLeft + "px");
+                            $("#innerCanvasContainer").css("left", currentLeft + "px"); // Áp dụng vị trí mới
                         }
                     }
                 }
             });
-            // Đảm bảo link hoạt động trên thiết bị cảm ứng
+            // Xử lý sự kiện touchend cho các link (có thể là để đảm bảo link hoạt động trên mobile)
             $("a").live("touchend", function (event) {
                 location.href = $(this).attr("href");
             });
         }
     };
 
-    // Hàm cuộn đến zone tiếp theo (trái hoặc phải)
-    visualsModule.scrollToNextZone = function (direction) {
+    // Cuộn đến zone tiếp theo (dựa trên `direction`: 1 là sang phải, -1 là sang trái)
+    visualsManager.scrollToNextZone = function (direction) {
         if (GameManager.company) {
             var currentZone = GameManager.company.flags.currentZone;
-            if (currentZone === undefined) {
-                currentZone = 1; // Mặc định là zone giữa
+            if (currentZone === void 0) {
+                currentZone = 1; // Mặc định là zone 1 (trung tâm)
             }
-            var nextZone = (currentZone + direction).clamp(0, 2); // Giới hạn zone từ 0 đến 2
+            var nextZone = (currentZone + direction).clamp(0, 2); // Giới hạn zone trong khoảng 0-2
 
-            // Điều kiện đặc biệt cho level 4 (có thể một số phòng chưa mở)
+            // Nếu không phải level 4, luôn là zone 1
             if (GameManager.company.currentLevel != 4) {
-                nextZone = 1; // Các level khác chỉ có zone giữa
+                nextZone = 1;
             } else {
-                if (!GameManager.company.flags.hwLabUnlocked) {
-                    nextZone = nextZone.clamp(1, 2); // Nếu phòng Hardware chưa mở, không cho cuộn sang zone 0
+                // Giới hạn zone dựa trên việc đã mở khóa phòng lab chưa
+                if (!GameManager.company.flags.hwLabUnlocked) { // Chưa mở Hardware lab (zone 0)
+                    nextZone = nextZone.clamp(1, 2);
                 }
-                if (!GameManager.company.flags.rndLabUnlocked) {
-                    nextZone = nextZone.clamp(0, 1); // Nếu phòng R&D chưa mở, không cho cuộn sang zone 2
+                if (!GameManager.company.flags.rndLabUnlocked) { // Chưa mở R&D lab (zone 2)
+                    nextZone = nextZone.clamp(0, 1);
                 }
             }
-            visualsModule.scrollToZone(nextZone, true); // Cuộn đến zone mới với hiệu ứng
+            visualsManager.scrollToZone(nextZone, !0); // Cuộn đến zone mới với animation
         }
     };
 
-    // Hàm cuộn đến một zone cụ thể
-    visualsModule.scrollToZone = function (zoneIndex, withAnimation) {
-        var backgroundCanvasWidth = CanvasManager.backgroundStage.canvas.width;
-        if (zoneIndex === undefined) {
-            zoneIndex = 1; // Mặc định là zone giữa
+    // Cuộn đến một zone cụ thể
+    visualsManager.scrollToZone = function (targetZone, animateScroll) {
+        var stageWidth = CanvasManager.backgroundStage.canvas.width;
+        if (targetZone === void 0) {
+            targetZone = 1; // Mặc định là zone 1
         }
 
-        // Tính toán vị trí X mục tiêu dựa trên zoneIndex
-        var targetX = zoneIndex == 0 ? visualsModule.toScreenCoordinates(270) :
-            zoneIndex == 1 ? visualsModule.toScreenCoordinates(2560) :
-                visualsModule.toScreenCoordinates(4760);
+        // Tính toán vị trí X mục tiêu dựa trên zone
+        var targetX = (targetZone === 0) ? visualsManager.toScreenCoordinates(270) :
+            (targetZone === 1) ? visualsManager.toScreenCoordinates(2560) :
+                visualsManager.toScreenCoordinates(4760);
         targetX = targetX * CanvasManager.globalScale;
 
-        var scrollContainerWidth = $("#canvasScrollContainer").width();
-        var offset = Math.abs(scrollContainerWidth - backgroundCanvasWidth) / 2;
-        targetX = targetX + offset * zoneIndex; // Điều chỉnh targetX dựa trên offset
+        var containerWidth = $("#canvasScrollContainer").width();
+        // Độ lệch để căn giữa zone trong container (nếu stage rộng hơn container)
+        var centerOffset = Math.abs(containerWidth - stageWidth) / 2;
+        targetX = targetX + centerOffset * targetZone; // Áp dụng độ lệch
 
-        // Nếu vị trí hiện tại khác vị trí mục tiêu thì thực hiện cuộn
+        // Nếu vị trí hiện tại khác vị trí mục tiêu, thực hiện cuộn
         if ($("#innerCanvasContainer").offset().left != targetX) {
-            var animationDuration = withAnimation ? visualsModule.toScreenCoordinates(600) : 0;
-            visualsModule.isAnimatingScroll = true;
+            var animationDuration = animateScroll ? visualsManager.toScreenCoordinates(600) : 0;
+            visualsManager.isAnimatingScroll = true; // Đánh dấu đang cuộn
             $("#innerCanvasContainer").transition({ left: -targetX }, animationDuration);
             setTimeout(function () {
-                visualsModule.isAnimatingScroll = false;
+                visualsManager.isAnimatingScroll = false;
             }, animationDuration);
         }
 
-        visualsModule._zoneChanged(zoneIndex, withAnimation); // Gọi hàm xử lý khi zone thay đổi
-        GameManager.company.flags.currentZone = zoneIndex; // Lưu lại zone hiện tại
+        visualsManager._zoneChanged(targetZone, animateScroll); // Gọi hàm xử lý khi zone thay đổi
+        GameManager.company.flags.currentZone = targetZone; // Lưu zone hiện tại
     };
 
-    // Hàm cập nhật lại tất cả hình ảnh máy tính
-    visualsModule.updateComputers = function () {
-        GameManager.company.staff.slice().sort(function (staffA, staffB) {
-            return staffA.slot - staffB.slot;
-        }).forEach(function (staffMember) {
-            visualsModule.addComputer(staffMember);
+    // Cập nhật (vẽ lại) tất cả các máy tính của nhân viên
+    visualsManager.updateComputers = function () {
+        GameManager.company.staff.slice().sort(function (charA, charB) {
+            return charA.slot - charB.slot; // Sắp xếp theo slot để đảm bảo thứ tự vẽ
+        }).forEach(function (character) {
+            visualsManager.addComputer(character);
         });
     };
 
-    // Biến lưu trữ đối tượng hiển thị tên công ty
-    var companyNameVisual;
-    // Hàm cập nhật tên công ty trên biển hiệu trong văn phòng
-    visualsModule.updateCompanyNameInOffice = function () {
-        var currentCompanyLevel = GameManager.company.currentLevel;
-        if (currentCompanyLevel != 1) { // Level 1 không có biển hiệu
-            if (!companyNameVisual) {
+    var companyNameVisual; // Biến lưu trữ đối tượng hiển thị tên công ty
+    // Cập nhật hiển thị tên công ty trên văn phòng
+    visualsManager.updateCompanyNameInOffice = function () {
+        var currentLevel = GameManager.company.currentLevel;
+        if (currentLevel != 1) { // Chỉ hiển thị tên công ty từ level 2 trở đi
+            if (!companyNameVisual) { // Nếu chưa có, tạo mới
                 companyNameVisual = new IsometricCompanyNameVisual();
                 CanvasManager.backgroundStage.addChild(companyNameVisual);
             }
-            companyNameVisual.updateVisual(currentCompanyLevel == 2); // updateVisual có thể thay đổi dựa trên level
+            companyNameVisual.updateVisual(currentLevel == 2); // Cập nhật visual (có thể khác nhau giữa level 2 và các level khác)
 
-            // Cập nhật vị trí và tỷ lệ của biển tên công ty dựa trên level
-            if (currentCompanyLevel === 2 || currentCompanyLevel === 3) {
-                companyNameVisual.x = visualsModule.toScreenCoordinates(690, CanvasManager.globalScale);
-                companyNameVisual.y = visualsModule.toScreenCoordinates(1100, CanvasManager.globalScale);
-            } else if (currentCompanyLevel === 4) {
-                companyNameVisual.x = visualsModule.toScreenCoordinates(1410, CanvasManager.globalScale);
-                companyNameVisual.y = visualsModule.toScreenCoordinates(300, CanvasManager.globalScale);
-                companyNameVisual.scaleX *= 0.8;
+            // Thiết lập vị trí và scale cho tên công ty dựa trên level
+            if (currentLevel === 2 || currentLevel === 3) {
+                companyNameVisual.x = visualsManager.toScreenCoordinates(690, CanvasManager.globalScale);
+                companyNameVisual.y = visualsManager.toScreenCoordinates(1100, CanvasManager.globalScale);
+            } else if (currentLevel === 4) {
+                companyNameVisual.x = visualsManager.toScreenCoordinates(1410, CanvasManager.globalScale);
+                companyNameVisual.y = visualsManager.toScreenCoordinates(300, CanvasManager.globalScale);
+                companyNameVisual.scaleX *= 0.8; // Level 4 có thể có tên nhỏ hơn
                 companyNameVisual.scaleY *= 0.8;
             }
-            companyNameVisual.x += visualsModule.currentXOffset; // Áp dụng offset toàn cục
+            companyNameVisual.x += visualsManager.currentXOffset; // Áp dụng độ lệch X
         }
     };
 
-    // Các hàm cập nhật UI khi bắt đầu/kết thúc các hoạt động
-    visualsModule.startCreateEngine = function () {
-        visualsModule.gameStatusBar.startEngine();
-        visualsModule.updatePoints();
+    // Bắt đầu hiển thị cho việc tạo engine
+    visualsManager.startCreateEngine = function () {
+        visualsManager.gameStatusBar.startEngine();
+        visualsManager.updatePoints();
     };
 
-    visualsModule.startContract = function () {
-        visualsModule.gameStatusBar.startContract();
-        visualsModule.updatePoints();
+    // Bắt đầu hiển thị cho việc làm hợp đồng
+    visualsManager.startContract = function () {
+        visualsManager.gameStatusBar.startContract();
+        visualsManager.updatePoints();
     };
 
-    visualsModule.updateEngineStatus = function () {
+    // Cập nhật trạng thái khi đang tạo engine
+    visualsManager.updateEngineStatus = function () {
         var currentEngineDev = GameManager.currentEngineDev;
-        visualsModule.gameStatusBar.updateProgress(currentEngineDev.progress, true, 100);
-        visualsModule.gameStatusBar.updateStatusMessage(currentEngineDev.currentPart.name);
+        visualsManager.gameStatusBar.updateProgress(currentEngineDev.progress, !0, 100); // true: animate, 100: duration
+        visualsManager.gameStatusBar.updateStatusMessage(currentEngineDev.currentPart.name);
     };
 
-    visualsModule.finishEngine = function () {
-        visualsModule.gameStatusBar.finishEngine();
-        GameManager.spawnedPoints = 0; // Reset số điểm đang bay
+    // Kết thúc hiển thị tạo engine
+    visualsManager.finishEngine = function () {
+        visualsManager.gameStatusBar.finishEngine();
+        GameManager.spawnedPoints = 0; // Reset số điểm đang spawn
     };
 
-    visualsModule.updatePoints = function () {
-        visualsModule.gameStatusBar.updatePoints();
-        visualsModule.researchPoints.updatePoints(GameManager.company.researchPoints);
+    // Cập nhật hiển thị tất cả các loại điểm
+    visualsManager.updatePoints = function () {
+        visualsManager.gameStatusBar.updatePoints();
+        visualsManager.researchPoints.updatePoints(GameManager.company.researchPoints);
     };
 
-    // Hàm tạo hiệu ứng "pulse" cho hiển thị điểm
-    visualsModule.pulsePointsDisplay = function (pointType, callback) {
-        if (pointType === "r") { // Điểm nghiên cứu
-            visualsModule.researchPoints.pulse(callback);
-        } else { // Các loại điểm khác trên thanh trạng thái
-            visualsModule.gameStatusBar.pulsePointsDisplay(pointType, callback);
+    // Tạo hiệu ứng "pulse" cho một loại điểm cụ thể
+    visualsManager.pulsePointsDisplay = function (pointType, callback) {
+        if (pointType === "r") { // Research points
+            visualsManager.researchPoints.pulse(callback);
+        } else {
+            visualsManager.gameStatusBar.pulsePointsDisplay(pointType, callback);
         }
     };
 
-    // Lấy vị trí toàn cục của nơi hiển thị một loại điểm cụ thể
-    visualsModule.getGlobalLocationOfPointsDisplay = function (pointType) {
+    // Lấy vị trí toàn cục (global coordinates) của một loại điểm hiển thị
+    visualsManager.getGlobalLocationOfPointsDisplay = function (pointType) {
         if (pointType === "r") {
             return {
-                x: visualsModule.researchPoints.x + visualsModule.researchPoints.size / 2,
-                y: visualsModule.researchPoints.y + visualsModule.researchPoints.size / 2
+                x: visualsManager.researchPoints.x + visualsManager.researchPoints.size / 2,
+                y: visualsManager.researchPoints.y + visualsManager.researchPoints.size / 2
             };
+        } else {
+            return visualsManager.gameStatusBar.getGlobalLocationOfPointsDisplay(pointType);
         }
-        return visualsModule.gameStatusBar.getGlobalLocationOfPointsDisplay(pointType);
     };
 
-    // Load lại hình ảnh tất cả nhân vật
-    visualsModule.reloadAllCharacters = function () {
+    // Tải lại hiển thị của tất cả các nhân vật
+    visualsManager.reloadAllCharacters = function () {
         if (GameManager.company && GameManager.company.staff) {
             var staffList = GameManager.company.staff;
             for (var i = 0; i < staffList.length; i++) {
                 var character = staffList[i];
-                visualsModule.getCharacterOverlay(character); // Lấy hoặc tạo overlay
-                character.refreshPoints(); // Làm mới các điểm đang bay của nhân vật
+                visualsManager.getCharacterOverlay(character); // Lấy hoặc tạo overlay
+                character.refreshPoints(); // Làm mới hiển thị điểm của nhân vật (nếu có)
             }
         }
     };
 
-    visualsModule.characterOverlays = []; // Mảng chứa các đối tượng CharacterOverlay
+    // Mảng chứa các đối tượng CharacterOverlay (quản lý hiển thị của từng nhân vật)
+    visualsManager.characterOverlays = [];
 
-    // Lấy hoặc tạo mới CharacterOverlay cho một nhân vật
-    visualsModule.getCharacterOverlay = function (character, skipCreation) {
-        var existingOverlay = visualsModule.characterOverlays.first(function (overlay) {
+    // Lấy (hoặc tạo mới nếu chưa có) CharacterOverlay cho một nhân vật
+    visualsManager.getCharacterOverlay = function (character, dontCreate) {
+        var existingOverlay = visualsManager.characterOverlays.first(function (overlay) {
             return overlay.character === character;
         });
-        if (existingOverlay || skipCreation) {
+        // Nếu overlay đã tồn tại hoặc không yêu cầu tạo mới, trả về nó
+        if (existingOverlay || dontCreate) {
             return existingOverlay;
+        } else {
+            // Ngược lại, tạo overlay mới
+            return visualsManager.createCharacterOverlay(character);
         }
-        return visualsModule.createCharacterOverlay(character);
     };
 
-    // Lấy vị trí hiện tại của một nhân vật trên màn hình
-    visualsModule.getCurrentPosition = function (level, slot) {
+    // Lấy vị trí hiện tại (x, y) cho một nhân vật dựa trên level và slot
+    visualsManager.getCurrentPosition = function (level, slot) {
         var position = {};
-        // Logic xác định vị trí x, y dựa trên level và slot (vị trí ngồi của nhân viên)
-        // (Giữ nguyên logic phức tạp này vì nó đặc thù cho việc sắp xếp nhân vật)
-        if (level === 1) { position.x = 998 * CanvasManager.globalScale; position.y = 599 * CanvasManager.globalScale; }
-        else if (level === 2 || level === 3) {
+        // Hardcode vị trí cho từng level và slot
+        // Đây là phần rất đặc thù cho việc sắp xếp nhân vật trong các văn phòng khác nhau
+        if (level === 1) {
+            position.x = 998 * CanvasManager.globalScale;
+            position.y = 599 * CanvasManager.globalScale;
+        } else if (level === 2 || level === 3) {
             if (slot === 0) { position.x = 1515 * CanvasManager.globalScale; position.y = 995 * CanvasManager.globalScale; }
             else if (slot === 1) { position.x = 1055 * CanvasManager.globalScale; position.y = 790 * CanvasManager.globalScale; }
             else if (slot === 2) { position.x = 803 * CanvasManager.globalScale; position.y = 589 * CanvasManager.globalScale; }
@@ -745,156 +755,150 @@ var VisualsManager = {};
             else if (slot === 6) { position.x = 989 * CanvasManager.globalScale; position.y = 382 * CanvasManager.globalScale; }
         }
         // Chuyển đổi sang tọa độ màn hình và áp dụng offset
-        position.x = visualsModule.toScreenCoordinates(position.x);
-        position.y = visualsModule.toScreenCoordinates(position.y);
-        position.x += visualsModule.currentXOffset;
+        position.x = visualsManager.toScreenCoordinates(position.x);
+        position.y = visualsManager.toScreenCoordinates(position.y);
+        position.x += visualsManager.currentXOffset;
         return position;
     };
 
-    // Đặt vị trí cho CharacterOverlay và cập nhật hình ảnh (máy tính, bàn,...)
-    visualsModule.positionCharacterOverlay = function (overlay, level, slot) {
-        var position = visualsModule.getCurrentPosition(level, slot);
-        overlay.x = position.x;
-        overlay.y = position.y;
-        visualsModule.updateImages(overlay, level, slot); // Cập nhật hình ảnh bàn, ghế, máy tính
+    // Thiết lập vị trí cho một CharacterOverlay và cập nhật hình ảnh liên quan (bàn, ghế, PC)
+    visualsManager.positionCharacterOverlay = function (characterOverlay, level, slot) {
+        var position = visualsManager.getCurrentPosition(level, slot);
+        characterOverlay.x = position.x;
+        characterOverlay.y = position.y;
+        visualsManager.updateImages(characterOverlay, level, slot); // Cập nhật hình ảnh bàn, ghế,...
     };
 
-    // Hàm cập nhật các hình ảnh phụ (bàn, ghế, máy tính) cho một CharacterOverlay
-    visualsModule.updateImages = function (overlay, level, slot) {
-        var imageSize = 200; // Kích thước mặc định của hình ảnh phụ
+    // Cập nhật các hình ảnh phụ (bàn, ghế, keyboard, PC) cho một CharacterOverlay
+    visualsManager.updateImages = function (characterOverlay, level, slot) {
+        var imageSize = 200; // Kích thước cơ sở của ảnh
         if (PlatformShim.ISLOWRES) {
             imageSize = 107; // Kích thước cho độ phân giải thấp
         }
         var globalScale = CanvasManager.globalScale;
 
-        // Logic phức tạp để xác định và lấy hình ảnh bàn, ghế, keyboard, PC
-        // dựa trên level, slot và hướng của nhân vật.
-        // (Giữ nguyên logic này vì nó đặc thù cho cách game bố trí các đối tượng)
-        if (slot === 2 || slot === 4 || slot === 6) { // Các slot nhất định có thể có cách hiển thị khác
+        // Chỉ cập nhật nếu slot là 2, 4, hoặc 6 (các slot có thể có PC riêng)
+        if (slot === 2 || slot === 4 || slot === 6) {
             if (level === 2) {
-                overlay.deskImage = visualsModule.getSubImage(overlay.x - 807 / visualsModule.Divisor * globalScale, overlay.y - 527 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2Desk);
+                characterOverlay.deskImage = visualsManager.getSubImage(characterOverlay.x - 807 / visualsManager.Divisor * globalScale, characterOverlay.y - 527 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2Desk);
                 if (slot === 2) {
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 889 / visualsModule.Divisor * globalScale, overlay.y - 716 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 880 / visualsModule.Divisor * globalScale, overlay.y - 698 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C2);
-                } else { // slot === 4
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 1117 / visualsModule.Divisor * globalScale, overlay.y - 582 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 1114 / visualsModule.Divisor * globalScale, overlay.y - 511 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C4);
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 889 / visualsManager.Divisor * globalScale, characterOverlay.y - 716 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 880 / visualsManager.Divisor * globalScale, characterOverlay.y - 698 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C2);
+                } else { // slot 4
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 1117 / visualsManager.Divisor * globalScale, characterOverlay.y - 582 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 1114 / visualsManager.Divisor * globalScale, characterOverlay.y - 511 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level2C4);
                 }
             } else if (level === 3) {
-                overlay.deskImage = visualsModule.getSubImage(overlay.x - 807 / visualsModule.Divisor * globalScale, overlay.y - 527 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3Desk);
+                characterOverlay.deskImage = visualsManager.getSubImage(characterOverlay.x - 807 / visualsManager.Divisor * globalScale, characterOverlay.y - 527 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3Desk);
                 if (slot === 2) {
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 893 / visualsModule.Divisor * globalScale, overlay.y - 713 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 878 / visualsModule.Divisor * globalScale, overlay.y - 703 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C2);
-                } else { // slot === 4
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 1130 / visualsModule.Divisor * globalScale, overlay.y - 578 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 1109 / visualsModule.Divisor * globalScale, overlay.y - 511 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C4);
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 893 / visualsManager.Divisor * globalScale, characterOverlay.y - 713 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 878 / visualsManager.Divisor * globalScale, characterOverlay.y - 703 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C2);
+                } else { // slot 4
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 1130 / visualsManager.Divisor * globalScale, characterOverlay.y - 578 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 1109 / visualsManager.Divisor * globalScale, characterOverlay.y - 511 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level3C4);
                 }
             } else if (level === 4) {
-                overlay.deskImage = visualsModule.getSubImage(overlay.x - 427 / visualsModule.Divisor * globalScale, overlay.y - 460 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4Desk);
+                characterOverlay.deskImage = visualsManager.getSubImage(characterOverlay.x - 427 / visualsManager.Divisor * globalScale, characterOverlay.y - 460 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4Desk);
                 if (slot === 2) {
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 541 / visualsModule.Divisor * globalScale, overlay.y - 840 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 428 / visualsModule.Divisor * globalScale, overlay.y - 756 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2);
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 541 / visualsManager.Divisor * globalScale, characterOverlay.y - 840 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 428 / visualsManager.Divisor * globalScale, characterOverlay.y - 756 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2);
                 } else if (slot === 4) {
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 824 / visualsModule.Divisor * globalScale, overlay.y - 676 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 711 / visualsModule.Divisor * globalScale, overlay.y - 591 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2);
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 824 / visualsManager.Divisor * globalScale, characterOverlay.y - 676 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 711 / visualsManager.Divisor * globalScale, characterOverlay.y - 591 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2);
                 } else if (slot === 6) {
-                    overlay.keyBoardImage = visualsModule.getSubImage(overlay.x - 1094 / visualsModule.Divisor * globalScale, overlay.y - 511 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard);
-                    overlay.pcImage = visualsModule.getSubImage(overlay.x - 981 / visualsModule.Divisor * globalScale, overlay.y - 426 / visualsModule.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2);
+                    characterOverlay.keyBoardImage = visualsManager.getSubImage(characterOverlay.x - 1094 / visualsManager.Divisor * globalScale, characterOverlay.y - 511 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2Keyboard);
+                    characterOverlay.pcImage = visualsManager.getSubImage(characterOverlay.x - 981 / visualsManager.Divisor * globalScale, characterOverlay.y - 426 / visualsManager.Divisor * globalScale, imageSize, imageSize, ResourceKeys.Level4C2);
                 }
             }
         }
     };
 
-    // Hàm lấy một phần của hình ảnh (sub-image) để dùng cho bàn, ghế, ...
-    // (Tạo một canvas tạm, vẽ phần cần lấy của resource lên đó, rồi tạo Image object từ data URL)
-    visualsModule.getSubImage = function (sourceX, sourceY, width, height, resourceKey) {
+    // Tạo một sub-image từ một resource lớn hơn (dùng để cắt ảnh từ sprite sheet hoặc ảnh nền lớn)
+    visualsManager.getSubImage = function (srcX, srcY, width, height, resourceKey) {
         var tempCanvas = document.createElement("canvas");
         tempCanvas.width = width;
         tempCanvas.height = height;
-        tempCanvas.getContext("2d").drawImage(
-            GameDev.ResourceManager.resources[resourceKey],
-            -((sourceX - visualsModule.currentXOffset) / CanvasManager.globalScale), // Điều chỉnh sourceX, sourceY
-            -sourceY / CanvasManager.globalScale
-        );
-        var imageElement = new Image();
-        imageElement.src = tempCanvas.toDataURL("image/png");
-        return imageElement;
+        var imageResource = GameDev.ResourceManager.resources[resourceKey];
+        // Vẽ phần cần thiết của resource lớn vào canvas tạm
+        tempCanvas.getContext("2d").drawImage(imageResource,
+            -((srcX - visualsManager.currentXOffset) / CanvasManager.globalScale), // Điều chỉnh tọa độ nguồn
+            -srcY / CanvasManager.globalScale);
+
+        var subImage = new Image();
+        subImage.src = tempCanvas.toDataURL("image/png"); // Chuyển canvas tạm thành Image object
+        return subImage;
     };
 
-    // Hàm làm mới các nút thuê nhân viên trên màn hình
-    visualsModule.refreshHiringButtons = function () {
+    // Làm mới các nút "Hire Staff" trên màn hình
+    visualsManager.refreshHiringButtons = function () {
         var canvasContainer = $("#canvasContainer");
         canvasContainer.find(".hireStaffButtonBase").remove(); // Xóa các nút cũ
 
         var currentLevel = GameManager.company.currentLevel;
         var staffList = GameManager.company.staff;
 
-        // Chỉ hiển thị nút thuê nếu còn slot trống và level cho phép
+        // Chỉ hiển thị nút nếu level > 1 và chưa đủ số nhân viên tối đa cho level đó
         if (currentLevel > 1 &&
-            !((currentLevel == 2 || currentLevel == 3) && staffList.length == 5) &&
-            !((currentLevel > 3) && staffList.length == 7)) {
+            !((currentLevel === 2 || currentLevel === 3) && staffList.length === 5) &&
+            !((currentLevel > 3) && staffList.length === 7)) {
 
             // Tìm slot trống đầu tiên
-            var availableSlots = [1, 2, 3, 4, 5, 6];
-            var firstEmptySlot = availableSlots.first(function (slot) {
-                return !staffList.some(function (staffMember) {
-                    return staffMember.slot == slot;
+            var emptySlot = [1, 2, 3, 4, 5, 6].first(function (slotIndex) {
+                return !staffList.some(function (character) {
+                    return character.slot == slotIndex;
                 });
             });
 
-            // Tạo và thêm nút thuê nhân viên mới
-            if (firstEmptySlot !== undefined) {
-                var hireButton = visualsModule.createHireButton(currentLevel, firstEmptySlot);
-                canvasContainer.append(hireButton);
-                UI.maxFont("bold", canvasContainer.find(".hireButtonLabel"), 12); // Điều chỉnh font chữ
-            }
+            // Tạo và thêm nút vào vị trí của slot trống
+            var hireButton = visualsManager.createHireButton(currentLevel, emptySlot);
+            canvasContainer.append(hireButton);
+            UI.maxFont("bold", canvasContainer.find(".hireButtonLabel"), 12); // Điều chỉnh font chữ
         }
     };
 
-    // Biến lưu trữ nút "Hoàn thành game"
-    var releaseButtonElement;
-    // Hàm cập nhật trạng thái của nút "Hoàn thành game"
-    visualsModule.updateReleaseReadyButton = function () {
+    var releaseButtonElement; // Lưu trữ nút "Release"
+    // Cập nhật trạng thái hiển thị của nút "Release" (hoàn thành game)
+    visualsManager.updateReleaseReadyButton = function () {
         if (!releaseButtonElement) { // Nếu nút chưa được tạo
-            releaseButtonElement = $('<div id="releaseButton" class="selectorButton greenButton windowStyleHideState" style="position:absolute; opacity=0;">' +
-                "Finish".localize("button") + "</div>");
+            releaseButtonElement = $('<div id="releaseButton" class="selectorButton greenButton windowStyleHideState" style="position:absolute; opacity=0;">' + "Finish".localize("button") + "</div>");
             releaseButtonElement.gdIsActive = false; // Trạng thái hoạt động của nút
             $("#canvasContainer").append(releaseButtonElement);
         }
-        // Căn giữa nút
+
         var containerWidth = releaseButtonElement.parent().width();
+        // Căn giữa nút
         releaseButtonElement.css({
             left: containerWidth / 2 - releaseButtonElement.width() / 2 + "px"
         });
 
         // Kiểm tra xem có nên hiển thị nút không
-        var shouldShowButton = GameManager.company && GameManager.company.currentGame &&
+        var shouldBeActive = GameManager.company && GameManager.company.currentGame &&
             !GameManager.company.currentGame.flags.devCompleted &&
             GameManager.company.currentGame.flags.releaseReady;
 
-        if (shouldShowButton != releaseButtonElement.gdIsActive) { // Nếu trạng thái thay đổi
-            releaseButtonElement.gdIsActive = shouldShowButton;
+        if (shouldBeActive != releaseButtonElement.gdIsActive) { // Nếu trạng thái thay đổi
+            releaseButtonElement.gdIsActive = shouldBeActive;
             var hideButton = function () {
                 releaseButtonElement.transition({ opacity: 0 }, 200);
                 releaseButtonElement.removeClass("windowStyleShowState").addClass("windowStyleHideState");
                 releaseButtonElement.gdIsActive = false;
             };
 
-            if (shouldShowButton) {
+            if (shouldBeActive) {
                 releaseButtonElement.transition({ opacity: 1 }, 200);
-                releaseButtonElement.removeClass("windowStyleHideState"); // Có thể là .addClass("windowStyleShowState")
-                Sound.playSoundOnce("gameReady", 0.2);
-                releaseButtonElement.clickExclOnce(function (event) {
+                releaseButtonElement.removeClass("windowStyleHideState");
+                Sound.playSoundOnce("gameReady", 0.2); // Phát âm thanh "game sẵn sàng"
+                releaseButtonElement.clickExclOnce(function (event) { // Chỉ xử lý click một lần
                     Sound.click();
                     hideButton();
-                    // Khi click, đánh dấu game đã hoàn thành giai đoạn phát triển
+                    // Đánh dấu game đã hoàn thành
                     if (GameManager.currentFeature) {
                         GameManager.currentFeature.progress = 1;
                     }
                     if (GameManager.company.currentGame) {
                         GameManager.company.currentGame.flags.finished = true;
                     }
-                    return false; // Ngăn chặn sự kiện click mặc định
+                    return false; // Ngăn chặn sự kiện click lan tỏa
                 });
             } else {
                 hideButton();
@@ -902,13 +906,13 @@ var VisualsManager = {};
         }
     };
 
-    // Hàm tạo nút "Thuê nhân viên"
-    visualsModule.createHireButton = function (level, slot) {
-        var buttonElement = $(PlatformShim.toStaticHtml('<div class="hireStaffButtonBase hireStaffButton"><div class="hireButtonLabel">' + "Fill Position".localize() + '</div><div class="hireStaffProgress"></div></div>'));
+    // Tạo nút "Hire Staff"
+    visualsManager.createHireButton = function (level, slot) {
+        var buttonHtml = PlatformShim.toStaticHtml('<div class="hireStaffButtonBase hireStaffButton"><div class="hireButtonLabel">' + "Fill Position".localize() + '</div><div class="hireStaffProgress"></div></div>');
+        var hireButton = $(buttonHtml);
         var xPos = 0, yPos = 0;
 
-        // Xác định vị trí nút dựa trên level và slot
-        // (Giữ nguyên logic phức tạp này)
+        // Hardcode vị trí nút dựa trên level và slot
         if (level === 2 || level === 3) {
             switch (slot) {
                 case 1: xPos = 1060; yPos = 840; break;
@@ -928,65 +932,67 @@ var VisualsManager = {};
             }
         }
 
-        xPos = visualsModule.toScreenCoordinates(xPos, CanvasManager.globalScale);
-        yPos = visualsModule.toScreenCoordinates(yPos, CanvasManager.globalScale);
-        xPos += visualsModule.currentXOffset; // Áp dụng offset
+        xPos = visualsManager.toScreenCoordinates(xPos, CanvasManager.globalScale);
+        yPos = visualsManager.toScreenCoordinates(yPos, CanvasManager.globalScale);
+        xPos += visualsManager.currentXOffset; // Áp dụng độ lệch X
 
-        buttonElement.css({
+        hireButton.css({
             position: "absolute",
             top: yPos + "px",
             left: xPos + "px"
         });
 
-        // Xử lý sự kiện click
-        buttonElement.clickExcl(function () {
+        // Xử lý sự kiện click nút
+        hireButton.clickExcl(function () {
             Sound.click();
-            if (GameManager.company.maxStaff == 1) { // Nếu chưa nâng cấp để thuê được
+            if (GameManager.company.maxStaff == 1) { // Nếu chưa thể thuê thêm (chưa train Staff Management)
                 GameManager.company.activeNotifications.insertAt(0, new Notification("Hint".localize(), "You have to complete the Staff Management training before you can hire someone. Simply {0} on your player character to access the training menu.".localize().format(Tutorial.getClickVerb())));
                 GameManager.showPendingNotifications();
-            } else if (!UI.isStaffSearchInProgress()) { // Nếu không đang tìm kiếm
+            } else if (!UI.isStaffSearchInProgress()) { // Nếu không đang tìm nhân viên
                 if (GameManager.company.staff.length > 1) {
                     Tutorial.hireMoreStaff();
                 } else {
                     Tutorial.findStaff();
                 }
-                UI.showFindStaffWindow(slot); // Hiển thị cửa sổ tìm nhân viên
+                UI.showFindStaffWindow(slot); // Hiển thị cửa sổ tìm nhân viên cho slot này
             }
-            window.event.cancelBubble = true; // Ngăn sự kiện nổi bọt
+            window.event.cancelBubble = true; // Ngăn sự kiện click lan tỏa
         });
-        return buttonElement;
+        return hireButton;
     };
 
-    // Hàm tạo CharacterOverlay cho một nhân vật
-    visualsModule.createCharacterOverlay = function (characterData) {
-        var characterStage = canvasModule.characterStage;
-        var newOverlay = new CharacterOverlay(characterData);
-        visualsModule.positionCharacterOverlay(newOverlay, GameManager.company.currentLevel, characterData.slot);
-        visualsModule.characterOverlays.push(newOverlay);
-        visualsModule.addCharacterOverlayToStage(characterStage, newOverlay); // Thêm vào stage ở vị trí đúng
+    // Tạo một CharacterOverlay mới cho một nhân vật
+    visualsManager.createCharacterOverlay = function (character) {
+        var characterStage = canvasManagerInstance.characterStage;
+        var newOverlay = new CharacterOverlay(character);
+        // Thiết lập vị trí và thêm vào mảng quản lý
+        visualsManager.positionCharacterOverlay(newOverlay, GameManager.company.currentLevel, character.slot);
+        visualsManager.characterOverlays.push(newOverlay);
+        // Thêm vào stage tại đúng vị trí layer
+        visualsManager.addCharacterOverlayToStage(characterStage, newOverlay);
         return newOverlay;
     };
 
-    // Hàm thêm CharacterOverlay vào stage ở vị trí phù hợp để đảm bảo thứ tự vẽ đúng
-    visualsModule.addCharacterOverlayToStage = function (stage, overlayToAdd) {
-        var characterSlot = overlayToAdd.character.slot;
-        if (characterSlot === 0) { // Người chơi chính luôn ở trên cùng (hoặc vị trí mặc định)
+    // Thêm CharacterOverlay vào stage tại vị trí phù hợp (để đảm bảo thứ tự vẽ đúng)
+    visualsManager.addCharacterOverlayToStage = function (stage, overlayToAdd) {
+        var slot = overlayToAdd.character.slot;
+        if (slot === 0) { // Nhân vật chính luôn ở trên cùng (hoặc layer đặc biệt)
             stage.addChild(overlayToAdd);
         } else {
-            // Logic sắp xếp phức tạp dựa trên slot để đảm bảo nhân vật không che khuất nhau không đúng cách
-            // (Giữ nguyên logic này)
+            // Logic sắp xếp phức tạp dựa trên slot để đảm bảo nhân vật ở xa hơn được vẽ trước
             for (var i = 0; i < stage.children.length; i++) {
                 if (stage.children[i].character) { // Chỉ so sánh với các CharacterOverlay khác
-                    if (characterSlot === 4 || characterSlot === 6 || characterSlot === 3 || characterSlot === 5) { // Các slot ở "phía sau"
-                        stage.addChildAt(overlayToAdd, 0); // Thêm vào dưới cùng
+                    // Các slot ở "phía sau" (ví dụ: 4, 6, 3, 5 trong một số layout) được vẽ trước
+                    if (slot === 4 || slot === 6 || slot === 3 || slot === 5) {
+                        stage.addChildAt(overlayToAdd, 0); // Thêm vào đầu danh sách (vẽ sau cùng/trên cùng)
                         break;
-                    } else if ((characterSlot === 1 && stage.children[i].character.slot > 1) ||
-                        (characterSlot === 2 && stage.children[i].character.slot > 4) || // Điều kiện này có vẻ lạ, cần xem xét lại
-                        (characterSlot === 3 && stage.children[i].character.slot > 2)) {
+                    } else if ((slot === 1 && stage.children[i].character.slot > 1) ||
+                        (slot === 2 && stage.children[i].character.slot > 4) || // Logic này có vẻ hơi lạ, cần xem xét layout cụ thể
+                        (slot === 3 && stage.children[i].character.slot > 2)) {
                         stage.addChildAt(overlayToAdd, i);
                         break;
-                    } else if (characterSlot > 4) { // Các slot còn lại (có thể là ở "phía trước")
-                        stage.addChild(overlayToAdd); // Thêm vào trên cùng
+                    } else if (slot > 4) { // Các slot lớn hơn thường ở phía trước
+                        stage.addChild(overlayToAdd); // Thêm vào cuối (vẽ trước/dưới cùng)
                         break;
                     }
                 }
@@ -994,94 +1000,94 @@ var VisualsManager = {};
         }
     };
 
-    // Hàm làm mới overlay huấn luyện của nhân viên
-    visualsModule.refreshTrainingOverlays = function () {
+    // Làm mới các overlay hiển thị thông tin training của nhân viên
+    visualsManager.refreshTrainingOverlays = function () {
         var canvasContainer = $("#canvasContainer");
         canvasContainer.find(".trainingOverlayTemplate").remove(); // Xóa các overlay cũ
 
-        for (var i = 0; i < visualsModule.characterOverlays.length; i++) {
-            var characterOverlay = visualsModule.characterOverlays[i];
+        for (var i = 0; i < visualsManager.characterOverlays.length; i++) {
+            var characterOverlay = visualsManager.characterOverlays[i];
             var trainingOverlayElement = $("#trainingOverlayTemplate").clone();
             trainingOverlayElement.removeAttr("id");
 
-            var xOffset = GameFlags.IS_LOW_RES ? -30 : 0; // Điều chỉnh vị trí cho độ phân giải thấp
+            var lowResOffset = GameFlags.IS_LOW_RES ? -30 : 0; // Độ lệch cho độ phân giải thấp
+            // Thiết lập vị trí và scale cho overlay training
             trainingOverlayElement.css({
                 position: "absolute",
                 top: characterOverlay.y - VisualsManager.toScreenCoordinates(120, CanvasManager.globalScale) + "px",
-                left: characterOverlay.x - VisualsManager.toScreenCoordinates(60, CanvasManager.globalScale) + xOffset + "px",
-                transform: "scale({0},{0})".format(CanvasManager.globalScaleIgnoringLowResBackground) // Scale theo tỷ lệ toàn cục
+                left: characterOverlay.x - VisualsManager.toScreenCoordinates(60, CanvasManager.globalScale) + lowResOffset + "px",
+                transform: "scale({0},{0})".format(CanvasManager.globalScaleIgnoringLowResBackground)
             });
-            characterOverlay.trainingOverlay = trainingOverlayElement; // Gán overlay cho nhân vật
+            characterOverlay.trainingOverlay = trainingOverlayElement;
             canvasContainer.append(trainingOverlayElement);
-            trainingOverlayElement.hide(); // Ẩn ban đầu
-            characterOverlay.resumeTraining(); // Tiếp tục trạng thái huấn luyện (nếu có)
+            trainingOverlayElement.hide(); // Mặc định ẩn
+            characterOverlay.resumeTraining(); // Tiếp tục trạng thái training (nếu có)
         }
     };
 
-    // Hàm xử lý cho màn hình siêu rộng, căn giữa vùng game chính
-    visualsModule.handleUltraWideMonitors = function (screenWidth, screenHeight) {
-        if (screenWidth / screenHeight > 16 / 9) { // Nếu tỷ lệ rộng hơn 16:9
-            var excessWidth = screenWidth / (screenWidth / screenHeight) * (screenWidth / screenHeight - 16 / 9);
+    // Xử lý cho màn hình siêu rộng (ultra-wide monitors)
+    visualsManager.handleUltraWideMonitors = function (containerWidth, containerHeight) {
+        if (containerWidth / containerHeight > 16 / 9) { // Nếu tỷ lệ rộng hơn 16:9
+            // Tính toán phần thừa ra và căn giữa nội dung game
+            var excessWidth = containerWidth / (containerWidth / containerHeight) * (containerWidth / containerHeight - 16 / 9);
             $("#gameContainerWrapper").css({
-                left: excessWidth / 2 + "px", // Dịch sang phải
-                width: screenWidth - excessWidth + "px" // Giảm chiều rộng
+                left: excessWidth / 2 + "px",
+                width: containerWidth - excessWidth + "px"
             });
-            visualsModule.globalOffsetX = excessWidth / 2; // Lưu lại offset
+            visualsManager.globalOffsetX = excessWidth / 2; // Lưu lại độ lệch toàn cục
         } else { // Nếu tỷ lệ chuẩn hoặc hẹp hơn
             $("#gameContainerWrapper").css({
                 left: "0px",
                 width: "100%"
             });
-            visualsModule.globalOffsetX = 0;
+            visualsManager.globalOffsetX = 0;
         }
     };
 })(); // Kết thúc IIFE của VisualsManager
 
-// --- START OF ProjectWorkerVisual related code ---
-// (IIFE này bao gồm logic cho các nhân viên trong phòng lab)
+// IIFE cho phần quản lý hiển thị của các phòng lab (Hardware và R&D)
 (function () {
-    var visualsModule = VisualsManager; // Alias
-    var projectWorkerVisuals = []; // Mảng chứa các đối tượng ProjectWorkerVisual
+    var visualsManager = VisualsManager; // Alias
+    var labWorkersList = []; // Danh sách các đối tượng hiển thị nhân viên trong lab
 
-    // Hàm làm mới các nhân viên trong phòng lab (Hardware và R&D)
-    visualsModule.refreshLabCrew = function () {
-        // Xóa các đối tượng cũ
-        if (projectWorkerVisuals) {
-            projectWorkerVisuals.forEach(function (workerVisual) {
-                if (workerVisual.parent) { // Kiểm tra xem có parent không trước khi remove
-                    workerVisual.parent.removeChild(workerVisual);
-                }
+    // Làm mới hiển thị của các nhân viên trong lab
+    visualsManager.refreshLabCrew = function () {
+        if (labWorkersList) { // Nếu đã có danh sách cũ
+            labWorkersList.forEach(function (workerVisual) {
+                workerVisual.parent.removeChild(workerVisual); // Xóa khỏi stage
             });
-            projectWorkerVisuals = [];
+            labWorkersList = []; // Reset danh sách
         }
-        // Tạo lại nhân viên cho phòng Hardware và R&D
-        createHardwareLabCrew();
-        createRnDLabCrew();
-        // Cập nhật hiển thị dựa trên zone hiện tại (chỉ cho level 4)
+        initializeHardwareLabVisuals(); // Khởi tạo hiển thị cho Hardware lab
+        initializeResearchAndDevelopmentLabVisuals(); // Khởi tạo hiển thị cho R&D lab
+        // Cập nhật hiển thị của các zone dựa trên zone hiện tại của công ty (sau khi level 4 được mở khóa)
         if (GameManager.company.currentLevel == 4) {
-            visualsModule._zoneChanged(GameManager.company.flags.currentZone, false);
+            visualsManager._zoneChanged(GameManager.company.flags.currentZone, false);
         }
     };
 
-    // Hàm tạo template cho thẻ trạng thái dự án (được sử dụng bởi cả 2 phòng lab)
-    var createProjectStatusCardTemplate = function (initialSliderValue) {
+    // Tạo một card trạng thái dự án (dùng cho cả Hardware và R&D lab)
+    var createProjectStatusCard = function (initialBudgetValue) {
         var cardElement = $("#projectStatusCardTemplate").clone();
-        cardElement[0].id = undefined; // Xóa id để tránh trùng lặp
+        cardElement[0].id = void 0; // Xóa ID để tránh trùng lặp
+
         // Khởi tạo slider cho budget
         cardElement.find(".projectBudgetSlider").slider({
             orientation: "horizontal",
             range: "min",
             min: 0,
             max: 100,
-            value: initialSliderValue,
+            value: initialBudgetValue,
             animate: "fast",
             slide: function (event, ui) {
-                var slider = $(ui.handle).closest(".projectBudgetSlider");
-                if (!slider.hasClass("projectBudgetSlider")) throw "couldn't find target slider";
-                cardElement._gd_sliderValue = ui.value; // Lưu giá trị slider
-                slider.slider("value", ui.value);
+                var sliderElement = $(ui.handle).closest(".projectBudgetSlider");
+                if (!sliderElement.hasClass("projectBudgetSlider")) throw "couldn't find target slider";
+
+                cardElement._gd_sliderValue = ui.value; // Lưu giá trị slider (có thể để so sánh sau này)
+                sliderElement.slider("value", ui.value); // Cập nhật giá trị của slider
+
                 var newBudgetValue = ui.value;
-                // Cập nhật budget tương ứng của công ty
+                // Cập nhật budget tương ứng trong GameManager dựa trên loại card (R&D hay Hardware)
                 if (cardElement.hasClass("rndCard")) {
                     GameManager.company.flags.rndBudget = newBudgetValue / 100;
                 } else {
@@ -1093,101 +1099,113 @@ var VisualsManager = {};
         return cardElement;
     };
 
-    var hardwareLabCard, createHardwareLabCrew = function () {
-        var company = GameManager.company;
-        if (!hardwareLabCard) { // Nếu thẻ chưa được tạo
-            var initialHwBudget = company.flags.hwBudget;
-            if (initialHwBudget === undefined) initialHwBudget = 0;
+    var hardwareLabCard, researchAndDevelopmentLabCard; // Biến lưu trữ các card trạng thái
 
-            hardwareLabCard = createProjectStatusCardTemplate(initialHwBudget * 100);
-            hardwareLabCard.addClass("projectCardLeft").addClass("hwCard");
+    // Khởi tạo hiển thị cho Hardware Lab (zone 0)
+    var initializeHardwareLabVisuals = function () {
+        var company = GameManager.company;
+        if (!hardwareLabCard) { // Nếu card chưa được tạo
+            var initialBudget = company.flags.hwBudget;
+            if (initialBudget === void 0) initialBudget = 0;
+
+            hardwareLabCard = createProjectStatusCard(initialBudget * 100);
+            hardwareLabCard.addClass("projectCardLeft hwCard"); // CSS class cho vị trí và loại
             hardwareLabCard.find(".projectCardLabel").text("Hardware lab".localize());
-            // Sự kiện click để cuộn đến phòng Hardware
+            // Click vào card sẽ cuộn đến zone tương ứng
             hardwareLabCard.clickExcl(function () {
-                visualsModule.scrollToZone(0, true);
+                visualsManager.scrollToZone(0, true);
             });
-            hardwareLabCard.insertBefore("#consoleMaintenanceContainer");
-            hardwareLabCard._gd_projectVisible = true; // Cờ theo dõi trạng thái hiển thị
+            hardwareLabCard.insertBefore("#consoleMaintenanceContainer"); // Thêm vào DOM
+            hardwareLabCard._gd_projectVisible = true; // Đánh dấu card đang hiển thị dự án (ban đầu)
         }
 
-        if (company.currentLevel < 4 || !company.flags.hwLabUnlocked) { // Ẩn nếu không đủ điều kiện
+        // Ẩn/Hiện card dựa trên level và việc đã mở khóa lab chưa
+        if (company.currentLevel < 4 || !company.flags.hwLabUnlocked) {
             hardwareLabCard.hide();
         } else {
             hardwareLabCard.show();
             updateProjectCardDisplay(hardwareLabCard, GameManager.currentHwProject); // Cập nhật thông tin dự án
-            if (!company.hwCrew) company.hwCrew = []; // Khởi tạo mảng nhân viên nếu chưa có
 
-            var hardwareCrew = company.hwCrew;
-            var maxHwBudget = GameManager.getMaxHwBudget();
-            var hardwareLabCharacterStage = CanvasManager.leftScreen.characterStage;
-            var backRowWorkers = [], frontRowWorkers = []; // Để sắp xếp thứ tự vẽ
+            if (!company.hwCrew) company.hwCrew = []; // Khởi tạo danh sách nhân viên lab nếu chưa có
+            var hardwareLabStaffList = company.hwCrew;
+            var maxHardwareBudget = GameManager.getMaxHwBudget();
+            var hardwareLabStage = CanvasManager.leftScreen.characterStage; // Stage để vẽ nhân viên Hardware lab
+            var staffToDrawLater = []; // Nhân viên vẽ sau (để đảm bảo thứ tự layer)
 
-            for (var i = 0; i <= 12; i++) { // Tạo tối đa 13 nhân viên
-                if (hardwareCrew.length < i + 1) { // Nếu chưa có nhân viên ở slot này
-                    hardwareCrew.push(new ProjectWorkerVisual());
-                    hardwareCrew[i].zone = 0; // Zone 0 là phòng Hardware
-                    hardwareCrew[i].setPosition(i); // Đặt vị trí dựa trên index
-                    hardwareCrew[i].loadAnimations(); // Load animation
+            // Tạo hoặc cập nhật hiển thị cho từng nhân viên trong Hardware lab (tối đa 13 vị trí)
+            for (var i = 0; i <= 12; i++) {
+                if (hardwareLabStaffList.length < i + 1) { // Nếu chưa có nhân viên ở vị trí này, tạo mới
+                    hardwareLabStaffList.push(new ProjectWorkerVisual());
+                    hardwareLabStaffList[i].zone = 0; // Zone 0 là Hardware lab
+                    hardwareLabStaffList[i].setPosition(i); // Thiết lập vị trí dựa trên index
+                    hardwareLabStaffList[i].loadAnimations(); // Tải animation
                 }
-                var workerVisual = hardwareCrew[i];
-                // Gán hàm để lấy dự án hiện tại
-                workerVisual.getCurrentProject = function () { return GameManager.currentHwProject; };
-                // Gán hàm tính toán yếu tố ảnh hưởng (dựa trên budget và vị trí)
-                (function (visual, budgetPerWorkerSlot) {
-                    visual.getAffordanceFactor = function () {
-                        return calculateAffordanceFactor(maxHwBudget * company.flags.hwBudget, budgetPerWorkerSlot);
+                var workerVisual = hardwareLabStaffList[i];
+                workerVisual.getCurrentProject = function () { return GameManager.currentHwProject; }; // Gán hàm lấy dự án hiện tại
+
+                // Gán hàm tính toán yếu tố "affordance" (khả năng chi trả/hiệu suất dựa trên budget)
+                (function (worker, budgetPerWorker) {
+                    worker.getAffordanceFactor = function () {
+                        return calculateAffordanceFactor(maxHardwareBudget * company.flags.hwBudget, budgetPerWorker);
                     };
-                })(workerVisual, maxHwBudget / 12 * (i + 1));
+                })(workerVisual, maxHardwareBudget / 12 * (i + 1));
 
-                // Sắp xếp vào hàng trước/sau để vẽ đúng thứ tự
-                if (i == 3 || i == 7) {
-                    backRowWorkers.push(workerVisual);
+                // Một số vị trí nhân viên được vẽ sau để đảm bảo thứ tự layer
+                if (i === 3 || i === 7) {
+                    staffToDrawLater.push(workerVisual);
                 } else {
-                    hardwareLabCharacterStage.addChild(workerVisual);
-                    projectWorkerVisuals.push(workerVisual);
+                    hardwareLabStage.addChild(workerVisual);
+                    labWorkersList.push(workerVisual);
                 }
             }
-            // Thêm nhân viên hàng sau vào sau cùng
-            for (var i = 0, len = backRowWorkers.length; i < len; i++) {
-                hardwareLabCharacterStage.addChild(backRowWorkers[i]);
-                projectWorkerVisuals.push(backRowWorkers[i]);
+            // Thêm các nhân viên cần vẽ sau vào stage
+            for (var i = 0, len = staffToDrawLater.length; i < len; i++) {
+                hardwareLabStage.addChild(staffToDrawLater[i]);
+                labWorkersList.push(staffToDrawLater[i]);
             }
-            visualsModule.putConsoleToPedestal(); // Đặt console lên bệ (nếu có)
+            visualsManager.putConsoleToPedestal(); // Đặt console lên bệ (nếu có)
         }
     };
 
-    // Hàm đặt console lên bệ trong phòng Hardware
-    visualsModule.putConsoleToPedestal = function () {
+    // Đặt console đang phát triển hoặc console mới nhất của công ty lên bệ trưng bày
+    visualsManager.putConsoleToPedestal = function () {
         var company = GameManager.company;
+        // Chỉ thực hiện nếu là level 4 và Hardware lab đã mở khóa
         if (company.currentLevel === 4 && company.flags.hwLabUnlocked) {
-            // Xóa console cũ (nếu có)
-            if (visualsModule.consoleContainer && CanvasManager.leftScreen.backgroundOverlayStage.contains(visualsModule.consoleContainer)) {
-                CanvasManager.leftScreen.backgroundOverlayStage.removeChild(visualsModule.consoleContainer);
+            // Xóa console cũ khỏi bệ (nếu có)
+            if (visualsManager.consoleContainer && CanvasManager.leftScreen.backgroundOverlayStage.contains(visualsManager.consoleContainer)) {
+                CanvasManager.leftScreen.backgroundOverlayStage.removeChild(visualsManager.consoleContainer);
             }
 
-            var consoleToShow = undefined;
-            var consoleDataList = undefined;
+            var consoleToDisplay = void 0;
+            var licensedPlatforms = void 0;
 
-            // Ưu tiên hiển thị console đang được phát triển
+            // Ưu tiên hiển thị console đang phát triển
             if (GameManager.currentHwProject && GameManager.currentHwProject.id === "custom console") {
-                consoleToShow = { iconUri: GameManager.currentHwProject.iconUri };
+                consoleToDisplay = { iconUri: GameManager.currentHwProject.iconUri };
             } else {
-                // Nếu không, tìm console tùy chỉnh mới nhất đã phát hành
-                consoleDataList = company.licencedPlatforms.filter(function (platform) { return platform.isCustom; });
-                if (consoleDataList.length) {
-                    consoleToShow = consoleDataList.last();
+                // Tiếp theo, hiển thị console tự tạo mới nhất
+                licensedPlatforms = company.licencedPlatforms.filter(function (platform) { return platform.isCustom; });
+                if (licensedPlatforms.length) {
+                    consoleToDisplay = licensedPlatforms.last();
                 } else {
-                    // Nếu không, tìm console đang phát triển hoặc game mới nhất có platform không phải PC/G64/...
-                    consoleDataList = company.currentGame;
-                    if (consoleDataList && consoleDataList.platforms.length > 0 &&
-                        consoleDataList.platforms[0].id != "PC" && consoleDataList.platforms[0].id != "G64" && /* các điều kiện khác */ true) {
-                        consoleToShow = company.currentGame.platforms[0];
+                    // Nếu không có console tự tạo, hiển thị platform của game đang phát triển (nếu không phải PC/mobile)
+                    var currentGame = company.currentGame;
+                    if (currentGame && currentGame.platforms.length > 0 &&
+                        currentGame.platforms[0].id != "PC" && currentGame.platforms[0].id != "G64" &&
+                        currentGame.platforms[0].id != "Gameling" && currentGame.platforms[0].id != "Vena Gear" &&
+                        currentGame.platforms[0].id != "PPS" && currentGame.platforms[0].id != "GS" &&
+                        currentGame.platforms[0].id != "grPhone") {
+                        consoleToDisplay = company.currentGame.platforms[0];
                     } else {
-                        // Cuối cùng, tìm trong lịch sử game
-                        for (var i = company.gameLog.length - 1; i > 0; i--) {
+                        // Cuối cùng, tìm game đã phát hành gần nhất có platform phù hợp
+                        for (var i = company.gameLog.length - 1; i > 0; i--) { // Sửa: i >= 0
                             var gamePlatforms = company.gameLog[i].platforms;
-                            if (gamePlatforms[0].id != "PC" && gamePlatforms[0].id != "G64" && /* các điều kiện khác */ true) {
-                                consoleToShow = gamePlatforms[0];
+                            if (gamePlatforms[0].id != "PC" && gamePlatforms[0].id != "G64" &&
+                                gamePlatforms[0].id != "Gameling" && gamePlatforms[0].id != "Vena Gear" &&
+                                gamePlatforms[0].id != "PPS" && gamePlatforms[0].id != "GS" &&
+                                gamePlatforms[0].id != "grPhone") {
+                                consoleToDisplay = gamePlatforms[0];
                                 break;
                             }
                         }
@@ -1195,161 +1213,164 @@ var VisualsManager = {};
                 }
             }
 
-            if (consoleToShow) {
-                var platformImageSrc = Platforms.getPlatformImage(consoleToShow, company.currentWeek);
+            // Nếu tìm thấy console để hiển thị, vẽ nó lên bệ
+            if (consoleToDisplay) {
+                var platformImageSrc = Platforms.getPlatformImage(consoleToDisplay, company.currentWeek);
                 var consoleBitmap = new createjs.Bitmap(platformImageSrc);
                 var container = new createjs.Container();
                 var globalScale = CanvasManager.globalScale;
-                // Đặt vị trí và tỷ lệ cho console trên bệ
+                // Thiết lập scale và vị trí cho console trên bệ
                 container.scaleX = 0.45 * globalScale;
                 container.scaleY = 0.45 * globalScale;
                 container.x = 2230 * globalScale;
                 container.y = 1104 * globalScale;
                 container.addChild(consoleBitmap);
-                visualsModule.consoleContainer = container;
-                CanvasManager.leftScreen.backgroundOverlayStage.addChild(visualsModule.consoleContainer);
+                visualsManager.consoleContainer = container;
+                CanvasManager.leftScreen.backgroundOverlayStage.addChild(visualsManager.consoleContainer);
             }
         }
     };
 
-    // Hàm tính toán yếu tố ảnh hưởng đến hiệu suất của nhân viên phòng lab
-    var calculateAffordanceFactor = function (currentBudget, budgetRequiredForThisSlot) {
-        if (currentBudget === 0) return -4; // Không có budget -> hiệu suất rất thấp
-        var ratio = currentBudget / budgetRequiredForThisSlot;
+    // Tính toán yếu tố "affordance" (liên quan đến hiệu suất dựa trên budget)
+    var calculateAffordanceFactor = function (totalBudget, budgetThreshold) {
+        if (totalBudget === 0) return -4; // Không có budget -> hiệu suất rất thấp
+        var ratio = totalBudget / budgetThreshold;
         if (ratio < 1) {
-            ratio = -1 + ratio; // Nếu budget thấp hơn yêu cầu, hiệu suất giảm
+            ratio = -1 + ratio; // Giá trị âm nếu budget thấp hơn ngưỡng
         }
         return ratio;
     };
 
-    var rndLabCard, createRnDLabCrew = function () {
+    // Khởi tạo hiển thị cho R&D Lab (zone 2)
+    var initializeResearchAndDevelopmentLabVisuals = function () {
         var company = GameManager.company;
-        if (!rndLabCard) { // Nếu thẻ chưa được tạo
-            var initialRndBudget = company.flags.rndBudget;
-            if (initialRndBudget === undefined) initialRndBudget = 0;
+        if (!researchAndDevelopmentLabCard) { // Nếu card chưa được tạo
+            var initialBudget = company.flags.rndBudget;
+            if (initialBudget === void 0) initialBudget = 0;
 
-            rndLabCard = createProjectStatusCardTemplate(initialRndBudget * 100);
-            rndLabCard.addClass("projectCardRight").addClass("rndCard");
-            rndLabCard.find(".projectCardLabel").text("R&D lab".localize());
-            // Sự kiện click để cuộn đến phòng R&D
-            rndLabCard.clickExcl(function () {
-                visualsModule.scrollToZone(2, true);
-            });
-            $("#gameUIContainer").append(rndLabCard);
-            rndLabCard._gd_projectVisible = true;
+            researchAndDevelopmentLabCard = createProjectStatusCard(initialBudget * 100);
+            researchAndDevelopmentLabCard.addClass("projectCardRight rndCard");
+            researchAndDevelopmentLabCard.find(".projectCardLabel").text("R&D lab".localize());
+            researchAndDevelopmentLabCard.clickExcl(function () { visualsManager.scrollToZone(2, true); });
+            $("#gameUIContainer").append(researchAndDevelopmentLabCard); // Thêm vào DOM (khác với Hardware lab)
+            researchAndDevelopmentLabCard._gd_projectVisible = true;
         }
 
-        if (GameManager.company.currentLevel < 4 || !company.flags.rndLabUnlocked) { // Ẩn nếu không đủ điều kiện
-            rndLabCard.hide();
+        // Ẩn/Hiện card
+        if (company.currentLevel < 4 || !company.flags.rndLabUnlocked) {
+            researchAndDevelopmentLabCard.hide();
         } else {
-            rndLabCard.show();
-            updateProjectCardDisplay(rndLabCard, GameManager.currentRnDProject); // Cập nhật thông tin dự án
-            if (!company.rndCrew) company.rndCrew = []; // Khởi tạo mảng nhân viên nếu chưa có
+            researchAndDevelopmentLabCard.show();
+            updateProjectCardDisplay(researchAndDevelopmentLabCard, GameManager.currentRnDProject);
 
-            var rndCrew = company.rndCrew;
-            var maxRndBudget = GameManager.getMaxRndBudget();
-            var rndLabCharacterStage = CanvasManager.rightScreen.characterStage;
-            var backRowWorkers = [], frontRowWorkers = [];
+            if (!company.rndCrew) company.rndCrew = [];
+            var researchAndDevelopmentStaffList = company.rndCrew;
+            var maxResearchAndDevelopmentBudget = GameManager.getMaxRndBudget();
+            var researchAndDevelopmentStage = CanvasManager.rightScreen.characterStage;
+            var staffToDrawLater = [];
 
             for (var i = 0; i <= 12; i++) {
-                if (rndCrew.length < i + 1) {
-                    rndCrew.push(new ProjectWorkerVisual());
-                    rndCrew[i].zone = 2; // Zone 2 là phòng R&D
-                    rndCrew[i].setPosition(i);
-                    rndCrew[i].loadAnimations();
+                if (researchAndDevelopmentStaffList.length < i + 1) {
+                    researchAndDevelopmentStaffList.push(new ProjectWorkerVisual());
+                    researchAndDevelopmentStaffList[i].zone = 2; // Zone 2 là R&D lab
+                    researchAndDevelopmentStaffList[i].setPosition(i);
+                    researchAndDevelopmentStaffList[i].loadAnimations();
                 }
-                var workerVisual = rndCrew[i];
+                var workerVisual = researchAndDevelopmentStaffList[i];
                 workerVisual.getCurrentProject = function () { return GameManager.currentRnDProject; };
-                (function (visual, budgetPerWorkerSlot) {
-                    visual.getAffordanceFactor = function () {
-                        return calculateAffordanceFactor(maxRndBudget * company.flags.rndBudget, budgetPerWorkerSlot);
-                    };
-                })(workerVisual, maxRndBudget / 12 * (i + 1));
 
-                if (i === 5 || i === 7) {
-                    backRowWorkers.push(workerVisual);
+                (function (worker, budgetPerWorker) {
+                    worker.getAffordanceFactor = function () {
+                        return calculateAffordanceFactor(maxResearchAndDevelopmentBudget * company.flags.rndBudget, budgetPerWorker);
+                    };
+                })(workerVisual, maxResearchAndDevelopmentBudget / 12 * (i + 1));
+
+                if (i === 5 || i === 7) { // Các vị trí đặc biệt vẽ sau
+                    staffToDrawLater.push(workerVisual);
                 } else {
-                    rndLabCharacterStage.addChild(workerVisual);
-                    projectWorkerVisuals.push(workerVisual);
+                    researchAndDevelopmentStage.addChild(workerVisual);
+                    labWorkersList.push(workerVisual);
                 }
             }
-            for (var i = 0, len = backRowWorkers.length; i < len; i++) {
-                rndLabCharacterStage.addChild(backRowWorkers[i]);
-                projectWorkerVisuals.push(backRowWorkers[i]);
+            for (var i = 0, len = staffToDrawLater.length; i < len; i++) {
+                researchAndDevelopmentStage.addChild(staffToDrawLater[i]);
+                labWorkersList.push(staffToDrawLater[i]);
             }
         }
     };
 
-    // Hàm được gọi khi zone (khu vực hiển thị) thay đổi
-    visualsModule._zoneChanged = function (newZone, withAnimation) {
-        var animationSpeed = withAnimation ? "normal" : 0;
-        // Kích hoạt/hủy kích hoạt canvas của các zone
-        CanvasManager.zone0Activ = (newZone === 0);
-        CanvasManager.zone1Activ = (newZone === 1);
-        CanvasManager.zone2Activ = (newZone === 2);
+    // Hàm được gọi khi zone hiển thị thay đổi
+    visualsManager._zoneChanged = function (targetZone, animateScroll) {
+        var animationSpeed = animateScroll ? "normal" : 0;
 
-        // Hiển thị/ẩn slider budget dựa trên zone hiện tại
-        if (newZone != 2 && rndLabCard) {
-            rndLabCard.find(".projectBudgetSlider").slideUp(animationSpeed);
-            rndLabCard.find(".projectCardLabel").slideDown(animationSpeed);
+        // Kích hoạt/Hủy kích hoạt các canvas phụ dựa trên zone hiện tại
+        CanvasManager.zone0Activ = (targetZone === 0);
+        CanvasManager.zone1Activ = (targetZone === 1);
+        CanvasManager.zone2Activ = (targetZone === 2);
+
+        // Hiển thị/Ẩn slider budget cho R&D lab
+        if (targetZone != 2 && researchAndDevelopmentLabCard) {
+            researchAndDevelopmentLabCard.find(".projectBudgetSlider").slideUp(animationSpeed);
+            researchAndDevelopmentLabCard.find(".projectCardLabel").slideDown(animationSpeed);
         }
-        if (newZone == 2 && rndLabCard) {
-            rndLabCard.find(".projectBudgetSlider").slideDown(animationSpeed);
-            rndLabCard.find(".projectCardLabel").slideUp(animationSpeed);
+        if (targetZone == 2 && researchAndDevelopmentLabCard) {
+            researchAndDevelopmentLabCard.find(".projectBudgetSlider").slideDown(animationSpeed);
+            researchAndDevelopmentLabCard.find(".projectCardLabel").slideUp(animationSpeed);
         }
-        if (newZone != 0 && hardwareLabCard) {
+
+        // Hiển thị/Ẩn slider budget cho Hardware lab
+        if (targetZone != 0 && hardwareLabCard) {
             hardwareLabCard.find(".projectBudgetSlider").slideUp(animationSpeed);
             hardwareLabCard.find(".projectCardLabel").slideDown(animationSpeed);
         }
-        if (newZone == 0 && hardwareLabCard) {
+        if (targetZone == 0 && hardwareLabCard) {
             hardwareLabCard.find(".projectBudgetSlider").slideDown(animationSpeed);
             hardwareLabCard.find(".projectCardLabel").slideUp(animationSpeed);
         }
 
-        updateLabCardLayoutForSmallScreen(); // Điều chỉnh layout cho màn hình nhỏ
-        // Hiển thị thông báo hướng dẫn khi vào phòng lab lần đầu
-        if (newZone == 2) Media.enterRndLab(GameManager.company);
-        else if (newZone == 0) Media.enterHwLab(GameManager.company);
+        adjustCardLayoutForSmallScreen(); // Điều chỉnh layout card cho màn hình nhỏ
+        // Hiển thị thông báo tutorial khi vào các lab lần đầu
+        if (targetZone == 2) Media.enterRndLab(GameManager.company);
+        else if (targetZone == 0) Media.enterHwLab(GameManager.company);
     };
 
-    // Hàm điều chỉnh layout thẻ trạng thái dự án cho màn hình nhỏ
-    var updateLabCardLayoutForSmallScreen = function () {
+    // Điều chỉnh layout của các card trạng thái dự án nếu màn hình nhỏ
+    var adjustCardLayoutForSmallScreen = function () {
         var isSmallScreen = CanvasManager.isSmallScreen;
-        if (rndLabCard) {
-            var shouldBeSmall = isSmallScreen && GameManager.currentRnDProject;
-            if (shouldBeSmall && !rndLabCard.hasClass("small")) {
-                rndLabCard.addClass("small");
-            } else if (!shouldBeSmall && rndLabCard.hasClass("small")) {
-                rndLabCard.removeClass("small");
+        if (researchAndDevelopmentLabCard) {
+            var projectActive = isSmallScreen && GameManager.currentRnDProject;
+            if (projectActive && !researchAndDevelopmentLabCard.hasClass("small")) {
+                researchAndDevelopmentLabCard.addClass("small");
+            } else if (!projectActive && researchAndDevelopmentLabCard.hasClass("small")) {
+                researchAndDevelopmentLabCard.removeClass("small");
             }
         }
         if (hardwareLabCard) {
-            var shouldBeSmall = isSmallScreen && GameManager.currentHwProject;
-            if (shouldBeSmall && !hardwareLabCard.hasClass("small")) {
+            var projectActive = isSmallScreen && GameManager.currentHwProject;
+            if (projectActive && !hardwareLabCard.hasClass("small")) {
                 hardwareLabCard.addClass("small");
-            } else if (!shouldBeSmall && hardwareLabCard.hasClass("small")) {
+            } else if (!projectActive && hardwareLabCard.hasClass("small")) {
                 hardwareLabCard.removeClass("small");
             }
         }
     };
 
-    // Hàm cập nhật hiển thị của một thẻ trạng thái dự án
-    var updateProjectCardDisplay = function (cardElement) {
+    // Cập nhật hiển thị của một card trạng thái dự án
+    var updateProjectCardDisplay = function (cardElement, currentProject) { // Thêm currentProject vào đây
         if (cardElement) {
             var company = GameManager.company;
             if (company) {
-                var currentHwBudgetPercent = company.flags.hwBudget * 100;
-                var hardwareLabMonthlyCost = GameManager.getLabCostPerMonth(0);
-                var currentProject = GameManager.currentHwProject;
+                var currentBudgetValue = company.flags.hwBudget * 100; // Mặc định là Hardware
+                var monthlyCost = GameManager.getLabCostPerMonth(0); // Zone 0 cho Hardware
 
-                // Lấy thông tin đúng nếu là thẻ của phòng R&D
-                if (cardElement.hasClass("rndCard")) {
-                    currentProject = GameManager.currentRnDProject;
-                    hardwareLabMonthlyCost = GameManager.getLabCostPerMonth(2);
-                    currentHwBudgetPercent = company.flags.rndBudget * 100;
+                if (cardElement.hasClass("rndCard")) { // Nếu là card R&D
+                    currentProject = GameManager.currentRnDProject; // Lấy dự án R&D hiện tại
+                    monthlyCost = GameManager.getLabCostPerMonth(2); // Zone 2 cho R&D
+                    currentBudgetValue = company.flags.rndBudget * 100;
                 }
+                // currentProject đã được truyền vào hoặc lấy từ trên
 
-                // Hiển thị/ẩn phần thông tin dự án
+                // Hiển thị/Ẩn phần thông tin dự án
                 if (!currentProject && cardElement._gd_projectVisible) {
                     cardElement.find(".projectStatusContainer").slideUp();
                     cardElement._gd_projectVisible = false;
@@ -1358,7 +1379,7 @@ var VisualsManager = {};
                         cardElement.find(".projectStatusContainer").slideDown();
                         cardElement._gd_projectVisible = true;
                     }
-                    // Cập nhật icon, tiêu đề, tiến độ, điểm còn lại của dự án
+                    // Cập nhật icon, tên, progress, điểm còn lại nếu có thay đổi
                     if (cardElement._gd_iconUrl != currentProject.iconUri) {
                         cardElement.find(".projectIcon").attr("src", currentProject.iconUri);
                         cardElement._gd_iconUrl = currentProject.iconUri;
@@ -1378,27 +1399,27 @@ var VisualsManager = {};
                     }
                 }
 
-                // Cập nhật chi phí hàng tháng và giá trị slider
-                if (cardElement._gd_budget !== hardwareLabMonthlyCost) {
-                    cardElement.find(".projectBudgetValue").text("{0} per month".localize().format(UI.getShortNumberString(hardwareLabMonthlyCost)));
-                    cardElement._gd_budget = hardwareLabMonthlyCost;
+                // Cập nhật chi phí hàng tháng và giá trị slider nếu có thay đổi
+                if (cardElement._gd_budget !== monthlyCost) {
+                    cardElement.find(".projectBudgetValue").text("{0} per month".localize().format(UI.getShortNumberString(monthlyCost)));
+                    cardElement._gd_budget = monthlyCost;
                 }
-                if (Math.round(cardElement._gd_sliderValue) != Math.round(currentHwBudgetPercent)) {
-                    cardElement.find(".projectBudgetSlider").slider({ value: currentHwBudgetPercent });
-                    cardElement._gd_sliderValue = currentHwBudgetPercent;
+                if (Math.round(cardElement._gd_sliderValue) != Math.round(currentBudgetValue)) {
+                    cardElement.find(".projectBudgetSlider").slider({ value: currentBudgetValue });
+                    cardElement._gd_sliderValue = currentBudgetValue;
                 }
-                updateLabCardLayoutForSmallScreen(); // Điều chỉnh layout
+                adjustCardLayoutForSmallScreen(); // Điều chỉnh layout
             }
         }
     };
 
-    // Hàm cập nhật tất cả các thẻ trạng thái dự án
-    visualsModule.updateProjectStatusCards = function () {
+    // Hàm được gọi để cập nhật card trạng thái (ví dụ, khi có thay đổi từ GameManager)
+    visualsManager.updateProjectStatusCards = function () {
         if (GameManager.company.flags.hwLabUnlocked) {
-            updateProjectCardDisplay(hardwareLabCard);
+            updateProjectCardDisplay(hardwareLabCard); // Không cần truyền currentProject nữa
         }
         if (GameManager.company.flags.rndLabUnlocked) {
-            updateProjectCardDisplay(rndLabCard);
+            updateProjectCardDisplay(researchAndDevelopmentLabCard); // Không cần truyền currentProject nữa
         }
     };
-})(); // Kết thúc IIFE của ProjectWorkerVisual
+})();
